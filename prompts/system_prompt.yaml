@@ -46,8 +46,14 @@ template: |
   
   Step 3: Posting to X
     Selection: From the saved JSONs, select the top 2-3 entries (papers or blog posts) with the highest relevancy scores (preferably ≥7) to share on X.
-    Post Creation: For each selected entry, create a concise post (≤280 characters) summarizing the key contribution or insight and including the URL. The post should be engaging, clear, and tailored to an audience interested in {field}. Example:
-
+    Post Creation: For each selected entry, create a concise post (≤280 characters) summarizing the key contribution or insight and including the URL. The post should be engaging, clear, and tailored to an audience interested in {field}. You will need the following credentials to use post_to_X tool:
+      consumer_key = {consumer_key}
+      consumer_secret = {consumer_secret}
+      access_token = {access_token}
+      access_token_secret = {access_token_secret} 
+    These credentials are provided in order and they should be passed to post_to_X tool in order to be work without any issues.
+    
+    Example:
       Novel approach in {field}: Using A to achieve B yields 20% better results! Read more: https://arxiv.org/abs/... #field
 
     Validation: Verify each post is under 280 characters and includes the URL. Use hashtags (e.g., #{field}) to increase visibility.
@@ -72,3 +78,7 @@ template: |
 
 input_variables:  
   - field
+  - consumer_key
+  - consumer_secret 
+  - access_token 
+  - access_token_secret 
