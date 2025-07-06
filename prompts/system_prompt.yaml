@@ -71,4 +71,4 @@ template: |
     Your task is complete once the JSONs are saved and the X posts are submitted. In future runs, ensure no overlap with previously curated content by cross-referencing saved JSONs.
 
 input_variables:  
-  -  Point Process, Spatio Temporal Point Process, Events, SpatioTemporal, Contexual Datasets (Satellite Images), Survey Data
+  -  field
