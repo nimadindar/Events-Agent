@@ -14,18 +14,24 @@ def load_yaml(input_path:str) -> str:
     return prompt_config
 
 
-def load_prompt(input_path : str, input_variables : str) -> str:
-
+def load_prompt(input_path: str, field_input: str) -> PromptTemplate:
     prompt_config = load_yaml(input_path)
 
-    prompt = PromptTemplate(
-        input_variables=prompt_config['input_variables'],
-        template=prompt_config['template'])
-    
-    formatted_prompt = prompt.format(field = input_variables,
-                                     consumer_key = os.getenv("X_API_KEY"),
-                                     consumer_secret = os.getenv("X_API_KEY_SECRET"),
-                                     access_token = os.getenv("X_ACCESS_TOKEN"),
-                                     access_token_secret = os.getenv("X_ACCESS_TOKEN_SECRET"))
-
-    return formatted_prompt
+    return PromptTemplate(
+        input_variables=[
+            "field",
+            "consumer_key",
+            "consumer_secret",
+            "access_token",
+            "access_token_secret",
+            "agent_scratchpad"  
+        ],
+        partial_variables={
+            "field": field_input,
+            "consumer_key": os.getenv("X_API_KEY", "your_consumer_key"),
+            "consumer_secret": os.getenv("X_API_KEY_SECRET", "your_consumer_secret"),
+            "access_token": os.getenv("X_ACCESS_TOKEN", "your_access_token"),
+            "access_token_secret": os.getenv("X_ACCESS_TOKEN_SECRET", "your_access_token_secret")
+        },
+        template=prompt_config["template"]
+    )
