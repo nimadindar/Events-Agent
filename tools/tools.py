@@ -207,16 +207,14 @@ def ArxivTool(query: str, max_results: int = 10) -> str:
             except ValueError:
                 formatted_date = "Unknown"
             
-            if formatted_date != current_date:
-                continue
+            # if formatted_date != current_date:
+            #     continue
             
             authors = metadata.get("authors", "").split(", ")
             
             # summary = doc.page_content[:500]
             summary = doc.page_content  
             
-            
-            # Construct result entry
             entry = {
                 "source": "arxiv",
                 "title": metadata.get("title", "Unknown"),
@@ -227,7 +225,6 @@ def ArxivTool(query: str, max_results: int = 10) -> str:
             }
             results.append(entry)
         
-        # If no results match the date, return empty array with message
         if not results:
             return json.dumps({
                 "results": [],
