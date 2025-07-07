@@ -7,6 +7,7 @@ from typing import List, Dict, Any
 from langchain.tools import tool
 from langchain_community.document_loaders import ArxivLoader
 
+@tool
 def save_json(input_data, save_dir="./saved/results.json") -> str:
     """
     Save input_data to a JSON file, appending to existing data if the file exists.
@@ -63,7 +64,7 @@ def save_json(input_data, save_dir="./saved/results.json") -> str:
         raise OSError(f"Error writing to file {save_dir}: {str(e)}")
     
 
-
+@tool
 def post_to_X(
     consumer_key: str,
     consumer_secret: str,
