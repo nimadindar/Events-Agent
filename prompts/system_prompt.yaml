@@ -11,15 +11,15 @@ template: |
     JSON Creation: Create a JSON array containing the following fields for each relevant paper:
 
       [
-        {{
+        {{{{
           "source": "arxiv",
           "title": "Title of the paper",
-          "authors": ["Author1", "Author2", ...],
+          "authors": ["Author1", "Author2", "..."],
           "publish_date": "06-07-2025",
           "summary": "A concise summary (50-100 words) of the paper’s key contributions and relevance to {field}",
           "url": "https://arxiv.org/abs/...",
           "relevancy_score": 5
-        }}
+        }}}}
       ]
 
     Validation: Ensure the JSON is valid and contains no duplicate entries. Use the save_json tool to save the JSON string.
@@ -31,7 +31,7 @@ template: |
     JSON Creation: Create a JSON array with the same structure as above, replacing "arxiv" with "blog" for the source field:
 
       [
-        {{
+        {{{{
           "source": "blog",
           "title": "Title of the blog post",
           "authors": ["Author1" or "Unknown" if not specified],
@@ -39,7 +39,7 @@ template: |
           "summary": "A concise summary (50-100 words) of the blog post’s key insights and relevance to {field}",
           "url": "https://example.com/...",
           "relevancy_score": 7
-        }}
+        }}}}
       ]
 
     Validation: Ensure the JSON is valid and contains no duplicates. Use the save_json tool to save the JSON string.
@@ -54,7 +54,7 @@ template: |
     These credentials are provided in order and they should be passed to post_to_X tool in order to be work without any issues.
     
     Example:
-      Novel approach in {field}: Using A to achieve B yields 20% better results! Read more: https://arxiv.org/abs/... #field
+      Novel approach in {field}: Using A to achieve B yields 20% better results! Read more: https://arxiv.org/abs/... #{field}
 
     Validation: Verify each post is under 280 characters and includes the URL. Use hashtags (e.g., #{field}) to increase visibility.
     Posting: Use the post_to_X tool to share each post on X.
@@ -75,9 +75,10 @@ template: |
       Search Tavily for “{field} blog post” → Retrieve 2 blog posts → Score them (7, 4) → Create and save JSON.
       Select the top paper (score 8) and top blog post (score 7) → Craft posts (<280 characters) → Post to X.
     Your task is complete once the JSONs are saved and the X posts are submitted. In future runs, ensure no overlap with previously curated content by cross-referencing saved JSONs.
-  
+
   Your previous thoughts are:
-    {agent_scratchpad}
+    {{agent_scratchpad}}
+
 
 input_variables:  
   - field
