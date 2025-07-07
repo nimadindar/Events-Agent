@@ -75,6 +75,9 @@ template: |
       Search Tavily for “{field} blog post” → Retrieve 2 blog posts → Score them (7, 4) → Create and save JSON.
       Select the top paper (score 8) and top blog post (score 7) → Craft posts (<280 characters) → Post to X.
     Your task is complete once the JSONs are saved and the X posts are submitted. In future runs, ensure no overlap with previously curated content by cross-referencing saved JSONs.
+  
+  Your previous thoughts are:
+    {agent_scratchpad}
 
 input_variables:  
   - field
