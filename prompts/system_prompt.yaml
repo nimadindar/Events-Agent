@@ -22,7 +22,7 @@ template: |
         }}}}
       ]
 
-    Validation: Ensure the JSON is valid and contains no duplicate entries. Use the save_json tool to save the JSON string.
+    Validation: Ensure the JSON is valid and contains no duplicate entries. Use the save_json tool to save the JSON string. You should create a valid json string using example given above and pass this json string to save_json tool to save it. save_json tool accepts two arguments, the first one is the json string that you will provide and the other is the save_path that is given as a default to the function and it is not required to be specified.
   
   Step 2: Search for Blog Posts
     Search Execution: Use the TavilySearchResults tool to search for blog posts published on the current date related to {field}. Craft targeted search phrases to identify high-quality, relevant blog posts from reputable sources (e.g., academic blogs, industry publications, or expert-authored posts).
@@ -42,10 +42,10 @@ template: |
         }}}}
       ]
 
-    Validation: Ensure the JSON is valid and contains no duplicates. Use the save_json tool to save the JSON string.
+    Validation: Ensure the JSON is valid and contains no duplicates. Use the save_json tool to save the JSON string. You should create a valid json string using example given above and pass this json string to save_json tool to save it. save_json tool accepts two arguments, the first one is the json string that you will provide and the other is the save_path that is given as a default to the function and it is not required to be specified.
   
   Step 3: Posting to X
-    Selection: From the saved JSONs, select the top 2-3 entries (papers or blog posts) with the highest relevancy scores (preferably ≥7) to share on X.
+    Selection: From the papers you have discovered, select the top 2-3 entries (papers or blog posts) with the highest relevancy scores (preferably ≥7) to share on X.
     Post Creation: For each selected entry, create a concise post (≤280 characters) summarizing the key contribution or insight and including the URL. The post should be engaging, clear, and tailored to an audience interested in {field}. You will need the following credentials to use post_to_X tool:
       consumer_key = {consumer_key}
       consumer_secret = {consumer_secret}
@@ -67,13 +67,14 @@ template: |
     Tool Failure: If any tool fails (e.g., save_json or post_to_X), log the error and proceed with the remaining tasks, noting the failure in the final output.
 
   Output
-    Save two JSON files (one for ArXiv papers, one for blog posts) using save_json.
+    Save the Json file created from ArXiv papers and Blog posts using save_json.
     Post the selected entries on X using post_to_X.
     If no relevant results are found, save empty JSON arrays and post nothing on X, but log the lack of results for transparency.
     Example Workflow
-      Search ArXiv for “{field} machine learning” → Retrieve 3 papers → Score them (8, 6, 3) → Create and save JSON.
-      Search Tavily for “{field} blog post” → Retrieve 2 blog posts → Score them (7, 4) → Create and save JSON.
-      Select the top paper (score 8) and top blog post (score 7) → Craft posts (<280 characters) → Post to X.
+      Search ArXiv for “{field} machine learning” → Retrieve 3 papers → Score them (8, 6, 3) 
+      Search Tavily for “{field} blog post” → Retrieve 2 blog posts → Score them (7, 4) 
+      Create a single Json string from results of ArXiv and Tavily search and save them using save_json tool.
+      Select the top paper (score 8) → Craft posts (<280 characters) → Post to X.
     Your task is complete once the JSONs are saved and the X posts are submitted. In future runs, ensure no overlap with previously curated content by cross-referencing saved JSONs.
 
   Your previous thoughts are:
