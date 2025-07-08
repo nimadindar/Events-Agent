@@ -2,14 +2,13 @@ import os
 import json
 import tweepy
 from datetime import datetime
-from typing import List, Dict, Any
 
 from langchain.tools import tool
-from langchain_core.tools import ToolException
+from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import ArxivLoader
 
 @tool
-def save_json(input_data, save_dir: str) -> str:
+def save_json(input_data, save_dir: str = "./saved/results.json") -> str:
     """
     Save input_data to a JSON file, appending to existing data if the file exists.
     Returns a status message indicating success or failure.
@@ -88,28 +87,6 @@ def post_to_X(
     Raises:
         ValueError: If any input parameter is invalid (e.g., empty or non-string).
         tweepy.TweepyException: If there is an issue with the X API (e.g., authentication failure, rate limits).
-
-    Example:
-        ```python
-        result = post_to_X(
-            consumer_key="your_consumer_key",
-            consumer_secret="your_consumer_secret",
-            access_token="your_access_token",
-            access_token_secret="your_access_token_secret",
-            content="New breakthrough in AI! Check it out: https://example.com #AI"
-        )
-        print(result)  # Output: "Successfully posted to X" or "Error posting to X: <error>"
-        ```
-
-    Notes:
-        - The content is automatically truncated to 280 characters to comply with X's limit.
-        - Ensure all credentials are valid and have the necessary permissions to post tweets.
-        - This tool is designed for use in an AI agent workflow, such as posting curated research findings.
-        - If the X API returns an error (e.g., rate limit exceeded, invalid credentials), the error message
-          will include details for debugging.
-        - Network issues or missing dependencies (e.g., tweepy) may also cause failures.
-        - The function does not support posting media or other advanced tweet features.
-
     """
     if not all(isinstance(arg, str) for arg in [consumer_key, consumer_secret, access_token, access_token_secret, content]):
         return "Error posting to X: All arguments must be strings"
@@ -232,3 +209,20 @@ def ArxivTool(query: str, max_results: int = 10) -> str:
             "results": [],
             "error": f"Error querying ArXiv: {str(e)}"
         })
+
+@tool
+def tavily_tool(max_results: int = 5) -> TavilySearch:
+    """
+    Creates and returns a configured instance of TavilySearch tool.
+
+    Args:
+        max_results (int): Maximum number of results to return. Default is 5.
+
+    Returns:
+        TavilySearch: Configured search tool instance.
+    """
+    tavily_tool = TavilySearch(
+        max_results=max_results,
+        api_key=os.getenv("TAVILY_API_KEY")
+    )
+    return tavily_tool
