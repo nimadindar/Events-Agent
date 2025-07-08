@@ -53,10 +53,10 @@ def run_agent():
     # ("system", "Use Arxiv tool to fetch one paper about machine learning, create a single sentence \
     #  summary of this paper and post it on X using post_to_X tool. For Arxiv tool create a search query \
     #  and pass it to the function and for post_to_X use the following cresentials:\
-    # consumer_key = qVMJaFr94g3R6iXybfjzEIOub \
-    # consumer_secret = Ryma6P3tm0av8XCj1RPljPP0FE3IYZCO6RKyXYVgzSrrfSBhU7 \
-    # access_token = 1264085021952008197-d6L1eNSimZwn1QkbK1OlVzBD6cqQy7 \
-    # access_token_secret = v1TR3qKUenLi00oW3ulwfMPNj2GFjrGRYcIWlCk8kdrl0"),
+    # consumer_key =  \
+    # consumer_secret =  \
+    # access_token =  \
+    # access_token_secret = "),
     # ("human", "{input}"),
     # ("placeholder", "{agent_scratchpad}")])
 
