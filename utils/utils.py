@@ -1,9 +1,12 @@
-import yaml
 import os
+import yaml
+import logging
 from dotenv import load_dotenv
 load_dotenv()
 
 from langchain.prompts import PromptTemplate
+from langchain.callbacks.base import BaseCallbackHandler
+
 
 
 def load_yaml(input_path:str) -> str:
@@ -33,3 +36,20 @@ def load_prompt(input_path: str, field_input: str) -> PromptTemplate:
     )
 
     return formatted_system_prompt
+
+logger = logging.getLogger(__name__)
+class LoggingCallbackHandler(BaseCallbackHandler):
+    def on_llm_start(self, serialized, prompts, **kwargs):
+        logger.info(f"[LLM Start] Prompt: {prompts}")
+
+    def on_llm_end(self, response, **kwargs):
+        logger.info(f"[LLM End] Response: {response.generations}")
+
+    def on_tool_start(self, tool, input_str, **kwargs):
+        logger.info(f"[Tool Start] Tool: {tool}, Input: {input_str}")
+
+    def on_tool_end(self, output, **kwargs):
+        logger.info(f"[Tool End] Output: {output}")
+
+    def on_chain_error(self, error, **kwargs):
+        logger.error(f"[Error] {error}")

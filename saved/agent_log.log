@@ -1,0 +1,4 @@
+2025-07-08 15:53:48 - Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=Spatio+Temporal+Point+Process+2025&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-07-08 15:53:48 - Got first page: 100 of 859897 total results
+2025-07-08 15:54:52 - Requesting page (first: True, try: 0): https://export.arxiv.org/api/query?search_query=Spatio+Temporal+Point+Process+machine+learning+2025&id_list=&sortBy=relevance&sortOrder=descending&start=0&max_results=100
+2025-07-08 15:54:53 - Got first page: 100 of 1076400 total results

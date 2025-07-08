@@ -1,16 +1,26 @@
 import os 
 import time
 import schedule
+import logging
+from datetime import datetime
 from dotenv import load_dotenv
 load_dotenv()
 
-from utils.utils import load_prompt
 from agents.build_agent import BuildAgent
+from utils.utils import load_prompt, LoggingCallbackHandler
 from tools.tools import save_json, post_to_X, ArxivTool, tavily_tool
 
 from langchain.agents import AgentExecutor
 from langchain.prompts import ChatPromptTemplate
 from langchain_google_genai import ChatGoogleGenerativeAI
+
+
+logging.basicConfig(
+    filename='./saved/agent_log.log',
+    level=logging.INFO,
+    format='%(asctime)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 
 def run_agent():
@@ -39,6 +49,7 @@ def run_agent():
         agent=agent,
         tools=tools,
         verbose=True,
+        callbacks=[LoggingCallbackHandler()]
     )
 
     try:
@@ -49,8 +60,9 @@ def run_agent():
 
 if __name__ == "__main__":
 
-    schedule.every(24).hours.do(run_agent)
+    run_agent()
+    # schedule.every(24).hours.do(run_agent)
     
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+    # while True:
+    #     schedule.run_pending()
+    #     time.sleep(1)
