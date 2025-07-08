@@ -1,4 +1,6 @@
 import os 
+import time
+import schedule
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -15,7 +17,7 @@ def run_agent():
 
     loaded_prompt = load_prompt(
         "./prompts/system_prompt.yaml",
-        "Spatio Temporal Point Process"
+        "Spatio Temporal Point Process, Point Process, STPP, Events, SpatioTemporal, Contextual Datasets (Satellite Data), Survey data"
     )
 
     prompt = ChatPromptTemplate.from_messages([
@@ -46,4 +48,9 @@ def run_agent():
         print(f"Error running agent: {str(e)}")
 
 if __name__ == "__main__":
-    run_agent()
+
+    schedule.every(24).hours.do(run_agent)
+    
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
