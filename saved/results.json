@@ -22,5 +22,122 @@
     "link": "https://arxiv.org/abs/2411.14585",
     "abstract": "This work presents PointLCA-Net, which leverages the strengths of PointNets for extracting robust features from input point sets, while utilizing the efficiency of Exemplar LCA to encode these features. PointLCA-Net achieves a high accuracy of 93.41% on DVS128 while reducing energy consumption by approximately 92% compared to other spiking neural networks applied to point clouds, making the system more efficient and well-suited for energy-constrained applications.",
     "similarity score": 6
+  },
+  {
+    "source": "arxiv",
+    "title": "A multi-scale area-interaction model for spatio-temporal point patterns",
+    "authors": [
+      "A. Iftimi",
+      "M.N.M. van Lieshout",
+      "F. Montes"
+    ],
+    "publish_date": "11-01-2017",
+    "link": "https://arxiv.org/abs/1701.02887",
+    "abstract": "Models for fitting spatio-temporal point processes should incorporate spatio-temporal inhomogeneity and allow for different types of interaction between points (clustering or regularity). This paper proposes an extension of the spatial multi-scale area-interaction model to a spatio-temporal framework. This model allows for interaction between points at different spatio-temporal scales and the inclusion of covariates. We fit the proposed model to varicella cases registered during 2013 in Valencia, Spain. The fitted model indicates small scale clustering and regularity for higher spatio-temporal scales.",
+    "similarity score": 8
+  },
+  {
+    "source": "arxiv",
+    "title": "PointLCA-Net: Using Point Clouds for Energy Efficient Sparse Spatio-Temporal Signal Recognition in Neuromorphic Systems",
+    "authors": [
+      "Sanaz Mahmoodi Takaghaj"
+    ],
+    "publish_date": "20-05-2025",
+    "link": "https://arxiv.org/abs/2411.14585",
+    "abstract": "This work presents PointLCA-Net, which leverages the strengths of PointNets for extracting robust features from input point sets, while utilizing the efficiency of Exemplar LCA to encode these features. PointLCA-Net achieves a high accuracy of 93.41% on DVS128 while reducing energy consumption by approximately 92% compared to other spiking neural networks applied to point clouds, making the system more efficient and well-suited for energy-constrained applications.",
+    "similarity score": 6
+  },
+  {
+    "source": "arxiv",
+    "title": "stopp: An R Package for Spatio-Temporal Point Pattern Analysis",
+    "authors": [
+      "Nicoletta D\u2019Angelo",
+      "Giada Adelfio"
+    ],
+    "publish_date": "27-08-2024",
+    "link": "https://arxiv.org/abs/2408.15052",
+    "abstract": "stopp is a novel R package specifically designed for the analysis of spatio-temporal point patterns which might have occurred in a subset of the Euclidean space or on some specific linear network, such as roads of a city. It represents the first package providing a comprehensive modelling framework for spatio-temporal Poisson point processes.",
+    "similarity score": 7
+  },
+  {
+    "source": "arxiv",
+    "title": "A multi-scale area-interaction model for spatio-temporal point patterns",
+    "authors": [
+      "A. Iftimi",
+      "M.N.M. van Lieshout",
+      "F. Montes"
+    ],
+    "publish_date": "Unknown",
+    "link": "https://arxiv.org/abs/1701.02887",
+    "abstract": "Models for \ufb01tting spatio-temporal point processes should incorporate spatio-temporal inhomogeneity and allow for di\ufb00erent types of interaction between points (clustering or regularity). This paper proposes an extension of the spatial multi-scale area-interaction model to a spatio-temporal framework. This model allows for interaction between points at di\ufb00erent spatio-temporal scales and the inclusion of covariates. We \ufb01t the proposed model to varicella cases registered during 2013 in Valencia, Spain. The \ufb01tted model indicates small scale clustering and regularity for higher spatio-temporal scales.",
+    "similarity score": 8
+  },
+  {
+    "source": "arxiv",
+    "title": "PointLCA-Net: Using Point Clouds for Energy Efficient Sparse Spatio-Temporal Signal Recognition in Neuromorphic Systems",
+    "authors": [
+      "Sanaz Mahmoodi Takaghaj"
+    ],
+    "publish_date": "Unknown",
+    "link": "https://arxiv.org/abs/2411.14585",
+    "abstract": "This work presents PointLCA-Net, which leverages the strengths of PointNets for extracting robust features from input point sets, while utilizing the efficiency of Exemplar LCA to encode these features. PointLCA-Net achieves a high accuracy of 93.41% on DVS128 while reducing energy consumption by approximately 92% compared to other spiking neural networks applied to point clouds, making the system more efficient and well-suited for energy-constrained applications.",
+    "similarity score": 6
+  },
+  {
+    "source": "arxiv",
+    "title": "stopp: An R Package for Spatio-Temporal Point Pattern Analysis",
+    "authors": [
+      "Nicoletta D\u2019Angelo",
+      "Giada Adelfio"
+    ],
+    "publish_date": "Unknown",
+    "link": "https://arxiv.org/abs/2408.15052",
+    "abstract": "stopp is a novel R package specifically designed for the analysis of spatio-temporal point patterns which might have occurred in a subset of the Euclidean space or on some specific linear network, such as roads of a city. It represents the first package providing a comprehensive modelling framework for spatio-temporal Poisson point processes.",
+    "similarity score": 7
+  },
+  {
+    "source": "blog post",
+    "title": "Reinforcement-Learning-of-Spatio-Temporal-Point-Processes - GitHub",
+    "authors": "unknown",
+    "publish_date": "unknown",
+    "link": "https://github.com/meowoodie/Reinforcement-Learning-of-Spatio-Temporal-Point-Processes",
+    "abstract": "Spatio-temporal point processes offer a versatile framework for modeling such event data, as it can jointly capture spatial and temporal dependency.",
+    "similarity score": 6
+  },
+  {
+    "source": "blog post",
+    "title": "Deep spatio-temporal point processes: Advances and new directions",
+    "authors": "unknown",
+    "publish_date": "unknown",
+    "link": "https://arxiv.org/abs/2504.06364",
+    "abstract": "This article reviews the development of the deep influence kernel approach, which enjoys statistical explainability.",
+    "similarity score": 5
+  },
+  {
+    "source": "blog post",
+    "title": "Spatio-temporal point process statistics: A review - ScienceDirect",
+    "authors": "unknown",
+    "publish_date": "unknown",
+    "link": "https://www.sciencedirect.com/science/article/pii/S2211675316301130",
+    "abstract": "A review describing statistical models and methods that can be used to analyse patterns of points in space and time.",
+    "similarity score": 5
+  },
+  {
+    "source": "blog post",
+    "title": "Learning Spatiotemporal Dynamical Systems from Point Process...",
+    "authors": "unknown",
+    "publish_date": "unknown",
+    "link": "https://openreview.net/forum?id=37EXtKCOkn",
+    "abstract": "A new method that can effectively learn spatiotemporal dynamics from point process observations.",
+    "similarity score": 4
+  },
+  {
+    "source": "blog post",
+    "title": "Flexible marked spatio-temporal point processes with applications to ...",
+    "authors": "unknown",
+    "publish_date": "unknown",
+    "link": "https://academic.oup.com/jrsssc/article/72/5/1095/7253039",
+    "abstract": "A new family of marked point processes by focusing the characteristic properties of marked Hawkes processes exclusively on the space of marks.",
+    "similarity score": 4
   }
 ]
