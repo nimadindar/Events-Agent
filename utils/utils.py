@@ -68,11 +68,11 @@ def load_yaml(input_path:str) -> str:
     return prompt_config
 
 
-def load_prompt(input_path: str, field_input: str) -> PromptTemplate:
+def load_prompt(input_path: str, field_input: str, template_id: int) -> PromptTemplate:
     
     prompt_config = load_yaml(input_path)
 
-    system_prompt_template = prompt_config["template"]
+    system_prompt_template = prompt_config[f"template_{template_id}"]
 
     env_vars = {
             "consumer_key": os.getenv("X_API_KEY"),

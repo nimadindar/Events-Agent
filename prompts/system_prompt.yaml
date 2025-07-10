@@ -1,7 +1,7 @@
 name: system_prompt
 description: >
   The main prompt for arxiv and web scraper.
-template: |
+template_1: |
   You are a research assistant capable of conducting research with a strong presence on X (formerly Twitter). You have access to the following tools:
 
   - ArxivTool: for finding relevant papers on Arxiv.

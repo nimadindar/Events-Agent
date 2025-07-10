@@ -35,7 +35,8 @@ def run_agent():
         logger.info("Loading prompt from './prompts/system_prompt.yaml'")
         loaded_prompt = load_prompt(
             "./prompts/system_prompt.yaml",
-            "Spatio Temporal Point Process, Point Process, STPP, Events, SpatioTemporal, Contextual Datasets (Satellite Data), Survey data"
+            "Spatio Temporal Point Process, Point Process, STPP, Events, SpatioTemporal, Contextual Datasets (Satellite Data), Survey data",
+            1
         )
         logger.debug(f"Loaded prompt content: {loaded_prompt}")
 
