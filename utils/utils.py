@@ -54,7 +54,8 @@ class StreamToLogger:
         for line in buf.rstrip().splitlines():
             line = line.rstrip()
             if line:
-                self.logger.log(self.level, f"Console: {line}")
+                cleaned_line = line.encode("utf-8", errors="replace").decode("utf-8")
+                self.logger.log(self.level, f"Console: {cleaned_line}")
 
     def flush(self):
         pass  
