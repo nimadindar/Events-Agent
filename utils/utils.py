@@ -43,6 +43,22 @@ class LoggingCallbackHandler(BaseCallbackHandler):
         """Log when agent finishes."""
         self.logger.info(f"Agent finished with output: {finish.return_values}")
 
+class StreamToLogger:
+    def __init__(self, logger, level=logging.INFO):
+        self.logger = logger
+        self.level = level
+        self.linebuf = ''
+
+    def write(self, buf):
+
+        for line in buf.rstrip().splitlines():
+            line = line.rstrip()
+            if line:
+                self.logger.log(self.level, f"Console: {line}")
+
+    def flush(self):
+        pass  
+
 
 def load_yaml(input_path:str) -> str:
 
