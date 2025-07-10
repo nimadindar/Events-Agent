@@ -1,47 +1,26 @@
 [
   {
     "source": "arxiv",
-    "title": "STContext: A Multifaceted Dataset for Developing Context-aware Spatio-temporal Crowd Mobility Prediction Models",
+    "title": "A multi-scale area-interaction model for spatio-temporal point patterns",
     "authors": [
-      "LIYUE CHEN",
-      "JIANGYI FANG",
-      "TENGFEI LIU",
-      "FANGYUAN GAO",
-      "LEYE WANG"
+      "A. Iftimi",
+      "M.N.M. van Lieshout",
+      "F. Montes"
     ],
-    "link": "https://arxiv.org/abs/",
-    "similarity score": 9
+    "publish_date": "11-01-2017",
+    "link": "https://arxiv.org/abs/1701.02887",
+    "abstract": "Models for fitting spatio-temporal point processes should incorporate spatio-temporal inhomogeneity and allow for different types of interaction between points (clustering or regularity). This paper proposes an extension of the spatial multi-scale area-interaction model to a spatio-temporal framework. This model allows for interaction between points at different spatio-temporal scales and the inclusion of covariates. We fit the proposed model to varicella cases registered during 2013 in Valencia, Spain. The fitted model indicates small scale clustering and regularity for higher spatio-temporal scales.",
+    "similarity score": 8
   },
   {
     "source": "arxiv",
-    "title": "VIDEOMOLMO: Spatio-Temporal Grounding Meets Pointing",
+    "title": "PointLCA-Net: Using Point Clouds for Energy Efficient Sparse Spatio-Temporal Signal Recognition in Neuromorphic Systems",
     "authors": [
-      "Ghazi Shazan Ahmad",
-      "Ahmed Heakl",
-      "Hanan Gani",
-      "Abdelrahman Shaker",
-      "Zhiqiang Shen",
-      "Fahad Shahbaz Khan",
-      "Salman Khan"
+      "Sanaz Mahmoodi Takaghaj"
     ],
-    "link": "https://arxiv.org/abs/",
-    "similarity score": 7
-  },
-  {
-    "source": "arxiv",
-    "title": "OMNIMAMBA4D: SPATIO-TEMPORAL MAMBA FOR LONGITUDINAL CT LESION SEGMENTATION",
-    "authors": [
-      "Justin Namuk Kim",
-      "Yiqiao Liu",
-      "Rajath Soans",
-      "Keith Persson",
-      "Sarah Halek",
-      "Michal Tomaszewski",
-      "Jianda Yuan",
-      "Gregory Goldmacher",
-      "Antong Chen"
-    ],
-    "link": "https://arxiv.org/abs/",
+    "publish_date": "20-05-2025",
+    "link": "https://arxiv.org/abs/2411.14585",
+    "abstract": "This work presents PointLCA-Net, which leverages the strengths of PointNets for extracting robust features from input point sets, while utilizing the efficiency of Exemplar LCA to encode these features. PointLCA-Net achieves a high accuracy of 93.41% on DVS128 while reducing energy consumption by approximately 92% compared to other spiking neural networks applied to point clouds, making the system more efficient and well-suited for energy-constrained applications.",
     "similarity score": 6
   }
 ]
