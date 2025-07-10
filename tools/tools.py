@@ -3,6 +3,7 @@ import json
 import tweepy
 from pathlib import Path
 from datetime import datetime
+from typing import Union, List
 
 from langchain.tools import tool
 from langchain_tavily import TavilySearch
@@ -10,12 +11,12 @@ from langchain_community.document_loaders import ArxivLoader
 
 
 @tool
-def save_to_json(content: str | dict) -> str:
+def save_to_json(content: Union[str, dict]) -> str:
     """
-    Save JSON content to './saved/results.json'.
+    Append JSON content to './saved/results.json' as a list of entries.
     
     Args:
-        content: A JSON string or Python dictionary containing data to save.
+        content: A JSON string or Python dictionary containing data to append.
         
     Returns:
         str: A message indicating success or failure.
@@ -27,18 +28,36 @@ def save_to_json(content: str | dict) -> str:
             except json.JSONDecodeError:
                 return "Error: Invalid JSON string provided."
 
+        if not isinstance(content, dict):
+            return "Error: Content must be a dictionary or valid JSON object."
+
         output_dir = Path("./saved")
         output_dir.mkdir(exist_ok=True)
-
         output_file = output_dir / "results.json"
 
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(content, f, indent=2)
+        existing_data: List[dict] = []
 
-        return f"Successfully saved content to {output_file}"
+        if output_file.exists():
+            try:
+                with open(output_file, 'r', encoding='utf-8') as f:
+                    existing_data = json.load(f)
+                    if not isinstance(existing_data, list):
+                        existing_data = [existing_data] 
+            except json.JSONDecodeError:
+                return f"Error: Existing file {output_file} contains invalid JSON."
+            except Exception as e:
+                return f"Error reading existing file: {str(e)}"
+
+        existing_data.append(content)
+
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(existing_data, f, indent=2)
+
+        return f"Successfully appended content to {output_file}"
 
     except Exception as e:
         return f"Error saving JSON to file: {str(e)}"
+    
 
 @tool
 def post_to_X(
@@ -175,7 +194,8 @@ def ArxivTool(query: str, max_results: int = 20) -> str:
                 "authors": authors if authors else ["Unknown"],
                 "publish_date": formatted_date,
                 "summary": summary,
-                "url": f"https://arxiv.org/abs/{metadata.get('entry_id', '').split('/')[-1]}",
+                # "url": f"https://arxiv.org/abs/{metadata.get('entry_id', '').split('/')[-1]}",
+                "url" : metadata.get('entry_id', '')
             }
             results.append(entry)
         
