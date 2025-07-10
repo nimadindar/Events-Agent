@@ -1,6 +1,8 @@
 import os
 import yaml
 import logging
+from logging.handlers import RotatingFileHandler
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -37,19 +39,26 @@ def load_prompt(input_path: str, field_input: str) -> PromptTemplate:
 
     return formatted_system_prompt
 
-logger = logging.getLogger(__name__)
-class LoggingCallbackHandler(BaseCallbackHandler):
-    def on_llm_start(self, serialized, prompts, **kwargs):
-        logger.info(f"[LLM Start] Prompt: {prompts}")
+def setup_logging():
+    logger = logging.getLogger('AgentLogger')
+    logger.setLevel(logging.DEBUG)
 
-    def on_llm_end(self, response, **kwargs):
-        logger.info(f"[LLM End] Response: {response.generations}")
+    formatter = logging.Formatter(
+        '%(asctime)s - %(levelname)s - %(message)s',
+        datefmt='%Y-%m-%d %H:%M:%S'
+    )
 
-    def on_tool_start(self, tool, input_str, **kwargs):
-        logger.info(f"[Tool Start] Tool: {tool}, Input: {input_str}")
+    console_handler = logging.StreamHandler()
+    console_handler.setLevel(logging.INFO)
+    console_handler.setFormatter(formatter)
 
-    def on_tool_end(self, output, **kwargs):
-        logger.info(f"[Tool End] Output: {output}")
+    file_handler = RotatingFileHandler(
+        './saved/agent_logs.log', maxBytes=5*1024*1024, backupCount=3
+    )
+    file_handler.setLevel(logging.DEBUG)
+    file_handler.setFormatter(formatter)
 
-    def on_chain_error(self, error, **kwargs):
-        logger.error(f"[Error] {error}")
+    logger.addHandler(console_handler)
+    logger.addHandler(file_handler)
+
+    return logger
