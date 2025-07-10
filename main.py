@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from agents.build_agent import BuildAgent
-from tools.tools import save_json, post_to_X, ArxivTool, tavily_tool
+from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool
 from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler, StreamToLogger
 
 from langchain.agents import AgentExecutor
@@ -36,7 +36,7 @@ def run_agent():
         loaded_prompt = load_prompt(
             "./prompts/system_prompt.yaml",
             "Spatio Temporal Point Process, Point Process, STPP, Events, SpatioTemporal, Contextual Datasets (Satellite Data), Survey data",
-            1
+            2
         )
         logger.debug(f"Loaded prompt content: {loaded_prompt}")
 
@@ -56,7 +56,7 @@ def run_agent():
         )
         logger.debug("LLM initialized with model=gemini-2.0-flash, temperature=0.0")
 
-        tools = [ArxivTool, tavily_tool, post_to_X]
+        tools = [ArxivTool, tavily_tool, save_to_json]
         logger.info(f"Tools initialized: {[tool.name for tool in tools]}")
 
         logger.info("Building agent")
@@ -73,7 +73,7 @@ def run_agent():
         logger.debug("AgentExecutor created with verbose=True")
 
         logger.info("Invoking agent with input: 'Find a paper and tweet about it.'")
-        result = agent_executor.invoke({"input": "Find a paper and tweet about it."})
+        result = agent_executor.invoke({"input": "Search for related papers and blog posts and save an organized json file."})
         logger.info("Agent execution completed")
         logger.debug(f"Agent result: {result}")
 

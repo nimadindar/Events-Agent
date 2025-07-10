@@ -1,0 +1,47 @@
+[
+  {
+    "source": "arxiv",
+    "title": "STContext: A Multifaceted Dataset for Developing Context-aware Spatio-temporal Crowd Mobility Prediction Models",
+    "authors": [
+      "LIYUE CHEN",
+      "JIANGYI FANG",
+      "TENGFEI LIU",
+      "FANGYUAN GAO",
+      "LEYE WANG"
+    ],
+    "link": "https://arxiv.org/abs/",
+    "similarity score": 9
+  },
+  {
+    "source": "arxiv",
+    "title": "VIDEOMOLMO: Spatio-Temporal Grounding Meets Pointing",
+    "authors": [
+      "Ghazi Shazan Ahmad",
+      "Ahmed Heakl",
+      "Hanan Gani",
+      "Abdelrahman Shaker",
+      "Zhiqiang Shen",
+      "Fahad Shahbaz Khan",
+      "Salman Khan"
+    ],
+    "link": "https://arxiv.org/abs/",
+    "similarity score": 7
+  },
+  {
+    "source": "arxiv",
+    "title": "OMNIMAMBA4D: SPATIO-TEMPORAL MAMBA FOR LONGITUDINAL CT LESION SEGMENTATION",
+    "authors": [
+      "Justin Namuk Kim",
+      "Yiqiao Liu",
+      "Rajath Soans",
+      "Keith Persson",
+      "Sarah Halek",
+      "Michal Tomaszewski",
+      "Jianda Yuan",
+      "Gregory Goldmacher",
+      "Antong Chen"
+    ],
+    "link": "https://arxiv.org/abs/",
+    "similarity score": 6
+  }
+]

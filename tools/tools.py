@@ -1,61 +1,44 @@
 import os
 import json
 import tweepy
+from pathlib import Path
 from datetime import datetime
 
 from langchain.tools import tool
 from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import ArxivLoader
 
+
 @tool
-def save_json(input_data, save_dir: str = "./saved/results.json") -> str:
+def save_to_json(content: str | dict) -> str:
     """
-    Save input_data to a JSON file, appending to existing data if the file exists.
-    Returns a status message indicating success or failure.
+    Save JSON content to './saved/results.json'.
+    
+    Args:
+        content: A JSON string or Python dictionary containing data to save.
+        
+    Returns:
+        str: A message indicating success or failure.
     """
     try:
-        os.makedirs(os.path.dirname(save_dir), exist_ok=True)
-    except Exception as e:
-        return f"Failed to create directory for saving: {str(e)}"
-    
-    try:
-        json.dumps(input_data)  # Check if serializable
-    except (TypeError, ValueError) as e:
-        return f"Input data is not valid JSON: {str(e)}"
-    
-    try:
-        if os.path.exists(save_dir):
-            with open(save_dir, 'r', encoding='utf-8') as f:
-                try:
-                    existing_data = json.load(f)
-                except json.JSONDecodeError:
-                    existing_data = []
+        if isinstance(content, str):
+            try:
+                content = json.loads(content)
+            except json.JSONDecodeError:
+                return "Error: Invalid JSON string provided."
 
-            if not isinstance(existing_data, list):
-                return "Existing file does not contain a JSON array"
+        output_dir = Path("./saved")
+        output_dir.mkdir(exist_ok=True)
 
-            if isinstance(input_data, dict):
-                input_data = [input_data]
-            elif not isinstance(input_data, list):
-                return "Input data must be a dict or list for appending"
+        output_file = output_dir / "results.json"
 
-            existing_data.extend(input_data)
-            data_to_save = existing_data
-        else:
-            if isinstance(input_data, dict):
-                data_to_save = [input_data]
-            elif isinstance(input_data, list):
-                data_to_save = input_data
-            else:
-                return "Input data must be a dict or list for saving"
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(content, f, indent=2)
 
-        with open(save_dir, 'w', encoding='utf-8') as f:
-            json.dump(data_to_save, f, indent=2)
-        return f"Data saved successfully to {save_dir}"
+        return f"Successfully saved content to {output_file}"
 
     except Exception as e:
-        return f"Unexpected error during saving: {str(e)}"
-    
+        return f"Error saving JSON to file: {str(e)}"
 
 @tool
 def post_to_X(
@@ -120,7 +103,7 @@ def post_to_X(
     
 
 @tool
-def ArxivTool(query: str, max_results: int = 10) -> str:
+def ArxivTool(query: str, max_results: int = 20) -> str:
     """
     Search ArXiv for papers based on a provided query and return relevant results in JSON format.
 
@@ -211,7 +194,7 @@ def ArxivTool(query: str, max_results: int = 10) -> str:
         })
 
 @tool
-def tavily_tool(max_results: int = 5) -> TavilySearch:
+def tavily_tool(max_results: int = 20) -> TavilySearch:
     """
     Creates and returns a configured instance of TavilySearch tool.
 
