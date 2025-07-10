@@ -1,5 +1,7 @@
 import os 
+import sys
 import time
+import logging
 import schedule
 import traceback
 from dotenv import load_dotenv
@@ -7,7 +9,7 @@ load_dotenv()
 
 from agents.build_agent import BuildAgent
 from tools.tools import save_json, post_to_X, ArxivTool, tavily_tool
-from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler
+from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler, StreamToLogger
 
 from langchain.agents import AgentExecutor
 from langchain.prompts import ChatPromptTemplate
@@ -18,6 +20,12 @@ def run_agent():
 
     logger = setup_logging()
     logger.info("Starting agent execution")
+
+    original_stdout = sys.stdout
+    original_stderr = sys.stderr
+    sys.stdout = StreamToLogger(logger, logging.INFO)
+    sys.stderr = StreamToLogger(logger, logging.ERROR)
+    logger.info("Redirected stdout and stderr to logger")
 
     callback_handler = LoggingCallbackHandler(logger)
     logger.info("Initialized LoggingCallbackHandler")
@@ -73,10 +81,14 @@ def run_agent():
         return result
 
     except Exception as e:
-
         logger.error(f"Error running agent: {str(e)}")
         logger.debug(f"Stack trace: {traceback.format_exc()}")
         raise
+    
+    finally:
+        sys.stdout = original_stdout
+        sys.stderr = original_stderr
+        logger.info("Restored original stdout and stderr")
 
 if __name__ == "__main__":
     run_agent()
