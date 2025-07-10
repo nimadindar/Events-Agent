@@ -185,7 +185,7 @@ def ArxivTool(query: str, max_results: int = 20) -> str:
             
             authors = metadata.get("authors", "").split(", ")
             
-            # summary = doc.page_content[:500]
+            summary = doc.page_content[:200]
             summary = doc.page_content  
             
             entry = {
