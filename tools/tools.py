@@ -6,6 +6,7 @@ from datetime import datetime
 from typing import Union, List
 
 from langchain.tools import tool
+from tavily import TavilyClient
 from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import ArxivLoader
 
@@ -122,7 +123,7 @@ def post_to_X(
     
 
 @tool
-def ArxivTool(query: str, max_results: int = 20) -> str:
+def ArxivTool(query: str, max_results: int = 5) -> str:
     """
     Search ArXiv for papers based on a provided query and return relevant results in JSON format.
 
@@ -213,19 +214,29 @@ def ArxivTool(query: str, max_results: int = 20) -> str:
             "error": f"Error querying ArXiv: {str(e)}"
         })
 
+
 @tool
-def tavily_tool(max_results: int = 20) -> TavilySearch:
+def tavily_tool(query, max_results: int = 5) -> str:
     """
     Creates and returns a configured instance of TavilySearch tool.
 
     Args:
+        query (str) : Search string to search in web.
         max_results (int): Maximum number of results to return. Default is 5.
 
     Returns:
-        TavilySearch: Configured search tool instance.
+        str : search results as string.
     """
+    includer_domains = [
+        "https://journals.plos.org/ploscompbiol/issue",
+        "https://www.spatialedge.co/",
+        "https://events2025.github.io/docs/conferences.html",
+        "https://spacetimecausality.github.io/",
+    ]
+    
     tavily_tool = TavilySearch(
         max_results=max_results,
-        api_key=os.getenv("TAVILY_API_KEY")
+        api_key=os.getenv("TAVILY_API_KEY"),
+        include_domains=None,
     )
-    return tavily_tool
+    return tavily_tool.invoke(query)
