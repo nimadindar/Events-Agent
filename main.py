@@ -6,8 +6,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from agents.build_agent import BuildAgent
-from utils.utils import load_prompt, setup_logging
 from tools.tools import save_json, post_to_X, ArxivTool, tavily_tool
+from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler
 
 from langchain.agents import AgentExecutor
 from langchain.prompts import ChatPromptTemplate
@@ -18,6 +18,9 @@ def run_agent():
 
     logger = setup_logging()
     logger.info("Starting agent execution")
+
+    callback_handler = LoggingCallbackHandler(logger)
+    logger.info("Initialized LoggingCallbackHandler")
 
     try:
 
@@ -55,7 +58,8 @@ def run_agent():
         agent_executor = AgentExecutor(
             agent=agent,
             tools=tools,
-            verbose=True
+            verbose=True,
+            callbacks=[callback_handler]
         )
         logger.debug("AgentExecutor created with verbose=True")
 
