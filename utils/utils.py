@@ -69,7 +69,7 @@ def load_yaml(input_path:str) -> str:
     return prompt_config
 
 
-def load_prompt(input_path: str, field_input: str, template_id: int) -> PromptTemplate:
+def load_prompt(input_path: str, field_input: str, arxiv_max_results: int, tavily_max_results, template_id: int) -> PromptTemplate:
     
     prompt_config = load_yaml(input_path)
 
@@ -84,6 +84,8 @@ def load_prompt(input_path: str, field_input: str, template_id: int) -> PromptTe
     
     formatted_system_prompt = system_prompt_template.format(
         field=field_input,
+        arxiv_max_results = arxiv_max_results,
+        tavily_max_results = tavily_max_results,
         **env_vars
     )
 
