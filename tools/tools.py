@@ -12,52 +12,119 @@ from langchain_community.document_loaders import ArxivLoader
 
 
 @tool
+def json_reader_tool() -> str:
+    """
+    Reads './saved/results.json', selects the highest-scoring untweeted result,
+    and tracks tweeted URLs in './saved/tweets.json' to avoid duplicates.
+
+    Returns:
+        str: A JSON string of the selected item or an error message.
+    """
+    json_file_path = "./saved/results.json"
+    tweeted_file_path = "./saved/tweets.json"
+
+    try:
+        # Ensure results file exists
+        if not os.path.exists(json_file_path):
+            return json.dumps({"error": f"JSON file '{json_file_path}' not found"})
+
+        # Load results
+        with open(json_file_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        if not isinstance(data, dict) or "results" not in data:
+            return json.dumps({"error": "Invalid format: expected a dictionary with a 'results' key"})
+
+        all_results = data["results"]
+        if not all_results:
+            return json.dumps({"error": "No results found in 'results.json'"})
+
+        # Load tweeted URLs
+        tweeted_urls = set()
+        tweeted_list = []
+
+        if os.path.exists(tweeted_file_path):
+            with open(tweeted_file_path, "r", encoding="utf-8") as f:
+                tweeted_data = json.load(f)
+                if isinstance(tweeted_data, dict):
+                    tweeted_list = tweeted_data.get("tweeted", [])
+                elif isinstance(tweeted_data, list):
+                    tweeted_list = tweeted_data  # fallback
+                tweeted_urls = set(item["url"] for item in tweeted_list if isinstance(item, dict) and "url" in item)
+
+        # Filter out already tweeted items
+        untweeted_items = [item for item in all_results if item.get("url") and item["url"] not in tweeted_urls]
+        if not untweeted_items:
+            return json.dumps({"error": "No untweeted items available"})
+
+        # Select item with highest similarity_score
+        selected_item = max(untweeted_items, key=lambda x: x.get("similarity_score", 0))
+
+        # Update tweeted list
+        tweeted_list.append({"url": selected_item["url"]})
+        tweeted_data = {"tweeted": tweeted_list}
+
+        with open(tweeted_file_path, "w", encoding="utf-8") as f:
+            json.dump(tweeted_data, f, ensure_ascii=False, indent=2)
+
+        return json.dumps(selected_item, ensure_ascii=False)
+
+    except Exception as e:
+        return json.dumps({"error": f"Error processing JSON files: {str(e)}"})
+
+
+@tool
 def save_to_json(content: Union[str, dict]) -> str:
     """
-    Append JSON content to './saved/results.json' as a list of entries.
+    Save new result entries into a single 'results' list inside './saved/results.json'.
     
     Args:
-        content: A JSON string or Python dictionary containing data to append.
+        content: A JSON string or Python dictionary with a 'results' key pointing to a list.
         
     Returns:
         str: A message indicating success or failure.
     """
     try:
+        # Load content if it's a JSON string
         if isinstance(content, str):
             try:
                 content = json.loads(content)
             except json.JSONDecodeError:
                 return "Error: Invalid JSON string provided."
 
-        if not isinstance(content, dict):
-            return "Error: Content must be a dictionary or valid JSON object."
+        # Validate format
+        if not isinstance(content, dict) or "results" not in content or not isinstance(content["results"], list):
+            return "Error: Content must be a dictionary with a 'results' key containing a list."
 
         output_dir = Path("./saved")
         output_dir.mkdir(exist_ok=True)
         output_file = output_dir / "results.json"
 
-        existing_data: List[dict] = []
-
+        # Initialize or load existing data
+        merged_data = {"results": []}
         if output_file.exists():
             try:
                 with open(output_file, 'r', encoding='utf-8') as f:
                     existing_data = json.load(f)
-                    if not isinstance(existing_data, list):
-                        existing_data = [existing_data] 
+                    if isinstance(existing_data, dict) and "results" in existing_data:
+                        merged_data["results"] = existing_data["results"]
             except json.JSONDecodeError:
                 return f"Error: Existing file {output_file} contains invalid JSON."
             except Exception as e:
                 return f"Error reading existing file: {str(e)}"
 
-        existing_data.append(content)
+        # Append new results
+        merged_data["results"].extend(content["results"])
 
+        # Save merged results
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(existing_data, f, indent=2)
+            json.dump(merged_data, f, indent=2)
 
-        return f"Successfully appended content to {output_file}"
+        return f"Successfully merged content into {output_file}"
 
     except Exception as e:
         return f"Error saving JSON to file: {str(e)}"
+
     
 
 @tool
@@ -237,6 +304,6 @@ def tavily_tool(query, max_results: int = 5) -> str:
     tavily_tool = TavilySearch(
         max_results=max_results,
         api_key=os.getenv("TAVILY_API_KEY"),
-        include_domains=None,
+        include_domains=includer_domains,
     )
     return tavily_tool.invoke(query)
