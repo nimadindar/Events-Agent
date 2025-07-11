@@ -112,6 +112,46 @@
       "url": "https://arxiv.org/abs/2003.02476",
       "abstract": "This paper contributes to the multivariate analysis of marked spatio-temporal\npoint process data by introducing di\ufb00erent partial point characteristics and ex-\ntending the spatial dependence graph model formalism.\nOur approach yields\na uni\ufb01ed framework for di\ufb00erent types of spatio-temporal data including both,\npurely qualitatively (multivariate) cases and multivariate cases with additional\nquantitative marks.",
       "similarity_score": 6
+    },
+    {
+      "source": "arxiv",
+      "title": "A multi-scale area-interaction model for spatio-temporal point patterns",
+      "authors": [
+        "A. Iftimi",
+        "M.N.M. van Lieshout",
+        "F. Montes"
+      ],
+      "Publish_date": "11-01-2017",
+      "url": "https://arxiv.org/abs/1701.02887",
+      "abstract": "This paper proposes an extension of the spatial multi-scale area-interaction model to a spatio-temporal framework. This model allows for interaction between points at different spatio-temporal scales and the inclusion of covariates. We \ufb01t the proposed model to varicella cases registered during 2013 in Valencia, Spain. The \ufb01tted model indicates small scale clustering and regularity for higher spatio-temporal scales.",
+      "similarity_score": 7
+    },
+    {
+      "source": "arxiv",
+      "title": "Spatio-temporal determinantal point processes",
+      "authors": [
+        "Na\ufb01seh Vafaei",
+        "Mohammad Ghorbani",
+        "Masoud Ganji",
+        "Mari Myllym\u00e4ki"
+      ],
+      "Publish_date": "06-01-2023",
+      "url": "https://arxiv.org/abs/2301.02353",
+      "abstract": "We present spatio-temporal counterparts of determinantal point processes and give examples of these models, based on spatio-temporal covariance functions which are separable and non-separable in space and time.",
+      "similarity_score": 8
+    },
+    {
+      "source": "arxiv",
+      "title": "Graphical modelling and partial characteristics for multitype and multivariate-marked spatio-temporal point processes",
+      "authors": [
+        "Matthias Eckardt",
+        "Jonatan A. Gonz\u00b4alez",
+        "Jorge Mateu"
+      ],
+      "Publish_date": "05-03-2020",
+      "url": "https://arxiv.org/abs/2003.02476",
+      "abstract": "This paper contributes to the multivariate analysis of marked spatio-temporal point process data by introducing di\ufb00erent partial point characteristics and extending the spatial dependence graph model formalism. Our approach yields a uni\ufb01ed framework for di\ufb00erent types of spatio-temporal data including both, purely qualitatively (multivariate) cases and multivariate cases with additional quantitative marks.",
+      "similarity_score": 9
     }
   ]
 }
