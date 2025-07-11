@@ -1,15 +1,14 @@
 import os 
-import sys
 import time
-import logging
 import schedule
 import traceback
 from dotenv import load_dotenv
 load_dotenv()
 
+from config import AgentConfig
 from agents.build_agent import BuildAgent
 from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool, json_reader_tool
-from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler, StreamToLogger
+from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler
 
 from langchain.agents import AgentExecutor
 from langchain.prompts import ChatPromptTemplate
@@ -19,24 +18,20 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 def run_agent():
 
     logger = setup_logging()
-    logger.info("Starting agent execution")
-
-    # original_stdout = sys.stdout
-    # original_stderr = sys.stderr
-    # sys.stdout = StreamToLogger(logger, logging.INFO)
-    # sys.stderr = StreamToLogger(logger, logging.ERROR)
-    # logger.info("Redirected stdout and stderr to logger")
+    logger.info("Starting a new agent execution")
 
     callback_handler = LoggingCallbackHandler(logger)
     logger.info("Initialized LoggingCallbackHandler")
 
     try:
 
-        logger.info("Loading prompt from './prompts/system_prompt.yaml'")
+        logger.info(f"Loading prompt from {AgentConfig.PromptDir}")
         loaded_prompt = load_prompt(
-            "./prompts/system_prompt.yaml",
-            "Spatio Temporal Point Process",
-            2
+            AgentConfig.PromptDir,
+            AgentConfig.Field,
+            AgentConfig.ArxivMaxResults,
+            AgentConfig.TavilyMaxResults,
+            AgentConfig.PromptVersion
         )
         logger.debug(f"Loaded prompt content: {loaded_prompt}")
 
@@ -50,11 +45,11 @@ def run_agent():
 
         logger.info("Initializing ChatGoogleGenerativeAI model")
         llm = ChatGoogleGenerativeAI(
-            model="gemini-2.0-flash",
-            temperature=0.0,
+            model=AgentConfig.ModelName,
+            temperature=AgentConfig.Temperature,
             google_api_key=os.getenv("GOOGLE_API_KEY")
         )
-        logger.debug("LLM initialized with model=gemini-2.0-flash, temperature=0.0")
+        logger.debug(f"LLM initialized with model={AgentConfig.ModelName}, temperature={AgentConfig.Temperature}")
 
         tools = [ArxivTool, tavily_tool, save_to_json, json_reader_tool, post_to_X]
         logger.info(f"Tools initialized: {[tool.name for tool in tools]}")
@@ -67,13 +62,13 @@ def run_agent():
         agent_executor = AgentExecutor(
             agent=agent,
             tools=tools,
-            verbose=True,
+            verbose=AgentConfig.Verbose,
             callbacks=[callback_handler]
         )
-        logger.debug("AgentExecutor created with verbose=True")
+        logger.debug(f"AgentExecutor created with verbose={AgentConfig.Verbose}")
 
-        logger.info("Invoking agent with input: 'Search for related papers and blog posts and save an organized json file, and finally post it to X.'")
-        result = agent_executor.invoke({"input": "Search for related papers and blog posts and save an organized json file, and finally post it to X."})
+        logger.info(f"Invoking agent with input: {AgentConfig.InvokeInput}")
+        result = agent_executor.invoke({"input": AgentConfig.InvokeInput})
         logger.info("Agent execution completed")
         logger.debug(f"Agent result: {result}")
 
@@ -86,13 +81,9 @@ def run_agent():
         logger.debug(f"Stack trace: {traceback.format_exc()}")
         raise
     
-    # finally:
-    #     sys.stdout = original_stdout
-    #     sys.stderr = original_stderr
-    #     logger.info("Restored original stdout and stderr")
-
 if __name__ == "__main__":
     run_agent()
+
     # print(json_reader_tool())
     # schedule.every(24).hours.do(run_agent)
     
