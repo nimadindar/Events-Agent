@@ -10,6 +10,30 @@ load_dotenv()
 from langchain.prompts import PromptTemplate
 from langchain.callbacks.base import BaseCallbackHandler
 
+class StreamlitLogHandler(logging.Handler):
+    """
+    Handles Streamlit related logs.
+    """
+    def __init__(self):
+        super().__init__()
+        self.logs = []
+
+    def emit(self, record):
+        log_message = self.format(record)
+        if log_message.startswith("Invoking:"):
+            try:
+                tool_part = log_message.split(" with ")[0].replace("Invoking: ", "").strip("`")
+                params_part = log_message.split(" with ")[1].strip("`")
+                self.logs.append({"tool": tool_part, "parameters": params_part})
+            except IndexError:
+                pass  # Skip malformed log entries
+
+    def get_logs(self):
+        return self.logs
+
+    def clear_logs(self):
+        self.logs = []
+    
 class LoggingCallbackHandler(BaseCallbackHandler):
     def __init__(self, logger):
         self.logger = logger
@@ -113,4 +137,19 @@ def setup_logging():
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
 
-    return logger
+    return logger  
+
+def update_agent_config(field, arxiv_max_results, tavily_max_results, model_name, temperature, verbose, invoke_input):
+    """
+    Update the global AgentConfig attributes dynamically.
+    """
+    from config import AgentConfig as GlobalAgentConfig
+    
+    GlobalAgentConfig.Field = field
+    GlobalAgentConfig.ArxivMaxResults = arxiv_max_results
+    GlobalAgentConfig.TavilyMaxResults = tavily_max_results
+    GlobalAgentConfig.ModelName = model_name
+    GlobalAgentConfig.Temperature = temperature
+    GlobalAgentConfig.Verbose = verbose
+    GlobalAgentConfig.InvokeInput = invoke_input
+    return GlobalAgentConfig
