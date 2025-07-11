@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from agents.build_agent import BuildAgent
-from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool
+from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool, json_reader_tool
 from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler, StreamToLogger
 
 from langchain.agents import AgentExecutor
@@ -56,7 +56,7 @@ def run_agent():
         )
         logger.debug("LLM initialized with model=gemini-2.0-flash, temperature=0.0")
 
-        tools = [ArxivTool, tavily_tool, save_to_json]
+        tools = [ArxivTool, tavily_tool, save_to_json, json_reader_tool, post_to_X]
         logger.info(f"Tools initialized: {[tool.name for tool in tools]}")
 
         logger.info("Building agent")
@@ -72,8 +72,8 @@ def run_agent():
         )
         logger.debug("AgentExecutor created with verbose=True")
 
-        logger.info("Invoking agent with input: 'Find a paper and tweet about it.'")
-        result = agent_executor.invoke({"input": "Search for related papers and blog posts and save an organized json file."})
+        logger.info("Invoking agent with input: 'Search for related papers and blog posts and save an organized json file, and finally post it to X.'")
+        result = agent_executor.invoke({"input": "Search for related papers and blog posts and save an organized json file, and finally post it to X."})
         logger.info("Agent execution completed")
         logger.debug(f"Agent result: {result}")
 
@@ -93,6 +93,7 @@ def run_agent():
 
 if __name__ == "__main__":
     run_agent()
+    # print(json_reader_tool())
     # schedule.every(24).hours.do(run_agent)
     
     # while True:

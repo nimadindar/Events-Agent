@@ -24,11 +24,9 @@ def json_reader_tool() -> str:
     tweeted_file_path = "./saved/tweets.json"
 
     try:
-        # Ensure results file exists
         if not os.path.exists(json_file_path):
             return json.dumps({"error": f"JSON file '{json_file_path}' not found"})
 
-        # Load results
         with open(json_file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
@@ -39,7 +37,6 @@ def json_reader_tool() -> str:
         if not all_results:
             return json.dumps({"error": "No results found in 'results.json'"})
 
-        # Load tweeted URLs
         tweeted_urls = set()
         tweeted_list = []
 
@@ -52,15 +49,12 @@ def json_reader_tool() -> str:
                     tweeted_list = tweeted_data  # fallback
                 tweeted_urls = set(item["url"] for item in tweeted_list if isinstance(item, dict) and "url" in item)
 
-        # Filter out already tweeted items
         untweeted_items = [item for item in all_results if item.get("url") and item["url"] not in tweeted_urls]
         if not untweeted_items:
             return json.dumps({"error": "No untweeted items available"})
 
-        # Select item with highest similarity_score
         selected_item = max(untweeted_items, key=lambda x: x.get("similarity_score", 0))
 
-        # Update tweeted list
         tweeted_list.append({"url": selected_item["url"]})
         tweeted_data = {"tweeted": tweeted_list}
 
@@ -85,14 +79,12 @@ def save_to_json(content: Union[str, dict]) -> str:
         str: A message indicating success or failure.
     """
     try:
-        # Load content if it's a JSON string
         if isinstance(content, str):
             try:
                 content = json.loads(content)
             except json.JSONDecodeError:
                 return "Error: Invalid JSON string provided."
 
-        # Validate format
         if not isinstance(content, dict) or "results" not in content or not isinstance(content["results"], list):
             return "Error: Content must be a dictionary with a 'results' key containing a list."
 
@@ -100,7 +92,6 @@ def save_to_json(content: Union[str, dict]) -> str:
         output_dir.mkdir(exist_ok=True)
         output_file = output_dir / "results.json"
 
-        # Initialize or load existing data
         merged_data = {"results": []}
         if output_file.exists():
             try:
@@ -113,10 +104,8 @@ def save_to_json(content: Union[str, dict]) -> str:
             except Exception as e:
                 return f"Error reading existing file: {str(e)}"
 
-        # Append new results
         merged_data["results"].extend(content["results"])
 
-        # Save merged results
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(merged_data, f, indent=2)
 
@@ -262,7 +251,6 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
                 "authors": authors if authors else ["Unknown"],
                 "publish_date": formatted_date,
                 "summary": summary,
-                # "url": f"https://arxiv.org/abs/{metadata.get('entry_id', '').split('/')[-1]}",
                 "url" : metadata.get('entry_id', '')
             }
             results.append(entry)
