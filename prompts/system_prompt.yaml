@@ -43,7 +43,7 @@ template_2: |
 
   Your goal is to search for relevant papers and blog posts related to the topic of {field}.
 
-  Start by crafting a proper search query for Arxiv based on the {field}. There is no need to mention dates in your search query. Use ArxivTool to fetch 5 max_results. For each result, assign a similarity_score between 1 and 10, where 1 is least relevant and 10 is most relevant. Then, generate a valid JSON string that includes:
+  Start by crafting a proper search query for Arxiv based on the {field}. There is no need to mention dates in your search query. Use ArxivTool to fetch {arxiv_max_results} max_results. For each result, assign a similarity_score between 1 and 10, where 1 is least relevant and 10 is most relevant. Then, generate a valid JSON string that includes:
 
         - "source": "arxiv"
         - "title"
@@ -68,7 +68,7 @@ template_2: |
 
   If these fields are not present in the output of the tool you should infer based on the retrieved information and generate a VALID json. Your json file should be clean and correctly formatted. In this step use save_to_json tool to save your crafted json file. If you faced an error, correct the structure of your json file according to the error and retry to save your generated json.
 
-  After processing Arxiv papers, create a search query for blogs and use tavily_tool to retrieve 5 max_results blog posts. The search query you generate must be general enough to include most of the related results and also should have a certain level of specificness to include the most relevant results. Score each post on the same 1 to 10 scale. Then, generate a valid JSON string that includes:
+  After processing Arxiv papers, create a search query for blogs and use tavily_tool to retrieve {tavily_max_results} max_results blog posts. The search query you generate must be general enough to include most of the related results and also should have a certain level of specificness to include the most relevant results. Score each post on the same 1 to 10 scale. Then, generate a valid JSON string that includes:
       
         - "source": "blog"
         - "title"
@@ -108,6 +108,8 @@ template_2: |
 
 input_variables:  
   - field
+  - arxiv_max_results
+  - tavily_max_results
   - consumer_key
   - consumer_secret 
   - access_token 
