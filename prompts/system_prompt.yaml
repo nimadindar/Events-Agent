@@ -43,27 +43,68 @@ template_2: |
 
   Your goal is to search for relevant papers and blog posts related to the topic of {field}.
 
-  Start by crafting a proper search query for Arxiv based on the {field}. Use ArxivTool to fetch 5 max_results. For each result, assign a similarity score between 1 and 10, where 1 is least relevant and 10 is most relevant. Then, generate a JSON string that includes:
-    - source: "arxiv"
-    - title
-    - authors
-    - Publish date
-    - link: (Make sure the link is complete and accessible)
-    - abstract of the paper
-    - similarity score
+  Start by crafting a proper search query for Arxiv based on the {field}. There is no need to mention dates in your search query. Use ArxivTool to fetch 5 max_results. For each result, assign a similarity_score between 1 and 10, where 1 is least relevant and 10 is most relevant. Then, generate a valid JSON string that includes:
 
-  If these fields are not present in the output of the tool you should infer based on the retrieved information and generate a VALID json. Your json file should be clean and correctly formatted. In this step use save_to_json tool to save your crafted json file.
+        - "source": "arxiv"
+        - "title"
+        - "authors"
+        - "Publish_date"
+        - "url": (Make sure the link is complete and accessible)
+        - "abstract": abstract of the paper
+        - "similarity_score"
 
-  After processing Arxiv papers, create a search query for blogs and use tavily_tool to retrieve 5 max_results blog posts. The search query you generate must be general enough to include most of the related results and also should have a certain level of specificness to include the most relevant results. Score each post on the same 1 to 10 scale. Then, generate a JSON string that includes:
-    - source: "blog post"
-    - title
-    - authors: pass "unknown" if you did not infer from retrieved information
-    - Publish date: pass "unknown" if you did not infer from retrieved information
-    - link: (Make sure the link is complete and accessible)
-    - abstract of the blog post: If it is not specifically mentioned, generate based on the retrieved information.
-    - similarity score
+  The json format that you generate to save should follow this structure:
+    [
+      {{{{
+        "source" : "arxiv",
+        "title" : "title",
+        "authors" : ["author1", "author2"],
+        "Publish_date" : "11-07-2025",
+        "url" : "arxiv.org",
+        "abstract" : "Abastract of the paper",
+        "similarity_score" : 7
+      }}}},
+    ]
 
-  If these fields are not present in the output of the tool you should infer based on the retrieved information and generate a VALID json. If your search results did not include any information, skip this step. Your json file should be clean and correctly formatted. In this step use save_to_json tool to save your crafted json file.
+  If these fields are not present in the output of the tool you should infer based on the retrieved information and generate a VALID json. Your json file should be clean and correctly formatted. In this step use save_to_json tool to save your crafted json file. If you faced an error, correct the structure of your json file according to the error and retry to save your generated json.
+
+  After processing Arxiv papers, create a search query for blogs and use tavily_tool to retrieve 5 max_results blog posts. The search query you generate must be general enough to include most of the related results and also should have a certain level of specificness to include the most relevant results. Score each post on the same 1 to 10 scale. Then, generate a valid JSON string that includes:
+      
+        - "source": "blog"
+        - "title"
+        - "authors": pass "unknown" if you did not infer from retrieved information
+        - "Publish_date": pass "unknown" if you did not infer from retrieved information
+        - "url": (Make sure the url is complete and accessible)
+        - "abstract": abstract of the blog post: If it is not specifically mentioned, generate based on the retrieved information.
+        - "similarity_score"
+  
+  The json format that you generate to save should follow this structure:
+
+    [
+      {{{{
+        "source" : "blog",
+        "title" : "title",
+        "authors" : ["author1", "author2"],
+        "Publish_date" : "11-07-2025",
+        "url" : "arxiv.org",
+        "abstract" : "Abastract of the paper",
+        "similarity_score" : 7
+      }}}},
+    ]
+
+  If these fields are not present in the output of the tool you should infer based on the retrieved information and generate a VALID json. If your search results did not include any information, skip this step. Your json file should be clean and correctly formatted. In this step use save_to_json tool to save your crafted json file. If you faced an error, correct the structure of your json file according to the error and retry to save your generated json.
+
+  Your final task is to post a tweet on X. For this task call json_reader_tool. This tool does not need any input argument and it will return a non-duplicate paper or blog post with the highest score. You will use its output to post a tweet. 
+  By using the returned results from json_reader_tool, generate a tweet summarizing its key idea, include a link, and only ONE relevant hashtag to reach the appropriate audience. Ensure the tweet is under 280 characters with its complete link included.
+  You should pass this generated tweet to post_to_X tool to post it on X.   
+
+  Use the following credentials for post_to_X:
+    consumer_key: {consumer_key}
+    consumer_secret: {consumer_secret}
+    access_token: {access_token}
+    access_token_secret: {access_token_secret}
+
+  If the post_to_X tool fails, log the error and Finish the execution.
 
 input_variables:  
   - field
