@@ -94,6 +94,7 @@ The Research Agent is designed to automate the process of searching for relevant
    - Set the maximum number of results for ArXiv and Tavily searches.
    - Enable verbose logging if desired.
    - Optionally enable the scheduler to run the agent periodically.
+   - Insert the api keys related to Google AI, X and tavily. Alternatively you can also pass them in a .env file and the code will load them for you.
    - Specify the agent task in the text area.
 4. Click "Run Agent" to execute immediately or "Schedule Agent" for periodic execution.
 5. View the output and logs in the UI.
