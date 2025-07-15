@@ -93,25 +93,35 @@ def save_to_json(content: Union[str, dict]) -> str:
         output_dir.mkdir(exist_ok=True)
         output_file = output_dir / "results.json"
 
-        merged_data = {"results": []}
+        existing_results = []
+        existing_urls = set()
+
         if output_file.exists():
             try:
                 with open(output_file, 'r', encoding='utf-8') as f:
                     existing_data = json.load(f)
                     if isinstance(existing_data, dict) and "results" in existing_data:
-                        merged_data["results"] = existing_data["results"]
+                        existing_results = existing_data["results"]
+                        existing_urls = {entry.get("url") for entry in existing_results}
             except json.JSONDecodeError:
                 return f"Error: Existing file {output_file} contains invalid JSON."
             except Exception as e:
                 return f"Error reading existing file: {str(e)}"
 
-        merged_data["results"].extend(content["results"])
+        new_unique_results = [
+            entry for entry in content["results"]
+            if entry.get("url") not in existing_urls
+        ]
 
+        if not new_unique_results:
+            return "No new unique results to save."
+        
+        merged_results = existing_results + new_unique_results
         with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump(merged_data, f, indent=2)
+            json.dump({"results": merged_results}, f, indent=2)
 
-        return f"Successfully merged content into {output_file}"
-
+        return f"Successfully added {len(new_unique_results)} new unique results to {output_file}"
+  
     except Exception as e:
         return f"Error saving JSON to file: {str(e)}"
 
