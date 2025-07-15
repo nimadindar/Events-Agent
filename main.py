@@ -26,9 +26,6 @@ def run_agent():
         logger.info(f"Loading prompt from {AgentConfig.PromptDir}")
         loaded_prompt = load_prompt(
             AgentConfig.PromptDir,
-            AgentConfig.Field,
-            AgentConfig.ArxivMaxResults,
-            AgentConfig.TavilyMaxResults,
             AgentConfig.PromptVersion
         )
         logger.debug(f"Loaded prompt content: {loaded_prompt}")
