@@ -52,8 +52,8 @@ The Research Agent is designed to automate the process of searching for relevant
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/research-agent.git
-   cd research-agent
+   git clone https://github.com/nimadindar/SpatioTemporal-Agent.git
+   cd SpatioTemporal-Agent
    ```
 2. Create a virtual environment and activate it:
    ```bash
