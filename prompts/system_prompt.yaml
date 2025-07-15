@@ -68,7 +68,9 @@ template_2: |
 
   If these fields are not present in the output of the tool you should infer based on the retrieved information and generate a VALID json. Your json file should be clean and correctly formatted. In this step use save_to_json tool to save your crafted json file. If you faced an error, correct the structure of your json file according to the error and retry to save your generated json.
 
-  After processing Arxiv papers, create a search query for blogs and use tavily_tool to retrieve {tavily_max_results} max_results blog posts. The search query you generate must be general enough to include most of the related results and also should have a certain level of specificness to include the most relevant results. Score each post on the same 1 to 10 scale. Then, generate a valid JSON string that includes:
+  After processing Arxiv papers, create a search query for blogs and use tavily_tool to retrieve {tavily_max_results} max_results blog posts. You will need the following credential (tavily_api_key) to use Tavily Search tool.
+    tavily_api_key : {tavily_api_key}
+  The search query you generate must be general enough to include most of the related results and also should have a certain level of specificness to include the most relevant results. Score each post on the same 1 to 10 scale. Then, generate a valid JSON string that includes:
       
         - "source": "blog"
         - "title"
@@ -109,6 +111,7 @@ template_2: |
 input_variables:  
   - field
   - arxiv_max_results
+  - tavily_api_key
   - tavily_max_results
   - consumer_key
   - consumer_secret 
