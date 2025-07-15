@@ -2,8 +2,6 @@ import os
 import time
 import schedule
 import traceback
-from dotenv import load_dotenv
-load_dotenv()
 
 from config import AgentConfig
 from agents.build_agent import BuildAgent
@@ -47,7 +45,7 @@ def run_agent():
         llm = ChatGoogleGenerativeAI(
             model=AgentConfig.ModelName,
             temperature=AgentConfig.Temperature,
-            google_api_key=os.getenv("GOOGLE_API_KEY")
+            google_api_key=AgentConfig.GOOGLE_API_KEY
         )
         logger.debug(f"LLM initialized with model={AgentConfig.ModelName}, temperature={AgentConfig.Temperature}")
 
