@@ -1,3 +1,4 @@
+import os
 import logging
 import threading
 import streamlit as st
@@ -70,8 +71,7 @@ def main():
 
     st.markdown('<p class="label">Model Name</p>', unsafe_allow_html=True)
     model_name = st.selectbox("", [
-        "gemini-2.5-pro", "gemini-2.5-flash", "gemini-2.0-pro",
-        "gemini-2.0-flash", "gemini-1.5-pro", "gemini-1.0-pro"
+        "gemini-2.5-pro", "gemini-2.5-flash","gemini-2.0-flash"
     ], index=0)
 
     col1, col2 = st.columns(2)
@@ -93,6 +93,21 @@ def main():
     if scheduler_enabled:
         st.markdown('<p class="label">Run Agent Every (hours)</p>', unsafe_allow_html=True)
         scheduler_hours = st.number_input("Run Interval (hours)", min_value=1, max_value=24, step=1, key="scheduler_hours")
+
+    st.markdown('<p class="label">API Keys (Required)</p>', unsafe_allow_html=True)
+    with st.expander("🔐 Set API Keys", expanded=True):
+        required_keys = [
+            "GOOGLE_API_KEY", "X_API_KEY", "X_API_KEY_SECRET",
+            "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET","TAVILY_API_KEY"
+        ]
+        for key in required_keys:
+            env_value = os.getenv(key)
+            if key not in st.session_state:
+                st.session_state[key] = env_value or ""
+                # st.session_state[key] = ""
+            st.session_state[key] = st.text_input(
+                key.replace("_", " ").title(), value=st.session_state[key], type="password"
+            )
 
     if not scheduler_enabled or (scheduler_enabled and scheduler_hours):
         with st.form(key='agent_form'):
@@ -116,16 +131,29 @@ def main():
         st.session_state.log_handler.clear_logs()
         log_placeholder.empty()
 
+        missing_keys = [key for key in required_keys if not st.session_state.get(key)]
+        if missing_keys:
+            st.markdown(
+                f'<p class="error-message">Missing required API keys: {", ".join(missing_keys)}. Please fill in all keys to continue.</p>',
+                unsafe_allow_html=True
+            )
+
         try:
             AgentConfig = {
-                "field": field,
-                "arxiv_max_results": int(arxiv_max_results),
-                "tavily_max_results": int(tavily_max_results),
-                "model_name": model_name,
-                "temperature": temperature,
-                "verbose": verbose,
-                "invoke_input": invoke_input
-            }
+                    "field": field,
+                    "arxiv_max_results": int(arxiv_max_results),
+                    "tavily_max_results": int(tavily_max_results),
+                    "model_name": model_name,
+                    "temperature": temperature,
+                    "verbose": verbose,
+                    "invoke_input": invoke_input,
+                    "GOOGLE_API_KEY": st.session_state.GOOGLE_API_KEY,
+                    "X_API_KEY": st.session_state.X_API_KEY,
+                    "X_API_KEY_SECRET": st.session_state.X_API_KEY_SECRET,
+                    "X_ACCESS_TOKEN": st.session_state.X_ACCESS_TOKEN,
+                    "X_ACCESS_TOKEN_SECRET": st.session_state.X_ACCESS_TOKEN_SECRET,
+                    "TAVILY_API_KEY": st.session_state.TAVILY_API_KEY
+                }
 
             if scheduler_enabled:
                 schedule_agent(scheduler_hours, AgentConfig)
@@ -133,6 +161,7 @@ def main():
             else:
                 with st.spinner("Running agent..."):
                     update_agent_config(**AgentConfig)
+                    print(AgentConfig["TAVILY_API_KEY"])
                     result = run_agent()
 
                 output = result.get('output', 'No output returned')
