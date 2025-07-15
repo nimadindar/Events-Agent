@@ -92,25 +92,24 @@ def load_yaml(input_path:str) -> str:
     return prompt_config
 
 
-def load_prompt(input_path: str, field_input: str, arxiv_max_results: int, tavily_max_results, template_id: int) -> PromptTemplate:
+def load_prompt(input_path: str, template_id: int) -> PromptTemplate:
     
     prompt_config = load_yaml(input_path)
 
     system_prompt_template = prompt_config[f"template_{template_id}"]
 
     env_vars = {
+            "field": AgentConfig.Field,
+            "arxiv_max_results": AgentConfig.ArxivMaxResults,
+            "tavily_api_key": AgentConfig.TAVILY_API_KEY,
+            "tavily_max_results": AgentConfig.TavilyMaxResults,
             "consumer_key": AgentConfig.X_API_KEY,
             "consumer_secret": AgentConfig.X_API_KEY_SECRET,
             "access_token": AgentConfig.X_ACCESS_TOKEN,
             "access_token_secret": AgentConfig.X_ACCESS_TOKEN_SECRET,
         }
     
-    formatted_system_prompt = system_prompt_template.format(
-        field=field_input,
-        arxiv_max_results = arxiv_max_results,
-        tavily_max_results = tavily_max_results,
-        **env_vars
-    )
+    formatted_system_prompt = system_prompt_template.format(**env_vars)
 
     return formatted_system_prompt
 
@@ -138,14 +137,29 @@ def setup_logging():
 
     return logger  
 
-def update_agent_config(**kwargs):
+def update_agent_config(field, arxiv_max_results, tavily_max_results, 
+                        model_name, temperature, verbose, invoke_input,
+                        GOOGLE_API_KEY, X_API_KEY, X_API_KEY_SECRET,
+                        X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET, TAVILY_API_KEY):
     """
     Update the global AgentConfig attributes dynamically.
     """
     from config import AgentConfig as GlobalAgentConfig
-
-    for key, value in kwargs.items():
-        if hasattr(GlobalAgentConfig):
-            setattr(GlobalAgentConfig, key, value)
     
+    GlobalAgentConfig.Field = field
+    GlobalAgentConfig.ArxivMaxResults = arxiv_max_results
+    GlobalAgentConfig.TavilyMaxResults = tavily_max_results
+    GlobalAgentConfig.ModelName = model_name
+    GlobalAgentConfig.Temperature = temperature
+    GlobalAgentConfig.Verbose = verbose
+    GlobalAgentConfig.InvokeInput = invoke_input
+    GlobalAgentConfig.GOOGLE_API_KEY = GOOGLE_API_KEY 
+    GlobalAgentConfig.X_API_KEY = X_API_KEY
+    GlobalAgentConfig.X_API_KEY_SECRET = X_API_KEY_SECRET
+    GlobalAgentConfig.X_ACCESS_TOKEN = X_ACCESS_TOKEN
+    GlobalAgentConfig.X_ACCESS_TOKEN_SECRET = X_ACCESS_TOKEN_SECRET
+    GlobalAgentConfig.TAVILY_API_KEY = TAVILY_API_KEY
+
     return GlobalAgentConfig
+
+
