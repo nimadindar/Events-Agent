@@ -10,28 +10,19 @@ from langchain.prompts import PromptTemplate
 from langchain.callbacks.base import BaseCallbackHandler
 
 class StreamlitLogHandler(logging.Handler):
-    """
-    Handles Streamlit related logs.
-    """
     def __init__(self):
         super().__init__()
-        self.logs = []
+        self.log_buffer = []
 
     def emit(self, record):
-        log_message = self.format(record)
-        if log_message.startswith("Invoking:"):
-            try:
-                tool_part = log_message.split(" with ")[0].replace("Invoking: ", "").strip("`")
-                params_part = log_message.split(" with ")[1].strip("`")
-                self.logs.append({"tool": tool_part, "parameters": params_part})
-            except IndexError:
-                pass  
+        log_entry = self.format(record)
+        self.log_buffer.append(log_entry)
 
     def get_logs(self):
-        return self.logs
+        return self.log_buffer  
 
     def clear_logs(self):
-        self.logs = []
+        self.log_buffer = []
     
 class LoggingCallbackHandler(BaseCallbackHandler):
     def __init__(self, logger):
