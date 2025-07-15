@@ -272,17 +272,20 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
 
 
 @tool
-def tavily_tool(query, max_results: int = 5) -> str:
+def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
     """
     Creates and returns a configured instance of TavilySearch tool.
 
     Args:
         query (str) : Search string to search in web.
+        tavily_api_key (str) : API key to use tavily tool.
         max_results (int): Maximum number of results to return. Default is 5.
 
     Returns:
         str : search results as string.
     """
+    os.environ["TAVILY_API_KEY"] = tavily_api_key 
+    
     includer_domains = [
         "https://journals.plos.org/ploscompbiol/issue",
         "https://www.spatialedge.co/",
@@ -292,7 +295,7 @@ def tavily_tool(query, max_results: int = 5) -> str:
     
     tavily_tool = TavilySearch(
         max_results=max_results,
-        api_key=AgentConfig.TAVILY_API_KEY,
+        api_key=tavily_api_key,
         include_domains=includer_domains,
     )
     return tavily_tool.invoke(query)
