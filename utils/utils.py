@@ -4,8 +4,7 @@ import logging
 import traceback
 from logging.handlers import RotatingFileHandler
 
-from dotenv import load_dotenv
-load_dotenv()
+from config import AgentConfig
 
 from langchain.prompts import PromptTemplate
 from langchain.callbacks.base import BaseCallbackHandler
@@ -26,7 +25,7 @@ class StreamlitLogHandler(logging.Handler):
                 params_part = log_message.split(" with ")[1].strip("`")
                 self.logs.append({"tool": tool_part, "parameters": params_part})
             except IndexError:
-                pass  # Skip malformed log entries
+                pass  
 
     def get_logs(self):
         return self.logs
@@ -100,10 +99,10 @@ def load_prompt(input_path: str, field_input: str, arxiv_max_results: int, tavil
     system_prompt_template = prompt_config[f"template_{template_id}"]
 
     env_vars = {
-            "consumer_key": os.getenv("X_API_KEY"),
-            "consumer_secret": os.getenv("X_API_KEY_SECRET"),
-            "access_token": os.getenv("X_ACCESS_TOKEN"),
-            "access_token_secret": os.getenv("X_ACCESS_TOKEN_SECRET"),
+            "consumer_key": AgentConfig.X_API_KEY,
+            "consumer_secret": AgentConfig.X_API_KEY_SECRET,
+            "access_token": AgentConfig.X_ACCESS_TOKEN,
+            "access_token_secret": AgentConfig.X_ACCESS_TOKEN_SECRET,
         }
     
     formatted_system_prompt = system_prompt_template.format(
@@ -139,17 +138,14 @@ def setup_logging():
 
     return logger  
 
-def update_agent_config(field, arxiv_max_results, tavily_max_results, model_name, temperature, verbose, invoke_input):
+def update_agent_config(**kwargs):
     """
     Update the global AgentConfig attributes dynamically.
     """
     from config import AgentConfig as GlobalAgentConfig
+
+    for key, value in kwargs.items():
+        if hasattr(GlobalAgentConfig):
+            setattr(GlobalAgentConfig, key, value)
     
-    GlobalAgentConfig.Field = field
-    GlobalAgentConfig.ArxivMaxResults = arxiv_max_results
-    GlobalAgentConfig.TavilyMaxResults = tavily_max_results
-    GlobalAgentConfig.ModelName = model_name
-    GlobalAgentConfig.Temperature = temperature
-    GlobalAgentConfig.Verbose = verbose
-    GlobalAgentConfig.InvokeInput = invoke_input
     return GlobalAgentConfig
