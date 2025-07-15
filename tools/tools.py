@@ -10,6 +10,7 @@ from tavily import TavilyClient
 from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import ArxivLoader
 
+from config import AgentConfig
 
 @tool
 def json_reader_tool() -> str:
@@ -291,7 +292,7 @@ def tavily_tool(query, max_results: int = 5) -> str:
     
     tavily_tool = TavilySearch(
         max_results=max_results,
-        api_key=os.getenv("TAVILY_API_KEY"),
+        api_key=AgentConfig.TAVILY_API_KEY,
         include_domains=includer_domains,
     )
     return tavily_tool.invoke(query)
