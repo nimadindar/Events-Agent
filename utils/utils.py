@@ -55,7 +55,8 @@ class LoggingCallbackHandler(BaseCallbackHandler):
 
     def on_agent_finish(self, finish, **kwargs):
         """Log when agent finishes."""
-        self.logger.info(f"Agent finished with output: {finish.return_values}")
+        clean_output = str(finish.return_values).encode('ascii', 'replace').decode()
+        self.logger.info(f"Agent finished with output: {clean_output}")
 
 class StreamToLogger:
     def __init__(self, logger, level=logging.INFO):
@@ -92,8 +93,10 @@ def load_prompt(input_path: str, template_id: int) -> PromptTemplate:
     env_vars = {
             "field": AgentConfig.Field,
             "arxiv_max_results": AgentConfig.ArxivMaxResults,
+            "arxiv_min_usefulness": AgentConfig.ArxivMinUsefulness,
             "tavily_api_key": AgentConfig.TAVILY_API_KEY,
             "tavily_max_results": AgentConfig.TavilyMaxResults,
+            "blog_min_usefulness": AgentConfig.BlogMinUsefulness,
             "consumer_key": AgentConfig.X_API_KEY,
             "consumer_secret": AgentConfig.X_API_KEY_SECRET,
             "access_token": AgentConfig.X_ACCESS_TOKEN,
@@ -116,6 +119,7 @@ def setup_logging():
     console_handler = logging.StreamHandler()
     console_handler.setLevel(logging.INFO)
     console_handler.setFormatter(formatter)
+    console_handler.stream.reconfigure(encoding='utf-8')
 
     file_handler = RotatingFileHandler(
         './saved/agent_logs.log', maxBytes=5*1024*1024, backupCount=3
@@ -128,7 +132,8 @@ def setup_logging():
 
     return logger  
 
-def update_agent_config(field, arxiv_max_results, tavily_max_results, 
+def update_agent_config(field, arxiv_max_results, arxiv_min_usefulness,
+                        tavily_max_results, blog_min_usefulness,
                         model_name, temperature, verbose, invoke_input,
                         GOOGLE_API_KEY, X_API_KEY, X_API_KEY_SECRET,
                         X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET, TAVILY_API_KEY):
@@ -139,7 +144,9 @@ def update_agent_config(field, arxiv_max_results, tavily_max_results,
     
     GlobalAgentConfig.Field = field
     GlobalAgentConfig.ArxivMaxResults = arxiv_max_results
+    GlobalAgentConfig.ArxivMinUsefulness = arxiv_min_usefulness
     GlobalAgentConfig.TavilyMaxResults = tavily_max_results
+    GlobalAgentConfig.BlogMinUsefulness = blog_min_usefulness
     GlobalAgentConfig.ModelName = model_name
     GlobalAgentConfig.Temperature = temperature
     GlobalAgentConfig.Verbose = verbose
