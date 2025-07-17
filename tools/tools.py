@@ -296,17 +296,16 @@ def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
     """
     os.environ["TAVILY_API_KEY"] = tavily_api_key 
     
-    includer_domains = [
-        "https://journals.plos.org/ploscompbiol/issue",
-        "https://www.spatialedge.co/",
-        "https://events2025.github.io/docs/conferences.html",
-        "https://spacetimecausality.github.io/",
-        ""
-    ]
+    include_domains = [
+    "journals.plos.org",
+    "spatialedge.co",
+    "events2025.github.io",
+    "spacetimecausality.github.io"
+]
     
     tavily_tool = TavilySearch(
         max_results=max_results,
         api_key=tavily_api_key,
-        include_domains=includer_domains,
+        include_domains=include_domains,
     )
     return tavily_tool.invoke(query)
