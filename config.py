@@ -8,9 +8,12 @@ class AgentConfig:
     Field = "Spatio Temporal Point Process"         # the field that agent conducts research
 
     ArxivMaxResults = 5                             # maximum number of retreived papers from arxiv tool !!! HINT: Lager number might overload LLM's contex window !!! 
+    ArxivMinUsefulness = 70                         # minimum score required to save an Arxiv paper
+
     TavilyMaxResults = 5                            # maximum number of retrieved search results from tavily search tool !!! HINT: Lager number might overload LLM's contex window !!! 
+    BlogMinUsefulness = 70                          # minimum usefulness score for saving the blog posts
     
-    PromptVersion = 2                               # system prompt version
+    PromptVersion = 3                               # system prompt version
     
     ModelName = "gemini-2.0-flash"                  # only ChatGoogleGenerativeAI models are supported
     Temperature = 0.0                               # the level of creativity in LLM responses. Higher temp causes creative but unexpected behaviour
