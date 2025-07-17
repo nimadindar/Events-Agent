@@ -177,13 +177,27 @@ def main():
 
                 if verbose:
                     logs = st.session_state.log_handler.get_logs()
-                    if logs:
-                        st.markdown('<p class="label">Verbose Logs</p>', unsafe_allow_html=True)
-                        st.markdown(f'<div class="log-output">{logs}</div>', unsafe_allow_html=True)
-                    else:
-                        st.markdown('<p>No verbose logs captured.</p>', unsafe_allow_html=True)
+                    log_str = "\n".join(logs) if isinstance(logs, list) else str(logs)
 
-                st.markdown('<p class="success-message">Agent execution completed successfully!</p>', unsafe_allow_html=True)
+                    if "posted a summary of the most useful entry" in log_str.lower():
+                        import re
+
+                        match = re.search(r'"title"\s*:\s*"(.+?)".+?"url"\s*:\s*"(.+?)"', logs, re.DOTALL)
+                        if match:
+                            paper_title, paper_url = match.groups()
+                            st.markdown(f"""
+                                <p class="success-message">
+                                    ✅ Successfully posted the most useful paper to X:<br>
+                                    📎 <a href="{paper_url}" target="_blank">{paper_title}</a>
+                                </p>
+                            """, unsafe_allow_html=True)
+                        else:
+                            st.markdown(f'<p class="success-message">✅ Successfully posted the research paper to X.</p>', unsafe_allow_html=True)
+                    else:
+                        st.markdown('<p class="success-message">✅ Agent finished execution. No posting action was logged.</p>', unsafe_allow_html=True)
+
+                    with st.expander("Show detailed logs"):
+                        st.text(log_str if log_str else "No logs available.")
 
         except Exception as e:
             st.markdown(f'<p class="error-message">Error running agent: {str(e)}</p>', unsafe_allow_html=True)
