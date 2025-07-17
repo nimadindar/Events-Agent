@@ -47,14 +47,14 @@ def json_reader_tool() -> str:
                 if isinstance(tweeted_data, dict):
                     tweeted_list = tweeted_data.get("tweeted", [])
                 elif isinstance(tweeted_data, list):
-                    tweeted_list = tweeted_data  # fallback
+                    tweeted_list = tweeted_data  
                 tweeted_urls = set(item["url"] for item in tweeted_list if isinstance(item, dict) and "url" in item)
 
         untweeted_items = [item for item in all_results if item.get("url") and item["url"] not in tweeted_urls]
         if not untweeted_items:
             return json.dumps({"error": "No untweeted items available"})
 
-        selected_item = max(untweeted_items, key=lambda x: x.get("similarity_score", 0))
+        selected_item = max(untweeted_items, key=lambda x: x.get("usefulness_score", 0))    # criteria to select the tweet
 
         tweeted_list.append({"url": selected_item["url"]})
         tweeted_data = {"tweeted": tweeted_list}
@@ -301,6 +301,7 @@ def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
         "https://www.spatialedge.co/",
         "https://events2025.github.io/docs/conferences.html",
         "https://spacetimecausality.github.io/",
+        ""
     ]
     
     tavily_tool = TavilySearch(
