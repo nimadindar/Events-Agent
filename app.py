@@ -78,12 +78,19 @@ def main():
     with col1:
         st.markdown('<p class="label">Arxiv Max Results</p>', unsafe_allow_html=True)
         arxiv_max_results = st.number_input("", min_value=1, max_value=10, value=5, step=1, key="arxiv_max_results")
+
+        st.markdown('<p class="label">Arxiv Min Usefulness Score</p>', unsafe_allow_html=True)
+        arxiv_min_usefulness = st.number_input("", min_value=0, max_value=100, value=50, step=5, key="arxiv_min_usefulness")
+
     with col2:
         st.markdown('<p class="label">Tavily Max Results</p>', unsafe_allow_html=True)
         tavily_max_results = st.number_input("", min_value=1, max_value=10, value=5, step=1, key="tavily_max_results")
 
+        st.markdown('<p class="label">Blog Min Usefulness Score</p>', unsafe_allow_html=True)
+        blog_min_usefulness = st.number_input("", min_value=0, max_value=100, value=50, step=5, key="blog_min_usefulness")
+
     st.markdown('<p class="label">Temperature</p>', unsafe_allow_html=True)
-    temperature = st.slider("", min_value=0.0, max_value=1.0, value=0.0, step=0.1)
+    temperature = st.slider("", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
 
     st.markdown('<p class="label">Verbose Logging</p>', unsafe_allow_html=True)
     verbose = st.checkbox("Enable verbose logging", value=True)
@@ -142,7 +149,9 @@ def main():
             AgentConfig = {
                     "field": field,
                     "arxiv_max_results": int(arxiv_max_results),
+                    "arxiv_min_usefulness" : int(arxiv_min_usefulness),
                     "tavily_max_results": int(tavily_max_results),
+                    "blog_min_usefulness": int(blog_min_usefulness),
                     "model_name": model_name,
                     "temperature": temperature,
                     "verbose": verbose,
@@ -161,7 +170,6 @@ def main():
             else:
                 with st.spinner("Running agent..."):
                     update_agent_config(**AgentConfig)
-                    print(AgentConfig["TAVILY_API_KEY"])
                     result = run_agent()
 
                 output = result.get('output', 'No output returned')
