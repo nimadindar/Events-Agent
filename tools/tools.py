@@ -3,10 +3,10 @@ import json
 import tweepy
 from pathlib import Path
 from datetime import datetime
-from typing import Union, List
+from typing import Union, List, Dict
 
 from langchain.tools import tool
-from tavily import TavilyClient
+from serpapi import GoogleSearch
 from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import ArxivLoader
 
@@ -309,3 +309,75 @@ def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
         include_domains=include_domains,
     )
     return tavily_tool.invoke(query)
+
+
+@tool
+def get_scholar_papers(author_ids: List[str], api_key: str, max_scholar_results: int) -> Union[List[Dict], Dict]:
+    """
+    Fetches recent papers for a list of Google Scholar author IDs using SerpAPI.
+    Returns a combined list of dicts with title, link, authors, publish_date, url, and abstract.
+    If an error occurs for a specific author, includes it in the results.
+
+    Args:
+        author_ids (List[str]): List of Google Scholar author IDs
+        api_key (str): SerpAPI key
+        max_scholar_results (int): Max results per author
+
+    Returns:
+        Union[List[Dict], Dict]: List of papers or error message
+    """
+    ABSTRACT_ENABLED = True
+
+    if not api_key:
+        return {"error": "Missing SERP_API key."}
+
+    all_papers = []
+
+    for author_id in author_ids:
+        params = {
+            "engine": "google_scholar_author",
+            "author_id": author_id,
+            "api_key": api_key,
+            "num": max_scholar_results,
+            "sort": "pubdate"
+        }
+
+        try:
+            search = GoogleSearch(params)
+            results = search.get_dict()
+
+            for article in results.get("articles", []):
+
+                citation_id = article.get("citation_id")
+
+                params_citation = {
+                    "engine": "google_scholar_author",
+                    "view_op": "view_citation",
+                    "citation_id": citation_id,
+                    "api_key": api_key }     
+
+                search_paper = GoogleSearch(params_citation)
+                citation_data = search_paper.get_dict()
+                abstract = citation_data.get("citation")["description"]
+                publish_date = citation_data.get("citation")["publication_date"]
+                url = citation_data.get("citation")["link"]
+
+
+                paper = {
+                    "source": "Gscholar",
+                    "title": article.get("title"),
+                    "authors": article.get("authors"),
+                    "Publish_date": publish_date,
+                    "url": url,                    
+                    "abstract": abstract,
+                }
+                all_papers.append(paper)
+
+        except Exception as e:
+            all_papers.append({
+                "source": "Gscholar",
+                "author_id": author_id,
+                "error": f"Failed to fetch data: {str(e)}"
+            })
+
+    return all_papers
