@@ -312,7 +312,7 @@ def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
 
 
 @tool
-def get_scholar_papers(author_ids: List[str], api_key: str, max_scholar_results: int) -> Union[List[Dict], Dict]:
+def get_scholar_papers(author_ids: List[str], scholar_max_results: int, api_key: str) -> Union[List[Dict], Dict]:
     """
     Fetches recent papers for a list of Google Scholar author IDs using SerpAPI.
     Returns a combined list of dicts with title, link, authors, publish_date, url, and abstract.
@@ -338,7 +338,7 @@ def get_scholar_papers(author_ids: List[str], api_key: str, max_scholar_results:
             "engine": "google_scholar_author",
             "author_id": author_id,
             "api_key": api_key,
-            "num": max_scholar_results,
+            "num": scholar_max_results,
             "sort": "pubdate"
         }
 
