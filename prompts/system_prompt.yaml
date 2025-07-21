@@ -276,7 +276,7 @@ template_4: |
         "Publish_date" : "dd-MM-YYYY",
         "url" : "url",
         "abstract" : "Abastract of the paper",
-        "usefulness_score" : For each result, assign a usefullness score between 0 and 100. For each retrieved result you should judge how useful and innovative the paper is. For this evaluation, consider the methods, achievements of the paper and novelty of its proposed solution. Furthermore, in your evaluation consider how much the retrieved results are related to the given field. Score 0 indicates the least usefulness and score 100 indicates the most useful paper in the given field. You should only include Arxiv results that have usefulness_score of above {arxiv_min_usefulness} in your final crafted json string. If there are no papers with usefulness_score higher than {arxiv_min_usefulness}, log this and move to the next step. 
+        "usefulness_score" : For each result, assign a usefullness score between 0 and 100. For each retrieved result you should judge how useful and innovative the paper is. For this evaluation, consider the methods, achievements of the paper and novelty of its proposed solution. Furthermore, in your evaluation consider how much the retrieved results are related to the given field. Score 0 indicates the least usefulness and score 100 indicates the most useful paper in the given field. You should only include Arxiv results that have usefulness_score of above {min} in your final crafted json string. If there are no papers with usefulness_score higher than {scholar_min_usefulness}, log this and move to the next step. 
       }}}},
     ]
 
@@ -303,6 +303,7 @@ input_variables:
   - author_ids_list
   - scholar_max_results
   - serp_api_key
+  - scholar_min_usefulness
   - consumer_key
   - consumer_secret 
   - access_token 
