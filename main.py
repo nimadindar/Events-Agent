@@ -5,7 +5,7 @@ import traceback
 
 from config import AgentConfig
 from agents.build_agent import BuildAgent
-from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool, json_reader_tool
+from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool, json_reader_tool, get_scholar_papers
 from utils.utils import load_prompt, setup_logging, LoggingCallbackHandler
 
 from langchain.agents import AgentExecutor
@@ -37,7 +37,7 @@ def run_agent():
             google_api_key=AgentConfig.GOOGLE_API_KEY
         )
 
-        tools = [ArxivTool, tavily_tool, save_to_json, json_reader_tool, post_to_X]
+        tools = [ArxivTool, tavily_tool, get_scholar_papers, save_to_json, json_reader_tool, post_to_X]
 
         agent = BuildAgent(llm, tools, prompt).build_agent()
 
