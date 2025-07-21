@@ -18,9 +18,9 @@ class AgentConfig:
     ScholarMaxResults = 1                           # maximum number of retrieved google scholar results !!! HINT: Lager number might overload LLM's contex window !!!
     ScholarMinUsefulness = 50                       # minimum usefulness score for saving google scholar papers
     
-    PromptVersion = 3                               # system prompt version
+    PromptVersion = 4                               # system prompt version
     
-    ModelName = "gemini-2.0-flash"                  # only ChatGoogleGenerativeAI models are supported
+    ModelName = "gemini-2.5-pro"                  # only ChatGoogleGenerativeAI models are supported
     Temperature = 0.0                               # the level of creativity in LLM responses. Higher temp causes creative but unexpected behaviour
     
     Verbose = True                                  # LLM log the intermediate states or not
