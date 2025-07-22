@@ -282,8 +282,8 @@ template_4: |
 
   After creating the VALID json, use save_to_json tool to save your crafted json object. If an error occurs while saving, revise and correct the JSON and retry.
   
-  Finally, retrieve the entry with the highest usefulness score using json_reader_tool. Using the output of json_reader_tool, generate a tweet summarizing the key idea, include the full URL and exactly **one relevant hashtag**. Ensure the tweet is under 280 characters with its complete link included.
-  You should pass this generated tweet to post_to_X tool to post it on X.   
+  Finally, retrieve the entry with the highest usefulness score using json_reader_tool. Using the output of json_reader_tool, generate a tweet summarizing the key idea, include the full URL and exactly **one relevant hashtag**. The tweet text you generate must be UNDER 280 characters with the complete link included.
+  Before finishing the chain call post_to_X. pass the generated tweet text to post_to_X as well as the following credentials to post on X.   
 
   Use the following credentials for post_to_X:
     consumer_key: {consumer_key}
