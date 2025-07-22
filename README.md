@@ -71,9 +71,10 @@ The Research Agent is designed to automate the process of searching for relevant
 ### Running via Command Line
 1. Configure the agent by editing `config.py`:
    - Set `Field` to your desired research topic (e.g., "Spatio Temporal Point Process").
-   - Adjust `ArxivMaxResults` and `TavilyMaxResults` (recommended: 5 to avoid LLM ontext window issues).
-   - Specify `ModelName` (e.g., "gemini-2.0-flash") and `Temperature` (e.g., 0.0 for deterministic output).
-   - Set `PromptVersion` (1 or 2) to select the desired prompt template.
+   - Adjust `ArxivMaxResults`, `TavilyMaxResults` and `ScholarMaxResults` (recommended: 5 to avoid LLM ontext window issues).
+   - Set `ScholarPages` as a list of strings that include google scholar user ID. You can find user ID from the url of the profile.
+   - Adjust `ArxivMinUsefulness`, `BlogMinUsefulness` and `ScholarMinUsefulness` to save results above the baseline score.
+   - Set `PromptVersion` (latest version 4) to select the desired prompt template.
    - Enable/disable `Verbose` logging.
    - Define `InvokeInput` for the agent's task.
 2. Run the agent:
@@ -91,7 +92,9 @@ The Research Agent is designed to automate the process of searching for relevant
 3. Configure the agent via the web interface:
    - Enter the research field.
    - Select the model name and temperature.
-   - Set the maximum number of results for ArXiv and Tavily searches.
+   - Set the maximum number of results for ArXiv, Tavily and google scholar searches.
+   - Set the minimum required score for each of the given sources.
+   - Set the google scholar page IDs. 
    - Enable verbose logging if desired.
    - Optionally enable the scheduler to run the agent periodically.
    - Insert the api keys related to Google AI, X and tavily. Alternatively you can also pass them in a .env file and the code will load them for you.
@@ -104,8 +107,10 @@ The agent can be configured via:
 - **config.py**: Edit this file for command-line execution. Key parameters include:
   - `PromptDir`: Path to the system prompt YAML file.
   - `Field`: Research topic.
-  - `ArxivMaxResults` and `TavilyMaxResults`: Maximum results for searches.
-  - `PromptVersion`: Selects the prompt template (1 or 2).
+  - `ArxivMaxResults`, `TavilyMaxResults` and `ScholarMaxResults`: Maximum results for searches.
+  - `ArxivMinUsefulness`, `TavilyMinUsefulness` and `ScholarMinUsefulness`: Minimum required score to save the results.
+  - `ScholarPages`: List of author IDs.
+  - `PromptVersion`: Selects the prompt template (4 the latest version).
   - `ModelName`: Google Generative AI model.
   - `Temperature`: Controls response creativity.
   - `Verbose`: Enables detailed logging.
@@ -137,11 +142,13 @@ X_API_KEY_SECRET=your_x_consumer_secret
 X_ACCESS_TOKEN=your_x_access_token
 X_ACCESS_TOKEN_SECRET=your_x_access_token_secret
 TAVILY_API_KEY=your_tavily_api_key
+SERP_API_KEY = your_serp_api_key
 ```
 Obtain these keys from:
 - Google API: Google Cloud Console
 - X API: X Developer Portal (https://developer.x.com)
 - Tavily API: Tavily Dashboard (https://tavily.com)
+- Serp API: Serpapi website (https://serpapi.com/)
 
 ## Logging
 - Logs are saved to `./saved/agent_logs.log` with a maximum size of 5MB and up to 3 backup files.
