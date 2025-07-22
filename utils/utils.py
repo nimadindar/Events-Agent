@@ -138,9 +138,10 @@ def setup_logging():
 
 def update_agent_config(field, arxiv_max_results, arxiv_min_usefulness,
                         tavily_max_results, blog_min_usefulness,
+                        scholar_max_results, scholar_min_usefulness, scholar_user_ID,
                         model_name, temperature, verbose, invoke_input,
                         GOOGLE_API_KEY, X_API_KEY, X_API_KEY_SECRET,
-                        X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET, TAVILY_API_KEY):
+                        X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET, TAVILY_API_KEY, SERP_API_KEY):
     """
     Update the global AgentConfig attributes dynamically.
     """
@@ -151,6 +152,9 @@ def update_agent_config(field, arxiv_max_results, arxiv_min_usefulness,
     GlobalAgentConfig.ArxivMinUsefulness = arxiv_min_usefulness
     GlobalAgentConfig.TavilyMaxResults = tavily_max_results
     GlobalAgentConfig.BlogMinUsefulness = blog_min_usefulness
+    GlobalAgentConfig.ScholarPages = scholar_user_ID
+    GlobalAgentConfig.ScholarMaxResults = scholar_max_results
+    GlobalAgentConfig.ScholarMinUsefulness = scholar_min_usefulness
     GlobalAgentConfig.ModelName = model_name
     GlobalAgentConfig.Temperature = temperature
     GlobalAgentConfig.Verbose = verbose
@@ -161,6 +165,7 @@ def update_agent_config(field, arxiv_max_results, arxiv_min_usefulness,
     GlobalAgentConfig.X_ACCESS_TOKEN = X_ACCESS_TOKEN
     GlobalAgentConfig.X_ACCESS_TOKEN_SECRET = X_ACCESS_TOKEN_SECRET
     GlobalAgentConfig.TAVILY_API_KEY = TAVILY_API_KEY
+    GlobalAgentConfig.SERP_API_KEY = SERP_API_KEY
 
     return GlobalAgentConfig
 
