@@ -79,16 +79,54 @@ def main():
         st.markdown('<p class="label">Arxiv Max Results</p>', unsafe_allow_html=True)
         arxiv_max_results = st.number_input("", min_value=1, max_value=10, value=5, step=1, key="arxiv_max_results")
 
-        st.markdown('<p class="label">Arxiv Min Usefulness Score</p>', unsafe_allow_html=True)
-        arxiv_min_usefulness = st.number_input("", min_value=0, max_value=100, value=50, step=5, key="arxiv_min_usefulness")
-
-    with col2:
         st.markdown('<p class="label">Tavily Max Results</p>', unsafe_allow_html=True)
         tavily_max_results = st.number_input("", min_value=1, max_value=10, value=5, step=1, key="tavily_max_results")
+
+        st.markdown('<p class="label">G-Scholar Max Results</p>', unsafe_allow_html=True)
+        scholar_max_results = st.number_input("", min_value=1, max_value=10, value=5, step=1, key="scholar_max_results")
+       
+
+    with col2:
+
+        st.markdown('<p class="label">Arxiv Min Usefulness Score</p>', unsafe_allow_html=True)
+        arxiv_min_usefulness = st.number_input("", min_value=0, max_value=100, value=50, step=5, key="arxiv_min_usefulness")
 
         st.markdown('<p class="label">Blog Min Usefulness Score</p>', unsafe_allow_html=True)
         blog_min_usefulness = st.number_input("", min_value=0, max_value=100, value=50, step=5, key="blog_min_usefulness")
 
+        st.markdown('<p class="label">G-Scholar Min Usefulness Score</p>', unsafe_allow_html=True)
+        scholar_min_usefulness = st.number_input("", min_value=0, max_value=100, value=50, step=5, key="scholar_min_usefulness")
+
+    st.markdown('''
+                <p class="label">
+                    Google Scholar Author ID
+                    <span title="You should add user ID not the user name. You can find ID in Google Scholar profile URL, e.g., https://scholar.google.com/citations?user=USER-ID&hl=en" style="display: inline-block; cursor: help;">ℹ️</span>
+                </p>''', 
+                unsafe_allow_html=True)
+
+    if 'names' not in st.session_state:
+        st.session_state.names = [""]
+
+    def add_name_input():
+        st.session_state.names.append("")
+
+    def delete_name(index):
+        if len(st.session_state.names) > 1:
+            st.session_state.names.pop(index)
+            st.rerun()  
+
+    for i, name in enumerate(st.session_state.names):
+        cols = st.columns([6, 1])
+        with cols[0]:
+            st.session_state.names[i] = st.text_input(f"Name {i + 1}", value=name, key=f"name_{i}")
+        with cols[1]:
+            if i > 0:
+                if st.button("❌", key=f"delete_name_{i}"):
+                    delete_name(i)
+
+    st.button("➕ Add Another Name", on_click=add_name_input)
+
+    
     st.markdown('<p class="label">Temperature</p>', unsafe_allow_html=True)
     temperature = st.slider("", min_value=0.0, max_value=1.0, value=0.0, step=0.01)
 
@@ -105,13 +143,12 @@ def main():
     with st.expander("🔐 Set API Keys", expanded=True):
         required_keys = [
             "GOOGLE_API_KEY", "X_API_KEY", "X_API_KEY_SECRET",
-            "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET","TAVILY_API_KEY"
+            "X_ACCESS_TOKEN", "X_ACCESS_TOKEN_SECRET","TAVILY_API_KEY", "SERP_API_KEY"
         ]
         for key in required_keys:
             env_value = os.getenv(key)
             if key not in st.session_state:
                 st.session_state[key] = env_value or ""
-                # st.session_state[key] = ""
             st.session_state[key] = st.text_input(
                 key.replace("_", " ").title(), value=st.session_state[key], type="password"
             )
@@ -152,6 +189,9 @@ def main():
                     "arxiv_min_usefulness" : int(arxiv_min_usefulness),
                     "tavily_max_results": int(tavily_max_results),
                     "blog_min_usefulness": int(blog_min_usefulness),
+                    "scholar_user_ID": st.session_state.names,
+                    "scholar_max_results": int(scholar_max_results),
+                    "scholar_min_usefulness": int(scholar_min_usefulness),
                     "model_name": model_name,
                     "temperature": temperature,
                     "verbose": verbose,
@@ -161,7 +201,9 @@ def main():
                     "X_API_KEY_SECRET": st.session_state.X_API_KEY_SECRET,
                     "X_ACCESS_TOKEN": st.session_state.X_ACCESS_TOKEN,
                     "X_ACCESS_TOKEN_SECRET": st.session_state.X_ACCESS_TOKEN_SECRET,
-                    "TAVILY_API_KEY": st.session_state.TAVILY_API_KEY
+                    "TAVILY_API_KEY": st.session_state.TAVILY_API_KEY,
+                    "SERP_API_KEY" : st.session_state.SERP_API_KEY
+
                 }
 
             if scheduler_enabled:
