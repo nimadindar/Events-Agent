@@ -58,8 +58,7 @@ def run_agent():
 if __name__ == "__main__":
     run_agent()
 
-    # print(json_reader_tool())
-    # schedule.every(24).hours.do(run_agent)
+    # schedule.every(2).hours.do(run_agent)
     
     # while True:
     #     schedule.run_pending()
