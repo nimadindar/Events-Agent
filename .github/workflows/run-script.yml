@@ -1,0 +1,46 @@
+name: Agent Schedule
+
+on:
+  schedule:
+    - cron: '0 0-23/12 * * *'  
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12 
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  
+
+      - name: Create .env file from GitHub secrets
+        run: |
+          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
+          echo "X_API_KEY=${{ secrets.X_API_KEY }}" >> .env
+          echo "X_API_KEY_SECRET=${{ secrets.X_API_KEY_SECRET }}" >> .env
+          echo "X_ACCESS_TOKEN=${{ secrets.X_ACCESS_TOKEN }}" >> .env
+          echo "X_ACCESS_TOKEN_SECRET=${{ secrets.X_ACCESS_TOKEN_SECRET }}" >> .env
+          echo "TAVILY_API_KEY=${{ secrets.TAVILY_API_KEY }}" >> .env
+          echo "SERP_API_KEY=${{ secrets.SERP_API_KEY }}" >> .env
+
+      - name: Run Agent script
+        run: |
+          python main.py  
+
+      - name: Upload saved output files as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: saved
+          path: |
+            saved/*.json 
+            saved/*.log 
+          retention-days: 3  
