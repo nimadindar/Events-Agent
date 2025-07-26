@@ -70,6 +70,45 @@
       "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.13420",
       "abstract": "This paper presents 'easyZloc,' a 3D single-molecule localization microscopy (SMLM) method using a lightweight Convolutional Neural Network. It is applicable to standard fluorescence microscopes, offering comparable performance to existing methods with reduced computational power and time. The method is demonstrated on nuclear pore complexes, the nuclear envelope, and actin samples.",
       "usefulness_score": 70
+    },
+    {
+      "source": "arxiv",
+      "title": "Spatio-temporal point processes with deep non-stationary kernels",
+      "authors": [
+        "Zheng Dong",
+        "Xiuyuan Cheng",
+        "Yao Xie"
+      ],
+      "Publish_date": "21-11-2022",
+      "url": "http://arxiv.org/abs/2211.11179v1",
+      "abstract": "This paper develops a new deep non-stationary influence kernel for spatio-temporal point processes. The method uses a novel low-rank decomposition and a log-barrier penalty to efficiently model non-stationary dependencies, leading to improved computational efficiency and performance on both simulated and real data.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "Deep Spatio-temporal Point Processes: Advances and New Directions",
+      "authors": [
+        "Xiuyuan Cheng",
+        "Zheng Dong",
+        "Yao Xie"
+      ],
+      "Publish_date": "08-04-2025",
+      "url": "http://arxiv.org/abs/2504.06364v1",
+      "abstract": "This article reviews the development of deep influence kernel approaches for spatio-temporal point processes (STPPs). It covers the main components of deep kernel point processes, including functional basis decomposition, graph neural networks for encoding spatial structures, and various estimation methods, while also addressing computational scalability and theoretical foundations.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Transformer-Based Neural Marked Spatio Temporal Point Process Model for Football Match Events Analysis",
+      "authors": [
+        "Calvin C. K. Yeung",
+        "Tony Sit",
+        "Keisuke Fujii"
+      ],
+      "Publish_date": "18-02-2023",
+      "url": "http://arxiv.org/abs/2302.09276v1",
+      "abstract": "This paper proposes a Transformer-Based Neural Marked Spatio Temporal Point Process (NMSTPP) model for football event data. The model outperforms baseline models in prediction performance and is used to propose a new holistic possession utilization score (HPUS) metric for football possession analysis.",
+      "usefulness_score": 80
     }
   ]
 }
