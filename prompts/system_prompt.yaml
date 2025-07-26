@@ -291,7 +291,7 @@ template_4: |
     access_token: {access_token}
     access_token_secret: {access_token_secret}
 
-  If the post_to_X tool fails, log the error and Finish the execution.
+  If an error occurs while post_to_X, revise based on the error and retry. After this step finish the execution.
 
 input_variables:  
   - field
