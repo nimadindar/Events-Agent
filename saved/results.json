@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "source": "arxiv",
+      "title": "A multi-scale area-interaction model for spatio-temporal point patterns",
+      "authors": [
+        "A. Iftimi",
+        "M.N.M. van Lieshout",
+        "F. Montes"
+      ],
+      "Publish_date": "11-01-2017",
+      "url": "http://arxiv.org/abs/1701.02887v1",
+      "abstract": "This paper introduces a multi-scale area-interaction model for spatio-temporal point processes, extending the spatial model to a spatio-temporal framework. The model allows for interactions at different scales and the inclusion of covariates. It is applied to varicella cases in Valencia, Spain, revealing small-scale clustering and regularity at larger spatio-temporal scales.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Spatio-temporal determinantal point processes",
+      "authors": [
+        "Nafiseh Vafaei",
+        "Mohammad Ghorbani",
+        "Masoud Ganji",
+        "Mari Myllymaki"
+      ],
+      "Publish_date": "06-01-2023",
+      "url": "http://arxiv.org/abs/2301.02353v1",
+      "abstract": "This paper introduces spatio-temporal determinantal point processes (STDPPs) as models for regular spatio-temporal point patterns. It presents examples based on both separable and non-separable spatio-temporal covariance functions, providing a new framework for modeling repulsive point patterns in a spatio-temporal context.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Graphical modelling and partial characteristics for multitype and multivariate-marked spatio-temporal point processes",
+      "authors": [
+        "Matthias Eckardt",
+        "Jonatan A. Gonzalez",
+        "Jorge Mateu"
+      ],
+      "Publish_date": "05-03-2020",
+      "url": "http://arxiv.org/abs/2003.02476v1",
+      "abstract": "This paper presents a unified framework for analyzing multivariate and multivariate-marked spatio-temporal point process data. It introduces partial point characteristics and extends the spatial dependence graph model formalism. The proposed graphical model, based on partial spectral density characteristics, is computationally efficient and reflects conditional similarity among spatio-temporal sub-processes.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "Gscholar",
+      "title": "Robert Verity, Anne Cori, Swapnil Mishra, Seth Flaxman and Samir Bhatt's contribution to the Discussion of \u201cSome statistical aspects of the Covid-19 response\u201d by Wood et al",
+      "authors": [
+        "R Verity",
+        "A Cori",
+        "S Mishra",
+        "S Flaxman",
+        "S Bhatt"
+      ],
+      "Publish_date": "02-07-2025",
+      "url": "https://academic.oup.com/jrsssa/advance-article-abstract/doi/10.1093/jrsssa/qnaf108/8182060",
+      "abstract": "The paper discusses the challenges and assumptions in statistical modeling during the COVID-19 pandemic, highlighting issues like media distortion and risk framing. While agreeing on the need for reflection, the authors argue that the deconvolution framework may not be flexible enough for accurately timing infection peaks.",
+      "usefulness_score": 60
+    },
+    {
+      "source": "Gscholar",
+      "title": "Model-free machine learning-based 3D single molecule localisation microscopy",
+      "authors": [
+        "MA Boland",
+        "JPE Lightley",
+        "E Garcia",
+        "S Kumar",
+        "C Dunsby",
+        "S Flaxman"
+      ],
+      "Publish_date": "01-07-2025",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.13420",
+      "abstract": "This paper presents 'easyZloc,' a 3D single-molecule localization microscopy (SMLM) method using a lightweight Convolutional Neural Network. It is applicable to standard fluorescence microscopes, offering comparable performance to existing methods with reduced computational power and time. The method is demonstrated on nuclear pore complexes, the nuclear envelope, and actin samples.",
+      "usefulness_score": 70
+    }
+  ]
+}
