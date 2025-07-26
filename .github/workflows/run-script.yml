@@ -14,6 +14,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+        
+      - name: Create saved directory
+        run: |
+          mkdir -p saved
 
       - name: Set up Python
         uses: actions/setup-python@v5
