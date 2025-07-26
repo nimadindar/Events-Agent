@@ -168,7 +168,8 @@ def post_to_X(
         return "Error posting to X: Content cannot be empty"
     
     if len(content) > 280:
-        content = content[:277] + "..."  
+        # content = content[:277] + "..."
+        return "Error posting to X: Content cannot be more than 280 characters. Try with shorter Content." 
     
     try:
         x_client = tweepy.Client(
