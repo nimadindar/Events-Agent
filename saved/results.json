@@ -149,6 +149,45 @@
       "url": "https://arxiv.org/abs/1701.02887v1",
       "abstract": "This paper proposes an extension of the spatial multi-scale area-interaction model to a spatio-temporal framework. This model allows for interaction between points at different spatio-temporal scales and the inclusion of covariates. We fit the proposed model to varicella cases registered during 2013 in Valencia, Spain. The fitted model indicates small scale clustering and regularity for higher spatio-temporal scales.",
       "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Spatio-temporal point processes with deep non-stationary kernels",
+      "authors": [
+        "Zheng Dong",
+        "Xiuyuan Cheng",
+        "Yao Xie"
+      ],
+      "Publish_date": "21-11-2022",
+      "url": "https://arxiv.org/abs/2211.11179",
+      "abstract": "This paper develops a new deep non-stationary influence kernel for spatio-temporal point processes. The method uses a novel low-rank decomposition and a log-barrier penalty to efficiently model non-stationary dependencies, improving performance and computational efficiency compared to state-of-the-art methods.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "Deep Spatio-temporal Point Processes: Advances and New Directions",
+      "authors": [
+        "Xiuyuan Cheng",
+        "Zheng Dong",
+        "Yao Xie"
+      ],
+      "Publish_date": "08-04-2025",
+      "url": "https://arxiv.org/abs/2504.06364",
+      "abstract": "This article reviews the development of deep influence kernel approaches for spatio-temporal point processes (STPPs). It covers functional basis decomposition, graph neural networks for complex structures, and both likelihood-based and likelihood-free estimation methods, highlighting applications in various fields.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Transformer-Based Neural Marked Spatio Temporal Point Process Model for Football Match Events Analysis",
+      "authors": [
+        "Calvin C. K. Yeung",
+        "Tony Sit",
+        "Keisuke Fujii"
+      ],
+      "Publish_date": "18-02-2023",
+      "url": "https://arxiv.org/abs/2302.09276",
+      "abstract": "This paper proposes a Transformer-Based Neural Marked Spatio Temporal Point Process (NMSTPP) model for football event data. It introduces the holistic possession utilization score (HPUS) metric for a more comprehensive analysis of football possessions, outperforming baseline models in prediction performance.",
+      "usefulness_score": 85
     }
   ]
 }
