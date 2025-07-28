@@ -10,7 +10,7 @@ from serpapi import GoogleSearch
 from langchain_tavily import TavilySearch
 from langchain_community.document_loaders import ArxivLoader
 
-from config import AgentConfig
+from utils.utils import normalize_url
 
 @tool
 def json_reader_tool() -> str:
@@ -44,13 +44,14 @@ def json_reader_tool() -> str:
         if os.path.exists(tweeted_file_path):
             with open(tweeted_file_path, "r", encoding="utf-8") as f:
                 tweeted_data = json.load(f)
-                if isinstance(tweeted_data, dict):
-                    tweeted_list = tweeted_data.get("tweeted", [])
-                elif isinstance(tweeted_data, list):
-                    tweeted_list = tweeted_data  
-                tweeted_urls = set(item["url"] for item in tweeted_list if isinstance(item, dict) and "url" in item)
+                # if isinstance(tweeted_data, dict):
+                tweeted_list = tweeted_data.get("tweeted", [])
+                # elif isinstance(tweeted_data, list):
+                #     tweeted_list = tweeted_data  
+                tweeted_urls = set(normalize_url(item["url"]) for item in tweeted_list if isinstance(item, dict) and "url" in item)
 
-        untweeted_items = [item for item in all_results if item.get("url") and item["url"] not in tweeted_urls]
+        untweeted_items = [item for item in all_results if normalize_url(item["url"]) not in tweeted_urls]
+        
         if not untweeted_items:
             return json.dumps({"error": "No untweeted items available"})
 
