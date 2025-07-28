@@ -188,6 +188,17 @@
       "url": "https://arxiv.org/abs/2302.09276",
       "abstract": "This paper proposes a Transformer-Based Neural Marked Spatio Temporal Point Process (NMSTPP) model for football event data. It introduces the holistic possession utilization score (HPUS) metric for a more comprehensive analysis of football possessions, outperforming baseline models in prediction performance.",
       "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "Point-process modeling of secondary crashes | PLOS One",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295343",
+      "abstract": "In this work, we developed a self-exciting temporal point process to analyze crash events data and classify it into primary and secondary crashes.",
+      "usefulness_score": 85
     }
   ]
 }
