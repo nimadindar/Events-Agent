@@ -1,14 +1,13 @@
 import os
 import json
+import arxiv
 import tweepy
 from pathlib import Path
-from datetime import datetime
 from typing import Union, List, Dict
 
 from langchain.tools import tool
 from serpapi import GoogleSearch
 from langchain_tavily import TavilySearch
-from langchain_community.document_loaders import ArxivLoader
 
 from utils.utils import normalize_url
 
@@ -51,7 +50,7 @@ def json_reader_tool() -> str:
                 tweeted_urls = set(normalize_url(item["url"]) for item in tweeted_list if isinstance(item, dict) and "url" in item)
 
         untweeted_items = [item for item in all_results if normalize_url(item["url"]) not in tweeted_urls]
-        
+
         if not untweeted_items:
             return json.dumps({"error": "No untweeted items available"})
 
@@ -196,15 +195,12 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
     """
     Search ArXiv for papers based on a provided query and return relevant results in JSON format.
 
-    This tool uses the ArxivLoader to fetch papers from ArXiv matching the given query. It is designed for use in an AI agent
-    workflow to curate recent publications in a specific field. The tool filters results to include only papers published on the
-    current date (July 06, 2025) and returns a JSON string containing paper details. The LLM is responsible for generating a
-    precise and relevant query based on the field of interest (e.g., "Point Process machine learning 2025").
+    This tool uses the arxiv client to fetch papers from ArXiv matching the given query sorted by date in descending order. It is designed for use in an AI agent
+    workflow to curate recent publications in a specific field. The LLM is responsible for generating a precise and relevant query based on the field of interest. 
 
     Args:
-        query (str): The search query to find relevant ArXiv papers. Should include specific keywords, subfields, or methodologies
-                     relevant to the field, and ideally include the current year (2025) to narrow results.
-        max_results (int, optional): Maximum number of papers to retrieve. Defaults to 10. Must be a positive integer.
+        query (str): Carefully crafted query string to search for papers.
+        max_results (int, optional): Maximum number of papers to retrieve. 
 
     Returns:
         str: A JSON string containing an array of paper details, each with the following fields:
@@ -215,67 +211,59 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
              - summary: Concise summary (50-100 words) of the paper’s key contributions
              - url: ArXiv URL (e.g., https://arxiv.org/abs/1234.5678)
              If no results are found or an error occurs, returns a JSON string with an empty array and an error message.
-
-    Raises:
-        ValueError: If the query is empty or not a string, or if max_results is not a positive integer.
-        Exception: For network issues, ArXiv API errors, or other unexpected failures.
     """
-
     if not isinstance(query, str) or not query.strip():
         return json.dumps({
             "results": [],
             "error": "Query must be a non-empty string"
         })
-    
+
     if not isinstance(max_results, int) or max_results <= 0:
         return json.dumps({
             "results": [],
             "error": "max_results must be a positive integer"
         })
-    
-    current_date = datetime.now().strftime("%d-%m-%Y")
-    
+
+    current_year = "2025"  # Filter for 2025 papers
+
     try:
-        loader = ArxivLoader(query=query, load_max_docs=max_results)
-        documents = loader.load()
-        
+        client = arxiv.Client()
+        search = arxiv.Search(
+            query=query,
+            max_results=max_results,
+            sort_by=arxiv.SortCriterion.SubmittedDate,
+            sort_order=arxiv.SortOrder.Descending
+        )
+
         results = []
-        for doc in documents:
-            metadata = doc.metadata
-            publish_date = metadata.get("published", "")
-            
-            try:
-                publish_date_obj = datetime.strptime(publish_date, "%Y-%m-%d")
-                formatted_date = publish_date_obj.strftime("%d-%m-%Y")
-            except ValueError:
-                formatted_date = "Unknown"
-            
-            # if formatted_date != current_date:
-            #     continue
-            
-            authors = metadata.get("authors", "").split(", ")
-            
-            summary = doc.page_content[:200]
-            summary = doc.page_content  
-            
+        for result in client.results(search):
+            publish_date = result.published
+            formatted_date = publish_date.strftime("%d-%m-%Y")
+
+            if not publish_date.strftime("%Y") == current_year:
+                continue
+
+            authors = [author.name for author in result.authors]
+            summary = result.summary[:500] 
+
             entry = {
                 "source": "arxiv",
-                "title": metadata.get("title", "Unknown"),
+                "title": result.title,
                 "authors": authors if authors else ["Unknown"],
                 "publish_date": formatted_date,
                 "summary": summary,
-                "url" : metadata.get('entry_id', '')
+                "url": result.entry_id
             }
             results.append(entry)
-        
+
         if not results:
             return json.dumps({
                 "results": [],
-                "error": f"No papers found for query '{query}' on {current_date}"
+                "error": f"No papers found for query '{query}' in {current_year}"
             })
-        
-        return json.dumps({"results": results})
-    
+
+        return json.dumps({"results": results}, ensure_ascii=False)
+
     except Exception as e:
         return json.dumps({
             "results": [],
