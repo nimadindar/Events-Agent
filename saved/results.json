@@ -299,6 +299,45 @@
       "url": "http://arxiv.org/abs/2507.19475v1",
       "abstract": "Free-floating objects (FFOs) in interstellar space$-$rogue planets, brown dwarfs, and large asteroids that are not gravitationally bound to any star$-$are expected to be ubiquitous throughout the Milky Way. Recent microlensing surveys have discovered several free-floating planets that are not bound to any known stellar systems. Additionally, three interstellar objects, namely 1I/'Oumuamua, 2I/Borisov, and 3I/ATLAS, have been detected passing through our solar system on hyperbolic trajectories. I",
       "usefulness_score": 78
+    },
+    {
+      "source": "arxiv",
+      "title": "Measuring the Unmeasurable? Systematic Evidence on Scale Transformations in Subjective Survey Data",
+      "authors": [
+        "Caspar Kaiser",
+        "Anthony Lepinteur"
+      ],
+      "Publish_date": "22-07-2025",
+      "url": "http://arxiv.org/abs/2507.16440v1",
+      "abstract": "Economists routinely use survey measures of, for example, risk preferences, trust, political attitudes, or wellbeing. The literature generally treats numerical response categories as if they represent equal psychological intervals. We provide the first systematic test of this assumption, developing a general framework to quantify how easily results can be overturned when this linearity assumption is relaxed. Using original experimental data, we show that respondents interpret survey scales in ways that challenge the linearity assumption, and that this can have a substantial impact on empirical findings.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "PLOS A mechanistic spatio-temporal framework for modelling individual-to-individual transmission\u2014With an application to the 2014-2015 West Africa Ebola outbreak | PLOS Computational Biology",
+      "authors": "unknown",
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005798",
+      "abstract": "This article presents a mechanistic spatio-temporal framework for modeling the transmission of infectious diseases from one individual to another. The model is applied to the 2014-2015 Ebola outbreak in West Africa, demonstrating how it can be used to understand the dynamics of an epidemic by considering the specific locations and timings of transmissions. The method involves detailed calculations of spatial infectivity between individuals, offering a more granular view compared to traditional models.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "plos",
+      "title": "PLOS An Accessible Method for Implementing Hierarchical Models with Spatio-Temporal Abundance Data | PLOS One",
+      "authors": "unknown",
+      "Publish_date": "16-11-2012",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0049395",
+      "abstract": "In ecology, understanding population dynamics across large areas and long times is a key goal. This paper presents an accessible method for creating hierarchical models that can analyze spatio-temporal abundance data, helping researchers to overcome common assumptions and make better inferences about how and why animal and plant populations vary.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "PLOS Understanding spatiotemporal patterns of COVID-19 incidence in Portugal: A functional data analysis from August 2020 to March 2022 | PLOS One",
+      "authors": "unknown",
+      "Publish_date": "01-02-2024",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0297772",
+      "abstract": "Using data on confirmed COVID-19 cases in Portugal, this study applies functional data analysis to understand the spatiotemporal dynamics of the pandemic. The research provides scientific insights into how the incidence rates varied across different locations and times, leveraging the massive datasets collected by public health authorities.",
+      "usefulness_score": 85
     }
   ]
 }
