@@ -5,7 +5,7 @@ load_dotenv()
 class AgentConfig:
     PromptDir = "./prompts/system_prompt.yaml"      # path to system prompt yaml file
 
-    Field = "Spatio Temporal Point Process"         # the field that agent conducts research
+    Field = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"         # the field that agent conducts research
 
     ArxivMaxResults = 5                             # maximum number of retreived papers from arxiv tool !!! HINT: Lager number might overload LLM's contex window !!! 
     ArxivMinUsefulness = 75                         # minimum score required to save an Arxiv paper
