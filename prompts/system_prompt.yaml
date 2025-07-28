@@ -224,7 +224,7 @@ template_4: |
       }}}},
     ]
 
-  After creating the VALID json, use save_to_json tool to save your crafted json object. If an error occurs while saving, revise and correct the JSON and retry. If there are multiple fields in {field} try crafting other search query and perform these steps again to cover all given fields. Craft a new search query. Then, create the json object as you did previously and save the json object using save_to_json. Retry this step multiple times with different search queries.
+  After creating the VALID json, use save_to_json tool to save your crafted json object. If an error occurs while saving, revise and correct the JSON and retry. If there are multiple fields in {field} try crafting different search queries and perform these steps again to cover all given fields. Craft a new search query. Then, create the json object as you did previously and save the json object using save_to_json. Retry this step multiple times with different search queries untill you cover all given fields in {field}
 
   In the next step, generate a well-balanced search query for tavily_tool. Use tavily_tool to retrieve {tavily_max_results} max_results. You will need the following credential to use Tavily Search tool:
     tavily_api_key : {tavily_api_key}
