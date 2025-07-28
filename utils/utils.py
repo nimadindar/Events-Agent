@@ -1,4 +1,5 @@
 import os
+import re
 import yaml
 import logging
 import traceback
@@ -170,3 +171,16 @@ def update_agent_config(field, arxiv_max_results, arxiv_min_usefulness,
     return GlobalAgentConfig
 
 
+def normalize_url(url):
+    """ 
+    This function uses a regular expression to match the arXiv ID format.
+    Example:
+    input url: http://arxiv.org/abs/2211.11179v1
+    output: 2211.11179
+
+    The other urls will be returned as is.    
+    """
+    match = re.search(r"(\d{4}\.\d{4,5})(v\d)?", url)
+    if match:
+        return match.group(1)  
+    return url
