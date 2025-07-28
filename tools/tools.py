@@ -102,7 +102,7 @@ def save_to_json(content: Union[str, dict]) -> str:
                     existing_data = json.load(f)
                     if isinstance(existing_data, dict) and "results" in existing_data:
                         existing_results = existing_data["results"]
-                        existing_urls = {entry.get("url") for entry in existing_results}
+                        existing_urls = {normalize_url(entry.get("url")) for entry in existing_results}
             except json.JSONDecodeError:
                 return f"Error: Existing file {output_file} contains invalid JSON."
             except Exception as e:
@@ -110,7 +110,7 @@ def save_to_json(content: Union[str, dict]) -> str:
 
         new_unique_results = [
             entry for entry in content["results"]
-            if entry.get("url") not in existing_urls
+            if normalize_url(entry.get("url")) not in existing_urls
         ]
 
         if not new_unique_results:
