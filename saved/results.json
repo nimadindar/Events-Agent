@@ -338,6 +338,39 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0297772",
       "abstract": "Using data on confirmed COVID-19 cases in Portugal, this study applies functional data analysis to understand the spatiotemporal dynamics of the pandemic. The research provides scientific insights into how the incidence rates varied across different locations and times, leveraging the massive datasets collected by public health authorities.",
       "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Let It Go? Not Quite: Addressing Item Cold Start in Sequential Recommendations with Content-Based Initialization",
+      "authors": [
+        "Anton Pembek",
+        "Artem Fatkulin",
+        "Anton Klenitskiy",
+        "Alexey Vasilev"
+      ],
+      "Publish_date": "25-07-2025",
+      "url": "http://arxiv.org/abs/2507.19473v1",
+      "abstract": "Many sequential recommender systems suffer from the cold start problem, where items with few or no interactions cannot be effectively used by the model due to the absence of a trained embedding. Content-based approaches, which leverage item metadata, are commonly used in such scenarios. One possible way is to use embeddings derived from content features such as textual descriptions as initialization for the model embeddings. However, directly using frozen content embeddings often results in subo",
+      "usefulness_score": 82
+    },
+    {
+      "source": "arxiv",
+      "title": "Back to the Features: DINO as a Foundation for Video World Models",
+      "authors": [
+        "Federico Baldassarre",
+        "Marc Szafraniec",
+        "Basile Terver",
+        "Vasil Khalidov",
+        "Francisco Massa",
+        "Yann LeCun",
+        "Patrick Labatut",
+        "Maximilian Seitzer",
+        "Piotr Bojanowski"
+      ],
+      "Publish_date": "25-07-2025",
+      "url": "http://arxiv.org/abs/2507.19468v1",
+      "abstract": "We present DINO-world, a powerful generalist video world model trained to predict future frames in the latent space of DINOv2. By leveraging a pre-trained image encoder and training a future predictor on a large-scale uncurated video dataset, DINO-world learns the temporal dynamics of diverse scenes, from driving and indoor scenes to simulated environments. We show that DINO-world outperforms previous models on a variety of video prediction benchmarks, e.g. segmentation and depth forecasting, an",
+      "usefulness_score": 79
     }
   ]
 }
