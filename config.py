@@ -20,6 +20,7 @@ class AgentConfig:
     
     PromptVersion = 4                               # system prompt version
     
+    LLM = "google"
     ModelName = "gemini-2.5-pro"                  # only ChatGoogleGenerativeAI models are supported
     Temperature = 0.0                               # the level of creativity in LLM responses. Higher temp causes creative but unexpected behaviour
     
