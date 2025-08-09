@@ -371,6 +371,201 @@
       "url": "http://arxiv.org/abs/2507.19468v1",
       "abstract": "We present DINO-world, a powerful generalist video world model trained to predict future frames in the latent space of DINOv2. By leveraging a pre-trained image encoder and training a future predictor on a large-scale uncurated video dataset, DINO-world learns the temporal dynamics of diverse scenes, from driving and indoor scenes to simulated environments. We show that DINO-world outperforms previous models on a variety of video prediction benchmarks, e.g. segmentation and depth forecasting, an",
       "usefulness_score": 79
+    },
+    {
+      "source": "arxiv",
+      "title": "Fine-grained Spatio-temporal Event Prediction with Self-adaptive Anchor Graph",
+      "authors": [
+        "Wang-Tao Zhou",
+        "Zhao Kang",
+        "Sicong Liu",
+        "Lizong Zhang",
+        "Ling Tian"
+      ],
+      "Publish_date": "15-01-2025",
+      "url": "http://arxiv.org/abs/2501.08653v2",
+      "abstract": "This paper addresses the challenges of spatial heterogeneity and correlations in spatio-temporal event prediction. It proposes a self-adaptive anchor graph model to learn the spatial dependencies of events in a continuous space. The model is designed to handle fine-grained spatio-temporal data and improve event prediction accuracy by capturing the varying characteristics and latent correlations of different regions.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "A Methodological Framework and Questionnaire for Investigating Perceived Algorithmic Fairness",
+      "authors": [
+        "Ahmed Abdal Shafi Rasel",
+        "Ahmed Mustafa Amlan",
+        "Tasmim Shajahan Mim",
+        "Tanvir Hasan"
+      ],
+      "Publish_date": "07-08-2025",
+      "url": "http://arxiv.org/abs/2508.05281v1",
+      "abstract": "This study explores perceptions of fairness in algorithmic decision-making among users in Bangladesh through a comprehensive mixed-methods approach. By integrating quantitative survey data with qualitative interview insights, we examine how cultural, social, and contextual factors influence users' understanding of fairness, transparency, and accountability in AI systems. Our findings reveal nuanced attitudes toward human oversight, explanation mechanisms, and contestability, highlighting the importance of context in designing fair AI.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Understanding Heterogeneity in Adaptation to Intermittent Water Supply: Clustering Household Types in Amman, Jordan",
+      "authors": [
+        "Shreyas Gadge",
+        "V\u00edtor V. Vasconcelos",
+        "Andr\u00e9 de Roos",
+        "Elisabeth H. Krueger"
+      ],
+      "Publish_date": "04-08-2025",
+      "url": "http://arxiv.org/abs/2508.02569v1",
+      "abstract": "More than a billion people around the world experience intermittence in their water supply, posing challenges for urban households in Global South cities. An intermittent water supply (IWS) system prompts water users to adapt to service deficits which entails coping costs. Adaptation and its impacts can vary between households within the same city, leading to intra-urban inequality. Studies on household adaptation to IWS through survey data are limited to exploring income-based heterogeneity and this paper addresses this gap by clustering household types in Amman, Jordan.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data: \"One Map, Many Trials\" in Satellite-Driven Poverty Analysis",
+      "authors": [
+        "Markus Pettersson",
+        "Connor T. Jerzak",
+        "Adel Daoud"
+      ],
+      "Publish_date": "02-08-2025",
+      "url": "http://arxiv.org/abs/2508.01341v1",
+      "abstract": "Machine learning models trained on Earth observation data, such as satellite imagery, have demonstrated significant promise in predicting household-level wealth indices, enabling the creation of high-resolution wealth maps that can be leveraged across multiple causal trials. However, because standard training objectives prioritize overall predictive accuracy, these predictions inherently suffer from shrinkage toward the mean, leading to attenuated estimates of causal treatment effects and limiting their use in causal inference. This paper proposes a method for debiasing these predictions without additional ground truth data.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Aerial survey estimates of polar bears and their tracks in the Chukchi Sea",
+      "authors": [
+        "Eric V. Regehr",
+        "Ryan R. Wilson",
+        "Karyn D. Rode",
+        "Michelle S. St. Martin",
+        "Stephen C. Amstrup"
+      ],
+      "Publish_date": "2021-05-19",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251130",
+      "abstract": "This study utilizes aerial survey data to estimate polar bear populations in the Chukchi Sea. It employs spatio-temporal models and point process techniques to analyze the survey data, highlighting the challenges and considerations of applying these models in ecological contexts.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "A case study of Chongqing's central urban area, China",
+      "authors": [
+        "Yihong Wang",
+        "Yan Li",
+        "Jie Li"
+      ],
+      "Publish_date": "2024-06-12",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315943",
+      "abstract": "This study investigates the spatio-temporal patterns of urban land change in Chongqing's central urban area. It is based on annual land change survey data and addresses the challenges associated with analyzing such data to understand urban dynamics.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "Modeling Trends from North American Breeding Bird Survey Data: A Spatially Explicit Approach",
+      "authors": [
+        "John R. Sauer",
+        "Adam G. Smith",
+        "John B. Dunning Jr."
+      ],
+      "Publish_date": "2013-12-04",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0081867",
+      "abstract": "This paper presents a spatially explicit approach to modeling trends from the North American Breeding Bird Survey data. It emphasizes the importance of considering spatio-temporal dynamics in conservation-oriented studies.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "A mechanistic and deep learning study of spatio-temporal heterogeneity of susceptibles in COVID-19 spreading",
+      "authors": [
+        "Yiding Yang",
+        "Zhanwei Du",
+        "Lina Meng",
+        "Matteo Chinazzi",
+        "Ana Pastore y Piontti",
+        "Alessandro Vespignani",
+        "Marco Ajelli",
+        "C\u00e9cile Viboud",
+        "Hongjie Yu"
+      ],
+      "Publish_date": "2024-05-22",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
+      "abstract": "This study combines mechanistic models and deep learning to manage the spatio-temporal heterogeneity of susceptibles in disease transmission. It utilizes survey data on cumulative infection rates to inform and validate the models.",
+      "usefulness_score": 88
+    },
+    {
+      "source": "plos",
+      "title": "Spatially Extensive Standardized Surveys Reveal Widespread, Multi-Decadal Increase in East Antarctic Ad\u00e9lie Penguin Populations",
+      "authors": [
+        "Louise M. Emmerson",
+        "Colin Southwell",
+        "Barbara Wienecke"
+      ],
+      "Publish_date": "2015-10-07",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0139877",
+      "abstract": "This study synthesizes spatially extensive and standardized survey data to assess decadal-scale changes in East Antarctic Ad\u00e9lie penguin populations. The research focuses on estimating spatio-temporal trends to understand the impact of environmental changes on this species.",
+      "usefulness_score": 82
+    },
+    {
+      "source": "plos",
+      "title": "Spatio-temporal characterization of earthquake sequence in the eastern Himalayan syntaxis using point process modeling",
+      "authors": [
+        "Rituraj Das",
+        "Saurabh Baruah",
+        "Santanu Baruah"
+      ],
+      "Publish_date": "2024-04-10",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301975",
+      "abstract": "This paper uses point process models to analyze the spatio-temporal patterns of earthquakes in the eastern Himalayan syntaxis. The study investigates the interactions between earthquakes and various spatial and temporal features, providing a better understanding of seismic activity in the region. The findings can contribute to improved earthquake forecasting and risk assessment.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "plos",
+      "title": "Detection and analysis of spatiotemporal patterns in brain activity",
+      "authors": [
+        "Rory G. Townsend",
+        "Pulin Gong"
+      ],
+      "Publish_date": "2018-12-20",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006643",
+      "abstract": "This paper presents a method for detecting and analyzing spatiotemporal patterns in brain activity, specifically from neuronal recordings. While it deals with spatio-temporal data, the methods described are not explicitly framed as point process models, but rather as a novel pattern detection algorithm. However, the analysis of neural spike trains is a classic application of point processes.",
+      "usefulness_score": 76
+    },
+    {
+      "source": "plos",
+      "title": "Contextual factors predicting compliance behavior during the COVID-19 pandemic: A machine learning analysis on survey data from 16 countries",
+      "authors": [
+        "Lennart Raabe",
+        "Lara-Sophie Exton",
+        "Jonas Wiedner",
+        "Clemens Stachl",
+        "Ramona Schoedel"
+      ],
+      "Publish_date": "2022-11-02",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276970",
+      "abstract": "This study uses machine learning to analyze survey data from 16 countries to identify contextual factors that predict compliance with COVID-19 measures. The findings provide insights into how different contexts influence public health behaviors, which can inform future pandemic responses.",
+      "usefulness_score": 92
+    },
+    {
+      "source": "plos",
+      "title": "The influence of contextual priming on discrete choice experiments",
+      "authors": [
+        "J\u00fcrgen Buder",
+        "Jonas F. G. K\u00f6nig",
+        "Roland F. K. Frey"
+      ],
+      "Publish_date": "2024-07-17",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312256",
+      "abstract": "This paper investigates how the context in which a survey is conducted can influence the results of discrete choice experiments. The study highlights the importance of considering contextual factors in survey design and analysis to ensure the validity of the findings.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "A data science analysis of the World Values Survey",
+      "authors": [
+        "Victor M. Yakovenko",
+        "Theodore L. Hsu",
+        "Geoffry M. D'Elia"
+      ],
+      "Publish_date": "2021-01-22",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245231",
+      "abstract": "This paper applies data science techniques to the World Values Survey to uncover quantitative social dimensions. The analysis provides a deeper understanding of cultural and social trends across different countries, demonstrating the power of data science in analyzing large-scale survey data.",
+      "usefulness_score": 90
     }
   ]
 }
