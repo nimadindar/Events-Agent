@@ -1,8 +1,8 @@
-import os
 import re
 import yaml
 import logging
 import traceback
+from typing import Any
 from logging.handlers import RotatingFileHandler
 
 from config import AgentConfig
@@ -184,3 +184,9 @@ def normalize_url(url):
     if match:
         return match.group(1)  
     return url
+
+
+def load_prompt_multi_agent(node_name: str, **env_vars: Any) -> str:
+    prompt_config = load_yaml(f"./multi_agent/prompts/{node_name}_node_prompt.yaml")
+    system_prompt_template = prompt_config["prompt"]
+    return system_prompt_template.format(**env_vars)
