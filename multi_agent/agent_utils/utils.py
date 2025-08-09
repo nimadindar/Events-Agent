@@ -1,5 +1,9 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
+from langgraph.graph import MessagesState
 
+
+class State(MessagesState):
+    next: str
 
 def load_llm(llm, model, temperature=0.0, api_key=None):
     """
