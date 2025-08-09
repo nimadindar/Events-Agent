@@ -47,7 +47,7 @@ jobs:
 
       - name: Run Agent script
         run: |
-          python main.py  
+          python -B -m multi_agent.main  
 
       - name: Commit updated JSON files
         run: |
