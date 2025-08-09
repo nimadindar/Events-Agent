@@ -2,7 +2,7 @@ from langchain_core.messages import HumanMessage
 from langgraph.prebuilt import create_react_agent
 from langgraph.types import Command
 
-from ...agent_utils.utils import load_llm, State
+from ..agent_utils.utils import load_llm, State
 
 from tools.tools import post_to_X, json_reader_tool
 from utils.utils import load_prompt_multi_agent
