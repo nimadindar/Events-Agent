@@ -614,6 +614,58 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097807",
       "abstract": "This paper suggests an alternative methodology for event detection using space-time scan statistics (STSS). It has been found that not only can STSS be applied to Twitter, but that abnormal space time clusters did exist within Twitter relating to the London helicopter crash disaster, as well as other space-time events such as sport fixtures and train delays.",
       "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "A Methodological Framework and Questionnaire for Investigating Perceived Algorithmic Fairness",
+      "authors": [
+        "Ahmed Abdal Shafi Rasel",
+        "Ahmed Mustafa Amlan",
+        "Tasmim Shajahan Mim",
+        "Tanvir Hasan"
+      ],
+      "Publish_date": "07-08-2025",
+      "url": "http://arxiv.org/abs/2508.05281v1",
+      "abstract": "This study explores perceptions of fairness in algorithmic decision-making among users in Bangladesh through a comprehensive mixed-methods approach. By integrating quantitative survey data with qualitative interview insights, we examine how cultural, social, and contextual factors influence users' understanding of fairness, transparency, and accountability in AI systems.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Understanding Heterogeneity in Adaptation to Intermittent Water Supply: Clustering Household Types in Amman, Jordan",
+      "authors": [
+        "Shreyas Gadge",
+        "V\u00edtor V. Vasconcelos",
+        "Andr\u00e9 de Roos",
+        "Elisabeth H. Krueger"
+      ],
+      "Publish_date": "04-08-2025",
+      "url": "http://arxiv.org/abs/2508.02569v1",
+      "abstract": "This paper uses survey data to study how households in Amman, Jordan adapt to intermittent water supply (IWS). The authors use a clustering approach to group households based on their adaptation strategies and explore the factors that lead to different levels of adaptation and inequality.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data: 'One Map, Many Trials' in Satellite-Driven Poverty Analysis",
+      "authors": [
+        "Markus Pettersson",
+        "Connor T. Jerzak",
+        "Adel Daoud"
+      ],
+      "Publish_date": "02-08-2025",
+      "url": "http://arxiv.org/abs/2508.01341v1",
+      "abstract": "This paper addresses the issue of shrinkage in machine learning models trained on satellite imagery to predict wealth indices. The authors propose a method to debias these predictions, which is crucial for accurate causal inference in poverty analysis. The approach is demonstrated in the context of creating high-resolution wealth maps from satellite data.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "journals.plos",
+      "title": "Pheno4D: A spatio-temporal dataset of maize and tomato plant point clouds",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256340",
+      "abstract": "This paper introduces Pheno4D, a spatio-temporal dataset of maize and tomato plant point clouds. This dataset can be used for applications such as tracking different phenotypic traits for the plants and quantifying their performance over time.",
+      "usefulness_score": 85
     }
   ]
 }
