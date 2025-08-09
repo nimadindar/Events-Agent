@@ -1,140 +1,214 @@
-# Research Agent
+```markdown
+# Events Agent
 
-A Streamlit-based application for conducting research by fetching and analyzing papers from ArXiv and blog posts from the web, saving results in a JSON file, and posting the highest-scoring item to X. The agent leverages LangChain, Google Generative AI models, and tools like ArxivLoader and Tavily for research tasks.
+An agentic workflow for conducting research by fetching and analyzing papers from ArXiv and blog posts from the web, saving results in JSON format, and posting the highest-scoring item to X. The agent leverages LangGraph, LangChain, Google Generative AI models, and tools like ArxivLoader and Tavily for research tasks.
 
 ## Table of Contents
 - [Overview](#overview)
-- [Features](#features)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
   - [Running via Command Line](#running-via-command-line)
   - [Running via Streamlit UI](#running-via-streamlit-ui)
+  - [Running via GitHub Actions](#running-via-github-actions)
 - [Configuration](#configuration)
 - [Dependencies](#dependencies)
 - [Environment Variables](#environment-variables)
 - [Logging](#logging)
 
+---
 
 ## Overview
-The Research Agent is designed to automate the process of searching for relevant academic papers and blog posts, scoring them based on relevance, saving results to a JSON file, and sharing the most relevant item on X. It supports both command-line execution via configuration and an interactive Streamlit web interface for user-friendly operation.
 
-## Features
-- **ArXiv Search**: Retrieves and scores academic papers from ArXiv based on a specified research field.
-- **Web Search**: Fetches and scores blog posts using the Tavily search tool.
-- **JSON Storage**: Saves search results in a structured JSON format in the `./saved` directory.
-- **X Integration**: Posts the highest-scoring untweeted paper or blog post to X with a concise summary and hashtag.
-- **Streamlit UI**: Provides an intuitive interface for configuring and running the agent.
-- **Scheduling**: Supports periodic execution of the agent at user-defined intervals.
-- **Logging**: Comprehensive logging for debugging and monitoring agent activities.
+The Events Agent automates searching for relevant academic papers and blog posts, scoring them by relevance, saving results to JSON, and sharing the top item on X. It supports both command-line execution and an interactive Streamlit interface.
+
+### Multi-Agent Workflow
+
+This workflow, built using the **LangGraph** framework, organizes the process into two specialized teams:
+
+1. **Research Team**  
+   - **ArXiv Agent** – Searches academic papers on ArXiv.  
+   - **Blog Agent** – Collects related blog information.  
+   - **Google Scholar Agent** – Finds relevant scholarly literature.  
+
+2. **Posting Team**  
+   - **X Agent** – Posts the highest-scoring research result to X (formerly Twitter).  
+
+Using dedicated agents for each step provides **modularity**, **control**, and **flexibility**, allowing updates or replacements without affecting the overall workflow.
+
+---
+
+### Single-Agent Workflow
+
+In this simpler workflow, a **single unified agent** handles the entire process:  
+1. Searches ArXiv, blogs, and Google Scholar.  
+2. Selects the most relevant content.  
+3. Posts the result directly to X.  
+
+This approach is easier to manage and requires fewer resources but offers less granularity and flexibility.
+
+> **Note:** The Streamlit application is currently out of date with recent updates; this will be addressed in future releases.
+
+---
 
 ## Project Structure
-```
-├── agents/
-│   └── build_agent.py         # Agent creation logic
-├── prompts/
-│   └── system_prompt.yaml    # System prompt templates for the agent
-├── saved/                    # Directory for storing results and logs
-│   ├── results.json          # Output JSON file for search results
-│   ├── tweets.json           # Tracks tweeted URLs to avoid duplicates
-│   └── agent_logs.log        # Log file for agent execution
+
+```plaintext
+├── .github/workflows/
+│   └── run-script.yml # GitHub Actions automation
+├── multi_agent/
+│   ├── agent_utils/
+│   │   ├── utils.py # Utility functions for agents
+│   │   ├── PostingTeam/
+│   │   │   └── X_node.py # X posting agent
+│   │   └── ResearchTeam/
+│   │       ├── arxiv_node.py # ArXiv research agent
+│   │       ├── blog_node.py # Blog research agent
+│   │       └── gscholar_node.py # Google Scholar research agent
+│   ├── prompts/ # System prompts for multi-agent workflow
+│   └── main.py # Entry point for multi-agent workflow
+├── single_agent/
+│   ├── agents/
+│   │   ├── agent_utils.py # Utilities for single agent
+│   │   └── build_agent.py # Single agent builder script
+│   ├── prompts/
+│   │   └── system_prompt.yaml # System prompt templates
+│   └── main.py # Entry point for single-agent workflow
+├── saved/ # Output and logs
+│   ├── results.json # Search results
+│   ├── tweets.json # Tweeted URLs tracker
+│   └── agent_logs.log # Execution logs
 ├── tools/
-│   └── tools.py              # Custom tools for ArXiv, Tavily, JSON handling, and X posting
+│   └── tools.py # Custom tools for research and posting
 ├── utils/
-│   └── utils.py              # Utility functions for logging and prompt loading
-├── app.py                    # Streamlit application for the web interface
-├── config.py                 # Configuration settings for the agent
-├── main.py                   # Main script for running the agent
-├── requirements.txt          # Project dependencies
-└── README.md                 # This file
+│   └── utils.py # General utilities
+├── app.py # Streamlit UI application
+├── config.py # Configuration settings
+├── main.py # Main script
+├── requirements.txt # Dependencies
+└── README.md # This file
 ```
 
+```yaml
+# YAML block for project structure
+```
+
+---
+
 ## Installation
+
 1. Clone the repository:
+
    ```bash
-   git clone https://github.com/nimadindar/SpatioTemporal-Agent.git
-   cd SpatioTemporal-Agent
+   git clone https://github.com/nimadindar/Events-Agent.git
+   cd Events-Agent
    ```
-2. Create a virtual environment and activate it:
+
+2. Create and activate a virtual environment:
+
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   source venv/bin/activate   # On Windows: venv\Scripts\activate
    ```
+
 3. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
-4. Set up environment variables (see [Environment Variables](#environment-variables)).
+
+4. Configure environment variables (see [Environment Variables](#environment-variables)).
 
 ## Usage
 
 ### Running via Command Line
-1. Configure the agent by editing `config.py`:
-   - Set `Field` to your desired research topic (e.g., "Spatio Temporal Point Process").
-   - Adjust `ArxivMaxResults`, `TavilyMaxResults` and `ScholarMaxResults` (recommended: 5 to avoid LLM ontext window issues).
-   - Set `ScholarPages` as a list of strings that include google scholar user ID. You can find user ID from the url of the profile.
-   - Adjust `ArxivMinUsefulness`, `BlogMinUsefulness` and `ScholarMinUsefulness` to save results above the baseline score.
-   - Set `PromptVersion` (latest version 4) to select the desired prompt template.
-   - Enable/disable `Verbose` logging.
-   - Define `InvokeInput` for the agent's task.
-2. Run the agent:
-   ```bash
-   python main.py
-   ```
-   This executes the agent once, fetching papers and blog posts, saving results to `./saved/results.json`, and posting to X.
+
+Edit `config.py` to configure:
+
+- Research topic (`Field`)
+- Maximum results per source (`ArxivMaxResults`, `TavilyMaxResults`, `ScholarMaxResults`)
+- Minimum usefulness thresholds (`ArxivMinUsefulness`, `BlogMinUsefulness`, `ScholarMinUsefulness`)
+- Google Scholar author IDs (`ScholarPages`)
+- Prompt version (`PromptVersion`) for single agent workflow
+- Model, temperature, verbosity, and invoke input
+
+Run single-agent workflow (deprecated and no longer maintained):
+
+```bash
+python -B -m single_agent.main
+```
+
+Run multi-agent workflow:
+
+```bash
+python -B -m multi_agent.main
+```
 
 ### Running via Streamlit UI
-1. Start the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
-2. Open the provided URL in your browser (e.g., `http://localhost:8501`).
-3. Configure the agent via the web interface:
-   - Enter the research field.
-   - Select the model name and temperature.
-   - Set the maximum number of results for ArXiv, Tavily and google scholar searches.
-   - Set the minimum required score for each of the given sources.
-   - Set the google scholar page IDs. 
-   - Enable verbose logging if desired.
-   - Optionally enable the scheduler to run the agent periodically.
-   - Insert the api keys related to Google AI, X and tavily. Alternatively you can also pass them in a .env file and the code will load them for you.
-   - Specify the agent task in the text area.
-4. Click "Run Agent" to execute immediately or "Schedule Agent" for periodic execution.
-5. View the output and logs in the UI.
+
+Start the app:
+
+```bash
+streamlit run app.py
+```
+
+Open the provided URL (e.g., `http://localhost:8501`).
+
+Configure parameters through the interface:
+
+- Research field, model, temperature
+- Max results and minimum scores per source
+- Scholar page IDs
+- Verbosity and scheduling options
+- API keys (Google, X, Tavily) or provide via `.env`
+- Agent task description
+
+Click **Run Agent** or **Schedule Agent**.
+
+> **Note:** The Streamlit UI is currently outdated and expected to be updated soon.
+
+### Running via GitHub Actions
+
+1. Add API keys as Secrets under your repository's **Settings → Secrets and variables → Actions**.
+2. Trigger the scheduled workflow or manual runs under the **Actions** tab.
+3. The default schedule runs every 12 hours and can be modified in `.github/workflows/run-script.yml`.
 
 ## Configuration
+
 The agent can be configured via:
-- **config.py**: Edit this file for command-line execution. Key parameters include:
-  - `PromptDir`: Path to the system prompt YAML file.
-  - `Field`: Research topic.
-  - `ArxivMaxResults`, `TavilyMaxResults` and `ScholarMaxResults`: Maximum results for searches.
-  - `ArxivMinUsefulness`, `TavilyMinUsefulness` and `ScholarMinUsefulness`: Minimum required score to save the results.
-  - `ScholarPages`: List of author IDs.
-  - `PromptVersion`: Selects the prompt template (4 the latest version).
-  - `ModelName`: Google Generative AI model.
-  - `Temperature`: Controls response creativity.
-  - `Verbose`: Enables detailed logging.
-  - `InvokeInput`: Task description for the agent.
-- **Streamlit UI**: Dynamically set these parameters through the web interface.
+
+- `config.py` (for command-line runs) with parameters such as:
+  - `PromptDir` (single-agent prompt path)
+  - `Field`, `ArxivMaxResults`, `TavilyMaxResults`, `ScholarMaxResults`
+  - `ArxivMinUsefulness`, `TavilyMinUsefulness`, `ScholarMinUsefulness`
+  - `ScholarPages` (author IDs)
+  - `PromptVersion`, `ModelName`, `Temperature`, `Verbose`
+  - `InvokeInput` (task description)
+- Streamlit UI for dynamic configuration.
 
 ## Dependencies
-Key dependencies are listed in `requirements.txt` and include:
-- `langchain`
-- `langchain-google-genai`
-- `langchain-community`
-- `tweepy`
-- `tavily-python`
-- `streamlit`
-- `python-dotenv`
-- `pyyaml`
 
-Install them using:
+Core dependencies are listed in `requirements.txt` and include:
+- langgraph
+- langchain
+- langchain-google-genai
+- langchain-community
+- tweepy
+- tavily-python
+- streamlit
+- python-dotenv
+- pyyaml
+
+Install with:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 ## Environment Variables
-Create a `.env` file in the project root with the following variables:
+
+Create a `.env` file at the project root with the following keys:
+
 ```bash
 GOOGLE_API_KEY=your_google_api_key
 X_API_KEY=your_x_consumer_key
@@ -142,15 +216,24 @@ X_API_KEY_SECRET=your_x_consumer_secret
 X_ACCESS_TOKEN=your_x_access_token
 X_ACCESS_TOKEN_SECRET=your_x_access_token_secret
 TAVILY_API_KEY=your_tavily_api_key
-SERP_API_KEY = your_serp_api_key
+SERP_API_KEY=your_serp_api_key
 ```
-Obtain these keys from:
-- Google API: Google Cloud Console
-- X API: X Developer Portal (https://developer.x.com)
-- Tavily API: Tavily Dashboard (https://tavily.com)
-- Serp API: Serpapi website (https://serpapi.com/)
+
+Sources for keys:
+
+- **Google API**: Google Cloud Console
+- **X API**: X Developer Portal
+- **Tavily API**: Tavily Dashboard
+- **Serp API**: Serpapi
 
 ## Logging
-- Logs are saved to `./saved/agent_logs.log` with a maximum size of 5MB and up to 3 backup files.
-- Verbose logging can be enabled in `config.py` or the Streamlit UI.
-- Streamlit logs are displayed in the UI when verbose mode is enabled.
+
+Logs are saved to `./saved/agent_logs.log` with rotation (max 5MB, 3 backups).
+
+Enable verbose logging via `config.py` or Streamlit UI.
+
+Streamlit shows logs when verbose mode is enabled.
+
+```
+
+Let me know if you want to contribute to this project!
