@@ -374,6 +374,86 @@
     },
     {
       "source": "arxiv",
+      "title": "Reconstructing 4D Spatial Intelligence: A Survey",
+      "authors": [
+        "Yukang Cao",
+        "Jiahao Lu",
+        "Zhisheng Huang",
+        "Zhuowei Shen",
+        "Chengfeng Zhao",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Xin Li",
+        "Wenping Wang",
+        "Yuan Liu",
+        "Ziwei Liu"
+      ],
+      "Publish_date": "28-07-2025",
+      "url": "http://arxiv.org/abs/2507.21045v1",
+      "abstract": "Reconstructing 4D spatial intelligence from visual observations has long been a central yet challenging task in computer vision, with broad real-world applications. These range from entertainment domains like movies, where the focus is often on reconstructing fundamental visual elements, to embodied AI, which emphasizes interaction modeling and physical realism. Fueled by rapid advances in 3D representations and deep learning architectures, the field has evolved quickly, outpacing the scope of p",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plosone",
+      "title": "Spatio-temporal characterization of earthquake sequence...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301975",
+      "abstract": "Point process modeling can be used to better understand potential interactions between earthquakes and spatial features, temporal features, and",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "GPT-IMAGE-EDIT-1.5M: A Million-Scale, GPT-Generated Image Dataset",
+      "authors": [
+        "Yuhan Wang",
+        "Siwei Yang",
+        "Bingchen Zhao",
+        "Letian Zhang",
+        "Qing Liu",
+        "Yuyin Zhou",
+        "Cihang Xie"
+      ],
+      "Publish_date": "28-07-2025",
+      "url": "http://arxiv.org/abs/2507.21033v1",
+      "abstract": "Recent advancements in large multimodal models like GPT-4o have set a new standard for high-fidelity, instruction-guided image editing. However, the proprietary nature of these models and their training data creates a significant barrier for open-source research. To bridge this gap, we introduce GPT-IMAGE-EDIT-1.5M, a publicly available, large-scale image-editing corpus containing more than 1.5 million high-quality triplets (instruction, source image, edited image). We systematically construct t",
+      "usefulness_score": 78
+    },
+    {
+      "source": "arxiv",
+      "title": "A Spatio-Temporal Point Process for Fine-Grained Modeling of Reading Behavior",
+      "authors": [
+        "Francesco Ignazio Re",
+        "Andreas Opedal",
+        "Glib Manaiev",
+        "Mario Giulianelli",
+        "Ryan Cotterell"
+      ],
+      "Publish_date": "24-06-2025",
+      "url": "http://arxiv.org/abs/2506.19999v1",
+      "abstract": "This paper introduces a spatio-temporal point process model to analyze reading behavior, capturing the dynamics of eye movements (fixations and saccades) to better understand online sentence processing. This approach moves beyond traditional aggregated eye-tracking measurements, offering a more fine-grained and detailed analysis of reading patterns.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "What Influences the Field Goal Attempts of Professional Players? Analysis of Basketball Shot Charts via Log Gaussian Cox Processes with Spatially Varying Coefficients",
+      "authors": [
+        "Jiahao Cao",
+        "Qingpo Cai",
+        "Lance A. Waller",
+        "DeMarc A. Hickson",
+        "Guanyu Hu",
+        "Jian Kang"
+      ],
+      "Publish_date": "04-03-2025",
+      "url": "http://arxiv.org/abs/2503.02137v1",
+      "abstract": "This study analyzes basketball shot charts using Log Gaussian Cox Processes with spatially varying coefficients to understand the factors influencing shot attempts. By modeling shot locations as a marked spatio-temporal point process, the paper provides insights into offensive and defensive strategies and player performance, offering a sophisticated approach to sports analytics.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
       "title": "Fine-grained Spatio-temporal Event Prediction with Self-adaptive Anchor Graph",
       "authors": [
         "Wang-Tao Zhou",
@@ -384,187 +464,155 @@
       ],
       "Publish_date": "15-01-2025",
       "url": "http://arxiv.org/abs/2501.08653v2",
-      "abstract": "This paper addresses the challenges of spatial heterogeneity and correlations in spatio-temporal event prediction. It proposes a self-adaptive anchor graph model to learn the spatial dependencies of events in a continuous space. The model is designed to handle fine-grained spatio-temporal data and improve event prediction accuracy by capturing the varying characteristics and latent correlations of different regions.",
-      "usefulness_score": 90
-    },
-    {
-      "source": "arxiv",
-      "title": "A Methodological Framework and Questionnaire for Investigating Perceived Algorithmic Fairness",
-      "authors": [
-        "Ahmed Abdal Shafi Rasel",
-        "Ahmed Mustafa Amlan",
-        "Tasmim Shajahan Mim",
-        "Tanvir Hasan"
-      ],
-      "Publish_date": "07-08-2025",
-      "url": "http://arxiv.org/abs/2508.05281v1",
-      "abstract": "This study explores perceptions of fairness in algorithmic decision-making among users in Bangladesh through a comprehensive mixed-methods approach. By integrating quantitative survey data with qualitative interview insights, we examine how cultural, social, and contextual factors influence users' understanding of fairness, transparency, and accountability in AI systems. Our findings reveal nuanced attitudes toward human oversight, explanation mechanisms, and contestability, highlighting the importance of context in designing fair AI.",
-      "usefulness_score": 85
-    },
-    {
-      "source": "arxiv",
-      "title": "Understanding Heterogeneity in Adaptation to Intermittent Water Supply: Clustering Household Types in Amman, Jordan",
-      "authors": [
-        "Shreyas Gadge",
-        "V\u00edtor V. Vasconcelos",
-        "Andr\u00e9 de Roos",
-        "Elisabeth H. Krueger"
-      ],
-      "Publish_date": "04-08-2025",
-      "url": "http://arxiv.org/abs/2508.02569v1",
-      "abstract": "More than a billion people around the world experience intermittence in their water supply, posing challenges for urban households in Global South cities. An intermittent water supply (IWS) system prompts water users to adapt to service deficits which entails coping costs. Adaptation and its impacts can vary between households within the same city, leading to intra-urban inequality. Studies on household adaptation to IWS through survey data are limited to exploring income-based heterogeneity and this paper addresses this gap by clustering household types in Amman, Jordan.",
-      "usefulness_score": 90
-    },
-    {
-      "source": "arxiv",
-      "title": "Debiasing Machine Learning Predictions for Causal Inference Without Additional Ground Truth Data: \"One Map, Many Trials\" in Satellite-Driven Poverty Analysis",
-      "authors": [
-        "Markus Pettersson",
-        "Connor T. Jerzak",
-        "Adel Daoud"
-      ],
-      "Publish_date": "02-08-2025",
-      "url": "http://arxiv.org/abs/2508.01341v1",
-      "abstract": "Machine learning models trained on Earth observation data, such as satellite imagery, have demonstrated significant promise in predicting household-level wealth indices, enabling the creation of high-resolution wealth maps that can be leveraged across multiple causal trials. However, because standard training objectives prioritize overall predictive accuracy, these predictions inherently suffer from shrinkage toward the mean, leading to attenuated estimates of causal treatment effects and limiting their use in causal inference. This paper proposes a method for debiasing these predictions without additional ground truth data.",
+      "abstract": "This paper presents a new model for fine-grained spatio-temporal event prediction that addresses the challenges of spatial heterogeneity and correlations. The proposed self-adaptive anchor graph method aims to improve the accuracy of predicting event occurrences in continuous space by learning spatial dependencies more effectively than existing state-of-the-art models.",
       "usefulness_score": 80
     },
     {
       "source": "plos",
-      "title": "Aerial survey estimates of polar bears and their tracks in the Chukchi Sea",
-      "authors": [
-        "Eric V. Regehr",
-        "Ryan R. Wilson",
-        "Karyn D. Rode",
-        "Michelle S. St. Martin",
-        "Stephen C. Amstrup"
-      ],
-      "Publish_date": "2021-05-19",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0251130",
-      "abstract": "This study utilizes aerial survey data to estimate polar bear populations in the Chukchi Sea. It employs spatio-temporal models and point process techniques to analyze the survey data, highlighting the challenges and considerations of applying these models in ecological contexts.",
-      "usefulness_score": 90
-    },
-    {
-      "source": "plos",
-      "title": "A case study of Chongqing's central urban area, China",
-      "authors": [
-        "Yihong Wang",
-        "Yan Li",
-        "Jie Li"
-      ],
-      "Publish_date": "2024-06-12",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0315943",
-      "abstract": "This study investigates the spatio-temporal patterns of urban land change in Chongqing's central urban area. It is based on annual land change survey data and addresses the challenges associated with analyzing such data to understand urban dynamics.",
+      "title": "PLOS Recurrent spatio-temporal modeling of check-ins in location-based social networks | PLOS ONE",
+      "authors": "unknown",
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0197683",
+      "abstract": "This paper explores the use of recurrent spatio-temporal models to understand user behavior in location-based social networks. It focuses on modeling check-in data, showcasing the application of point process models in analyzing human mobility and social patterns.",
       "usefulness_score": 85
     },
     {
-      "source": "plos",
-      "title": "Modeling Trends from North American Breeding Bird Survey Data: A Spatially Explicit Approach",
+      "source": "plosone",
+      "title": "Registration of spatio-temporal point clouds of plants for phenotyping",
       "authors": [
-        "John R. Sauer",
-        "Adam G. Smith",
-        "John B. Dunning Jr."
+        "unknown"
       ],
-      "Publish_date": "2013-12-04",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0081867",
-      "abstract": "This paper presents a spatially explicit approach to modeling trends from the North American Breeding Bird Survey data. It emphasizes the importance of considering spatio-temporal dynamics in conservation-oriented studies.",
-      "usefulness_score": 80
-    },
-    {
-      "source": "plos",
-      "title": "A mechanistic and deep learning study of spatio-temporal heterogeneity of susceptibles in COVID-19 spreading",
-      "authors": [
-        "Yiding Yang",
-        "Zhanwei Du",
-        "Lina Meng",
-        "Matteo Chinazzi",
-        "Ana Pastore y Piontti",
-        "Alessandro Vespignani",
-        "Marco Ajelli",
-        "C\u00e9cile Viboud",
-        "Hongjie Yu"
-      ],
-      "Publish_date": "2024-05-22",
-      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
-      "abstract": "This study combines mechanistic models and deep learning to manage the spatio-temporal heterogeneity of susceptibles in disease transmission. It utilizes survey data on cumulative infection rates to inform and validate the models.",
-      "usefulness_score": 88
-    },
-    {
-      "source": "plos",
-      "title": "Spatially Extensive Standardized Surveys Reveal Widespread, Multi-Decadal Increase in East Antarctic Ad\u00e9lie Penguin Populations",
-      "authors": [
-        "Louise M. Emmerson",
-        "Colin Southwell",
-        "Barbara Wienecke"
-      ],
-      "Publish_date": "2015-10-07",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0139877",
-      "abstract": "This study synthesizes spatially extensive and standardized survey data to assess decadal-scale changes in East Antarctic Ad\u00e9lie penguin populations. The research focuses on estimating spatio-temporal trends to understand the impact of environmental changes on this species.",
-      "usefulness_score": 82
-    },
-    {
-      "source": "plos",
-      "title": "Spatio-temporal characterization of earthquake sequence in the eastern Himalayan syntaxis using point process modeling",
-      "authors": [
-        "Rituraj Das",
-        "Saurabh Baruah",
-        "Santanu Baruah"
-      ],
-      "Publish_date": "2024-04-10",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301975",
-      "abstract": "This paper uses point process models to analyze the spatio-temporal patterns of earthquakes in the eastern Himalayan syntaxis. The study investigates the interactions between earthquakes and various spatial and temporal features, providing a better understanding of seismic activity in the region. The findings can contribute to improved earthquake forecasting and risk assessment.",
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247243",
+      "abstract": "This paper investigates the problem of registering 3D point clouds of plants over time and space, a key challenge in plant phenotyping. The authors propose a novel method for aligning these spatio-temporal point clouds to enable the study of plant growth and development.",
       "usefulness_score": 95
     },
     {
-      "source": "plos",
-      "title": "Detection and analysis of spatiotemporal patterns in brain activity",
+      "source": "ploscompbiol",
+      "title": "A mechanistic and deep learning study | PLOS Computational Biology",
       "authors": [
-        "Rory G. Townsend",
-        "Pulin Gong"
+        "unknown"
       ],
-      "Publish_date": "2018-12-20",
-      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006643",
-      "abstract": "This paper presents a method for detecting and analyzing spatiotemporal patterns in brain activity, specifically from neuronal recordings. While it deals with spatio-temporal data, the methods described are not explicitly framed as point process models, but rather as a novel pattern detection algorithm. However, the analysis of neural spike trains is a classic application of point processes.",
-      "usefulness_score": 76
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
+      "abstract": "This study proposes a novel modeling framework that integrates spatio-temporal heterogeneity of susceptible individuals into homogeneous models. This is a significant contribution to the field of epidemiology and disease modeling.",
+      "usefulness_score": 90
     },
     {
-      "source": "plos",
-      "title": "Contextual factors predicting compliance behavior during the COVID-19 pandemic: A machine learning analysis on survey data from 16 countries",
+      "source": "plosone",
+      "title": "Evaluating and implementing temporal, spatial, and spatio-temporal ...",
       "authors": [
-        "Lennart Raabe",
-        "Lara-Sophie Exton",
-        "Jonas Wiedner",
-        "Clemens Stachl",
-        "Ramona Schoedel"
+        "unknown"
       ],
-      "Publish_date": "2022-11-02",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276970",
-      "abstract": "This study uses machine learning to analyze survey data from 16 countries to identify contextual factors that predict compliance with COVID-19 measures. The findings provide insights into how different contexts influence public health behaviors, which can inform future pandemic responses.",
-      "usefulness_score": 92
-    },
-    {
-      "source": "plos",
-      "title": "The influence of contextual priming on discrete choice experiments",
-      "authors": [
-        "J\u00fcrgen Buder",
-        "Jonas F. G. K\u00f6nig",
-        "Roland F. K. Frey"
-      ],
-      "Publish_date": "2024-07-17",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312256",
-      "abstract": "This paper investigates how the context in which a survey is conducted can influence the results of discrete choice experiments. The study highlights the importance of considering contextual factors in survey design and analysis to ensure the validity of the findings.",
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184419",
+      "abstract": "This paper provides a comprehensive evaluation of various temporal, spatial, and spatio-temporal methods. The authors discuss the implementation of these methods in R, WinBUGS, and SaTScan, offering practical guidance for researchers.",
       "usefulness_score": 85
     },
     {
-      "source": "plos",
-      "title": "A data science analysis of the World Values Survey",
+      "source": "ploscompbiol",
+      "title": "Spatio-temporal modeling of the crowding conditions and metabolic ...",
       "authors": [
-        "Victor M. Yakovenko",
-        "Theodore L. Hsu",
-        "Geoffry M. D'Elia"
+        "unknown"
       ],
-      "Publish_date": "2021-01-22",
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245231",
-      "abstract": "This paper applies data science techniques to the World Values Survey to uncover quantitative social dimensions. The analysis provides a deeper understanding of cultural and social trends across different countries, demonstrating the power of data science in analyzing large-scale survey data.",
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1009140",
+      "abstract": "This research investigates how crowding conditions and metabolic variability among cells shape the dynamics of microbial communities. The authors use spatio-temporal modeling to explore these complex interactions.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plosone",
+      "title": "Self-Organization of Spatio-Temporal Hierarchy via Learning ... - PLOS",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131214",
+      "abstract": "This study introduces a method for contextual recognition of dynamic visual image patterns using a self-organizing spatio-temporal hierarchy. This has potential applications in computer vision and pattern recognition.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "arxiv",
+      "title": "When Proximity Falls Short: Inequalities in Commuting and Accessibility by Public Transport in Santiago, Chile",
+      "authors": [
+        "Cesar Marin-Flores",
+        "Leo Ferres",
+        "Henrikki Tenkanen"
+      ],
+      "Publish_date": "29-07-2025",
+      "url": "http://arxiv.org/abs/2507.21743v1",
+      "abstract": "This study uses mobile phone data (eXtended Detail Records) to analyze commuting patterns and accessibility in Santiago, Chile. By modeling residential and work locations and commuting routes, the authors reveal inequalities in public transport accessibility, highlighting the limitations of traditional static models.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "arxiv",
+      "title": "An empirical comparison of some outlier detection methods with longitudinal data",
+      "authors": [
+        "Marcello D'Orazio"
+      ],
+      "Publish_date": "28-07-2025",
+      "url": "http://arxiv.org/abs/2507.21203v1",
+      "abstract": "This paper compares various outlier detection methods for longitudinal data, drawing from official statistics, data mining, and machine learning. The study applies these methods to panel survey data, evaluating their effectiveness in identifying potential outliers and discussing their respective strengths and weaknesses.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Local Poisson Deconvolution for Discrete Signals",
+      "authors": [
+        "Shayan Hundrieser",
+        "Tudor Manole",
+        "Danila Litskevich",
+        "Axel Munk"
+      ],
+      "Publish_date": "01-08-2025",
+      "url": "http://arxiv.org/abs/2508.00824v1",
+      "abstract": "We analyze the statistical problem of recovering an atomic signal, modeled as a discrete uniform distribution, from a binned Poisson convolution model. This question is motivated, among others, by super-resolution laser microscopy applications, where precise estimation of the signal provides insights into spatial formations of cellular protein assemblies. Our main results quantify the local minimax risk of estimating the signal for a broad class of smooth convolution kernels.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Generative AI in Higher Education: Evidence from an Elite College",
+      "authors": [
+        "Zara Contractor",
+        "Germ\u00e1n Reyes"
+      ],
+      "Publish_date": "01-08-2025",
+      "url": "http://arxiv.org/abs/2508.00717v1",
+      "abstract": "This study uses survey data from a selective U.S. college to document the adoption of generative AI among students. It finds that over 80% of students use AI for academic purposes, with usage varying across disciplines and demographics. The paper explores how AI is used for learning and its potential impact on educational inequalities.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "arxiv",
+      "title": "Stochastic Taylor expansion via Poisson point processes",
+      "authors": [
+        "Weichao Wu",
+        "Athanasios C. Micheas"
+      ],
+      "Publish_date": "06-08-2025",
+      "url": "http://arxiv.org/abs/2508.04703v1",
+      "abstract": "This paper introduces a generalization of Taylor's theorem using a stochastic formulation based on a Poisson point process model. This approach is used to propose a novel non-linear regression framework and perform statistical inference on the model parameters. The authors prove theoretical properties of the proposed estimator, including its convergence to the true function. The theory is presented for both univariate and multivariate cases.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "ploscompbiol",
+      "title": "Detection and analysis of spatiotemporal patterns in brain activity",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006643",
+      "abstract": "Research Article: Detection and analysis of spatiotemporal patterns in brain activity. Rory G. Townsend, Pulin Gong.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plosone",
+      "title": "Event Detection using Twitter: A Spatio-Temporal Approach",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097807",
+      "abstract": "This paper suggests an alternative methodology for event detection using space-time scan statistics (STSS). It has been found that not only can STSS be applied to Twitter, but that abnormal space time clusters did exist within Twitter relating to the London helicopter crash disaster, as well as other space-time events such as sport fixtures and train delays.",
       "usefulness_score": 90
     }
   ]
