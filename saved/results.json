@@ -666,6 +666,28 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256340",
       "abstract": "This paper introduces Pheno4D, a spatio-temporal dataset of maize and tomato plant point clouds. This dataset can be used for applications such as tracking different phenotypic traits for the plants and quantifying their performance over time.",
       "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "LiDO: Discovery of a 10:1 Resonator with a Novel Libration State",
+      "authors": [
+        "Rosemary E. Pike",
+        "Ruth Murray-Clay",
+        "Kathryn Volk",
+        "Mike Alexandersen",
+        "Mark Comte",
+        "Samantha M. Lawler",
+        "Ying-Tung Chen",
+        "Arcelia Hermosillo Ruiz",
+        "Cameron Semenchuck",
+        "Cameron Collyer",
+        "J. J. Kavelaars",
+        "Lowell Peltier"
+      ],
+      "Publish_date": "07-08-2025",
+      "url": "http://arxiv.org/abs/2508.05627v1",
+      "abstract": "The Large inclination Distant Objects (LiDO) survey discovered a new object, 2020 VN40, in the 10:1 mean motion resonance of Neptune. This paper reports on the discovery from the survey data, confirming that this distant resonance is populated, which is a significant finding in planetary science.",
+      "usefulness_score": 80
     }
   ]
 }
