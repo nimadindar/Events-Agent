@@ -688,6 +688,78 @@
       "url": "http://arxiv.org/abs/2508.05627v1",
       "abstract": "The Large inclination Distant Objects (LiDO) survey discovered a new object, 2020 VN40, in the 10:1 mean motion resonance of Neptune. This paper reports on the discovery from the survey data, confirming that this distant resonance is populated, which is a significant finding in planetary science.",
       "usefulness_score": 80
+    },
+    {
+      "source": "arxiv",
+      "title": "Feature-Wise Mixing for Mitigating Contextual Bias in Predictive Supervised Learning",
+      "authors": [
+        "Yash Vardhan Tomar"
+      ],
+      "Publish_date": "28-06-2025",
+      "url": "http://arxiv.org/abs/2506.23033v1",
+      "abstract": "This paper introduces a feature-wise mixing framework to mitigate contextual bias in predictive machine learning models. The method aims to redistribute feature representations across different groups to reduce the influence of sensitive attributes on predictions, thereby improving fairness and model generalizability.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Unified Flow Matching for Long Horizon Event Forecasting",
+      "authors": [
+        "Xiao Shou"
+      ],
+      "Publish_date": "06-08-2025",
+      "url": "http://arxiv.org/abs/2508.04843v1",
+      "abstract": "This paper proposes a unified flow matching framework for marked temporal point processes, enabling non-autoregressive, long-horizon event forecasting. This approach addresses the limitations of traditional autoregressive models, which are prone to error accumulation and inefficiency in long-range predictions, making it suitable for applications in healthcare, finance, and user behavior modeling.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "A multi-stage Bayesian approach to fit spatial point process models",
+      "authors": [
+        "Rachael Ren",
+        "Mevin B. Hooten",
+        "Toryn L. J. Schafer",
+        "Nicholas M. Calzada",
+        "Benjamin Hoose",
+        "Jamie N. Womble",
+        "Scott Gende"
+      ],
+      "Publish_date": "04-08-2025",
+      "url": "http://arxiv.org/abs/2508.02922v1",
+      "abstract": "This paper introduces a flexible and efficient multi-stage recursive Bayesian approach for fitting spatial point process (SPP) models. The proposed method leverages parallel computing to streamline the estimation of model coefficients, addressing the computational expense of traditional methods and making it particularly useful for analyzing presence-only data in ecological studies.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "journals.plos.org",
+      "title": "Spatio-Temporal Variation of Conversational Utterances on Twitter",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0077793",
+      "abstract": "Conversations reflect the existing norms of a language. Previously, we found that utterance lengths in English fictional conversations in books and movies follow a log-normal distribution with a relatively stable mode of 3-4 seconds. Here we analyze the spatio-temporal variation of this mode on the social media platform Twitter.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "journals.plos.org",
+      "title": "Combining Spatial-Temporal and Phylogenetic Analysis for comprehensive understanding of pathogen evolution and spread",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0013575",
+      "abstract": "We report an interdisciplinary effort that combines the geospatial informatics approach with a bioinformatics approach to form an improved understanding on the evolution and spread of a pathogen. We used the H5N1 avian influenza virus as a case study. Our study demonstrated that the combined phylogenetic and spatial-temporal analysis approach can provide a comprehensive and improved understanding of the evolution and spread of a pathogen.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "journals.plos.org",
+      "title": "Scenic area attractiveness in Dali City and its influencing factors based on multi-source spatiotemporal data",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323310",
+      "abstract": "Scenic area attractiveness is a core factor in urban tourism development. Developments in social media and multi-source spatiotemporal data provide a basis for studying scenic area attractiveness. This study uses multi-source spatiotemporal data to analyze the attractiveness of scenic areas in Dali City and its influencing factors.",
+      "usefulness_score": 80
     }
   ]
 }
