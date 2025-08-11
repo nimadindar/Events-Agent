@@ -760,6 +760,46 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323310",
       "abstract": "Scenic area attractiveness is a core factor in urban tourism development. Developments in social media and multi-source spatiotemporal data provide a basis for studying scenic area attractiveness. This study uses multi-source spatiotemporal data to analyze the attractiveness of scenic areas in Dali City and its influencing factors.",
       "usefulness_score": 80
+    },
+    {
+      "source": "arxiv",
+      "title": "Doubly robust integration of nonprobability and probability survey data",
+      "authors": [
+        "Shaun R Seaman",
+        "Tommy Nyberg",
+        "Anne M Presanis"
+      ],
+      "Publish_date": "07-08-2025",
+      "url": "http://arxiv.org/abs/2508.05859v1",
+      "abstract": "This paper proposes several doubly robust estimators for integrating outcome and covariate data from a nonprobability survey with covariate data from an auxiliary probability survey. The authors address the challenge of combining a doubly robust estimate with an estimate based on outcome data from the auxiliary probability survey, which is a key issue in survey data analysis.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Spatio-Temporal distribution characteristics and driving factors of Chinese cultural heritage tourism routes in the past 20 years",
+      "authors": [
+        "Ying Zhang",
+        "Jing-jing Wang",
+        "Xiao-ling Li"
+      ],
+      "Publish_date": "May 2, 2024",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0303396",
+      "abstract": "This study analyzes the spatio-temporal distribution characteristics of Chinese cultural heritage tourism routes over the last two decades. It identifies the key driving factors that have influenced the spatial and temporal evolution of these tourism routes.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Accurate disaster entity recognition based on contextual information and multi-task learning",
+      "authors": [
+        "Yating Zhang",
+        "Ying Li",
+        "Jingjing Wang",
+        "Xiaoling Li"
+      ],
+      "Publish_date": "February 28, 2024",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318262",
+      "abstract": "This study focuses on the automatic extraction of disaster-related named entities from a dataset of 1000 annotated online news articles. By leveraging contextual information and a multi-task learning framework, the research aims to improve the accuracy of disaster entity recognition, which is crucial for emergency response and disaster management.",
+      "usefulness_score": 90
     }
   ]
 }
