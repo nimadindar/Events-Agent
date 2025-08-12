@@ -800,6 +800,50 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318262",
       "abstract": "This study focuses on the automatic extraction of disaster-related named entities from a dataset of 1000 annotated online news articles. By leveraging contextual information and a multi-task learning framework, the research aims to improve the accuracy of disaster entity recognition, which is crucial for emergency response and disaster management.",
       "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "WGAST: Weakly-Supervised Generative Network for Daily 10 m Land Surface Temperature Estimation via Spatio-Temporal Fusion",
+      "authors": [
+        "Sofiane Bouaziz",
+        "Adel Hafiane",
+        "Raphael Canals",
+        "Rachid Nedjai"
+      ],
+      "Publish_date": "08-08-2025",
+      "url": "http://arxiv.org/abs/2508.06485v1",
+      "abstract": "This paper presents WGAST, a weakly-supervised generative network for estimating daily Land Surface Temperature (LST) at a high spatial resolution (10 m) using spatio-temporal fusion. This method addresses the trade-off between spatial and temporal resolution in remote sensing satellites. The proposed solution is particularly relevant for environmental monitoring applications, which are increasingly important due to urbanization, climate change, and agricultural stress.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Effective Training Data Synthesis for Improving MLLM Chart Understanding",
+      "authors": [
+        "Yuwei Yang",
+        "Zeyu Zhang",
+        "Yunzhong Hou",
+        "Zhuowan Li",
+        "Gaowen Liu",
+        "Ali Payani",
+        "Yuan-Sen Ting",
+        "Liang Zheng"
+      ],
+      "Publish_date": "08-08-2025",
+      "url": "http://arxiv.org/abs/2508.06492v1",
+      "abstract": "This paper addresses the challenge of improving chart understanding in multimodal large language models (MLLMs). The authors propose a method for synthesizing effective training data that more closely resembles real-world charts, which is a key limitation of existing approaches. This work is significant for advancing the capabilities of AI agents in scientific and data analysis domains.",
+      "usefulness_score": 92
+    },
+    {
+      "source": "arxiv",
+      "title": "Non-programmers Assessing AI-Generated Code: A Case Study of Business Users Analyzing Data",
+      "authors": [
+        "Yuvraj Virk",
+        "Dongyu Liu"
+      ],
+      "Publish_date": "08-08-2025",
+      "url": "http://arxiv.org/abs/2508.06484v1",
+      "abstract": "This study investigates the ability of non-technical users, specifically marketing and sales professionals, to evaluate the correctness of AI-generated code for data analysis. The research uses a survey methodology to assess how well these users can identify errors in LLM-generated analyses of marketing data. The findings are crucial for understanding the reliability of AI-powered tools in business contexts.",
+      "usefulness_score": 88
     }
   ]
 }
