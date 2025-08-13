@@ -844,6 +844,41 @@
       "url": "http://arxiv.org/abs/2508.06484v1",
       "abstract": "This study investigates the ability of non-technical users, specifically marketing and sales professionals, to evaluate the correctness of AI-generated code for data analysis. The research uses a survey methodology to assess how well these users can identify errors in LLM-generated analyses of marketing data. The findings are crucial for understanding the reliability of AI-powered tools in business contexts.",
       "usefulness_score": 88
+    },
+    {
+      "source": "arxiv",
+      "title": "Identifying nonequilibrium degrees of freedom in high-dimensional stochastic systems",
+      "authors": [
+        "Catherine Ji",
+        "Ravin Raj",
+        "Benjamin Eysenbach",
+        "Gautam Reddy"
+      ],
+      "Publish_date": "11-08-2025",
+      "url": "http://arxiv.org/abs/2508.08247v1",
+      "abstract": "Standard methods for reducing the dimensionality of nonequilibrium systems often prioritize reconstruction accuracy over physical relevance. This paper introduces a model-free method to identify the key irreversible degrees of freedom within high-dimensional stochastic systems in a nonequilibrium steady state. The approach uniquely trains a classifier to distinguish between forward and time-reversed system dynamics, thereby isolating the components essential for understanding the system's irreversible behavior.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Mitigating incoherent excess variance in high-redshift 21-cm observations with multi-output cross Gaussian process regression",
+      "authors": [
+        "S. Munshi",
+        "L. V. E. Koopmans",
+        "F. G. Mertens",
+        "A. R. Offringa",
+        "S. A. Brackenhoff",
+        "E. Ceccotti",
+        "J. K. Chege",
+        "L. Y. Gao",
+        "S. Ghosh",
+        "M. Mevius",
+        "S. Zaroubi"
+      ],
+      "Publish_date": "11-08-2025",
+      "url": "http://arxiv.org/abs/2508.08235v1",
+      "abstract": "A major challenge in 21-cm cosmology is the contamination of the faint cosmological signal by bright astrophysical foregrounds and other systematic effects. This paper presents a novel method to mitigate incoherent excess variance in radio interferometric data, which can mimic the 21-cm signal. The proposed solution uses multi-output cross Gaussian process regression to model and subtract this contaminant, thereby improving the sensitivity of low-frequency radio telescopes for observing the high-redshift universe.",
+      "usefulness_score": 92
     }
   ]
 }
