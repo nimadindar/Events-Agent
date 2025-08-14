@@ -879,6 +879,100 @@
       "url": "http://arxiv.org/abs/2508.08235v1",
       "abstract": "A major challenge in 21-cm cosmology is the contamination of the faint cosmological signal by bright astrophysical foregrounds and other systematic effects. This paper presents a novel method to mitigate incoherent excess variance in radio interferometric data, which can mimic the 21-cm signal. The proposed solution uses multi-output cross Gaussian process regression to model and subtract this contaminant, thereby improving the sensitivity of low-frequency radio telescopes for observing the high-redshift universe.",
       "usefulness_score": 92
+    },
+    {
+      "source": "plos",
+      "title": "Multi-dimensional perceptual recognition of tourist destination using online travelogue data: A case study of Chinese tourists in Nordic countries",
+      "authors": [
+        "Yuxia Liu",
+        "Sz-Han Chen"
+      ],
+      "Publish_date": "2025-02-21",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318846",
+      "abstract": "This paper analyzes the spatio-temporal behavior of Chinese tourists in Nordic countries using geo-located travel blog data. The study aims to understand the multi-dimensional perceptual recognition of tourist destinations from the perspective of tourists. It provides a methodology for analyzing user-generated content to gain insights into tourism patterns and destination perception.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Multi-scale spatio-temporal analysis of human mobility",
+      "authors": [
+        "Laura Alessandretti",
+        "Piotr Sapiezynski",
+        "Sune Lehmann",
+        "Andrea Baronchelli"
+      ],
+      "Publish_date": "2017-02-21",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0171686",
+      "abstract": "This paper presents a multi-scale spatio-temporal analysis of human mobility by examining the digital traces of approximately 850 individuals over 25 months. The study characterizes mobility behavior across different magnitudes, providing insights into the patterns of human movement. The findings are relevant for urban planning, epidemiology, and other fields that rely on understanding human mobility.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Spatial and temporal characteristics analysis and prediction model of urban road traffic flow based on ST-Informer: A case study of Beijing",
+      "authors": [
+        "Yanjun Geng",
+        "Yize Wang",
+        "Yifei Wang",
+        "Yixin Liu",
+        "Yixin Zhang"
+      ],
+      "Publish_date": "2023-06-29",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287423",
+      "abstract": "This paper proposes a novel spatiotemporal prediction model, ST-Informer, to analyze and predict urban road traffic flow. Using Beijing as a case study, the research explores the spatial and temporal characteristics of traffic and develops a model to forecast traffic flow. The study addresses the shortcomings of existing spatiotemporal prediction models and offers a new approach for traffic management and urban planning.",
+      "usefulness_score": 88
+    },
+    {
+      "source": "plos",
+      "title": "Spatio-Temporal Analysis of Micro Economic Activities in Rome: A Twitter-Based Approach",
+      "authors": [
+        "Ruben Assistance",
+        "Michele Coscia",
+        "Salvatore Rinzivillo",
+        "Fosca Giannotti",
+        "Dino Pedreschi"
+      ],
+      "Publish_date": "2016-05-11",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0151681",
+      "abstract": "This study uses Twitter data to conduct a spatio-temporal analysis of micro-economic activities in Rome. The research demonstrates how social media data can provide insights into urbanization processes and economic trends. The paper's findings are valuable for understanding the dynamics of urban economies and the role of social media in economic analysis.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "Contextual factors predicting compliance behavior during the COVID-19 pandemic: A machine learning analysis on survey data from 16 countries",
+      "authors": [
+        "Timm Opitz",
+        "Simon Munzert",
+        "et al."
+      ],
+      "Publish_date": "2022-11-30",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276970",
+      "abstract": "This paper investigates the contextual factors that predict compliance behavior during the COVID-19 pandemic. Using a machine learning analysis of survey data from 16 countries, the study identifies key predictors of compliance with public health measures. The findings are crucial for understanding how to promote public health compliance during a pandemic.",
+      "usefulness_score": 92
+    },
+    {
+      "source": "plos",
+      "title": "Integrative context-dependent clustering for heterogeneous datasets",
+      "authors": [
+        "Sara C. Madeira",
+        "Ana T. Freitas"
+      ],
+      "Publish_date": "2017-10-12",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005781",
+      "abstract": "This paper introduces a novel algorithm for integrative, context-dependent clustering of heterogeneous multilevel data. The method is designed to handle complex datasets by incorporating contextual information into the clustering process. This approach is valuable for a wide range of applications where data from multiple sources and levels need to be analyzed together.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Exploring spatial variations and the individual and contextual factors of uptake of measles-containing second dose vaccine among children aged 24\u201335 months in Nigeria: A cross-sectional study",
+      "authors": [
+        "Bright Opoku Ahinkorah",
+        "Abdul-Aziz Seidu",
+        "et al."
+      ],
+      "Publish_date": "2023-01-18",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0280083",
+      "abstract": "This cross-sectional study explores the spatial variations and the individual and contextual factors influencing the uptake of the second dose of the measles vaccine in Nigeria. The research provides insights into the challenges of vaccination programs and the factors that need to be addressed to improve vaccine coverage. The findings are important for public health policy and intervention design.",
+      "usefulness_score": 85
     }
   ]
 }
