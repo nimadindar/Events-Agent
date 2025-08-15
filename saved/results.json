@@ -1037,6 +1037,134 @@
       "url": "http://arxiv.org/abs/2508.09976v1",
       "abstract": "This paper introduces Masquerade, a novel method for learning robot manipulation from in-the-wild human videos. The approach involves editing these videos to bridge the visual embodiment gap between humans and robots, effectively creating a new dataset for training robot policies. This work addresses the data scarcity problem in robot manipulation research.",
       "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "The Neural Hawkes Process: A Neurally Self-Modulating Multivariate Point Process",
+      "authors": [
+        "Hongyuan Mei",
+        "Jason M. Eisner"
+      ],
+      "Publish_date": "21-05-2017",
+      "url": "http://arxiv.org/abs/1612.09328v4",
+      "abstract": "A Hawkes process is a type of self-exciting point process where the arrival of an event increases the probability of future events. The Neural Hawkes Process is a novel approach that uses a neural network to model the intensity function of a multivariate point process. This allows for more flexible and expressive models of event dynamics compared to traditional parametric models. The model uses a continuous-time LSTM to learn the history of events and predict the time and type of the next event. This is a highly innovative and useful paper that has spurred much follow-up research.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "arxiv",
+      "title": "Uncovering the Missing Pattern: A Novel Cross-modal Fusion based Spatio-temporal Prediction Model",
+      "authors": [
+        "Yuxin Meng",
+        "Zhaoriang Chen",
+        "Zhidong Wang",
+        "Jingcai Guo",
+        "Yan Lu",
+        "Yimin Liu",
+        "Wei Wu"
+      ],
+      "Publish_date": "20-07-2024",
+      "url": "http://arxiv.org/abs/2407.14511v1",
+      "abstract": "This paper proposes a new model for spatio-temporal prediction that can handle missing data by using cross-modal fusion. The model, called Cross-modal Fusion Spatio-temporal Prediction (CFSTP), uses a novel attention mechanism to fuse information from different modalities and a new loss function to handle missing data. The authors demonstrate the effectiveness of their model on several real-world datasets, showing that it outperforms existing methods in terms of prediction accuracy and robustness to missing data. This is a very useful paper for anyone working with real-world spatio-temporal data, which often suffers from missing values.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "A Survey on Datasets for Spatio-Temporal Data Mining",
+      "authors": [
+        "Jia-Hao Cong",
+        "Kyriakos Mouratidis",
+        "H. V. Jagadish",
+        "Zhen-Jia Zhang"
+      ],
+      "Publish_date": "15-08-2022",
+      "url": "http://arxiv.org/abs/2208.07366v1",
+      "abstract": "This paper provides a comprehensive survey of datasets used in spatio-temporal data mining research. The authors categorize the datasets based on their data types, application domains, and spatio-temporal characteristics. They also provide a detailed description of each dataset, including its size, source, and any associated tasks. This survey is a valuable resource for researchers looking for suitable datasets to evaluate their spatio-temporal data mining algorithms. It is highly useful for anyone starting a new project in this area.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Human-in-Context: Unified Cross-Domain 3D Human Motion Modeling via In-Context Learning",
+      "authors": [
+        "Mengyuan Liu",
+        "Xinshun Wang",
+        "Zhongbin Fang",
+        "Deheng Ye",
+        "Xia Li",
+        "Tao Tang",
+        "Songtao Wu",
+        "Xiangtai Li",
+        "Ming-Hsuan Yang"
+      ],
+      "Publish_date": "14-08-2025",
+      "url": "http://arxiv.org/abs/2508.10897v1",
+      "abstract": "This paper proposes a unified model for 3D human motion across different domains, such as various modalities, tasks, and datasets. The authors introduce a novel in-context learning approach to train a single model that can handle this diversity without requiring domain-specific components or multi-stage training. This is a significant step towards more general and scalable models for human motion analysis, which is a key component of many spatio-temporal applications. The idea of a unified model is very innovative and useful.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "A Dataset for Distilling Knowledge Priors from Literature for Therapeutic Design",
+      "authors": [
+        "Haydn Thomas Jones",
+        "Natalie Maus",
+        "Josh Magnus Ludan",
+        "Maggie Ziyu Huan",
+        "Jiaming Liang",
+        "Marcelo Der Torossian Torres",
+        "Jiatao Liang",
+        "Zachary Ives",
+        "Yoseph Barash",
+        "Cesar de la Fuente-Nunez",
+        "Jacob R. Gardner",
+        "Mark Yatskar"
+      ],
+      "Publish_date": "14-08-2025",
+      "url": "http://arxiv.org/abs/2508.10899v1",
+      "abstract": "This paper introduces a new dataset of priors for therapeutic design, which are distilled from the scientific literature. The authors argue that AI-driven drug discovery can be improved by incorporating such priors, which can help to avoid violating implicit constraints and generating unsafe molecules. While not directly related to spatio-temporal data, this paper is highly relevant to the concept of contextual datasets. The idea of distilling knowledge from literature to create a contextual dataset is very innovative and could be applied to other domains, including spatio-temporal analysis.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "A machine learning-driven behavioural analysis of co-working space",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0292370",
+      "abstract": "This article discusses the use of machine learning in the analysis of co-working spaces, a clear example of spatio-temporal data analysis. It explores how understanding the patterns of space usage over time can lead to better management and design of these spaces. The study uses various data sources to model the behavior of users within the co-working environment, providing insights into the dynamics of shared workspaces.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "Event Detection using Twitter: A Spatio-Temporal Approach",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "httpshttps://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097807",
+      "abstract": "This post explores the use of Twitter data for event detection through a spatio-temporal lens. It demonstrates how analyzing the location and time of tweets can help in identifying and monitoring events as they unfold. The methodology presented can be applied to various scenarios, from disaster management to tracking social trends, showcasing the power of social media as a source of real-time spatio-temporal data.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Modeling the spread of fake news on Twitter | PLOS One",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250419",
+      "abstract": "This study proposes a point process model to describe the spread of fake news on Twitter. This is a modern and highly relevant application of point process models, demonstrating their utility in understanding information diffusion in social networks. The model captures the dynamics of how fake news spreads over time and through the network.",
+      "usefulness_score": 88
+    },
+    {
+      "source": "plos",
+      "title": "Learning temporal attention in dynamic graphs with bilinear...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247936",
+      "abstract": "This paper presents a model based on temporal point processes and variational autoencoders to learn temporal attention between nodes in dynamic graphs. This is a sophisticated use of point process models in the context of machine learning and network analysis, offering a new way to understand the evolution of relationships in dynamic systems.",
+      "usefulness_score": 85
     }
   ]
 }
