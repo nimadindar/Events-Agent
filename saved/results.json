@@ -1165,6 +1165,21 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247936",
       "abstract": "This paper presents a model based on temporal point processes and variational autoencoders to learn temporal attention between nodes in dynamic graphs. This is a sophisticated use of point process models in the context of machine learning and network analysis, offering a new way to understand the evolution of relationships in dynamic systems.",
       "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "MAESTRO: Masked AutoEncoders for Multimodal, Multitemporal, and Multispectral Earth Observation Data",
+      "authors": [
+        "Antoine Labatie",
+        "Michael Vaccaro",
+        "Nina Lardiere",
+        "Anatol Garioud",
+        "Nicolas Gonthier"
+      ],
+      "Publish_date": "14-08-2025",
+      "url": "http://arxiv.org/abs/2508.10894v1",
+      "abstract": "This paper presents MAESTRO, a novel Masked Autoencoder adapted for multimodal, multitemporal, and multispectral Earth observation data. It benchmarks fusion strategies and normalization schemes to handle the unique characteristics of this data type for self-supervised learning.",
+      "usefulness_score": 85
     }
   ]
 }
