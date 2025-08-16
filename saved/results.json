@@ -1180,6 +1180,78 @@
       "url": "http://arxiv.org/abs/2508.10894v1",
       "abstract": "This paper presents MAESTRO, a novel Masked Autoencoder adapted for multimodal, multitemporal, and multispectral Earth observation data. It benchmarks fusion strategies and normalization schemes to handle the unique characteristics of this data type for self-supervised learning.",
       "usefulness_score": 85
+    },
+    {
+      "source": "arxiv",
+      "title": "Neural Spatiotemporal Point Processes: Trends and Challenges",
+      "authors": [
+        "Sumantrak Mukherjee",
+        "Mouad Elhamdi",
+        "George Mohler",
+        "David A. Selby",
+        "Yao Xie",
+        "Sebastian Vollmer",
+        "Gerrit Grossmann"
+      ],
+      "Publish_date": "13-02-2025",
+      "url": "http://arxiv.org/abs/2502.09341v1",
+      "abstract": "Spatiotemporal point processes (STPPs) are probabilistic models for events that occur in continuous space and time. Real-world event data often exhibit complex dependencies and heterogeneous dynamics. By incorporating modern deep learning techniques, STPPs can model these complexities more effectively than traditional approaches. As a result, the fusion of neural methods with STPPs has become an active and rapidly evolving area of research. In this review, we categorize existing approaches, unify the field, and identify key trends and challenges.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Assessing the contagiousness of mass shootings with a point process model",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0248437",
+      "abstract": "This study uses a point process model to assess the contagiousness of mass shootings. A point process is a random collection of points occurring in some metric space, often in a temporal or spatio-temporal context. The model helps to determine if one mass shooting increases the probability of another one happening in the near future.",
+      "usefulness_score": 92
+    },
+    {
+      "source": "plos",
+      "title": "On the stability and dynamics of stochastic spiking neuron models",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005390",
+      "abstract": "Point process generalized linear models (PP-GLMs) provide an important statistical framework for modeling spiking activity in single-neurons and neuronal networks. This paper investigates the stability and dynamics of such models, which is crucial for understanding the computational properties of neural systems.",
+      "usefulness_score": 88
+    },
+    {
+      "source": "plos",
+      "title": "Implementing machine learning methods with complex survey data: Lessons learned on the impacts of accounting sampling weights in gradient boosting",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0280387",
+      "abstract": "This paper explores the application of machine learning methods, specifically gradient boosting, to complex survey data. Using data from the National Health and Nutrition Examination Survey, the authors investigate the impact of ignoring sampling weights on the model's predictive performance. The findings provide valuable lessons for researchers working with complex survey data and machine learning algorithms.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Indicators to Examine Quality of Large Scale Survey Data",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0090113",
+      "abstract": "This paper discusses various indicators used to examine the quality of large-scale survey data. The authors focus on age misreporting, incompleteness, and inconsistency of information as key quality indicators. The paper provides a framework for assessing the quality of survey data, which is crucial for ensuring the validity and reliability of research findings.",
+      "usefulness_score": 88
+    },
+    {
+      "source": "plos",
+      "title": "Risky Business: Factor Analysis of Survey Data",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0118900",
+      "abstract": "This paper undertakes a systematic assessment of the extent to which factor analysis can correctly identify the number of latent dimensions (factors) when applied to ordered-categorical survey data. The study highlights the potential risks and challenges associated with using factor analysis with survey data and provides recommendations for best practices.",
+      "usefulness_score": 85
     }
   ]
 }
