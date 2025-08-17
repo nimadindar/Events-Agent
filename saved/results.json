@@ -1252,6 +1252,17 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0118900",
       "abstract": "This paper undertakes a systematic assessment of the extent to which factor analysis can correctly identify the number of latent dimensions (factors) when applied to ordered-categorical survey data. The study highlights the potential risks and challenges associated with using factor analysis with survey data and provides recommendations for best practices.",
       "usefulness_score": 85
+    },
+    {
+      "source": "spatialedge",
+      "title": "MAESTRO: Masked AutoEncoders for Multimodal, Multitemporal, and Multispectral Earth Observation Data",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://www.spatialedge.co/p/maestro-masked-autoencoders-for",
+      "abstract": "A blog post discussing the MAESTRO paper, which introduces a self-supervised learning method for Earth observation data. The method uses a masked autoencoder to handle multimodal, multitemporal, and multispectral satellite imagery, learning rich representations for downstream tasks like land cover classification.",
+      "usefulness_score": 95
     }
   ]
 }
