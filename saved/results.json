@@ -1263,6 +1263,138 @@
       "url": "https://www.spatialedge.co/p/maestro-masked-autoencoders-for",
       "abstract": "A blog post discussing the MAESTRO paper, which introduces a self-supervised learning method for Earth observation data. The method uses a masked autoencoder to handle multimodal, multitemporal, and multispectral satellite imagery, learning rich representations for downstream tasks like land cover classification.",
       "usefulness_score": 95
+    },
+    {
+      "source": "plos",
+      "title": "Neural field models for latent state inference - Research journals",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007442",
+      "abstract": "The paper presents a method to interpret neural field models as latent state-space point-process models. This approach, based on moment closure, makes these models amenable to statistical analysis and allows for the inference of latent states from neural data. This provides a new framework for understanding the computational principles of neural field models.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Spatio-Temporal analysis of exports of cultural products and their ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0299654",
+      "abstract": "This study uses Exploratory Spatial Data Analysis (ESDA) to analyze the spatial patterns and relationships of cultural product exports. The methodology focuses on understanding the underlying spatial structures and distributions of the data, providing insights into the geographic concentrations and dispersions of cultural exports.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "Applying spatio-temporal models to assess variations across health ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0170480",
+      "abstract": "The paper discusses the application of various spatio-temporal models for disease mapping. It highlights the development of several methods over the last two decades to model and understand the complex spatio-temporal data structures in public health, allowing for the assessment of variations in health outcomes across different regions and time periods.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "A Four Dimensional Spatio-Temporal Analysis of an Agricultural ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0141120",
+      "abstract": "This article reviews primary temporal modeling approaches such as random walk and autoregressive models, as well as penalised spline smoothers. It acknowledges the complexity of spatio-temporal analysis and discusses these methods as foundational techniques for modeling temporal dependencies in four-dimensional agricultural data.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "Measurement and spatiotemporal analysis of high-quality ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0259845",
+      "abstract": "The paper introduces the natural breakpoint method as a data clustering technique for spatio-temporal analysis. This method aims to find the best grouping of different categories by minimizing the average deviation from the mean within each group, thus effectively identifying natural clusters in the data.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Spatial-Temporal Analysis of Environmental Data of North Beijing ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0167662",
+      "abstract": "This work demonstrates the use of Empirical Mode Decomposition (EMD) and Ensemble Empirical Mode Decomposition (EEMD) techniques for detecting abnormal values in environmental data. The study shows that the strong localized spectrum information provided by these methods allows for easy identification of anomalies in spatio-temporal datasets.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "A Granger Causality Measure for Point Process Models of Ensemble ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1001110",
+      "abstract": "This paper introduces a point process framework that allows the application of Granger causality to point process data, such as neural spike trains. This enables the analysis of causal relationships within ensembles of neurons, providing a new tool for understanding neural circuits.",
+      "usefulness_score": 95
+    },
+    {
+      "source": "plos",
+      "title": "Robust point-process Granger causality analysis in presence of ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007675",
+      "abstract": "The paper discusses Granger causality techniques for point-process data that overcome common problems in the analysis. By directly modeling the conditional intensity function (CIF) of neurons, these methods can be robustly applied to analyze causal interactions in neural data.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plos",
+      "title": "A Unified Approach to Linking Experimental, Statistical and ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0085269",
+      "abstract": "This article applies a standard point process analysis paradigm, constructing both descriptive statistics and a simple statistical model. The goal is to provide a unified approach that links experimental data with statistical analysis and theoretical models.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Point process analysis of noise in early invertebrate vision",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005687",
+      "abstract": "This paper provides a comprehensive analysis of the relative impact of intrinsic and extrinsic noise in invertebrate phototransduction. Using point process analysis, the study investigates the sources and effects of noise in the early stages of the visual system.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plos",
+      "title": "LERCause: Deep learning approaches for causal sentence ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0308155",
+      "abstract": "The authors introduce LERCause, a labeled dataset for the classification of causal sentences. This dataset, combined with specific labeling methods, is intended to serve as a benchmark for developing and evaluating deep learning models for causal sentence detection.",
+      "usefulness_score": 80
+    },
+    {
+      "source": "plos",
+      "title": "Exploiting contextual information to improve call prediction | PLOS One",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223780",
+      "abstract": "This study analyzes important dimensions of contextual information to predict which contact a user will call at a specific time. The research demonstrates that leveraging contextual data can significantly improve the accuracy of call prediction models.",
+      "usefulness_score": 80
     }
   ]
 }
