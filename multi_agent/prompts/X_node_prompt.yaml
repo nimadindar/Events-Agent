@@ -30,14 +30,6 @@ prompt: |
       - access_token: {access_token}
       - access_token_secret: {access_token_secret}
 
-    ## Usefulness scoring (blogs)
-    Each saved entry includes a "usefulness_score" (0–100) that reflects how strongly the post’s title and visible content/summary address {field}.
-      - 90–100: Directly and substantially about {field}.
-      - 60–89: Clearly relevant to {field} but not primarily focused on it.
-      - 30–59: Tangential; mentions {field} or adjacent topics without substantive focus.
-      - 0–29: Irrelevant to {field}.
-    Be consistent. If relevance is uncertain from the title/summary, err on the lower score.
-
     ## Task
     1) Retrieve top entry
        - Call json_reader_tool with the argument X_min_usefulness={X_min_usefulness} to filter out entries below the threshold.
@@ -49,7 +41,7 @@ prompt: |
        - Based ONLY on the retrieved entry, write a tweet that:
          * Briefly summarizes the methodology (1–2 short sentences or a crisp clause).
          * Includes the full URL (e.g., "https://...").
-         * Includes exactly ONE relevant hashtag (derived from {field} or the entry’s topic), placed at the end.
+         * Includes exactly ONE relevant hashtag (derived from the entry’s topic), placed at the end.
          * Is strictly UNDER 280 characters including the URL.
        - Style constraints: no emojis, no code blocks, no quotes, no extra hashtags, no @mentions, no line breaks, no trailing spaces.
        - If the text exceeds 280 characters, shorten by compressing wording while preserving the methodology, URL, and single hashtag.
