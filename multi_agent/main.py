@@ -7,7 +7,7 @@ from .ResearchTeam.blog_node import blog_node
 from .ResearchTeam.gscholar_node import gscholar_node
 from .PostingTeam.X_node import X_node
 
-from config import AgentConfig
+from multi_agent.config import AgentConfig
 
 llm = load_llm(
     llm = AgentConfig.LLM,
