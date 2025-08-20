@@ -1397,7 +1397,6 @@
       "usefulness_score": 80
     },
     {
-<<<<<<< HEAD
       "usefulness_score": 80.0,
       "authors": [
         "unknown"
@@ -1420,35 +1419,6 @@
       "source": "journals.plos.org"
     },
     {
-      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245231",
-      "Publish_date": "unknown",
-      "authors": [
-        "unknown"
-      ],
-      "title": "A data science analysis of the World Values Survey | PLOS One",
-      "usefulness_score": 82.0,
-      "abstract": "This study uses a data science approach to discover quantitative social dimensions from the World Values Survey.",
-      "source": "journals.plos.org"
-=======
-      "source": "arxiv",
-      "title": "4DNeX: Feed-Forward 4D Generative Modeling Made Easy",
-      "authors": [
-        "Zhaoxi Chen",
-        "Tianqi Liu",
-        "Long Zhuo",
-        "Jiawei Ren",
-        "Zeng Tao",
-        "He Zhu",
-        "Fangzhou Hong",
-        "Liang Pan",
-        "Ziwei Liu"
-      ],
-      "Publish_date": "18-08-2025",
-      "url": "http://arxiv.org/abs/2508.13154v1",
-      "abstract": "This paper presents 4DNeX, a feed-forward framework for generating 4D (dynamic 3D) scene representations from a single image. Unlike existing methods that are computationally expensive or require multi-frame inputs, 4DNeX allows for efficient, end-to-end image-to-4D generation by fine-tuning a pretrained video diffusion model. To address the scarcity of 4D data, the authors constructed 4DNeX-10M, a large-scale dataset with high-quality 4D annotations.",
-      "usefulness_score": 76
-    },
-    {
       "source": "arxiv",
       "title": "Training Machine Learning Models on Human Spatio-temporal Mobility Data: An Experimental Study [Experiment Paper]",
       "authors": [
@@ -1462,7 +1432,6 @@
       "url": "http://arxiv.org/abs/2508.13135v2",
       "abstract": "This paper explores the under-researched problem of predicting individual-level human mobility patterns, focusing on macro-level life routines rather than short-term trajectories. The study has applications in infectious disease monitoring, as well as child and elderly care. The authors conduct an experimental study on training machine learning models on human spatio-temporal mobility data.",
       "usefulness_score": 85
->>>>>>> b640bb81eb7141e53be77e94a2a64d85b6c2d4d1
     }
   ]
 }
