@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "source": "plosone",
+      "title": "Evaluating and implementing temporal, spatial, and spatio-temporal methods for outbreak detection in a local syndromic surveillance system",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184419",
+      "abstract": "We evaluated six temporal and four spatial/spatio-temporal detection methods using syndromic surveillance data spiked with simulated injections. Among the temporal methods, at a set specificity of 95%, a Holt-Winters exponential smoother performed the best, detecting 19% of the simulated injects across all shapes and sizes, followed by an autoregressive moving average model (16%), a generalized linear model (15%), a modified version of the Early Aberration Reporting System’s C2 algorithm (13%), a temporal scan statistic (11%), and a cumulative sum control chart (<2%). Of the spatial/spatio-temporal methods we tested, a spatial scan statistic detected 3% of all injects, a Bayes regression found 2%, and a generalized linear mixed model and a space-time permutation scan statistic detected none at a specificity of 95%.",
+      "usefulness_score": 85
+    },
+    {
+      "source": "plosone",
+      "title": "A Four Dimensional Spatio-Temporal Analysis of an Agricultural Dataset",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "29-10-2015",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0141120",
+      "abstract": "While a variety of statistical models now exist for the spatio - temporal analysis of two-dimensional (surface) data collected over time, there are few published examples of analogous models for the spatial analysis of data taken over four dimensions: latitude, longitude, height or depth, and time.",
+      "usefulness_score": 75
+    },
+    {
+      "source": "ploscompbiol",
+      "title": "Robust point-process Granger causality analysis in presence ...",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "25-01-2021",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1007675",
+      "abstract": "Here, we propose a novel point - process Granger causality technique that is robust with respect to the two most common exogenous modulations observed in real neuronal responses: within-trial temporal variations in spiking rate and between-trial variability in their magnitudes.",
+      "usefulness_score": 90
+    },
+    {
+      "source": "plosone",
+      "title": "Pheno4D: A spatio-temporal dataset of maize and tomato plant point clouds for phenotyping and advanced plant analysis",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "18-08-2021",
+      "url": "https://journals.plos.org/plosone/article/figures?id=10.1371/journal.pone.0256340",
+      "abstract": "Understanding the growth and development of individual plants is of central importance in modern agriculture, crop breeding, and crop science. To this end, using 3D data for plant analysis has gained attention over the last years. High-resolution point clouds offer the potential to derive a",
+      "usefulness_score": 70
+    },
+    {
+      "source": "plosone",
+      "title": "Applying spatio-temporal models to assess variations across health care areas and regions: Lessons from the decentralized Spanish National Health System",
+      "authors": [
+        "unknown"
+      ],
+      "Publish_date": "06-02-2017",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0170480",
+      "abstract": "Objective To illustrate the ability of hierarchical Bayesian spatio - temporal models in capturing different geo- temporal structures in order to explain hospital risk variations using three different conditions: Percutaneous Coronary Intervention (PCI), Colectomy in Colorectal Cancer (CCC) and",
+      "usefulness_score": 65
+    }
+  ]
+}
