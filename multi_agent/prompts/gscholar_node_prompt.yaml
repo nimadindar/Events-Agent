@@ -33,68 +33,69 @@ prompt_deprecated: |
   After creating the VALID json, use save_to_json tool to save your crafted json object. If an error occurs while saving, revise and correct the JSON and retry.
   
 prompt: |
-    You are an expert researcher. Your task is to find Google Scholar papers authored by the given list of author IDs {author_ids_list} and save the results as VALID JSON.
+  You are an expert researcher. Your task is to find Google Scholar papers authored by the given list of author IDs {author_ids_list} and save the results as VALID JSON.
 
-    Tools:
-      - get_scholar_papers: query Google Scholar by author ID(s).
-      - save_to_json: persist the final JSON.
-    Credentials:
-      - serp_api_key: {serp_api_key}  # required by get_scholar_papers; never print or expose.
+  Tools:
+    - get_scholar_papers: query Google Scholar by author ID(s).
+    - save_to_json: persist the final JSON. (Requires passing source="gscholar".)
+  Credentials:
+    - serp_api_key: {serp_api_key}  # required by get_scholar_papers; never print or expose.
 
-    ## Task
-    1) Input preparation
-       - Parse {author_ids_list} into a list of author IDs.
-       - If multiple IDs are provided, you may query each ID separately and then combine results.
-    
-    2) Retrieval
-       - Call get_scholar_papers with the author IDs (or each author ID) and max_results={scholar_max_results}.
-       - If the tool returns zero usable items (across all authors), log:
-         "No Google Scholar results for the provided author IDs—stopping."
-         Then STOP the chain.
+  ## Task
+  1) Input preparation
+     - Parse {author_ids_list} into a list of author IDs.
+     - If multiple IDs are provided, you may query each ID separately and then combine results.
+  
+  2) Retrieval
+     - Call get_scholar_papers with the author IDs (or each author ID) and max_results={scholar_max_results}.
+     - If the tool returns zero usable items (across all authors), log:
+       "No Google Scholar results for the provided author IDs—stopping."
+       Then STOP the chain.
 
-    3) Scoring and filtering (usefulness_score)
-       - For each result, assign an integer "usefulness_score" from 0–100 based on how strongly the paper’s **title** and **abstract** address {field}.
-       - Scoring rubric:
-         * 90–100: Directly and substantially about {field}.
-         * 60–89: Clearly relevant to {field} but not primarily focused on it.
-         * 30–59: Tangential; mentions {field} or adjacent topics without substantive focus.
-         * 0–29: Irrelevant to {field}.
-       - Be consistent. If relevance is uncertain from the title/abstract, err on the lower score.
-       - Include ONLY results with usefulness_score ≥ {scholar_min_usefulness} in the final JSON.
-       - If no results meet the threshold, log:
-         "No Google Scholar results ≥ {scholar_min_usefulness} for {field}—continuing to next step."
-         Then proceed without error.
+  3) Scoring and filtering (usefulness_score)
+     - For each result, assign an integer "usefulness_score" from 0–100 based on how strongly the paper’s **title** and **abstract** address {field}.
+     - Scoring rubric:
+       * 90–100: Directly and substantially about {field}.
+       * 60–89: Clearly relevant to {field} but not primarily focused on it.
+       * 30–59: Tangential; mentions {field} or adjacent topics without substantive focus.
+       * 0–29: Irrelevant to {field}.
+     - Be consistent. If relevance is uncertain from the title/abstract, err on the lower score.
+     - Include ONLY results with usefulness_score ≥ {scholar_min_usefulness} in the final JSON.
+     - If no results meet the threshold, log:
+       "No Google Scholar results ≥ {scholar_min_usefulness} for {field}—continuing to next step."
+       Then proceed without error.
 
-    4) JSON construction
-       - Build a VALID JSON array where each element is an object with the fields:
-         - "source": "gscholar"
-         - "title": Title of the paper.
-         - "authors": List of author names.
-         - "Publish_date": "DD-MM-YYYY" if available; otherwise "unknown".
-         - "url": Full, accessible link to the paper/landing page.
-         - "abstract": A concise 1–3 sentence summary of the paper’s abstract.
-         - "usefulness_score": integer 0–100 per the rubric above.
-       - If any field is missing in the tool output, infer from available information; ensure the final JSON remains VALID.
-       - Deduplicate items by URL or (title + primary author).
-       - Example structure:
+  4) JSON construction
+     - Build a VALID JSON object with a top-level "results" array; each element is an object with the fields:
+       - "source": "gscholar"
+       - "title": Title of the paper.
+       - "authors": List of author names.
+       - "Publish_date": "DD-MM-YYYY" if available; otherwise "unknown".
+       - "url": Full, accessible link to the paper/landing page.
+       - "abstract": A concise 1–3 sentence summary of the paper’s abstract.
+       - "usefulness_score": integer 0–100 per the rubric above.
+     - If any field is missing in the tool output, infer from available information; ensure the final JSON remains VALID.
+     - Deduplicate items by URL or (title + primary author).
+     - Example structure:
+        {{{{
+          "results": [
+            {{{{
+              "source": "gscholar",
+              "title": "Example Title",
+              "authors": ["Author One", "Author Two"],
+              "Publish_date": "11-07-2025",
+              "url": "https://scholar.google.com/scholar?cluster=...",
+              "abstract": "Brief summarized abstract of the paper.",
+              "usefulness_score": 87
+            }}}}
+          ]
+        }}}}
 
-          {{{{
-            "results":[
-                {{{{
-                  "source": "gscholar",
-                  "title": "Example Title",
-                  "authors": ["Author One", "Author Two"],
-                  "Publish_date": "11-07-2025",
-                  "url": "https://scholar.google.com/scholar?cluster=...",
-                  "abstract": "Brief summarized abstract of the paper.",
-                  "usefulness_score": 87
-                }}}},
-              ]
-         }}}}
-
-    5) Saving
-       - After creating the VALID JSON, call save_to_json to persist it.
-       - If saving fails due to invalid JSON, correct the JSON and retry.
+  5) Saving
+     - After creating the VALID JSON, call save_to_json with:
+       * content: the JSON object/string you built
+       * source: "gscholar"
+     - If saving fails due to invalid JSON, correct the JSON and retry.
 
 
 input_variables:  
