@@ -4,9 +4,9 @@ from langgraph.types import Command
 
 from ..agent_utils.utils import load_llm, State
 
-from tools.tools import post_to_X, json_reader_tool
-from utils.utils import load_prompt_multi_agent
-from config import AgentConfig
+from ..tools.tools import post_to_X, json_reader_tool
+from ..utils.utils import load_prompt_multi_agent
+from multi_agent.config import AgentConfig
 
 input_var = {
     "consumer_key": AgentConfig.X_API_KEY,
