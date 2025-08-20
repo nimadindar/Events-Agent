@@ -9,6 +9,7 @@ from ..utils.utils import load_prompt_multi_agent
 from multi_agent.config import AgentConfig
 
 input_var = {
+    "field": AgentConfig.Field, 
     "author_ids_list": AgentConfig.ScholarPages,
     "scholar_max_results": AgentConfig.ScholarMaxResults,
     "scholar_min_usefulness": AgentConfig.ScholarMinUsefulness,
