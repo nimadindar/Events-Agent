@@ -193,7 +193,7 @@ def load_prompt_multi_agent(node_name: str, **env_vars: Any) -> str:
     return system_prompt_template.format(**env_vars)
 
 
-def _parse_publish_date(d: str):
+def parse_publish_date(d: str):
     """Parse 'DD-MM-YYYY' -> datetime; returns minimal date on failure for safe tie-breaking."""
     if not isinstance(d, str):
         return datetime.min
