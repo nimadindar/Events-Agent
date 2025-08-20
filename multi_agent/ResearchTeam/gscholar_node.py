@@ -4,9 +4,9 @@ from langgraph.types import Command
 
 from ..agent_utils.utils import load_llm, State
 
-from tools.tools import get_scholar_papers, save_to_json
-from utils.utils import load_prompt_multi_agent
-from config import AgentConfig
+from ..tools.tools import get_scholar_papers, save_to_json
+from ..utils.utils import load_prompt_multi_agent
+from multi_agent.config import AgentConfig
 
 input_var = {
     "author_ids_list": AgentConfig.ScholarPages,
