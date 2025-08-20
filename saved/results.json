@@ -1395,6 +1395,39 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223780",
       "abstract": "This study analyzes important dimensions of contextual information to predict which contact a user will call at a specific time. The research demonstrates that leveraging contextual data can significantly improve the accuracy of call prediction models.",
       "usefulness_score": 80
+    },
+    {
+      "usefulness_score": 80.0,
+      "authors": [
+        "unknown"
+      ],
+      "title": "Recurrent spatio-temporal modeling of check-ins in location-based ...",
+      "Publish_date": "unknown",
+      "url": "https://journals.plos.org/plosone/article/figures?id=10.1371/journal.pone.0197683",
+      "abstract": "This paper introduces a recurrent spatio-temporal model for check-ins in location-based social networks. It uses a periodic point process to capture the recurrent patterns of user visits to different locations.",
+      "source": "journals.plos.org"
+    },
+    {
+      "title": "A machine learning analysis on survey data from 16 countries - PLOS",
+      "Publish_date": "unknown",
+      "authors": [
+        "unknown"
+      ],
+      "url": "https://journals.plos.org/plosone/article/figures?id=10.1371/journal.pone.0276970",
+      "usefulness_score": 85.0,
+      "abstract": "This research uses machine learning to analyze survey data from 16 countries, focusing on predicting leaving home.",
+      "source": "journals.plos.org"
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0245231",
+      "Publish_date": "unknown",
+      "authors": [
+        "unknown"
+      ],
+      "title": "A data science analysis of the World Values Survey | PLOS One",
+      "usefulness_score": 82.0,
+      "abstract": "This study uses a data science approach to discover quantitative social dimensions from the World Values Survey.",
+      "source": "journals.plos.org"
     }
   ]
 }
