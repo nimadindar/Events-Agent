@@ -9,6 +9,7 @@ from ..utils.utils import load_prompt_multi_agent
 from multi_agent.config import AgentConfig
 
 input_var = {
+    "X_min_usefulness": AgentConfig.XMinUsefulness,
     "consumer_key": AgentConfig.X_API_KEY,
     "consumer_secret": AgentConfig.X_API_KEY_SECRET,
     "access_token": AgentConfig.X_ACCESS_TOKEN,
