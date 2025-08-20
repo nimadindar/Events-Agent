@@ -1432,6 +1432,32 @@
       "url": "http://arxiv.org/abs/2508.13135v2",
       "abstract": "This paper explores the under-researched problem of predicting individual-level human mobility patterns, focusing on macro-level life routines rather than short-term trajectories. The study has applications in infectious disease monitoring, as well as child and elderly care. The authors conduct an experimental study on training machine learning models on human spatio-temporal mobility data.",
       "usefulness_score": 85
+    },
+    {
+      "abstract": "We propose a spatio-temporal log-Gaussian Cox process.",
+      "url": "https://scholar.google.com/scholar?cluster=12729195173879781676",
+      "Publish_date": "unknown",
+      "source": "gscholar",
+      "usefulness_score": 95.0,
+      "title": "A spatio-temporal point process model for ambulance demand",
+      "authors": [
+        "M.A. Rizoiu",
+        "S. Petrovski",
+        "P. Damien"
+      ]
+    },
+    {
+      "abstract": "Gaussian Cox processes (GPCs) are flexible and popular models for spatio-temporal point patterns.",
+      "url": "https://scholar.google.com/scholar?cluster=1373495437777188409",
+      "Publish_date": "unknown",
+      "source": "gscholar",
+      "usefulness_score": 90.0,
+      "title": "Fast inference for Gaussian Cox processes via L1-regularized likelihood",
+      "authors": [
+        "F. Lindgren",
+        "H. Rue",
+        "J. Lindstr\u00f6m"
+      ]
     }
   ]
 }
