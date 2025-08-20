@@ -95,16 +95,30 @@ def json_reader_tool(X_min_usefullness: int) -> str:
 
 
 @tool
-def save_to_json(content: Union[str, dict]) -> str:
+def save_to_json(content: Union[str, dict], source: str) -> str:
     """
-    Save new result entries into a single 'results' list inside './saved/results.json'.
-    
+    Save new result entries into a single 'results' list inside a source-specific file:
+      - arxiv     -> ./saved/arxiv_results.json
+      - blog      -> ./saved/blog_results.json
+      - gscholar  -> ./saved/gscholar_results.json
+
     Args:
-        content: A JSON string or Python dictionary with a 'results' key pointing to a list.
-        
+        content: A JSON string or Python dict with a 'results' key pointing to a list.
+        source: One of {'arxiv', 'blog', 'gscholar'} determining the output file.
+
     Returns:
         str: A message indicating success or failure.
+
+    Raises:
+        ValueError: If 'source' is not one of the allowed names.
     """
+    allowed = {"arxiv": "arxiv_results.json",
+               "blog": "blog_results.json",
+               "gscholar": "gscholar_results.json"}
+
+    if source not in allowed:
+        raise ValueError(f"Invalid source '{source}'. Must be one of {sorted(allowed.keys())}.")
+
     try:
         if isinstance(content, str):
             try:
@@ -117,41 +131,47 @@ def save_to_json(content: Union[str, dict]) -> str:
 
         output_dir = Path("./saved")
         output_dir.mkdir(exist_ok=True)
-        output_file = output_dir / "results.json"
+        output_file = output_dir / allowed[source]
 
         existing_results = []
         existing_urls = set()
 
         if output_file.exists():
             try:
-                with open(output_file, 'r', encoding='utf-8') as f:
+                with open(output_file, "r", encoding="utf-8") as f:
                     existing_data = json.load(f)
-                    if isinstance(existing_data, dict) and "results" in existing_data:
+                    if isinstance(existing_data, dict) and "results" in existing_data and isinstance(existing_data["results"], list):
                         existing_results = existing_data["results"]
-                        existing_urls = {normalize_url(entry.get("url")) for entry in existing_results}
+
+                        existing_urls = {normalize_url(entry.get("url")) for entry in existing_results if isinstance(entry, dict)}
             except json.JSONDecodeError:
                 return f"Error: Existing file {output_file} contains invalid JSON."
             except Exception as e:
                 return f"Error reading existing file: {str(e)}"
 
-        new_unique_results = [
-            entry for entry in content["results"]
-            if normalize_url(entry.get("url")) not in existing_urls
-        ]
+        new_unique_results = []
+        for entry in content["results"]:
+            if not isinstance(entry, dict):
+                continue
+            url = entry.get("url")
+            if not url:
+                continue
+            norm = normalize_url(url)  
+            if norm not in existing_urls:
+                new_unique_results.append(entry)
 
         if not new_unique_results:
-            return "No new unique results to save."
-        
+            return f"No new unique results to save for source '{source}'."
+
         merged_results = existing_results + new_unique_results
-        with open(output_file, 'w', encoding='utf-8') as f:
-            json.dump({"results": merged_results}, f, indent=2)
+        with open(output_file, "w", encoding="utf-8") as f:
+            json.dump({"results": merged_results}, f, ensure_ascii=False, indent=2)
 
         return f"Successfully added {len(new_unique_results)} new unique results to {output_file}"
-  
+
     except Exception as e:
         return f"Error saving JSON to file: {str(e)}"
 
-    
 
 @tool
 def post_to_X(
