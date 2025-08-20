@@ -9,16 +9,21 @@ from langchain.tools import tool
 from serpapi import GoogleSearch
 from langchain_tavily import TavilySearch
 
-from ..utils.utils import normalize_url
+from ..utils.utils import normalize_url, _parse_publish_date
 
-@tool
-def json_reader_tool() -> str:
+
+
+@tool  
+def json_reader_tool(X_min_usefullness: int) -> str:
     """
-    Reads './saved/results.json', selects the highest-scoring untweeted result,
-    and tracks tweeted URLs in './saved/tweets.json' to avoid duplicates.
+    Reads './saved/results.json', selects the highest-scoring untweeted result with
+    usefulness_score >= X_min_usefullness, and records the tweet URL in './saved/tweets.json'.
+
+    Call like:
+      json_reader_tool(X_min_usefullness=blog_min_usefulness)
 
     Returns:
-        str: A JSON string of the selected item or an error message.
+        str: JSON string of the selected item, or {"error": "..."} on failure/empty.
     """
     json_file_path = "./saved/results.json"
     tweeted_file_path = "./saved/tweets.json"
@@ -30,42 +35,63 @@ def json_reader_tool() -> str:
         with open(json_file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        if not isinstance(data, dict) or "results" not in data:
-            return json.dumps({"error": "Invalid format: expected a dictionary with a 'results' key"})
+        if not isinstance(data, dict) or "results" not in data or not isinstance(data["results"], list):
+            return json.dumps({"error": "Invalid format: expected a dict with a 'results' list"})
 
         all_results = data["results"]
         if not all_results:
             return json.dumps({"error": "No results found in 'results.json'"})
 
-        tweeted_urls = set()
         tweeted_list = []
-
+        tweeted_urls = set()
         if os.path.exists(tweeted_file_path):
             with open(tweeted_file_path, "r", encoding="utf-8") as f:
-                tweeted_data = json.load(f)
-                # if isinstance(tweeted_data, dict):
-                tweeted_list = tweeted_data.get("tweeted", [])
-                # elif isinstance(tweeted_data, list):
-                #     tweeted_list = tweeted_data  
-                tweeted_urls = set(normalize_url(item["url"]) for item in tweeted_list if isinstance(item, dict) and "url" in item)
+                tweeted_data = json.load(f) or {}
+            tweeted_list = tweeted_data.get("tweeted", [])
+            tweeted_urls = {
+                normalize_url(item["url"])
+                for item in tweeted_list
+                if isinstance(item, dict) and "url" in item
+            }
 
-        untweeted_items = [item for item in all_results if normalize_url(item["url"]) not in tweeted_urls]
+        # threshold = int(X_min_usefullness) if X_min_usefullness is not None else 0
+        eligible = []
+        for item in all_results:
+            url = item.get("url", "")
+            norm = normalize_url(url)
+            score = item.get("usefulness_score", 0)
+            if not norm:
+                continue
+            if norm in tweeted_urls:
+                continue
+            if not isinstance(score, (int, float)):
+                score = int(score)
+            if score >= X_min_usefullness:
+                eligible.append(item)
 
-        if not untweeted_items:
-            return json.dumps({"error": "No untweeted items available"})
+        if not eligible:
+            return json.dumps({"error": f"No untweeted items with usefulness_score >= {X_min_usefullness}"})
 
-        selected_item = max(untweeted_items, key=lambda x: x.get("usefulness_score", 0))    # criteria to select the tweet
+        # Pick the max by (usefulness_score, Publish_date) to break ties by recency
+        def _key(x):
+            s = x.get("usefulness_score", 0)
+            try:
+                s = float(s)
+            except Exception:
+                s = 0.0
+            return (s, _parse_publish_date(x.get("Publish_date", "")))
 
-        tweeted_list.append({"url": selected_item["url"]})
-        tweeted_data = {"tweeted": tweeted_list}
+        selected_item = max(eligible, key=_key)
 
+        tweeted_list.append({"url": selected_item.get("url", "")})
         with open(tweeted_file_path, "w", encoding="utf-8") as f:
-            json.dump(tweeted_data, f, ensure_ascii=False, indent=2)
+            json.dump({"tweeted": tweeted_list}, f, ensure_ascii=False, indent=2)
 
         return json.dumps(selected_item, ensure_ascii=False)
 
     except Exception as e:
         return json.dumps({"error": f"Error processing JSON files: {str(e)}"})
+
 
 
 @tool
