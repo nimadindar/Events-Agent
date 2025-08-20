@@ -3,7 +3,7 @@ import time
 import schedule
 import traceback
 
-from config import AgentConfig
+from multi_agent.config import AgentConfig
 from .agents.build_agent import BuildAgent
 from .agents.agent_utils import load_llm
 from tools.tools import save_to_json, post_to_X, ArxivTool, tavily_tool, json_reader_tool, get_scholar_papers
