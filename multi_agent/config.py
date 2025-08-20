@@ -22,7 +22,7 @@ class AgentConfig:
     
     
     LLM = "google"
-    ModelName = "gemini-1.5-pro"                  # only ChatGoogleGenerativeAI models are supported
+    ModelName = "gemini-2.5-pro"                  # only ChatGoogleGenerativeAI models are supported
     Temperature = 0.0                               # the level of creativity in LLM responses. Higher temp causes creative but unexpected behaviour
     
     Verbose = True                                  # LLM log the intermediate states or not
