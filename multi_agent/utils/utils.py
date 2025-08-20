@@ -3,6 +3,7 @@ import yaml
 import logging
 import traceback
 from typing import Any
+from datetime import datetime
 from logging.handlers import RotatingFileHandler
 
 from multi_agent.config import AgentConfig
@@ -190,3 +191,15 @@ def load_prompt_multi_agent(node_name: str, **env_vars: Any) -> str:
     prompt_config = load_yaml(f"./multi_agent/prompts/{node_name}_node_prompt.yaml")
     system_prompt_template = prompt_config["prompt"]
     return system_prompt_template.format(**env_vars)
+
+
+def _parse_publish_date(d: str):
+    """Parse 'DD-MM-YYYY' -> datetime; returns minimal date on failure for safe tie-breaking."""
+    if not isinstance(d, str):
+        return datetime.min
+    for fmt in ("%d-%m-%Y", "%d-%m-%y", "%Y-%m-%d"):
+        try:
+            return datetime.strptime(d, fmt)
+        except Exception:
+            pass
+    return datetime.min

@@ -9,7 +9,7 @@ from langchain.tools import tool
 from serpapi import GoogleSearch
 from langchain_tavily import TavilySearch
 
-from ..utils.utils import normalize_url, _parse_publish_date
+from ..utils.utils import normalize_url, parse_publish_date
 
 
 
@@ -79,7 +79,7 @@ def json_reader_tool(X_min_usefullness: int) -> str:
                 s = float(s)
             except Exception:
                 s = 0.0
-            return (s, _parse_publish_date(x.get("Publish_date", "")))
+            return (s, parse_publish_date(x.get("Publish_date", "")))
 
         selected_item = max(eligible, key=_key)
 
