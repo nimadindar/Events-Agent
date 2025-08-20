@@ -98,6 +98,7 @@ prompt: |
 
 
 input_variables:  
+  - field
   - author_ids_list
   - scholar_max_results
   - scholar_min_usefulness
