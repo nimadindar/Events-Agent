@@ -17,6 +17,8 @@ class AgentConfig:
     ScholarPages = ["Wnxq0mgAAAAJ"]                 # google scholar page of ["Seth Flaxman"]
     ScholarMaxResults = 2                           # maximum number of retrieved google scholar results !!! HINT: Lager number might overload LLM's contex window !!!
     ScholarMinUsefulness = 50                       # minimum usefulness score for saving google scholar papers
+
+    XMinUsefulness = 70                             # minimum usefulness score for posting on X 
     
     
     LLM = "google"
