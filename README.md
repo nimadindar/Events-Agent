@@ -1,251 +1,280 @@
-# Events Agent
+# Events-Agent 🤖
 
-An agentic workflow for conducting research by fetching and analyzing papers from ArXiv and blog posts from the web, saving results in JSON format, and posting the highest-scoring item to X. The agent leverages LangGraph, LangChain, Google Generative AI models, and tools like ArxivLoader and Tavily for research tasks.
+> **An intelligent multi-agent research workflow that automatically discovers, analyzes, and shares cutting-edge research across ArXiv, blogs, and Google Scholar.**
 
-## Table of Contents
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![LangGraph](https://img.shields.io/badge/LangGraph-0.6.4+-green.svg)](https://langchain-ai.github.io/langgraph/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.46.1+-red.svg)](https://streamlit.io)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-- [Overview](#overview)
-- [Project Structure](#project-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Running via Command Line](#running-via-command-line)
-  - [Running via Streamlit UI](#running-via-streamlit-ui)
-  - [Running via GitHub Actions](#running-via-github-actions)
-- [Configuration](#configuration)
-- [Dependencies](#dependencies)
-- [Environment Variables](#environment-variables)
-- [Logging](#logging)
+## 🚀 Overview
 
----
+Events-Agent is a research automation system that leverages **LangGraph** and **Google's Gemini AI** to intelligently discover, evaluate, and disseminate research content. The system operates through two distinct workflows:
 
-## Overview
+- **🔬 Multi-Agent Workflow**: Specialized agents for research and posting tasks
+- **⚡ Single-Agent Workflow**: Unified agent for streamlined operations
 
-The Events Agent automates searching for relevant academic papers and blog posts, scoring them by relevance, saving results to JSON, and sharing the top item on X. It supports both command-line execution and an interactive Streamlit interface.
+### ✨ Key Features
 
-### Multi-Agent Workflow
+- **Automated Research Discovery**: Searches ArXiv, web blogs, and Google Scholar simultaneously
+- **Intelligent Content Scoring**: AI-powered relevance assessment with configurable thresholds
+- **Smart Content Curation**: Automatically selects and formats the most valuable findings
+- **Social Media Integration**: Direct posting to X (Twitter) with intelligent content formatting
+- **Flexible Deployment**: Command-line, Streamlit UI, and GitHub Actions automation
+- **Comprehensive Logging**: Detailed execution tracking and result storage
 
-This workflow, built using the **LangGraph** framework, organizes the process into two specialized teams:
+## 🏗️ Architecture
 
-1. **Research Team**
+### Multi-Agent Workflow (Recommended)
 
-   - **ArXiv Agent** – Searches academic papers on ArXiv.
-   - **Blog Agent** – Collects related blog information.
-   - **Google Scholar Agent** – Finds relevant scholarly literature.
+Built with **LangGraph**, this workflow provides maximum flexibility and control:
 
-2. **Posting Team**
+```
+┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
+│   ArXiv     │───▶│    Blog     │───▶│  Google     │───▶│     X       │
+│   Agent     │    │   Agent     │    │   Agent     │    │   Agent     │
+│             │    │             │    │   Agent     │    │             │
+└─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
+```
 
-   - **X Agent** – Posts the highest-scoring research result to X (formerly Twitter).
+**Research Team:**
+- **ArXiv Agent**: Academic paper discovery and analysis
+- **Blog Agent**: Web content research and evaluation  
+- **Google Scholar Agent**: Scholarly literature exploration
 
-Using dedicated agents for each step provides **modularity**, **control**, and **flexibility**, allowing updates or replacements without affecting the overall workflow.
-
----
+**Posting Team:**
+- **X Agent**: Content formatting and social media posting
 
 ### Single-Agent Workflow
 
-In this simpler workflow, a **single unified agent** handles the entire process:
+A unified approach for simpler deployments:
+- Single agent handles all research and posting tasks
+- Reduced resource requirements
+- Easier maintenance and debugging
 
-1. Searches ArXiv, blogs, and Google Scholar.
-2. Selects the most relevant content.
-3. Posts the result directly to X.
+## 📦 Installation
 
-This approach is easier to manage and requires fewer resources but offers less granularity and flexibility.
+### Prerequisites
 
-> **Note:** The Streamlit application is currently out of date with recent updates; this will be addressed in future releases.
+- Python 3.8 or higher
+- Google Cloud API key
+- X (Twitter) API credentials
+- Tavily API key (optional, for enhanced web search)
 
----
+### Quick Start
 
-## Project Structure
-
-```
-├── .github/workflows/
-│   └── run-script.yml         # GitHub Actions automation
-├── multi_agent/
-│   ├── agent_utils/
-│   │   ├── utils.py           # Utility functions for agents
-│   │   ├── PostingTeam/
-│   │   │   └── X_node.py     # X posting agent
-│   │   └── ResearchTeam/
-│   │       ├── arxiv_node.py # ArXiv research agent
-│   │       ├── blog_node.py  # Blog research agent
-│   │       └── gscholar_node.py # Google Scholar research agent
-│   ├── prompts/               # System prompts for multi-agent workflow
-│   └── main.py                # Entry point for multi-agent workflow
-├── single_agent/
-│   ├── agents/
-│   │   ├── agent_utils.py     # Utilities for single agent
-│   │   └── build_agent.py     # Single agent builder script
-│   ├── prompts/
-│   │   └── system_prompt.yaml # System prompt templates
-│   └── main.py                # Entry point for single-agent workflow
-├── saved/                     # Output and logs
-│   ├── results.json           # Search results
-│   ├── tweets.json            # Tweeted URLs tracker
-│   └── agent_logs.log         # Execution logs
-├── tools/
-│   └── tools.py               # Custom tools for research and posting
-├── utils/
-│   └── utils.py               # General utilities
-├── app.py                     # Streamlit UI application
-├── config.py                  # Configuration settings
-├── main.py                    # Main script
-├── requirements.txt           # Dependencies
-└── README.md                  # This file
-```
-
----
-
-## Installation
-
-1. Clone the repository:
-
+1. **Clone the repository**
    ```bash
    git clone https://github.com/nimadindar/Events-Agent.git
    cd Events-Agent
    ```
 
-2. Create and activate a virtual environment:
-
+2. **Set up virtual environment**
    ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
    ```
 
-3. Install dependencies:
-
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-4. Configure environment variables (see [Environment Variables](#environment-variables)).
-
----
-
-## Usage
-
-### Running via Command Line
-
-1. Edit `config.py` to configure:
-
-   - Research topic (`Field`)
-   - Maximum results per source (`ArxivMaxResults`, `TavilyMaxResults`, `ScholarMaxResults`)
-   - Minimum usefulness thresholds (`ArxivMinUsefulness`, `BlogMinUsefulness`, `ScholarMinUsefulness`)
-   - Google Scholar author IDs (`ScholarPages`)
-   - Prompt version (`PromptVersion`) for single agent workflow
-   - Model, temperature, verbosity, and invoke input
-
-2. Run single-agent workflow (deprecated and no longer maintained):
-
+4. **Configure environment variables**
    ```bash
-   python -B -m single_agent.main
+   cp .env.example .env
+   # Edit .env with your API keys
    ```
 
-3. Run multi-agent workflow:
+## ⚙️ Configuration
 
-   ```bash
-   python -B -m multi_agent.main
-   ```
+### Environment Variables
 
----
-
-### Running via Streamlit UI
-
-1. Start the app:
-
-   ```bash
-   streamlit run app.py
-   ```
-
-2. Open the provided URL (e.g., `http://localhost:8501`).
-
-3. Configure parameters through the interface:
-
-   - Research field, model, temperature
-   - Max results and minimum scores per source
-   - Scholar page IDs
-   - Verbosity and scheduling options
-   - API keys (Google, X, Tavily) or provide via `.env`
-   - Agent task description
-
-4. Click **Run Agent** or **Schedule Agent**.
-
-> **Note:** The Streamlit UI is currently outdated and expected to be updated soon.
-
----
-
-### Running via GitHub Actions
-
-1. Add API keys as **Secrets** under your repository's **Settings → Secrets and variables → Actions**.
-
-2. Trigger the scheduled workflow or manual runs under the **Actions** tab.\
-   The default schedule runs every 12 hours and can be modified in `.github/workflows/run-script.yml`.
-
----
-
-## Configuration
-
-The agent can be configured via:
-
-- **config.py** (for command-line runs) with parameters such as:
-
-  - `PromptDir` (single-agent prompt path)
-  - `Field`, `ArxivMaxResults`, `TavilyMaxResults`, `ScholarMaxResults`
-  - `ArxivMinUsefulness`, `TavilyMinUsefulness`, `ScholarMinUsefulness`
-  - `ScholarPages` (author IDs)
-  - `PromptVersion`, `ModelName`, `Temperature`, `Verbose`
-  - `InvokeInput` (task description)
-
-- **Streamlit UI** for dynamic configuration.
-
----
-
-## Dependencies
-
-Core dependencies are listed in `requirements.txt` and include:
-
-- `langchain`
-- `langchain-google-genai`
-- `langchain-community`
-- `tweepy`
-- `tavily-python`
-- `streamlit`
-- `python-dotenv`
-- `pyyaml`
-
-Install with:
+Create a `.env` file in the project root:
 
 ```bash
-pip install -r requirements.txt
-```
+# Required
+GOOGLE_API_KEY=your_google_api_key_here
 
----
-
-## Environment Variables
-
-Create a `.env` file at the project root with the following keys:
-
-```bash
-GOOGLE_API_KEY=your_google_api_key
+# X (Twitter) API (for posting)
 X_API_KEY=your_x_consumer_key
 X_API_KEY_SECRET=your_x_consumer_secret
 X_ACCESS_TOKEN=your_x_access_token
 X_ACCESS_TOKEN_SECRET=your_x_access_token_secret
+
 TAVILY_API_KEY=your_tavily_api_key
 SERP_API_KEY=your_serp_api_key
 ```
 
-Sources for keys:
+### Configuration File
 
-- Google API: Google Cloud Console
-- X API: [X Developer Portal](https://developer.x.com)
-- Tavily API: [Tavily Dashboard](https://tavily.com)
-- Serp API: [Serpapi](https://serpapi.com/)
+Edit `multi_agent/config.py` to customize:
 
----
+```python
+class AgentConfig:
+    # Research field
+    Field = "Spatio Temporal Point Process, Spatio Temporal, Point Process"
+    
+    # Result limits (adjust based on your LLM's context window)
+    ArxivMaxResults = 5
+    TavilyMaxResults = 5
+    ScholarMaxResults = 2
+    
+    # Quality thresholds (0-100)
+    ArxivMinUsefulness = 70
+    BlogMinUsefulness = 70
+    ScholarMinUsefulness = 70
+    XMinUsefulness = 70
+    
+    # AI Model settings
+    ModelName = "gemini-2.5-flash"
+    Temperature = 0.0  # Lower = more consistent, Higher = more creative
+```
 
-## Logging
+## 🚀 Usage
 
-- Logs are saved to `./saved/agent_logs.log` with rotation (max 5MB, 3 backups).
-- Enable verbose logging via `config.py` or Streamlit UI.
-- Streamlit shows logs when verbose mode is enabled.
+### Command Line Interface
 
----
+#### Multi-Agent Workflow (Recommended)
+```bash
+python -m multi_agent.main
+```
+
+#### Single-Agent Workflow
+```bash
+python -m single_agent.main
+```
+
+### Streamlit Web Interface
+
+Launch the interactive web UI:
+
+```bash
+streamlit run app.py
+```
+
+Navigate to `http://localhost:8501` and configure:
+- Research field and AI model
+- Result limits and quality thresholds
+- API keys and execution parameters
+- Real-time monitoring and logging
+
+### GitHub Actions Automation
+
+1. **Set up repository secrets** in `Settings → Secrets and variables → Actions`
+2. **Configure workflow** in `.github/workflows/run-script.yml`
+3. **Schedule runs** (default: every 12 hours) or trigger manually
+
+## 📊 Output & Results
+
+### Generated Files
+
+All results are saved in the `saved/` directory:
+
+- `results.json` - Comprehensive research findings
+- `blog_results.json` - Blog post analysis
+- `gscholar_results.json` - Google Scholar papers
+- `tweets.json` - Posted content tracking
+- `agent_logs.log` - Execution logs
+
+### Result Structure
+
+```json
+{
+  "arxiv_papers": [
+    {
+      "title": "Paper Title",
+      "authors": ["Author 1", "Author 2"],
+      "abstract": "Abstract text...",
+      "url": "https://arxiv.org/...",
+      "usefulness_score": 85,
+      "summary": "AI-generated summary..."
+    }
+  ],
+  "blog_posts": [...],
+  "scholar_papers": [...],
+  "best_content": {
+    "type": "arxiv_paper",
+    "content": {...},
+    "post_text": "Formatted for X..."
+  }
+}
+```
+
+## 🔧 Customization
+
+### Adding New Research Sources
+
+1. Create a new agent in `multi_agent/ResearchTeam/`
+2. Implement the required interface
+3. Add to the workflow graph in `multi_agent/main.py`
+
+### Modifying Posting Behavior
+
+Edit `multi_agent/PostingTeam/X_node.py` to customize:
+- Content formatting
+- Posting frequency
+- Quality filters
+- Error handling
+
+### Custom Prompts
+
+Modify YAML files in `multi_agent/prompts/` to adjust:
+- Research criteria
+- Content evaluation
+- Output formatting
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+Events-Agent/
+├── multi_agent/           # Multi-agent workflow (recommended)
+│   ├── agent_utils/       # Shared utilities
+│   ├── ResearchTeam/      # Research agents
+│   ├── PostingTeam/       # Social media agents
+│   ├── prompts/           # AI prompt templates
+│   └── main.py           # Workflow orchestration
+├── single_agent/          # Single-agent workflow
+│   ├── agents/            # Agent implementation
+│   └── prompts/           # Prompt templates
+├── tools/                 # Research and posting tools
+├── utils/                 # General utilities
+├── app.py                # Streamlit web interface
+├── config.py             # Configuration settings
+└── requirements.txt      # Python dependencies
+```
+
+### Key Dependencies
+
+- **LangGraph**: Multi-agent workflow orchestration
+- **LangChain**: LLM integration and tool management
+- **Google Generative AI**: Advanced language models
+- **Streamlit**: Web interface framework
+- **Tweepy**: X (Twitter) API integration
+
+### Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests if applicable
+5. Submit a pull request
+
+## 📝 API Reference
+
+### Core Functions
+
+- `run_agent()` - Execute the research workflow
+- `load_llm()` - Initialize AI language model
+- `save_to_json()` - Store research results
+- `post_to_X()` - Share content on social media
+
+### Configuration Options
+
+See `multi_agent/config.py` for all available settings and their descriptions.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
