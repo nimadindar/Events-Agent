@@ -82,7 +82,19 @@ class DebugHandler(BaseCallbackHandler):
             self._log(f"[TOOL END] Output: {preview}{suffix}")
 
     def on_chain_start(self, serialized, inputs, **kwargs):
-        self._log(f"\n[CHAIN START] {serialized.get('name') or serialized.get('id')} | Inputs keys: {list(inputs.keys())}")
+        name = None
+        if isinstance(serialized, dict):
+            name = serialized.get("name") or serialized.get("id")
+        elif isinstance(serialized, str):
+            name = serialized
+        else:
+            name = type(serialized).__name__
+        try:
+            keys = list(inputs.keys()) if isinstance(inputs, dict) else type(inputs).__name__
+        except Exception:
+            keys = "<unknown>"
+        self._log(f"\n[CHAIN START] {name} | Inputs keys: {keys}")
+
 
     def on_chain_end(self, outputs, **kwargs):
         keys = list(outputs.keys()) if isinstance(outputs, dict) else type(outputs).__name__
