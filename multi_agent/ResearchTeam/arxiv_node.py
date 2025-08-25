@@ -25,6 +25,7 @@ ARXIV_MIN_USEFULNESS = 70
 # Model Config
 MODEL_NAME = "gemini-2.5-flash"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+NEXT_STATE = END
 
 INPUT_VAR = {
     "field": FIELD,
@@ -62,10 +63,10 @@ def arxiv_node(state: State, next_state) -> Command:
         goto=next_state
     )
 
-def main():
+def arxiv_main(next_state):
 
     research_builder = StateGraph(State)
-    research_builder.add_node("arxiv", partial(arxiv_node, next_state=END))
+    research_builder.add_node("arxiv", partial(arxiv_node, next_state=next_state))
     research_builder.add_edge(START, "arxiv")
 
     research_graph = research_builder.compile()
@@ -82,4 +83,4 @@ def main():
         print("---")
 
 if __name__ == "__main__":
-    main()
+    arxiv_main(NEXT_STATE)
