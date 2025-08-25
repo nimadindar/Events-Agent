@@ -1,15 +1,17 @@
 {
   "results": [
     {
-      "source": "journals.plos",
-      "title": "A mechanistic spatio-temporal framework for modelling individual-to ...",
+      "source": "plosone",
+      "title": "Scenic area attractiveness in Dali City and its influencing factors evaluated using multi-source spatiotemporal data",
       "authors": [
-        "unknown"
+        "Wang D",
+        "Qian H"
       ],
       "publish_date": "unknown",
-      "summary": "This post discusses a mechanistic spatio-temporal framework for modeling individual-to-individual infection spread. It involves placing new infections based on distance and angle, requiring recalculations of likelihood during MCMC sampling, and comparing estimated L(r) to a Poisson point process.",
-      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005798",
-      "usefulness_score": 95
+      "summary": "This article evaluates scenic area attractiveness in Dali City using multi-source spatiotemporal data. It covers spatial distribution patterns, sentiment analyses, characteristics of urban scenic areas, spatiotemporal distribution of tourists, and tourist evaluation models based on various user-generated content and mobile data.",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323310",
+      "usefulness_score": 50,
+      "usefulness_reason": "Score 50 assigned because the article discusses 'spatiotemporal data' and uses 'multi-source data' which aligns with 'Contextual dataset' and 'Survey data' in a broad sense. However, it does not explicitly focus on 'Point Process' or 'Spatio Temporal Point Process', making it tangentially relevant rather than directly focused on all aspects of the query."
     }
   ]
 }

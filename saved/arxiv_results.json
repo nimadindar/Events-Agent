@@ -8,9 +8,10 @@
         "Srikanth Krishnan Iyer"
       ],
       "publish_date": "22-08-2025",
-      "summary": "Hawkes processes were first introduced to obtain microscopic models for the rough volatility observed in asset prices. Scaling limits of such processes leads to the rough-Heston model that describes the macroscopic behavior. Blanc et al. (2017) show that Time-reversal asymmetry (TRA) or the Zumbach effect can be modeled using Quadratic Hawkes (QHawkes) processes. Dandapani et al. (2021) obtain a super-rough-Heston model as scaling limit of QHawkes processes in the case where the impact of buying",
+      "summary": "This paper explores Hawkes processes to model rough volatility in asset prices, leading to the super-Heston-rough model. It also shows how Time-reversal asymmetry can be modeled using Quadratic Hawkes processes.",
       "url": "http://arxiv.org/abs/2508.16566v1",
-      "usefulness_score": 70
+      "usefulness_score": 95,
+      "usefulness_reason": "The paper directly and substantially focuses on \"Hawkes processes,\" which are a fundamental type of point process."
     },
     {
       "source": "arxiv",
@@ -21,9 +22,10 @@
         "Katherine G. Herbert"
       ],
       "publish_date": "22-08-2025",
-      "summary": "A deep learning model is often considered a black-box model, as its internal workings tend to be opaque to the user. Because of the lack of transparency, it is challenging to understand the reasoning behind the model's predictions. Here, we present an approach to making a deep learning-based solar storm prediction model interpretable, where solar storms include solar flares and coronal mass ejections (CMEs). This deep learning model, built based on a long short-term memory (LSTM) network with an",
+      "summary": "This paper presents an approach to make a deep learning-based solar storm prediction model interpretable. The model, built on an LSTM network, aims to explain predictions for solar flares and coronal mass ejections.",
       "url": "http://arxiv.org/abs/2508.16543v1",
-      "usefulness_score": 65
+      "usefulness_score": 65,
+      "usefulness_reason": "The paper deals with predicting solar storms, which are inherently spatio-temporal events, and uses deep learning for this purpose."
     },
     {
       "source": "arxiv",
@@ -36,9 +38,10 @@
         "Alain Pagani"
       ],
       "publish_date": "22-08-2025",
-      "summary": "Recent advancements in video generation have substantially improved visual quality and temporal coherence, making these models increasingly appealing for applications such as autonomous driving, particularly in the context of driving simulation and so-called \"world models\". In this work, we investigate the effects of existing fine-tuning video generation approaches on structured driving datasets and uncover a potential trade-off: although visual fidelity improves, spatial accuracy in modeling dy",
+      "summary": "This work investigates the effects of fine-tuning video generation approaches on structured driving datasets. It uncovers a potential trade-off where visual fidelity improves but spatial accuracy in modeling dynamic scenes may be compromised.",
       "url": "http://arxiv.org/abs/2508.16512v1",
-      "usefulness_score": 60
+      "usefulness_score": 75,
+      "usefulness_reason": "The paper discusses video generation for driving simulation, which inherently involves spatio-temporal data and modeling. The summary mentions \"spatial accuracy.\""
     },
     {
       "source": "arxiv",
@@ -52,9 +55,10 @@
         "Yukun Yuan"
       ],
       "publish_date": "22-08-2025",
-      "summary": "Non-emergency municipal services such as city 311 systems have been widely implemented across cities in Canada and the United States to enhance residents' quality of life. These systems enable residents to report issues, e.g., noise complaints, missed garbage collection, and potholes, via phone calls, mobile applications, or webpages. However, residents are often given limited information about when their service requests will be addressed, which can reduce transparency, lower resident satisfact",
+      "summary": "This paper proposes MuST2-Learn, a multi-view spatial-temporal-type learning approach for estimating municipal service times. It aims to enhance transparency and resident satisfaction by providing better information on service request resolution.",
       "url": "http://arxiv.org/abs/2508.16503v1",
-      "usefulness_score": 90
+      "usefulness_score": 95,
+      "usefulness_reason": "The title explicitly includes \"Spatial-Temporal-Type Learning,\" indicating a direct and substantial focus on spatio-temporal aspects."
     },
     {
       "source": "arxiv",
@@ -73,9 +77,10 @@
         "Fei Gao"
       ],
       "publish_date": "22-08-2025",
-      "summary": "Photoacoustic imaging (PAI), by combining high optical contrast with ultrasonic resolution, offers a promising noninvasive approach for dynamic monitoring of cerebral vasculature. However, transcranial PAI still faces significant challenges due to strong attenuation of both optical and acoustic signals by the skull. In this study, we propose a multi-wavelength photoacoustic tomography system and method for intracranial pressure (ICP) assessment, enabling visualization of cross-sectional structur",
+      "summary": "This study proposes a multi-wavelength photoacoustic tomography system and method for intracranial pressure assessment. It aims to overcome challenges in transcranial photoacoustic imaging due to signal attenuation by the skull.",
       "url": "http://arxiv.org/abs/2508.16475v1",
-      "usefulness_score": 60
+      "usefulness_score": 30,
+      "usefulness_reason": "The paper is about medical imaging, which involves spatial data, but the summary does not explicitly mention a strong spatio-temporal focus or modeling."
     },
     {
       "source": "arxiv",
@@ -89,9 +94,125 @@
         "Wu Libo"
       ],
       "publish_date": "22-08-2025",
-      "summary": "Climate change is exacerbating extreme weather events globally, including high temperatures, extreme precipitation, strong winds, and tropical cyclones, posing severe threats to human health, infrastructure, food security, and socio-economic systems. Although existing global climate models (GCMs) provide essential tools for climate prediction, they face limitations such as insufficient resolution and high computational costs when simulating extreme events. To address these issues, this study pro",
+      "summary": "This study proposes a domain-aligned generative downscaling method to enhance projections of extreme climate events. It addresses limitations of global climate models in simulating such events due to insufficient resolution and high computational costs.",
       "url": "http://arxiv.org/abs/2508.16396v1",
-      "usefulness_score": 70
+      "usefulness_score": 80,
+      "usefulness_reason": "The paper focuses on projecting extreme climate events, which are inherently spatio-temporal phenomena, and uses generative downscaling, implying spatio-temporal modeling."
+    },
+    {
+      "source": "arxiv",
+      "title": "Benchmarking Training Paradigms, Dataset Composition, and Model Scaling for Child ASR in ESPnet",
+      "authors": [
+        "Anyu Ying",
+        "Natarajan Balaji Shankar",
+        "Chyi-Jiunn Lin",
+        "Mohan Shi",
+        "Pu Wang",
+        "Hye-jin Shim",
+        "Siddhant Arora",
+        "Hugo Van hamme",
+        "Abeer Alwan",
+        "Shinji Watanabe"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "This paper benchmarks training paradigms, dataset composition, and model scaling for child ASR. It compares flat-start training across multiple datasets and SSL representations, showing SSL representations are biased toward adult speech.",
+      "url": "http://arxiv.org/abs/2508.16576v1",
+      "usefulness_score": 60,
+      "usefulness_reason": "The paper discusses \"dataset composition\" and \"limited annotated data,\" which is relevant to the concept of datasets, but not specifically \"contextual datasets\" as a primary focus."
+    },
+    {
+      "source": "arxiv",
+      "title": "A Disease-Centric Vision-Language Foundation Model for Precision Oncology in Kidney Cancer",
+      "authors": [
+        "Yuhui Tao",
+        "Zhongwei Zhao",
+        "Zilong Wang",
+        "Xufang Luo",
+        "Feng Chen",
+        "Kang Wang",
+        "Chuanfu Wu",
+        "Xue Zhang",
+        "Shaoting Zhang",
+        "Jiaxi Yao",
+        "Xingwei Jin",
+        "Xinyang Jiang",
+        "Yifan Yang",
+        "Dongsheng Li",
+        "Lili Qiu",
+        "Zhiqiang Shao",
+        "Jianming Guo",
+        "Nengwang Yu",
+        "Shuo Wang",
+        "Ying Xiong"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "This study developed and validated RenalCLIP, a visual-language foundation model for characterizing, diagnosing, and prognosticating renal masses. It used a large dataset of CT scans from multiple medical centers.",
+      "url": "http://arxiv.org/abs/2508.16569v1",
+      "usefulness_score": 60,
+      "usefulness_reason": "The paper uses a large dataset of CT scans, making it relevant to the term \"dataset,\" but it doesn't primarily focus on the \"contextual\" aspect of the dataset."
+    },
+    {
+      "source": "arxiv",
+      "title": "Closer to Reality: Practical Semi-Supervised Federated Learning for Foundation Model Adaptation",
+      "authors": [
+        "Guangyu Sun",
+        "Jingtao Li",
+        "Weiming Zhuang",
+        "Chen Chen",
+        "Chen Chen",
+        "Lingjuan Lyu"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "This paper addresses the adaptation of foundation models in privacy-sensitive applications using federated learning. It focuses on practical semi-supervised federated learning to overcome limitations of edge devices like computational resources and scarce labeled data.",
+      "url": "http://arxiv.org/abs/2508.16568v1",
+      "usefulness_score": 70,
+      "usefulness_reason": "The paper discusses data privacy and edge data in the context of federated learning, which implies a focus on the contextual nature and constraints of datasets."
+    },
+    {
+      "source": "arxiv",
+      "title": "Spherical latent space models for social network analysis",
+      "authors": [
+        "Juan Sosa",
+        "Carlos Nosa"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "This article introduces a spherical latent space model for social network analysis, embedding actors on a hypersphere. This geometry facilitates the representation of transitive relationships and community structure, mitigating degeneracy issues.",
+      "url": "http://arxiv.org/abs/2508.16556v1",
+      "usefulness_score": 65,
+      "usefulness_reason": "The paper focuses on social network analysis, where the data often has inherent contextual relationships, making it relevant to \"contextual dataset.\""
+    },
+    {
+      "source": "arxiv",
+      "title": "TinyML Towards Industry 4.0: Resource-Efficient Process Monitoring of a Milling Machine",
+      "authors": [
+        "Tim Langer",
+        "Matthias Widra",
+        "Volkhard Beyer"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "This work presents a complete TinyML flow for resource-efficient process monitoring of a milling machine in Industry 4.0. It covers dataset generation, machine learning model development, and implementation on a microcontroller.",
+      "url": "http://arxiv.org/abs/2508.16553v1",
+      "usefulness_score": 60,
+      "usefulness_reason": "The paper discusses \"dataset generation\" for process monitoring, which is relevant to datasets, but not primarily focused on the \"contextual\" aspect."
+    },
+    {
+      "source": "arxiv",
+      "title": "LLM-Based Agents for Competitive Landscape Mapping in Drug Asset Due Diligence",
+      "authors": [
+        "Alisa Vinogradova",
+        "Vlad Vinogradov",
+        "Dmitrii Radkevich",
+        "Ilya Yasny",
+        "Dmitry Kobyzev",
+        "Ivan Izmailov",
+        "Katsiaryna Yanchanka",
+        "Andrey Doronichev"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "This paper describes a competitor-discovery component within an agentic AI system for drug asset due diligence. The AI agent retrieves and extracts attributes for drugs in a competitive landscape, handling fragmented and ontology-mismatched data.",
+      "url": "http://arxiv.org/abs/2508.16571v1",
+      "usefulness_score": 30,
+      "usefulness_reason": "The paper discusses various data sources for drug asset due diligence, but \"survey data\" is not explicitly mentioned or a primary focus."
     }
   ]
 }
