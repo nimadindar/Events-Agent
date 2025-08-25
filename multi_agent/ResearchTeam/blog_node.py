@@ -20,7 +20,7 @@ BLOG_PROMPT_DIR = "./multi_agent/prompts/blog_node_prompt.yaml"
 # Prompt Config
 FIELD = "Spatio-Temporal point processing"
 BLOG_MAX_RESULTS = 1
-BLOG_MIN_USEFULNESS = 0
+BLOG_MIN_USEFULNESS = 70
 
 # Tavily Config
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
