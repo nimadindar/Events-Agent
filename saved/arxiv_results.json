@@ -1,0 +1,97 @@
+{
+  "results": [
+    {
+      "source": "arxiv",
+      "title": "Asymmetric super-Heston-rough volatility model with Zumbach effect as scaling limit of quadratic Hawkes processes",
+      "authors": [
+        "Priyanka Chudasama",
+        "Srikanth Krishnan Iyer"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "Hawkes processes were first introduced to obtain microscopic models for the rough volatility observed in asset prices. Scaling limits of such processes leads to the rough-Heston model that describes the macroscopic behavior. Blanc et al. (2017) show that Time-reversal asymmetry (TRA) or the Zumbach effect can be modeled using Quadratic Hawkes (QHawkes) processes. Dandapani et al. (2021) obtain a super-rough-Heston model as scaling limit of QHawkes processes in the case where the impact of buying",
+      "url": "http://arxiv.org/abs/2508.16566v1",
+      "usefulness_score": 70
+    },
+    {
+      "source": "arxiv",
+      "title": "Explainable AI in Deep Learning-Based Prediction of Solar Storms",
+      "authors": [
+        "Adam O. Rawashdeh",
+        "Jason T. L. Wang",
+        "Katherine G. Herbert"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "A deep learning model is often considered a black-box model, as its internal workings tend to be opaque to the user. Because of the lack of transparency, it is challenging to understand the reasoning behind the model's predictions. Here, we present an approach to making a deep learning-based solar storm prediction model interpretable, where solar storms include solar flares and coronal mass ejections (CMEs). This deep learning model, built based on a long short-term memory (LSTM) network with an",
+      "url": "http://arxiv.org/abs/2508.16543v1",
+      "usefulness_score": 65
+    },
+    {
+      "source": "arxiv",
+      "title": "Seeing Clearly, Forgetting Deeply: Revisiting Fine-Tuned Video Generators for Driving Simulation",
+      "authors": [
+        "Chun-Peng Chang",
+        "Chen-Yu Wang",
+        "Julian Schmidt",
+        "Holger Caesar",
+        "Alain Pagani"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "Recent advancements in video generation have substantially improved visual quality and temporal coherence, making these models increasingly appealing for applications such as autonomous driving, particularly in the context of driving simulation and so-called \"world models\". In this work, we investigate the effects of existing fine-tuning video generation approaches on structured driving datasets and uncover a potential trade-off: although visual fidelity improves, spatial accuracy in modeling dy",
+      "url": "http://arxiv.org/abs/2508.16512v1",
+      "usefulness_score": 60
+    },
+    {
+      "source": "arxiv",
+      "title": "MuST2-Learn: Multi-view Spatial-Temporal-Type Learning for Heterogeneous Municipal Service Time Estimation",
+      "authors": [
+        "Nadia Asif",
+        "Zhiqing Hong",
+        "Shaogang Ren",
+        "Xiaonan Zhang",
+        "Xiaojun Shang",
+        "Yukun Yuan"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "Non-emergency municipal services such as city 311 systems have been widely implemented across cities in Canada and the United States to enhance residents' quality of life. These systems enable residents to report issues, e.g., noise complaints, missed garbage collection, and potholes, via phone calls, mobile applications, or webpages. However, residents are often given limited information about when their service requests will be addressed, which can reduce transparency, lower resident satisfact",
+      "url": "http://arxiv.org/abs/2508.16503v1",
+      "usefulness_score": 90
+    },
+    {
+      "source": "arxiv",
+      "title": "Transcranial Photoacoustic Imaging for Human Intracranial Pressure Evaluation",
+      "authors": [
+        "Ruixi Sun",
+        "Hengrong Lan",
+        "Yuanyuan Dang",
+        "Yunhui Jiang",
+        "Youshen Xiao",
+        "Sheng Liao",
+        "Fan Zhang",
+        "Daohuai Jiang",
+        "Zhongqi Li",
+        "Hulin Zhao",
+        "Fei Gao"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "Photoacoustic imaging (PAI), by combining high optical contrast with ultrasonic resolution, offers a promising noninvasive approach for dynamic monitoring of cerebral vasculature. However, transcranial PAI still faces significant challenges due to strong attenuation of both optical and acoustic signals by the skull. In this study, we propose a multi-wavelength photoacoustic tomography system and method for intracranial pressure (ICP) assessment, enabling visualization of cross-sectional structur",
+      "url": "http://arxiv.org/abs/2508.16475v1",
+      "usefulness_score": 60
+    },
+    {
+      "source": "arxiv",
+      "title": "Domain-aligned generative downscaling enhances projections of extreme climate events",
+      "authors": [
+        "Ruian Tie",
+        "Xiaohui Zhong",
+        "Zhengyu Shi",
+        "Hao Li",
+        "Jun Liu",
+        "Wu Libo"
+      ],
+      "publish_date": "22-08-2025",
+      "summary": "Climate change is exacerbating extreme weather events globally, including high temperatures, extreme precipitation, strong winds, and tropical cyclones, posing severe threats to human health, infrastructure, food security, and socio-economic systems. Although existing global climate models (GCMs) provide essential tools for climate prediction, they face limitations such as insufficient resolution and high computational costs when simulating extreme events. To address these issues, this study pro",
+      "url": "http://arxiv.org/abs/2508.16396v1",
+      "usefulness_score": 70
+    }
+  ]
+}

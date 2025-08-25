@@ -2,34 +2,17 @@
   "results": [
     {
       "source": "gscholar",
-      "title": "Robert Verity, Anne Cori, Swapnil Mishra, Seth Flaxman and Samir Bhatt's contribution to the Discussion of “Some statistical aspects of the Covid-19 response” by Wood et al",
+      "title": "Fast approximate Bayesian inference of HIV indicators using PCA adaptive Gauss-Hermite quadrature",
       "authors": [
-        "R Verity",
-        "A Cori",
-        "S Mishra",
-        "S Flaxman",
-        "S Bhatt"
+        "A Howes",
+        "A Stringer",
+        "SR Flaxman",
+        "JW Imai-Eaton"
       ],
-      "Publish_date": "02-07-2025",
-      "url": "https://academic.oup.com/jrsssa/advance-article-abstract/doi/10.1093/jrsssa/qnaf108/8182060",
-      "abstract": "This paper discusses critical issues that emerged from the COVID-19 pandemic's reliance on data and analysis, including media distortions and the framing of risk and uncertainty. It emphasizes the need for critical appraisal of assumptions underpinning scientific evidence to strengthen preparedness for future public health threats. The authors question the flexibility of the deconvolution framework in addressing the precise timing of infection peaks.",
-      "usefulness_score": 10
-    },
-    {
-      "source": "gscholar",
-      "title": "Model‐free machine learning‐based 3D single molecule localisation microscopy",
-      "authors": [
-        "MA Boland",
-        "JPE Lightley",
-        "E Garcia",
-        "S Kumar",
-        "C Dunsby",
-        "S Flaxman"
-      ],
-      "Publish_date": "01-07-2025",
-      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/jmi.13420",
-      "abstract": "This paper introduces easyZloc, a 3D single molecule localisation microscopy (SMLM) approach utilizing a lightweight Convolutional Neural Network. It is generally applicable, including with standard fluorescence microscopes, and aims to be practically useful in high-throughput SMLM workflows. The method demonstrates reconstruction of nuclear pore complexes with comparable performance to existing methods but with reduced computational power and execution time.",
-      "usefulness_score": 10
+      "publish_date": "21-08-2025",
+      "summary": "This paper proposes a new inference method for a spatial evidence synthesis model (Naomi) used to produce district-level HIV epidemic indicators. The model utilizes both household survey data and routinely reported health system data. The new method, based on an extension of adaptive Gauss-Hermite quadrature, improves the accuracy and speed of inference for model parameters.",
+      "url": "https://arxiv.org/abs/2508.15665",
+      "usefulness_score": 70
     }
   ]
 }
