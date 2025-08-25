@@ -20,7 +20,7 @@ BLOG_PROMPT_DIR = "./multi_agent/prompts/blog_node_prompt.yaml"
 # Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 BLOG_MAX_RESULTS = 1
-BLOG_MIN_USEFULNESS = 70
+BLOG_MIN_USEFULNESS = 50
 
 # Tavily Config
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
