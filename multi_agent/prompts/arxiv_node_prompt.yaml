@@ -34,9 +34,9 @@ prompt: |
        - "source": "arxiv"
        - "title": Title of the paper
        - "authors": List of author names
-       - "Publish_date": "DD-MM-YYYY" (day-month-year)
+       - "publish_date": "DD-MM-YYYY" (day-month-year)
+       - "summary": A concise (1–3 sentence) summary of the paper’s abstract
        - "url": Full, accessible link (e.g., "https://arxiv.org/abs/xxxx.xxxxx")
-       - "abstract": A concise (1–3 sentence) summary of the paper’s abstract
        - "usefulness_score": integer 0–100 per the rubric above
      - If any field is missing in the tool output, infer it from available information; ensure the final JSON remains VALID.
      - Example structure:
@@ -56,8 +56,8 @@ prompt: |
         }}}}
 
   5) Saving
-     - After creating the VALID JSON, call save_to_json with:
-       * content: the JSON object/string you built
+     - After creating the VALID JSON, call save_to_json with the following arguments:
+       * content: the JSON object/string you have generated
        * source: "arxiv"
      - If saving fails due to invalid JSON, correct the JSON and retry.
 
