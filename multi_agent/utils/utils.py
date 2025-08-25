@@ -1,200 +1,104 @@
 import re
-import yaml
-import logging
-import traceback
-from typing import Any
+import time
+from pathlib import Path
 from datetime import datetime
-from logging.handlers import RotatingFileHandler
 
-from multi_agent.config import AgentConfig
+from langchain_core.callbacks import BaseCallbackHandler
+from langgraph.graph import MessagesState
 
-from langchain.prompts import PromptTemplate
-from langchain.callbacks.base import BaseCallbackHandler
 
-class StreamlitLogHandler(logging.Handler):
-    def __init__(self):
-        super().__init__()
-        self.log_buffer = []
+class State(MessagesState):
+    next: str
 
-    def emit(self, record):
-        log_entry = self.format(record)
-        self.log_buffer.append(log_entry)
 
-    def get_logs(self):
-        return self.log_buffer  
+class DebugHandler(BaseCallbackHandler):
+    def __init__(self, log_filename: str = "debug.log"):
+        output_dir = Path("./saved")
+        output_dir.mkdir(parents=True, exist_ok=True)
+        self.log_file: Path = output_dir / log_filename
+        self._llm_t0 = None
+        self._tool_t0 = None
 
-    def clear_logs(self):
-        self.log_buffer = []
-    
-class LoggingCallbackHandler(BaseCallbackHandler):
-    def __init__(self, logger):
-        self.logger = logger
+    def _ts(self) -> str:
+        return datetime.now().strftime("%Y-%m-%d %H:%M:%S.%f")[:-3]
+
+    def _log(self, message: str):
+        line = f"[{self._ts()}] {message}"
+        print(line)
+        with open(self.log_file, "a", encoding="utf-8") as f:
+            f.write(line + "\n")
 
     def on_llm_start(self, serialized, prompts, **kwargs):
-        """Log when LLM starts processing."""
-        self.logger.debug(f"LLM started with prompts: {prompts}")
+        self._llm_t0 = time.perf_counter()
+        self._log("\n[LLM START]")
+        for i, p in enumerate(prompts):
+            self._log(f"Prompt {i}:\n{p}\n")
 
-    def on_llm_end(self, response, **kwargs):
-        """Log LLM output."""
-        self.logger.debug(f"LLM response: {response.generations}")
-
-    def on_tool_start(self, tool, input_str, **kwargs):
-        """Log when a tool is called."""
-        self.logger.info(f"Tool '{tool.name}' called with input: {input_str}")
-
-    def on_tool_end(self, output, **kwargs):
-        """Log tool output."""
-        self.logger.info(f"Tool output: {output}")
-
-    def on_tool_error(self, error, **kwargs):
-        """Log tool errors."""
-        self.logger.error(f"Tool error: {str(error)}")
-        self.logger.debug(f"Tool error stack trace: {traceback.format_exc()}")
+    def on_llm_end(self, response, **kwargs) -> None:
+        elapsed = None
+        if self._llm_t0 is not None:
+            elapsed = time.perf_counter() - self._llm_t0
+            self._llm_t0 = None
+        usage = getattr(response, "llm_output", {})   
+        if elapsed is not None:
+            self._log(f"[LLM END] elapsed={elapsed:.3f}s | usage: {usage}")
+        else:
+            self._log(f"[LLM END] usage: {usage}")
 
     def on_agent_action(self, action, **kwargs):
-        """Log intermediate agent actions."""
-        self.logger.debug(f"Agent action: {action}")
+
+        tool_name = getattr(action, "tool", "<unknown>")
+        tool_input = getattr(action, "tool_input", "")
+
+        preview = str(tool_input)
+        if len(preview) > 500:
+            preview = preview[:500] + " ..."
+        self._log(f"[AGENT] Plan: call tool '{tool_name}' with input: {preview}")
 
     def on_agent_finish(self, finish, **kwargs):
-        """Log when agent finishes."""
-        clean_output = str(finish.return_values).encode('ascii', 'replace').decode()
-        self.logger.info(f"Agent finished with output: {clean_output}")
 
-class StreamToLogger:
-    def __init__(self, logger, level=logging.INFO):
-        self.logger = logger
-        self.level = level
-        self.linebuf = ''
+        out = getattr(finish, "return_values", {})
+        preview = str(out)
+        if len(preview) > 500:
+            preview = preview[:500] + " ..."
+        self._log(f"[AGENT] Finished with: {preview}")
 
-    def write(self, buf):
+    def on_tool_start(self, serialized, input_str, **kwargs):
+        self._tool_t0 = time.perf_counter()
+        self._log(f"\n[TOOL START] {serialized.get('name')}")
+        self._log(f"Input: {input_str}")
 
-        for line in buf.rstrip().splitlines():
-            line = line.rstrip()
-            if line:
-                cleaned_line = line.encode("utf-8", errors="replace").decode("utf-8")
-                self.logger.log(self.level, f"Console: {cleaned_line}")
+    def on_tool_end(self, output, **kwargs):
+        output_str = str(output)
+        preview = output_str[:500]
+        suffix = " ..." if len(output_str) > 500 else ""
+        elapsed = None
+        if self._tool_t0 is not None:
+            elapsed = time.perf_counter() - self._tool_t0
+            self._tool_t0 = None
+        if elapsed is not None:
+            self._log(f"[TOOL END] elapsed={elapsed:.3f}s | Output: {preview}{suffix}")
+        else:
+            self._log(f"[TOOL END] Output: {preview}{suffix}")
 
-    def flush(self):
-        pass  
+    def on_chain_start(self, serialized, inputs, **kwargs):
+        self._log(f"\n[CHAIN START] {serialized.get('name') or serialized.get('id')} | Inputs keys: {list(inputs.keys())}")
 
+    def on_chain_end(self, outputs, **kwargs):
+        keys = list(outputs.keys()) if isinstance(outputs, dict) else type(outputs).__name__
+        self._log(f"[CHAIN END] Outputs: {keys}")
 
-def load_yaml(input_path:str) -> str:
-
-    with open(input_path, "r", encoding="utf-8") as f:
-        prompt_config = yaml.safe_load(f)
-
-    return prompt_config
-
-
-def load_prompt(input_path: str, template_id: int) -> PromptTemplate:
-    
-    prompt_config = load_yaml(input_path)
-
-    system_prompt_template = prompt_config[f"template_{template_id}"]
-
-    env_vars = {
-            "field": AgentConfig.Field,
-            "arxiv_max_results": AgentConfig.ArxivMaxResults,
-            "arxiv_min_usefulness": AgentConfig.ArxivMinUsefulness,
-            "tavily_api_key": AgentConfig.TAVILY_API_KEY,
-            "tavily_max_results": AgentConfig.TavilyMaxResults,
-            "blog_min_usefulness": AgentConfig.BlogMinUsefulness,
-            "author_ids_list": AgentConfig.ScholarPages,
-            "scholar_max_results": AgentConfig.ScholarMaxResults,
-            "serp_api_key": AgentConfig.SERP_API_KEY,
-            "scholar_min_usefulness": AgentConfig.ScholarMinUsefulness,
-            "consumer_key": AgentConfig.X_API_KEY,
-            "consumer_secret": AgentConfig.X_API_KEY_SECRET,
-            "access_token": AgentConfig.X_ACCESS_TOKEN,
-            "access_token_secret": AgentConfig.X_ACCESS_TOKEN_SECRET,
-        }
-    
-    formatted_system_prompt = system_prompt_template.format(**env_vars)
-
-    return formatted_system_prompt
-
-def setup_logging():
-    logger = logging.getLogger('AgentLogger')
-    logger.setLevel(logging.DEBUG)
-
-    formatter = logging.Formatter(
-        '%(asctime)s - %(levelname)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-    )
-
-    console_handler = logging.StreamHandler()
-    console_handler.setLevel(logging.INFO)
-    console_handler.setFormatter(formatter)
-    console_handler.stream.reconfigure(encoding='utf-8')
-
-    file_handler = RotatingFileHandler(
-        './saved/agent_logs.log', maxBytes=5*1024*1024, backupCount=3
-    )
-    file_handler.setLevel(logging.DEBUG)
-    file_handler.setFormatter(formatter)
-
-    logger.addHandler(console_handler)
-    logger.addHandler(file_handler)
-
-    return logger  
-
-def update_agent_config(field, arxiv_max_results, arxiv_min_usefulness,
-                        tavily_max_results, blog_min_usefulness,
-                        scholar_max_results, scholar_min_usefulness, scholar_user_ID,
-                        model_name, temperature, verbose, invoke_input,
-                        GOOGLE_API_KEY, X_API_KEY, X_API_KEY_SECRET,
-                        X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET, TAVILY_API_KEY, SERP_API_KEY):
-    """
-    Update the global AgentConfig attributes dynamically.
-    """
-    from multi_agent.config import AgentConfig as GlobalAgentConfig
-    
-    GlobalAgentConfig.Field = field
-    GlobalAgentConfig.ArxivMaxResults = arxiv_max_results
-    GlobalAgentConfig.ArxivMinUsefulness = arxiv_min_usefulness
-    GlobalAgentConfig.TavilyMaxResults = tavily_max_results
-    GlobalAgentConfig.BlogMinUsefulness = blog_min_usefulness
-    GlobalAgentConfig.ScholarPages = scholar_user_ID
-    GlobalAgentConfig.ScholarMaxResults = scholar_max_results
-    GlobalAgentConfig.ScholarMinUsefulness = scholar_min_usefulness
-    GlobalAgentConfig.ModelName = model_name
-    GlobalAgentConfig.Temperature = temperature
-    GlobalAgentConfig.Verbose = verbose
-    GlobalAgentConfig.InvokeInput = invoke_input
-    GlobalAgentConfig.GOOGLE_API_KEY = GOOGLE_API_KEY 
-    GlobalAgentConfig.X_API_KEY = X_API_KEY
-    GlobalAgentConfig.X_API_KEY_SECRET = X_API_KEY_SECRET
-    GlobalAgentConfig.X_ACCESS_TOKEN = X_ACCESS_TOKEN
-    GlobalAgentConfig.X_ACCESS_TOKEN_SECRET = X_ACCESS_TOKEN_SECRET
-    GlobalAgentConfig.TAVILY_API_KEY = TAVILY_API_KEY
-    GlobalAgentConfig.SERP_API_KEY = SERP_API_KEY
-
-    return GlobalAgentConfig
-
-
+ 
 def normalize_url(url):
-    """ 
-    This function uses a regular expression to match the arXiv ID format.
-    Example:
-    input url: http://arxiv.org/abs/2211.11179v1
-    output: 2211.11179
 
-    The other urls will be returned as is.    
-    """
     match = re.search(r"(\d{4}\.\d{4,5})(v\d)?", url)
     if match:
         return match.group(1)  
     return url
 
 
-def load_prompt_multi_agent(node_name: str, **env_vars: Any) -> str:
-    prompt_config = load_yaml(f"./multi_agent/prompts/{node_name}_node_prompt.yaml")
-    system_prompt_template = prompt_config["prompt"]
-    return system_prompt_template.format(**env_vars)
-
-
 def parse_publish_date(d: str):
-    """Parse 'DD-MM-YYYY' -> datetime; returns minimal date on failure for safe tie-breaking."""
+
     if not isinstance(d, str):
         return datetime.min
     for fmt in ("%d-%m-%Y", "%d-%m-%y", "%Y-%m-%d"):
