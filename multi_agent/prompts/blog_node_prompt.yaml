@@ -44,6 +44,7 @@ prompt: |
        - "summary": A concise 1–3 sentence summary of the post.
        - "url": Full, accessible URL (including https://).
        - "usefulness_score": integer 0–100 per the rubric above.
+       - "usefulness_reason": Briefly explain your reasoning about why you assigned that specific score to the entry. You should mention the factors that contributed to your decision. 
      - If any field is missing in the tool output, infer from available information while ensuring the final JSON remains VALID.
      - Deduplicate items by URL or (title + source).
      - Example structure:
@@ -58,6 +59,7 @@ prompt: |
               "summary": "Brief summarized abstract of the blog post.",
               "url": "https://www.spatialedge.co/...",
               "usefulness_score": 75
+              "usefulness_reason": "Score 75 assigned because..."
             }}}},
           ]
         }}}}

@@ -52,7 +52,7 @@ prompt: |
                   "summary": "Brief summarized abstract of the paper.",
                   "url": "https://arxiv.org/abs/...",
                   "usefulness_score": 94
-                  "usefulness_reason": "Score 94 assigned because ;;;"
+                  "usefulness_reason": "Score 94 assigned because..."
               }}}},
                     ]
         }}}}
