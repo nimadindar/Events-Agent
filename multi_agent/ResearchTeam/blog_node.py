@@ -20,7 +20,7 @@ BLOG_PROMPT_DIR = "./multi_agent/prompts/blog_node_prompt.yaml"
 # Prompt Config
 FIELD = "Spatio-Temporal point processing"
 BLOG_MAX_RESULTS = 1
-BLOG_MIN_USEFULNESS = 70
+BLOG_MIN_USEFULNESS = 0
 
 # Tavily Config
 TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
@@ -48,14 +48,14 @@ llm = ChatGoogleGenerativeAI(
                 google_api_key=GOOGLE_API_KEY
         )
 
-arxiv_agent = create_react_agent(
+blog_agent = create_react_agent(
     llm,
     tools=[tavily_tool, save_to_json],
     prompt=BLOG_SYSTEM_PROMPT
 )
 
 def blog_node(state: State, next_state) -> Command:
-    result = arxiv_agent.invoke(
+    result = blog_agent.invoke(
         state,
         config={"callbacks": [DebugHandler()], "run_name": "blog_agent"})
     return Command(
@@ -70,15 +70,15 @@ def blog_node(state: State, next_state) -> Command:
 def blog_main(next_state):
 
     research_builder = StateGraph(State)
-    research_builder.add_node("arxiv", partial(blog_node, next_state=next_state))
-    research_builder.add_edge(START, "arxiv")
+    research_builder.add_node("blog", partial(blog_node, next_state=next_state))
+    research_builder.add_edge(START, "blog")
 
     research_graph = research_builder.compile()
 
     for s in research_graph.stream(
         {
             "messages": [
-                ("user", f"Research about {FIELD} and then give me the results.")
+                ("user", f"Search for relevant blog posts about {FIELD} on the websites and then save the results as a json object based on the instructions you have.")
             ],
         },
         {"recursion_limit": 150},
