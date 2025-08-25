@@ -18,8 +18,8 @@ from ..utils.utils import State, DebugHandler
 ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
 
 # Prompt Config
-FIELD = "Spatio-Temporal point processing"
-ARXIV_MAX_RESULTS = 1
+FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
+ARXIV_MAX_RESULTS = 5
 ARXIV_MIN_USEFULNESS = 70
 
 # Model Config
@@ -74,7 +74,7 @@ def arxiv_main(next_state):
     for s in research_graph.stream(
         {
             "messages": [
-                ("user", f"Research about {FIELD} and then give me the results.")
+                ("user", f"Search for relevant papers about {FIELD} on arxiv and then save the results as a json object based on the instructions you have.")
             ],
         },
         {"recursion_limit": 150},
