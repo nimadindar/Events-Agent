@@ -7,6 +7,10 @@
     {
       "url": "http://arxiv.org/abs/2508.16566v1",
       "posting_reason": "The entry directly focuses on 'Hawkes processes', a fundamental type of point process, making it highly relevant to the 'Point Process' and 'Spatio Temporal Point Process' keywords. It also had the highest usefulness score."
+    },
+    {
+      "url": "https://arxiv.org/abs/2508.15665",
+      "posting_reason": "Selected 'Fast approximate Bayesian inference of HIV indicators using PCA adaptive Gauss-Hermite quadrature' because it directly addresses 'spatial evidence synthesis model' for 'HIV epidemic indicators', aligning with 'Spatio Temporal' analysis. It also explicitly uses 'household survey data' and 'health system data', which are forms of 'Survey data' and 'Contextual dataset' respectively."
     }
   ]
 }

@@ -213,6 +213,132 @@
       "url": "http://arxiv.org/abs/2508.16571v1",
       "usefulness_score": 30,
       "usefulness_reason": "The paper discusses various data sources for drug asset due diligence, but \"survey data\" is not explicitly mentioned or a primary focus."
+    },
+    {
+      "source": "arxiv",
+      "title": "Leveraging national forest inventory data to estimate forest carbon density status and trends for small areas",
+      "authors": [
+        "Elliot S. Shannon",
+        "Andrew O. Finley",
+        "Paul B. May",
+        "Grant M. Domke",
+        "Hans-Erik Andersen",
+        "George C. Gaines III",
+        "Arne Nothdurft",
+        "Sudipto Banerjee"
+      ],
+      "publish_date": "11-03-2025",
+      "summary": "This paper explores leveraging national forest inventory (NFI) data to estimate forest carbon density status and trends, particularly for small spatial, temporal, or biophysical domains where traditional design-based estimators are unreliable due to sparse data. It addresses the challenges of using survey data for small area estimation.",
+      "url": "http://arxiv.org/abs/2503.08653v1",
+      "usefulness_score": 70,
+      "usefulness_reason": "The paper is relevant as it explicitly mentions \"spatial, temporal\" domains and utilizes \"survey data\" (National Forest Inventory data). However, it does not directly focus on \"Point Process\" or \"Contextual dataset\" as core methodologies or topics, making it more of an application paper rather than a foundational one for those specific areas. Thus, a score of 70 is assigned."
+    },
+    {
+      "source": "arxiv",
+      "title": "Accelerating Historical K-Core Search in Temporal Graphs",
+      "authors": [
+        "Zhuo Ma",
+        "Dong Wen",
+        "Kaiyu Chen",
+        "Yixiang Fang",
+        "Xuemin Lin",
+        "Wenjie Zhang"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "We study the temporal k-core component search (TCCS), which outputs the k-core containing the query vertex in the snapshot over an arbitrary query time window in a temporal graph. The problem has been shown to be critical for tasks such as contact tracing, fault diagnosis, and financial forensics. The state-of-the-art EF-Index designs a separated forest structure for a set of carefully selected windows, incurring quadratic preprocessing time and large redundant storage. Our method introduces the",
+      "url": "http://arxiv.org/abs/2508.18151v1",
+      "usefulness_score": 65,
+      "usefulness_reason": "The title explicitly mentions 'Temporal Graphs' and the summary discusses 'temporal k-core component search' and 'query time window,' which are directly relevant to the 'Spatio Temporal' aspect of the query, even if it doesn't explicitly use the phrase 'spatio-temporal.' The concept of a temporal graph implies a spatio-temporal structure."
+    },
+    {
+      "source": "arxiv",
+      "title": "First-Order LTLf Synthesis with Lookback (Extended Version)",
+      "authors": [
+        "Sarah Winkler"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "Reactive synthesis addresses the problem of generating a controller for a temporal specification in an adversarial environment; it was typically studied for LTL. Driven by applications ranging from AI to business process management, LTLf modulo first order-theories over finite traces (LTLfMT) has recently gained traction, where propositional variables in properties are replaced by first-order constraints. Though reactive synthesis for LTLf with some first-order features has been addressed, existi",
+      "url": "http://arxiv.org/abs/2508.18149v1",
+      "usefulness_score": 55,
+      "usefulness_reason": "The summary mentions 'temporal specification' and 'LTLf' which are related to temporal logic and reasoning over time. While not explicitly 'spatio-temporal,' the temporal aspect is present and relevant."
+    },
+    {
+      "source": "arxiv",
+      "title": "Frozen in Time: Parameter-Efficient Time Series Transformers via Reservoir-Induced Feature Expansion and Fixed Random Dynamics",
+      "authors": [
+        "Pradeep Singh",
+        "Mehak Sharma",
+        "Anupriya Dey",
+        "Balasubramanian Raman"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "Transformers are the de-facto choice for sequence modelling, yet their quadratic self-attention and weak temporal bias can make long-range forecasting both expensive and brittle. We introduce FreezeTST, a lightweight hybrid that interleaves frozen random-feature (reservoir) blocks with standard trainable Transformer layers. The frozen blocks endow the network with rich nonlinear memory at no optimisation cost; the trainable layers learn to query this memory through self-attention. The design cut",
+      "url": "http://arxiv.org/abs/2508.18130v1",
+      "usefulness_score": 60,
+      "usefulness_reason": "The title and summary explicitly mention 'Time Series' and 'long-range forecasting,' which are directly related to the temporal aspect of 'Spatio Temporal.'"
+    },
+    {
+      "source": "arxiv",
+      "title": "Caregiver-in-the-Loop AI: A Simulation-Based Feasibility Study for Dementia Task Verification",
+      "authors": [
+        "Joy Lai",
+        "David Black",
+        "Kelly Beaton",
+        "Bing Ye",
+        "Alex Mihailidis"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "This feasibility study evaluates an AI-powered task verification system for caregivers of people living with dementia. It examines GPT-4's ability to generate effective follow-up questions and the accuracy of AI-driven task verification, highlighting the use of contextual information.",
+      "url": "http://arxiv.org/abs/2508.18267v1",
+      "usefulness_score": 55,
+      "usefulness_reason": "The system implicitly uses contextual information for task verification, making it relevant to the application of contextual data, even if not directly about dataset creation or analysis methods."
+    },
+    {
+      "source": "arxiv",
+      "title": "MMTok: Multimodal Coverage Maximization for Efficient Inference of VLMs",
+      "authors": [
+        "Sixun Dong",
+        "Juhua Hu",
+        "Mian Zhang",
+        "Ming Yin",
+        "Yanjie Fu",
+        "Qi Qian"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "This paper introduces MMTok, a method to improve the inference efficiency of Vision-Language Models (VLMs) by reducing redundant vision tokens. It leverages multimodal information for pruning, addressing the challenge of efficient processing of contextual multimodal data.",
+      "url": "http://arxiv.org/abs/2508.18264v1",
+      "usefulness_score": 50,
+      "usefulness_reason": "Discusses multimodal information, which is a form of contextual data, in the context of Vision-Language Models, making it relevant to how contextual data is processed and used."
+    },
+    {
+      "source": "arxiv",
+      "title": "Scene-Agnostic Traversability Labeling and Estimation via a Multimodal Self-supervised Framework",
+      "authors": [
+        "Zipeng Fang",
+        "Yanbo Wang",
+        "Lei Zhao",
+        "Weidong Chen"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "This paper proposes a multimodal self-supervised framework for traversability estimation in robots. It integrates heterogeneous sensory modalities to capture characteristics of non-traversable regions, addressing limitations of single-modality approaches and leveraging contextual information.",
+      "url": "http://arxiv.org/abs/2508.18249v1",
+      "usefulness_score": 60,
+      "usefulness_reason": "Utilizes multimodal sensory data to provide context for traversability estimation, directly relating to the application and use of contextual datasets."
+    },
+    {
+      "source": "arxiv",
+      "title": "Addressing Dipole Tension via Clustering in $Λ$CDM and beyond",
+      "authors": [
+        "Arefeh Daei Rasouli",
+        "Haniyeh S. Tadayyoni",
+        "Shant Baghram",
+        "Sohrab Rahvar"
+      ],
+      "publish_date": "25-08-2025",
+      "summary": "This work investigates the dipole in the angular distribution of the cosmic microwave background (CMB) and large-scale structures. It uses observational data, which can be considered survey data in astrophysics, to address discrepancies with predictions based on the CMB.",
+      "url": "http://arxiv.org/abs/2508.18259v1",
+      "usefulness_score": 60,
+      "usefulness_reason": "Uses observational data, which can be considered a form of survey data in astrophysics, making it relevant to the application of survey data, although the primary focus is cosmology."
     }
   ]
 }
