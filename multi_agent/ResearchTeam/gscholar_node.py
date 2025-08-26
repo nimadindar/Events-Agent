@@ -20,7 +20,7 @@ GSCHOLAR_PROMPT_DIR = "./multi_agent/prompts/gscholar_node_prompt.yaml"
 # Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 GSCHOLAR_MAX_RESULTS = 1
-GSCHOLAR_MIN_USEFULNESS = 50
+GSCHOLAR_MIN_USEFULNESS = 60
 AUTHOR_IDS = ["Wnxq0mgAAAAJ"]
 
 # Tavily Config

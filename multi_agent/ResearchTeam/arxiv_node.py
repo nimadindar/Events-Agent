@@ -20,7 +20,7 @@ ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
 # Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 ARXIV_MAX_RESULTS = 5
-ARXIV_MIN_USEFULNESS = 50
+ARXIV_MIN_USEFULNESS = 60
 
 # Model Config
 MODEL_NAME = "gemini-2.5-flash"

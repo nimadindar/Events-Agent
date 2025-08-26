@@ -21,7 +21,7 @@ X_PROMPT_DIR = "./multi_agent/prompts/X_node_prompt.yaml"
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 SOURCE = "all"
 DATE = "01.01.2025"
-X_MIN_USEFULNESS = 50
+X_MIN_USEFULNESS = 75
 
 # Model Config
 MODEL_NAME = "gemini-2.5-flash"
