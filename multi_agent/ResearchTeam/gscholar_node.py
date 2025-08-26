@@ -10,7 +10,7 @@ from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage
 from langgraph.types import Command
 
-from ..tools.tools import get_scholar_papers, save_to_json
+from ..tools.research_tools import get_scholar_papers, save_to_json
 from ..utils.utils import State, DebugHandler
 
 
