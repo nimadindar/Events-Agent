@@ -3,6 +3,10 @@
     {
       "url": "http://arxiv.org/abs/2508.16503v1",
       "posting_reason": "The entry 'MuST2-Learn: Multi-view Spatial-Temporal-Type Learning for Heterogeneous Municipal Service Time Estimation' was selected due to its explicit mention of 'Spatial-Temporal-Type Learning' in the title and summary, directly aligning with the 'Spatio Temporal' keyword. Its high usefulness score of 95 also indicates its quality. The methodology described is a 'multi-view spatial-temporal-type learning approach,' which is highly relevant to the user's interest in spatio-temporal modeling."
+    },
+    {
+      "url": "http://arxiv.org/abs/2508.16566v1",
+      "posting_reason": "The entry directly focuses on 'Hawkes processes', a fundamental type of point process, making it highly relevant to the 'Point Process' and 'Spatio Temporal Point Process' keywords. It also had the highest usefulness score."
     }
   ]
 }
