@@ -1,41 +1,64 @@
-from langgraph.graph import StateGraph, START
+import os
+from functools import partial
+from dotenv import load_dotenv
+load_dotenv()
 
-from .agent_utils.utils import load_llm, State
+from langgraph.graph import StateGraph, START, END
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-from .ResearchTeam.arxiv_node import arxiv_node
-from .ResearchTeam.blog_node import blog_node
-from .ResearchTeam.gscholar_node import gscholar_node
-from .PostingTeam.X_node import X_node
+from .utils.utils import State
 
-from multi_agent.config import AgentConfig
+from .ResearchTeam import arxiv_node, blog_node, gscholar_node
+from .PostingTeam import X_node
 
-llm = load_llm(
-    llm = AgentConfig.LLM,
-    model=AgentConfig.ModelName,
-    api_key=AgentConfig.GOOGLE_API_KEY
-)
 
-research_builder = StateGraph(State)
 
-research_builder.add_node("arxiv", arxiv_node)
-research_builder.add_node("blog", blog_node)
-research_builder.add_node("gscholar", gscholar_node)
-research_builder.add_node("X", X_node)
+FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 
-research_builder.add_edge(START, "arxiv")
-research_builder.add_edge("arxiv", "blog")
-research_builder.add_edge("blog", "gscholar")
-research_builder.add_edge("gscholar", "X")
+# Model Config
+MODEL_NAME = "gemini-2.5-flash"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
-research_graph = research_builder.compile()
+# Agent path
+next_state_arxiv = "blog"
+next_state_blog = "gscholar"
+next_state_gscholar = "X"
+next_state_X = END
 
-for s in research_graph.stream(
-    {
-        "messages": [
-            ("user", f"Research about {AgentConfig.Field} and then post the results.")
-        ],
-    },
-    {"recursion_limit": 150},
-):
-    print(s)
-    print("---")
+
+llm = ChatGoogleGenerativeAI(
+                model=MODEL_NAME,
+                temperature=0,
+                google_api_key=GOOGLE_API_KEY
+        )
+
+def main():
+    agent_builder = StateGraph(State)
+
+    agent_builder.add_node("arxiv", partial(arxiv_node.arxiv_node, next_state=next_state_arxiv))
+    agent_builder.add_node("blog", partial(blog_node.blog_node, next_state=next_state_blog))
+    agent_builder.add_node("gscholar", partial(gscholar_node.gscholar_node, next_state=next_state_gscholar))
+    agent_builder.add_node("X", partial(X_node.X_node, next_state=next_state_X))
+
+    agent_builder.add_edge(START, "arxiv")
+    agent_builder.add_edge("arxiv", "blog")
+    agent_builder.add_edge("blog", "gscholar")
+    agent_builder.add_edge("gscholar", "X")
+
+    agent_graph = agent_builder.compile()
+
+    for s in agent_graph.stream(
+        {
+            "messages": [
+                ("user", f"Perform research about {FIELD} and save the results with your reasoning as based on your instructions. \
+                 Then, load the saved results, and post on X and save the required files.")
+            ],
+        },
+        {"recursion_limit": 150},
+    ):
+        print(s)
+        print("---")
+
+
+if __name__ == "__main__":
+    main()
