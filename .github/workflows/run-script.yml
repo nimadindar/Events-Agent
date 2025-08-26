@@ -39,12 +39,6 @@ jobs:
           echo "TAVILY_API_KEY=${{ secrets.TAVILY_API_KEY }}" >> .env
           echo "SERP_API_KEY=${{ secrets.SERP_API_KEY }}" >> .env
 
-      - name: Debug saved files
-        run: |
-          ls -la saved/ || echo "saved/ directory not found"
-          cat saved/results.json || echo "results.json not found"
-          cat saved/tweets.json || echo "tweets.json not found"
-
       - name: Run Agent script
         run: |
           python -B -m multi_agent.main  
@@ -53,8 +47,8 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add saved/results.json saved/tweets.json
-          git commit -m "Update results.json and tweets.json from workflow" || echo "No changes to commit"
+          git add saved/arxiv_results.json saved/blog_results.json saved/gscholar_results.json saved/tweets.json
+          git commit -m "Update results from workflow" || echo "No changes to commit"
           git push
         continue-on-error: true
       
