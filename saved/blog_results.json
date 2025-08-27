@@ -12,6 +12,34 @@
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0323310",
       "usefulness_score": 50,
       "usefulness_reason": "Score 50 assigned because the article discusses 'spatiotemporal data' and uses 'multi-source data' which aligns with 'Contextual dataset' and 'Survey data' in a broad sense. However, it does not explicitly focus on 'Point Process' or 'Spatio Temporal Point Process', making it tangentially relevant rather than directly focused on all aspects of the query."
+    },
+    {
+      "source": "plos",
+      "title": "Point-process modeling of secondary crashes | PLOS One",
+      "authors": [
+        "Motagi S",
+        "Namilae S",
+        "Gbaguidi A",
+        "Parr S",
+        "Liu D"
+      ],
+      "publish_date": "unknown",
+      "summary": "This article discusses point-process modeling of secondary crashes, using a temporal point-process model with a sinusoidal background rate to classify crash events into primary and secondary events based on queue time values.",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295343",
+      "usefulness_score": 95,
+      "usefulness_reason": "Score 95 assigned because the post is directly and substantially about 'Point Process' and 'Spatio Temporal' (implied by crash events occurring in space and time). It provides a clear application of point-process modeling."
+    },
+    {
+      "source": "plos",
+      "title": "On the stability and dynamics of stochastic spiking neuron models",
+      "authors": [
+        "unknown"
+      ],
+      "publish_date": "unknown",
+      "summary": "This article discusses Point Process Generalized Linear Models (PP-GLMs) as a statistical framework for modeling spiking activity in single neurons.",
+      "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005390",
+      "usefulness_score": 80,
+      "usefulness_reason": "Score 80 assigned because the post is highly relevant to 'Point Process' by discussing Point Process Generalized Linear Models. However, it does not directly address 'Survey data'."
     }
   ]
 }

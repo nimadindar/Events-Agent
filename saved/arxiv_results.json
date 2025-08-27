@@ -339,6 +339,21 @@
       "url": "http://arxiv.org/abs/2508.18259v1",
       "usefulness_score": 60,
       "usefulness_reason": "Uses observational data, which can be considered a form of survey data in astrophysics, making it relevant to the application of survey data, although the primary focus is cosmology."
+    },
+    {
+      "source": "arxiv",
+      "title": "Fast approximate Bayesian inference of HIV indicators using PCA adaptive Gauss-Hermite quadrature",
+      "authors": [
+        "Adam Howes",
+        "Alex Stringer",
+        "Seth R. Flaxman",
+        "Jeffrey W. Imai-Eaton"
+      ],
+      "publish_date": "21-08-2025",
+      "summary": "Naomi is a spatial evidence synthesis model used to produce district-level HIV epidemic indicators in sub-Saharan Africa. Multiple outcomes of policy interest, including HIV prevalence, HIV incidence, and antiretroviral therapy treatment coverage are jointly modelled using both household survey data and routinely reported health system data.",
+      "url": "http://arxiv.org/abs/2508.15665v1",
+      "usefulness_score": 65,
+      "usefulness_reason": "The paper discusses a \"spatial evidence synthesis model\" and utilizes \"household survey data\" to model HIV indicators, which can be considered a contextual dataset. While it doesn't explicitly mention \"Spatio Temporal Point Process\", the spatial modeling and use of survey data make it relevant to the broader topic."
     }
   ]
 }
