@@ -40,6 +40,18 @@
       "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005390",
       "usefulness_score": 80,
       "usefulness_reason": "Score 80 assigned because the post is highly relevant to 'Point Process' by discussing Point Process Generalized Linear Models. However, it does not directly address 'Survey data'."
+    },
+    {
+      "source": "plosone",
+      "title": "PLOS Evaluating and implementing temporal, spatial, and spatio-temporal methods for outbreak detection in a local syndromic surveillance system | PLOS One",
+      "authors": [
+        "unknown"
+      ],
+      "publish_date": "unknown",
+      "summary": "This article evaluates temporal, spatial, and spatio-temporal detection methods using syndromic surveillance data. It compares the performance of various models like Holt-Winters, autoregressive moving average, generalized linear model, and spatial scan statistics for outbreak detection.",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184419",
+      "usefulness_score": 90,
+      "usefulness_reason": "The post directly evaluates spatio-temporal detection methods and applies them to syndromic surveillance data, which aligns with the \"Spatio Temporal\", \"Point Process\" (implied by detection methods), and \"Survey data\" aspects of the query."
     }
   ]
 }
