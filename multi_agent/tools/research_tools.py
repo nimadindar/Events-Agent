@@ -1,7 +1,6 @@
 import os
 import json
 import arxiv
-import tweepy
 from pathlib import Path
 from typing import Union, List, Dict
 
@@ -13,7 +12,7 @@ from ..utils.utils import normalize_url
 
 
 @tool
-def save_to_json(content: Union[str, dict], source: str) -> str:
+def save_to_json(content: Union[str, dict], file_name: str) -> str:
     """
     Save new result entries into a single 'results' list inside a source-specific file:
       - arxiv     -> ./saved/arxiv_results.json
@@ -30,12 +29,8 @@ def save_to_json(content: Union[str, dict], source: str) -> str:
     Raises:
         ValueError: If 'source' is not one of the allowed names.
     """
-    allowed = {"arxiv": "arxiv_results.json",
-               "blog": "blog_results.json",
-               "gscholar": "gscholar_results.json"}
-
-    if source not in allowed:
-        raise ValueError(f"Invalid source '{source}'. Must be one of {sorted(allowed.keys())}.")
+    # if source not in allowed:
+    #     raise ValueError(f"Invalid source '{source}'. Must be one of {sorted(allowed.keys())}.")
 
     try:
         if isinstance(content, str):
@@ -49,7 +44,7 @@ def save_to_json(content: Union[str, dict], source: str) -> str:
 
         output_dir = Path("./saved")
         output_dir.mkdir(exist_ok=True)
-        output_file = output_dir / allowed[source]
+        output_file = output_dir / file_name
 
         existing_results = []
         existing_urls = set()
@@ -79,7 +74,7 @@ def save_to_json(content: Union[str, dict], source: str) -> str:
                 new_unique_results.append(entry)
 
         if not new_unique_results:
-            return f"No new unique results to save for source '{source}'."
+            return f"No new unique results to save for file name: '{file_name}'."
 
         merged_results = existing_results + new_unique_results
         with open(output_file, "w", encoding="utf-8") as f:
@@ -92,7 +87,7 @@ def save_to_json(content: Union[str, dict], source: str) -> str:
     
 
 @tool
-def ArxivTool(query: str, max_results: int = 5) -> str:
+def ArxivTool(query: str, max_results: int = 5, year: str = "2025") -> str:
     """
     Search ArXiv for papers based on a provided query and return relevant results in JSON format.
 
@@ -125,8 +120,6 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
             "error": "max_results must be a positive integer"
         })
 
-    current_year = "2025"  # Filter for 2025 papers
-
     try:
         client = arxiv.Client()
         search = arxiv.Search(
@@ -141,7 +134,7 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
             publish_date = result.published
             formatted_date = publish_date.strftime("%d-%m-%Y")
 
-            if not publish_date.strftime("%Y") == current_year:
+            if not publish_date.strftime("%Y") == year:
                 continue
 
             authors = [author.name for author in result.authors]
@@ -160,7 +153,7 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
         if not results:
             return json.dumps({
                 "results": [],
-                "error": f"No papers found for query '{query}' in {current_year}"
+                "error": f"No papers found for query '{query}' in {year}"
             })
 
         return json.dumps({"results": results}, ensure_ascii=False)
@@ -173,7 +166,7 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
 
 
 @tool
-def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
+def tavily_tool(query, tavily_api_key, domains_included, max_results = 5) -> str:
     """
     Creates and returns a configured instance of TavilySearch tool.
 
@@ -187,17 +180,11 @@ def tavily_tool(query, tavily_api_key, max_results: int = 5) -> str:
     """
     os.environ["TAVILY_API_KEY"] = tavily_api_key 
     
-    include_domains = [
-    "journals.plos.org",
-    "spatialedge.co",
-    "events2025.github.io",
-    "spacetimecausality.github.io"
-]
-    
     tavily_tool = TavilySearch(
         max_results=max_results,
         api_key=tavily_api_key,
-        include_domains=include_domains,
+        search_depth = 'advanced',
+        include_domains=domains_included,
     )
     return tavily_tool.invoke(query)
 
