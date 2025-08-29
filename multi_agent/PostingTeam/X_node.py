@@ -9,7 +9,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 # Posting Config
 SOURCE = "arxiv"
 DATE = "01-01-2025"
-X_MIN_USEFULNESS = 50
+X_MIN_USEFULNESS = 80
 MODE = "score"
 
 # Model Config (LLM for crafting tweet text)
