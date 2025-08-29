@@ -1,64 +1,92 @@
-import os
-from functools import partial
-from dotenv import load_dotenv
-load_dotenv()
-
-from langgraph.graph import StateGraph, START, END
-from langchain_google_genai import ChatGoogleGenerativeAI
-
-from .utils.utils import State
-
-from .ResearchTeam import arxiv_node, blog_node, gscholar_node
-from .PostingTeam import X_node
+import sys
+import subprocess
+from pathlib import Path
+from datetime import datetime
 
 
+PIPELINE = ["ResearchTeam", "PostingTeam"]
 
-FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
+def log(msg: str) -> None:
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{ts}] {msg}")
 
-# Model Config
-MODEL_NAME = "gemini-2.5-flash"
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+def find_scripts(folder: Path):
+    """Yield .py files to run, sorted, excluding dunder and private files."""
+    for p in sorted(folder.glob("*.py")):
+        name = p.name
+        if name == "__init__.py":
+            continue
+        if name.startswith("_"):
+            continue
+        yield p
 
-# Agent path
-next_state_arxiv = "blog"
-next_state_blog = "gscholar"
-next_state_gscholar = "X"
-next_state_X = END
+def to_module_path(root_pkg_dir: Path, file_path: Path) -> str:
+    """
+    Convert a file path under `root_pkg_dir` into a dotted module path.
+    E.g., /.../multi_agent/ResearchTeam/arxiv_node.py -> multi_agent.ResearchTeam.arxiv_node
+    """
+    rel = file_path.relative_to(root_pkg_dir).with_suffix("")       
+    parts = [root_pkg_dir.name] + list(rel.parts)                   
+    return ".".join(parts)
 
+def run_module(module_path: str, cwd: Path) -> int:
+    """Run module in a fresh process; stream output; return exit code."""
+    log(f"RUN  -B  -m {module_path}")
+    proc = subprocess.Popen(
+        [sys.executable, "-m", module_path],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        cwd=cwd,            
+        text=True,
+        bufsize=1,
+    )
+    assert proc.stdout is not None
+    for line in proc.stdout:
+        print(line, end="")
+    proc.wait()
+    code = proc.returncode
+    if code == 0:
+        log(f"OK     {module_path}")
+    else:
+        log(f"ERROR  {module_path} (exit code {code})")
+    return code
 
-llm = ChatGoogleGenerativeAI(
-                model=MODEL_NAME,
-                temperature=0,
-                google_api_key=GOOGLE_API_KEY
-        )
+def main() -> int:
+    root_pkg_dir = Path(__file__).resolve().parent     
+    project_root = root_pkg_dir.parent                 
 
-def main():
-    agent_builder = StateGraph(State)
+    for stage in PIPELINE:
+        pkg_dir = root_pkg_dir / stage
+        if not pkg_dir.is_dir():
+            log(f"ERROR  Missing folder: {pkg_dir}")
+            return 1
+        if not (root_pkg_dir / "__init__.py").exists():
+            log(f"ERROR  Package root missing __init__.py: {root_pkg_dir}")
+            return 1
+        if not (pkg_dir / "__init__.py").exists():
+            log(f"ERROR  Package missing __init__.py: {pkg_dir}")
+            return 1
 
-    agent_builder.add_node("arxiv", partial(arxiv_node.arxiv_node, next_state=next_state_arxiv))
-    agent_builder.add_node("blog", partial(blog_node.blog_node, next_state=next_state_blog))
-    agent_builder.add_node("gscholar", partial(gscholar_node.gscholar_node, next_state=next_state_gscholar))
-    agent_builder.add_node("X", partial(X_node.X_node, next_state=next_state_X))
+    for stage in PIPELINE:
+        stage_dir = root_pkg_dir / stage
+        log(f"== Stage: {stage} ==")
+        scripts = list(find_scripts(stage_dir))
+        if not scripts:
+            log(f"WARNING No scripts found in {stage_dir}")
+            continue
 
-    agent_builder.add_edge(START, "arxiv")
-    agent_builder.add_edge("arxiv", "blog")
-    agent_builder.add_edge("blog", "gscholar")
-    agent_builder.add_edge("gscholar", "X")
+        for script in scripts:
+            if script.resolve() == Path(__file__).resolve():
+                continue
 
-    agent_graph = agent_builder.compile()
+            module_path = to_module_path(root_pkg_dir, script)
+            code = run_module(module_path, cwd=project_root)
+            if code != 0:
+                log("Terminating pipeline due to error.")
+                return code
 
-    for s in agent_graph.stream(
-        {
-            "messages": [
-                ("user", f"Perform research about {FIELD} and save the results with your reasoning as based on your instructions. \
-                 Then, load the saved results, and post on X and save the required files.")
-            ],
-        },
-        {"recursion_limit": 150},
-    ):
-        print(s)
-        print("---")
-
+    log("Pipeline completed successfully.")
+    return 0
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
