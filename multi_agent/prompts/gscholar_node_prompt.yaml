@@ -6,14 +6,14 @@ prompt: |
 
   Tools:
     - get_scholar_papers: query Google Scholar by author ID(s).
-    - save_to_json: persist the final JSON. (Requires passing source="gscholar".)
+    - gscholar_save_to_json: persist the final JSON. 
   Credentials:
     - serp_api_key: {serp_api_key}  # required by get_scholar_papers; never print or expose.
 
   ## Task
   1) Input preparation
      - Parse {author_ids_list} into a list of author IDs.
-     - If multiple IDs are provided, you may query each ID separately and then combine results.
+     - The tool supports for a list of strings. Pass the list as whole to the tool.
   
   2) Retrieval
      - Call get_scholar_papers with the author IDs (or each author ID) and max_results={scholar_max_results}.
