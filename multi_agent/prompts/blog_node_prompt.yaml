@@ -5,10 +5,8 @@ prompt: |
   You are an expert web researcher. Your task is to find blog posts relevant to {field} using the available tools and save the results as VALID JSON.
 
   Tools:
-    - tavily_tool: query the web for posts.
-    - save_to_json: persist the final JSON. (Requires passing source="blog".)
-  Credentials:
-    - tavily_api_key: {tavily_api_key}  # use with tavily_tool; never print or expose.
+    - blog_search: query the web for posts.
+    - blog_save_to_json: persist the final JSON.
 
   ## Task
   1) Query construction
@@ -16,10 +14,10 @@ prompt: |
      - Prefer precise keywords, common synonyms, and key phrases.
 
   2) Retrieval
-     - Call tavily_tool with max_results={tavily_max_results} (and tavily_api_key).
+     - Call blog_search with the query you have crafted.
      - If the search returns zero usable items, log:
        "No web results for {field}—stopping."
-       Then STOP the chain.
+       Then skip to step 6.
 
   3) Scoring and filtering (usefulness_score)
      - For each result, assign an integer "usefulness_score" from 0–100 based on how strongly the post’s title and visible content/summary address {field}.
@@ -65,9 +63,8 @@ prompt: |
         }}}}
 
   5) Saving
-     - After creating the VALID JSON, call save_to_json with:
+     - After creating the VALID JSON, call blog_ave_to_json with:
        * content: the JSON object/string you built
-       * source: "blog"
      - If saving fails due to invalid JSON, correct the JSON and retry.
      
   6) Multiple fields coverage
@@ -75,6 +72,4 @@ prompt: |
        with several query phrasings until all topics are covered.
 input_variables:  
   - field
-  - tavily_api_key
-  - tavily_max_results
   - blog_min_usefulness
