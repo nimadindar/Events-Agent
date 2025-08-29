@@ -1,92 +1,161 @@
-import os
-import yaml
-from functools import partial
+import os, sys, logging
 from dotenv import load_dotenv
 load_dotenv()
 
+from ..tools import posting_tools
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langgraph.graph import StateGraph, START, END
-from langgraph.prebuilt import create_react_agent
-from langchain_core.messages import HumanMessage
-from langgraph.types import Command
-
-from ..tools.posting_tools import post_to_X, fetch_filtered_items, save_tweet
-from ..utils.utils import State, DebugHandler
 
 
-# Path tp system prompt
-X_PROMPT_DIR = "./multi_agent/prompts/X_node_prompt.yaml"
+# Posting Config
+SOURCE = "arxiv"
+DATE = "01-01-2025"
+X_MIN_USEFULNESS = 50
+MODE = "score"
 
-# Prompt config
-FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
-SOURCE = "all"
-DATE = "01.01.2025"
-X_MIN_USEFULNESS = 75
-
-# Model Config
+# Model Config (LLM for crafting tweet text)
 MODEL_NAME = "gemini-2.5-flash"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-NEXT_STATE = END
 
-INPUT_VAR = {
-    "Field": FIELD,
-    "source":SOURCE,
-    "date": DATE,
-    "X_min_usefulness": X_MIN_USEFULNESS,
-    "consumer_key": os.getenv("X_API_KEY"),
-    "consumer_secret": os.getenv("X_API_KEY_SECRET"),
-    "access_token": os.getenv("X_ACCESS_TOKEN"),
-    "access_token_secret": os.getenv("X_ACCESS_TOKEN_SECRET")
-}
 
-with open(X_PROMPT_DIR, "r", encoding="utf-8") as f:
-        prompt_config = yaml.safe_load(f)
-
-X_SYSTEM_PROMPT = prompt_config["prompt"].format(**INPUT_VAR)
-
-llm = ChatGoogleGenerativeAI(
-                model=MODEL_NAME,
-                temperature=0,
-                google_api_key=GOOGLE_API_KEY
-        )
-
-X_agent = create_react_agent(
-    llm,
-    tools=[fetch_filtered_items, post_to_X, save_tweet],
-    prompt=X_SYSTEM_PROMPT
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(message)s"
 )
 
-def X_node(state: State, next_state) -> Command:
-    result = X_agent.invoke(
-        state,
-        config={"callbacks": [DebugHandler()], "run_name": "X_agent"})
-    return Command(
-        update={
-            "messages": [
-                HumanMessage(content=result["messages"][-1].content, name="X")
-            ]
-        },
-        goto=next_state
+
+def get_result(
+    source=SOURCE, 
+    min_usefulness_score=X_MIN_USEFULNESS, 
+    date=DATE,
+    mode=MODE):
+    """
+    Return a single best entry from fetch_filtered_items.
+
+    Args:
+        source: which source to use
+        min_usefulness_score: threshold for filtering
+        date: cutoff for filtering
+        mode: how to pick the best item:
+              - "date": most recent publish_date
+              - "score": highest usefulness_score
+
+    Falls back automatically if dates/scores are missing.
+    """
+
+    payload = posting_tools.fetch_filtered_items(source, min_usefulness_score, date)
+    items = payload.get("results", [])
+    meta  = payload.get("meta", {})
+
+    if not items:
+        return {"result": None,
+                "meta": {**meta, "selection_mode": "none", "error": "No results."}}
+
+    if mode == "date":
+        best = posting_tools._pick_best_by_date(items)
+        selection = "date"
+        if not best or posting_tools._parse_publish_date(best.get("publish_date")) is None:
+            best = posting_tools._pick_best_by_score(items)
+            selection = "score_fallback"
+    else:  # mode == "score"
+        best = posting_tools._pick_best_by_score(items)
+        selection = "score"
+        if not best or posting_tools._safe_int(best.get("usefulness_score")) < 0:
+            best = posting_tools._pick_best_by_date(items)
+            selection = "date_fallback"
+
+    return {"result": best,
+            "meta": {**meta, "selection_mode": selection}}
+
+
+def craft_tweet_text(entry_data):
+    entry = entry_data.get("result") if isinstance(entry_data, dict) else entry_data
+
+    if not entry:
+        return None  # nothing to tweet
+
+    llm = ChatGoogleGenerativeAI(
+        model=MODEL_NAME,
+        temperature=0,
+        google_api_key=GOOGLE_API_KEY,
     )
 
-def X_main(next_state):
+    prompt = f"""
+    - Write a tweet that:
+         * Briefly summarizes the methodology (1–2 short sentences or a crisp clause).
+         * Includes the full URL (e.g., "https://...").
+         * Includes exactly ONE relevant hashtag (derived from the entry’s topic), placed at the end.
+         * Is strictly UNDER 280 characters including the URL.
+    - Style constraints: no emojis, no code blocks, no quotes, no extra hashtags, no @mentions, no line breaks, no trailing spaces.
+    - If the text exceeds 280 characters, shorten by compressing wording while preserving the methodology, URL, and single hashtag.
+       Example tweet text:
+        "Vaswani et al. (2017) “Attention Is All You Need”: introduces the Transformer—replaces recurrence with multi-head self-attention + positional encodings for fast, parallel sequence modeling; sets SOTA in MT. [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762) #MachineLearning"
 
-    posting_builder = StateGraph(State)
-    posting_builder.add_node("X", partial(X_node, next_state=next_state))
-    posting_builder.add_edge(START, "X")
+    - Write a tweet text for the following entry:
+    {entry} 
+    """
 
-    posting_graph = posting_builder.compile()
+    response = llm.invoke(prompt)
+    tweet_text = response.content.strip() if hasattr(response, "content") else str(response).strip()
 
-    for s in posting_graph.stream(
-        {
-            "messages": [
-                ("user", f"Load the most related enteries to {FIELD}, then select one and post a tweet about it according to the guidlines you have.")
-            ],
-        },
-        {"recursion_limit": 150},
-    ):
-        print(s)
-        print("---")
+    return tweet_text
+
+
+def main():
+    try:
+        entry_data = get_result()  
+        tweet_text = craft_tweet_text(entry_data)
+
+        if not tweet_text:
+            logging.info("No results to be tweeted.")
+            return 0
+        try:
+            consumer_key = os.getenv("X_API_KEY")
+            consumer_secret = os.getenv("X_API_KEY_SECRET")
+            access_token = os.getenv("X_ACCESS_TOKEN")
+            access_token_secret = os.getenv("X_ACCESS_TOKEN_SECRET")
+        except RuntimeError as e:
+            logging.error(str(e))
+            return 1
+
+        status = posting_tools.post_to_X(
+            consumer_key=consumer_key,
+            consumer_secret=consumer_secret,
+            access_token=access_token,
+            access_token_secret=access_token_secret,
+            content=tweet_text,
+        )
+
+        if status.startswith("Successfully posted"):
+            entry = entry_data.get("result") if isinstance(entry_data, dict) else entry_data
+            url = (entry or {}).get("url")
+
+            source = globals().get("SOURCE", "N/A")
+            min_score = globals().get("X_MIN_USEFULNESS", "N/A")
+            cutoff_date = globals().get("DATE", "N/A")
+            mode = globals().get("MODE", "N/A")
+
+            posting_reason = (
+                f"The entry was posted with source: {source}, "
+                f"min usefulness score: {min_score}, date: {cutoff_date}. "
+                f"Selection mode: {mode}."
+            )
+            if url:
+                try:
+                    posting_tools.save_tweet(url=url, posting_reason=posting_reason)
+                    logging.info("Entry posted successfully and URL saved.")
+                except Exception as e:
+                    logging.warning(f"Entry posted, but failed to save URL: {e}")
+            else:
+                logging.warning("Entry posted, but no URL found to save.")
+
+            return 0
+        else:
+            logging.error(f"Posting failed: {status}")
+            return 1
+
+    except Exception as e:
+        logging.exception(f"Unhandled error in main: {e}")
+        return 1
 
 if __name__ == "__main__":
-    X_main(NEXT_STATE)
+    sys.exit(main())
