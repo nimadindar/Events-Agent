@@ -9,10 +9,14 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.prebuilt import create_react_agent
 from langchain_core.messages import HumanMessage
 from langgraph.types import Command
+from langchain.tools import tool
 
 from ..tools.research_tools import ArxivTool, save_to_json
 from ..utils.utils import State, DebugHandler
 
+
+# Output file name: The file will be saved in ./saved/output_file_name.json
+FILE_NAME = "arxiv_results.json"
 
 # Path to system prompt
 ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
@@ -21,15 +25,27 @@ ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 ARXIV_MAX_RESULTS = 5
 ARXIV_MIN_USEFULNESS = 60
+YEAR = "2025" # This is used for filtering the results. The results that don't match this year will be filtered.
 
 # Model Config
 MODEL_NAME = "gemini-2.5-flash"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 NEXT_STATE = END
 
+# The base tools are edited for handling file names on code side for deterministic results.
+@tool("save_arxiv_to_json")
+def arxiv_save_to_json(content: dict) -> str:
+    """Save arxiv results to a specified path"""
+    return save_to_json.func(content=content, file_name=FILE_NAME)
+
+@tool("arxiv_tool")
+def arxiv_tool(query:str) -> str:
+    """arxiv results filtered based on year"""
+    return ArxivTool.func(query, max_results= ARXIV_MAX_RESULTS, year = YEAR)
+
+
 INPUT_VAR = {
     "field": FIELD,
-    "arxiv_max_results": ARXIV_MAX_RESULTS,
     "arxiv_min_usefulness": ARXIV_MIN_USEFULNESS
 }
 
@@ -46,7 +62,7 @@ llm = ChatGoogleGenerativeAI(
 
 arxiv_agent = create_react_agent(
     llm,
-    tools=[ArxivTool, save_to_json],
+    tools=[arxiv_tool, arxiv_save_to_json],
     prompt=ARXIV_SYSTEM_PROMPT
 )
 
@@ -62,6 +78,7 @@ def arxiv_node(state: State, next_state) -> Command:
         },
         goto=next_state
     )
+
 
 def arxiv_main(next_state):
 
