@@ -33,7 +33,7 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 NEXT_STATE = END
 
 # The base tools are edited for handling file names on code side for deterministic results.
-@tool("save_arxiv_to_json")
+@tool("arxiv_save_to_json")
 def arxiv_save_to_json(content: dict) -> str:
     """Save arxiv results to a specified path"""
     return save_to_json.func(content=content, file_name=FILE_NAME)
