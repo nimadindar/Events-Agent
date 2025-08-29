@@ -4,32 +4,32 @@ import json
 import re
 from pathlib import Path
 from typing import Literal, Optional, List, Dict, Any, Tuple
-from datetime import datetime, date
+from datetime import datetime, date as dt_date
 from pydantic import BaseModel, Field, validator
 
-try:
-    from langchain_core.tools import tool
-except Exception:
-    try:
-        from langchain.tools import tool  
-    except Exception:
-        def tool(*a, **k):
-            def _wrap(fn): return fn
-            return _wrap
+# try:
+#     from langchain_core.tools import tool
+# except Exception:
+#     try:
+#         from langchain.tools import tool  
+#     except Exception:
+#         def tool(*a, **k):
+#             def _wrap(fn): return fn
+#             return _wrap
 
 SAVE_DIR = Path("./saved")
 TWEETS_FILE = SAVE_DIR / "tweets.json"
 SOURCES: Tuple[str, ...] = ("arxiv", "blog", "gscholar")
 
 
-def _parse_input_date(d: Optional[str]) -> Optional[date]:
+def _parse_input_date(d: Optional[str]) -> Optional[dt_date]:
     if not d:
         return None
 
     return datetime.strptime(d.strip(), "%d-%m-%Y").date()
 
 
-def _parse_publish_date(d: Any) -> Optional[date]:
+def _parse_publish_date(d: Any) -> Optional[dt_date]:
     if not d or (isinstance(d, str) and d.strip().lower() == "unknown"):
         return None
     s = str(d).strip()
@@ -125,7 +125,33 @@ def _load_results_for_source(source: str) -> List[Dict[str, Any]]:
     return [r for r in results if isinstance(r, dict)]
 
 
-class FetchFilteredItemsArgs(BaseModel):
+def _safe_int(x, default: int = -1) -> int:
+    try:
+        return int(x)
+    except Exception:
+        return default
+
+
+def _pick_best_by_date(items):
+    """Most recent publish_date (tie-break: higher usefulness_score)."""
+    def key(it: Dict[str, Any]):
+        pd = _parse_publish_date(it.get("publish_date"))
+        sc = _safe_int(it.get("usefulness_score"))
+        return (pd is None, pd or dt_date.min, sc)
+    return max(items, key=key, default=None)
+
+
+def _pick_best_by_score(items):
+    """Highest usefulness_score (tie-break: newer publish_date)."""
+    def key(it: Dict[str, Any]):
+        sc = _safe_int(it.get("usefulness_score"))
+        pd = _parse_publish_date(it.get("publish_date"))
+        return (sc, pd is None, pd or dt_date.min)
+    return max(items, key=key, default=None)
+
+
+# class FetchFilteredItemsArgs(BaseModel):
+class FetchFilteredItemsArgs():
     source: Literal["arxiv", "blog", "gscholar", "all"] = Field(
         ..., description='Which source(s) to read: "arxiv", "blog", "gscholar", or "all".'
     )
@@ -143,7 +169,7 @@ class FetchFilteredItemsArgs(BaseModel):
         return v
 
 
-@tool("fetch_filtered_items", args_schema=FetchFilteredItemsArgs)
+# @tool("fetch_filtered_items", args_schema=FetchFilteredItemsArgs)
 def fetch_filtered_items(
     source: Literal["arxiv", "blog", "gscholar", "all"],
     min_usefulness_score: Optional[int] = None,
@@ -227,14 +253,15 @@ def fetch_filtered_items(
     }
 
 
-class SaveTweetArgs(BaseModel):
+# class SaveTweetArgs(BaseModel):
+class SaveTweetArgs():
     url: str = Field(..., description="The URL of the posted item.")
     posting_reason: str = Field(
         ..., description="Short reason for posting (e.g., why it was selected)."
     )
 
 
-@tool("save_tweet", args_schema=SaveTweetArgs)
+# @tool("save_tweet", args_schema=SaveTweetArgs)
 def save_tweet(url: str, posting_reason: str) -> Dict[str, Any]:
     """
     Record a tweeted item in ./saved/tweets.json with fields:
@@ -255,7 +282,7 @@ def save_tweet(url: str, posting_reason: str) -> Dict[str, Any]:
     return {"status": "saved", "entry": new_entry}
 
 
-@tool
+# @tool
 def post_to_X(
     consumer_key: str,
     consumer_secret: str,
