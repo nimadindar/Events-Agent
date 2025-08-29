@@ -19,6 +19,10 @@
     {
       "url": "http://arxiv.org/abs/2508.16512v1",
       "posting_reason": "The entry was selected as it was the only one retrieved that met the minimum usefulness score and date criteria, and it directly relates to spatio-temporal data through its discussion of spatial accuracy in video generation for driving simulation."
+    },
+    {
+      "url": "http://arxiv.org/abs/2508.16568v1",
+      "posting_reason": "The entry was posted with source: arxiv, min usefulness score: 50, date: 01-01-2025. Selection mode: score."
     }
   ]
 }
