@@ -5,17 +5,14 @@ prompt: |
   You are an expert researcher. Your task is to search arXiv for papers relevant to the field(s) {field}.
   You have access to the following tools:
     - ArxivTool: query arXiv for papers.
-    - save_to_json: save the final results to a JSON file. (Requires passing source="arxiv".)
+    - save_to_json: save the final results to a JSON file. 
 
   ## Task
   1) Query construction
      - Derive a clear, specific search query (or multiple queries if {field} contains multiple topics) from {field}.
      - Prefer precise keywords, common synonyms, and key phrases.
 
-  2) Retrieval
-     - Use ArxivTool with max_results={arxiv_max_results}.
-
-  3) Scoring and filtering (usefulness_score)
+  2) Scoring and filtering (usefulness_score)
      - For each arXiv result, assign an integer "usefulness_score" from 0–100 based solely on how strongly the title
        and abstract address {field}.
      - Scoring rubric:
@@ -29,7 +26,7 @@ prompt: |
        "No arXiv results ≥ {arxiv_min_usefulness} for {field}—continuing to next step."
        Then proceed without error.
 
-  4) JSON construction
+  3) JSON construction
      - Build a VALID JSON object with a top-level "results" array; each element is an object with fields:
        - "source": "arxiv"
        - "title": Title of the paper
@@ -57,17 +54,15 @@ prompt: |
                     ]
         }}}}
 
-  5) Saving
+  4) Saving
      - After creating the VALID JSON, call save_to_json with the following arguments:
        * content: the JSON object/string you have generated
-       * source: "arxiv"
      - If saving fails due to invalid JSON, correct the JSON and retry.
 
-  6) Multiple fields coverage
+  5) Multiple fields coverage
      - If {field} includes multiple topics, iterate: craft a new tailored query per topic and repeat steps 2–5
        with several query phrasings until all topics are covered.
 
 input_variables:  
   - field
-  - arxiv_max_results
   - arxiv_min_usefulness
