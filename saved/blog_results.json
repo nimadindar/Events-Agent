@@ -248,6 +248,37 @@
       "usefulness_score": 70.0,
       "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000666",
       "summary": "This survey study explores biomedical professionals' perspectives on synthetic data and ELSI-focused computational checklists for AI/ML in health settings, highlighting the need for further ELSI research."
+    },
+    {
+      "source": "journals.plos",
+      "usefulness_reason": "Score 90 assigned because it explicitly mentions 'spatiotemporal data prediction task', 'spatial location, temporal variation and contextual information', directly covering 'Spatio Temporal' and 'Contextual dataset'.",
+      "summary": "This study applies attention mechanisms to spatiotemporal data prediction, proposing a novel PM2.5 concentration prediction model. The model combines spatial location, temporal variation, and contextual information, offering a new approach for air quality prediction based on massive air pollutant and meteorological data.",
+      "publish_date": "unknown",
+      "authors": [
+        "Ma Z",
+        "Luo W",
+        "Jiang J",
+        "Wang B",
+        "Ma Z",
+        "Lin J"
+      ],
+      "title": "Spatial and temporal characteristics analysis and prediction model ...",
+      "usefulness_score": 90.0,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287423"
+    },
+    {
+      "summary": "This paper hypothesizes that spatio-temporal hierarchy for contextual recognition of dynamic visual image patterns can be self-organized by imposing multi-scale spatial and temporal constraints. Evaluation using the Weizmann dataset showed robust categorization performance and contextual recognition of concatenated action patterns.",
+      "usefulness_reason": "Score 80 assigned because it is relevant to 'Spatio Temporal' and 'Contextual recognition', discussing 'spatio-temporal hierarchy' and 'dynamic visual image patterns' in the context of a 'dataset'.",
+      "source": "journals.plos",
+      "publish_date": "unknown",
+      "authors": [
+        "Jung M",
+        "Hwang J",
+        "Tani J"
+      ],
+      "title": "Self-Organization of Spatio-Temporal Hierarchy via Learning of ...",
+      "usefulness_score": 80.0,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131214"
     }
   ]
 }
