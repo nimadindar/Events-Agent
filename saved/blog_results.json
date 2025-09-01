@@ -212,6 +212,42 @@
       "usefulness_reason": "Relevant due to 'spatio-temporal point clouds' but focuses more on data processing than statistical point processes.",
       "usefulness_score": 65.0,
       "title": "Registration of spatio-temporal point clouds of plants for phenotyping"
+    },
+    {
+      "publish_date": "unknown",
+      "source": "plosone",
+      "usefulness_reason": "Score 95 assigned because the article directly discusses a hierarchical model that includes both spatial and temporal point processes, which is highly relevant to the core topic.",
+      "title": "A hierarchical model for estimating the spatial distribution and ...",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176966",
+      "usefulness_score": 95.0,
+      "authors": [
+        "unknown"
+      ],
+      "summary": "This post describes a hierarchical model that incorporates both spatial and temporal point processes to estimate the distribution of individual activity centers and detection times. It extends count-based SCR models to account for temporal heterogeneity."
+    },
+    {
+      "publish_date": "unknown",
+      "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3002910",
+      "usefulness_reason": "Score 90 assigned because it directly addresses spatiotemporal integration of contextual information, which is highly relevant to 'Spatio Temporal' and 'Contextual dataset'.",
+      "title": "Spatiotemporal integration of contextual and sensory information ...",
+      "source": "plosbiology",
+      "usefulness_score": 90.0,
+      "authors": [
+        "unknown"
+      ],
+      "summary": "This study investigates the spatiotemporal integration of contextual and sensory information within the cortical hierarchy in pain experience, providing temporal profiles of behavioral and neural processes."
+    },
+    {
+      "publish_date": "unknown",
+      "source": "plosdigitalhealth",
+      "usefulness_reason": "Score 70 assigned because it is a 'survey study' and discusses 'synthetic data', which can be considered a 'contextual dataset', making it relevant to 'Survey data' and 'Contextual dataset'.",
+      "title": "Synthetic data and ELSI-focused computational checklists—A ...",
+      "authors": [
+        "unknown"
+      ],
+      "usefulness_score": 70.0,
+      "url": "https://journals.plos.org/digitalhealth/article?id=10.1371/journal.pdig.0000666",
+      "summary": "This survey study explores biomedical professionals' perspectives on synthetic data and ELSI-focused computational checklists for AI/ML in health settings, highlighting the need for further ELSI research."
     }
   ]
 }
