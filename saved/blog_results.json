@@ -279,6 +279,20 @@
       "title": "Self-Organization of Spatio-Temporal Hierarchy via Learning of ...",
       "usefulness_score": 80.0,
       "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131214"
+    },
+    {
+      "title": "Spatial and temporal distribution characteristics and geographic ...",
+      "publish_date": "2024",
+      "source": "plosone",
+      "summary": "This study investigates the spatial and temporal distribution characteristics and geographic context factors of civilized villages in China. It employs methods like nearest neighbor index, kernel density, and spatiotemporal rearrangement scanning statistical analysis.",
+      "usefulness_reason": "Focuses on spatial and temporal distribution characteristics and geographic context factors, which is relevant to spatio-temporal analysis and can be applied to point data, though 'point process' and 'survey data' are not explicitly mentioned.",
+      "authors": [
+        "Ding Q",
+        "Yang Z",
+        "Huang Z"
+      ],
+      "usefulness_score": 75.0,
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0305591"
     }
   ]
 }
