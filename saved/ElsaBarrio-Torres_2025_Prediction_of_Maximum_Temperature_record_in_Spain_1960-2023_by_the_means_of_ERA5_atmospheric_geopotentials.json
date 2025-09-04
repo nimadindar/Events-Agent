@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Prediction of Maximum Temperature record in Spain 1960-2023 by the means of ERA5 atmospheric geopotentials",
+  "authors": [
+    "Elsa Barrio-Torres",
+    "Jesús Abaurrea",
+    "Jesús Asín",
+    "Jorge Castillo-Mateo",
+    "Ana Carmen Cebrián",
+    "Zeus Gracia"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This work focuses on predicting extreme temperature events, specifically daily maximum temperature records, in the Iberian Peninsula from 1960-2023. It investigates the connection between these events and upper-level atmospheric covariates using an innovative approach.",
+  "url": "http://arxiv.org/abs/2509.03459v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "The paper directly addresses \"Spatio Temporal\" aspects by analyzing temperature records over a specific geographical region (Spain/Iberian Peninsula) across a defined time period (1960-2023). It focuses on the spatial and temporal patterns of extreme temperature events."
+}

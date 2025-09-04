@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "DeepSea MOT: A benchmark dataset for multi-object tracking on deep-sea video",
+  "authors": [
+    "Kevin Barnard",
+    "Elaine Liu",
+    "Kristine Walz",
+    "Brian Schlining",
+    "Nancy Jacobsen Stout",
+    "Lonny Lundsten"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This study introduces DeepSea MOT, a novel benchmark video dataset developed to evaluate the performance of multi-object tracking and object detection models in deep-sea environments. It facilitates consistent comparisons and aids in optimizing model performance for this specific contextual application.",
+  "url": "http://arxiv.org/abs/2509.03499v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The paper explicitly discusses the development of a \"benchmark video dataset\" for a specific context (deep-sea video), making it highly relevant to the concept of a \"Contextual dataset.\" It focuses on a dataset designed for a particular application and its contextual use."
+}

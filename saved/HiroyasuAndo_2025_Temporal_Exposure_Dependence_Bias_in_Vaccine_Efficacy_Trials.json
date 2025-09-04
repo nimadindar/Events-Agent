@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Temporal Exposure Dependence Bias in Vaccine Efficacy Trials",
+  "authors": [
+    "Hiroyasu Ando",
+    "A. James O'Malley",
+    "Akihiro Nishi"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This study investigates a previously unreported source of bias in vaccine efficacy trials, arising from temporally correlated exposure status. It uses time-to-event methods like Cox proportional hazards models to explore how unmeasured heterogeneity in exposure or infection risk can lead to downward bias in point estimates of vaccine efficacy.",
+  "url": "http://arxiv.org/abs/2509.03476v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper focuses on \"temporal exposure dependence\" and \"time-to-event methods,\" which are directly relevant to the temporal aspect of \"Spatio Temporal.\" While it doesn't explicitly cover the spatial component or other keywords, its strong focus on temporal dynamics makes it clearly relevant."
+}

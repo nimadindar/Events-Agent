@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Invariant Features for Global Crop Type Classification",
+  "authors": [
+    "Xin-Yi Tong",
+    "Sherrie Wang"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This study focuses on accurately classifying crop types and their spatial distribution globally using remote sensing. It addresses the challenge of limited ground samples and performance declines under geospatial shifts by identifying remote sensing features that are invariant to geographical changes.",
+  "url": "http://arxiv.org/abs/2509.03497v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper discusses \"spatial distribution\" and \"geospatial shifts,\" which are directly related to the \"Spatio Temporal\" aspect of the query. While it doesn't explicitly mention \"point process,\" \"contextual dataset,\" or \"survey data,\" its focus on spatial data and its changes makes it clearly relevant."
+}
