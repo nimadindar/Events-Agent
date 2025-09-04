@@ -15,9 +15,6 @@ from ..tools.research_tools import get_scholar_papers, save_to_json
 from ..utils.utils import State, DebugHandler
 
 
-# Output file name: The file will be saved in ./saved/output_file_name.json
-FILE_NAME = "gscholar_results.json"
-
 # Path to system prompt
 GSCHOLAR_PROMPT_DIR = "./multi_agent/prompts/gscholar_node_prompt.yaml"
 
@@ -35,11 +32,6 @@ MODEL_NAME = "gemini-2.5-flash"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 NEXT_STATE = END
 
-# The base tools are edited for handling file names on code side for deterministic results.
-@tool("gscholar_save_to_json")
-def gscholar_save_to_json(content: dict) -> str:
-    """Save blog results to a specified path"""
-    return save_to_json.func(content=content, file_name=FILE_NAME)
 
 INPUT_VAR = {
     "field": FIELD, 
@@ -62,7 +54,7 @@ llm = ChatGoogleGenerativeAI(
 
 gscholar_agent = create_react_agent(
     llm,
-    tools=[get_scholar_papers, gscholar_save_to_json],
+    tools=[get_scholar_papers, save_to_json],
     prompt=GSCHOLAR_SYSTEM_PROMPT
 )
 
