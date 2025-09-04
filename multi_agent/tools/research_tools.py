@@ -242,13 +242,15 @@ def ArxivTool(query: str, max_results: int = 5) -> str:
 
 
 @tool
-def tavily_tool(query, tavily_api_key, domains_included, max_results = 5) -> str:
+def tavily_tool(query, tavily_api_key, domains_included, start_date, end_date, max_results = 5) -> str:
     """
     Creates and returns a configured instance of TavilySearch tool.
 
     Args:
         query (str) : Search string to search in web.
         tavily_api_key (str) : API key to use tavily tool.
+        domains_included : Domains used to search for query.
+        start_date, end_date : Time frame to search for the blog posts.
         max_results (int): Maximum number of results to return. Default is 5.
 
     Returns:
@@ -261,6 +263,9 @@ def tavily_tool(query, tavily_api_key, domains_included, max_results = 5) -> str
         api_key=tavily_api_key,
         search_depth = 'advanced',
         include_domains=domains_included,
+        topic = "general",
+        start_date = start_date,
+        end_date= end_date,
     )
     return tavily_tool.invoke(query)
 
