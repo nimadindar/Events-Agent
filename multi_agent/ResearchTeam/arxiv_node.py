@@ -1,5 +1,6 @@
 import os
 import yaml
+from datetime import datetime
 from functools import partial
 from dotenv import load_dotenv
 load_dotenv()
@@ -15,33 +16,28 @@ from ..tools.research_tools import ArxivTool, save_to_json
 from ..utils.utils import State, DebugHandler
 
 
-# Output file name: The file will be saved in ./saved/output_file_name.json
-FILE_NAME = "arxiv_results.json"
-
 # Path to system prompt
 ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
 
 # Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 ARXIV_MAX_RESULTS = 5
-ARXIV_MIN_USEFULNESS = 60
-YEAR = "2025" # This is used for filtering the results. The results that don't match this year will be filtered.
+ARXIV_MIN_USEFULNESS = 0
+
+# Time Frame used to get data
+START_DATE = "20250101000000"
+END_DATE = datetime.now().strftime("%Y%m%d%H%M%S")  # returns this moment
 
 # Model Config
 MODEL_NAME = "gemini-2.5-flash"
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 NEXT_STATE = END
 
-# The base tools are edited for handling file names on code side for deterministic results.
-@tool("arxiv_save_to_json")
-def arxiv_save_to_json(content: dict) -> str:
-    """Save arxiv results to a specified path"""
-    return save_to_json.func(content=content, file_name=FILE_NAME)
 
-@tool("arxiv_tool")
+# @tool("arxiv_tool")
 def arxiv_tool(query:str) -> str:
     """arxiv results filtered based on year"""
-    return ArxivTool.func(query, max_results= ARXIV_MAX_RESULTS, year = YEAR)
+    return ArxivTool.func(f"{query} AND submittedDate: [{START_DATE} TO {END_DATE}]", max_results= ARXIV_MAX_RESULTS)
 
 
 INPUT_VAR = {
@@ -62,7 +58,7 @@ llm = ChatGoogleGenerativeAI(
 
 arxiv_agent = create_react_agent(
     llm,
-    tools=[arxiv_tool, arxiv_save_to_json],
+    tools=[arxiv_tool, save_to_json],
     prompt=ARXIV_SYSTEM_PROMPT
 )
 
