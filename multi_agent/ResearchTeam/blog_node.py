@@ -1,6 +1,7 @@
 import os
 import yaml
 from functools import partial
+from datetime import date
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -15,24 +16,13 @@ from ..tools.research_tools import tavily_tool, save_to_json
 from ..utils.utils import State, DebugHandler
 
 
-# Output file name: The file will be saved in ./saved/output_file_name.json
-FILE_NAME = "blog_results.json"
 
 # Path to system prompt
 BLOG_PROMPT_DIR = "./multi_agent/prompts/blog_node_prompt.yaml"
 
-# Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 BLOG_MAX_RESULTS = 5
 BLOG_MIN_USEFULNESS = 60
-
-# Tavily Config
-TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
-
-# Model Config
-MODEL_NAME = "gemini-2.5-flash"
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-NEXT_STATE = END
 
 DOMAINS_INCLUDED = [
     "journals.plos.org",
@@ -41,17 +31,21 @@ DOMAINS_INCLUDED = [
     "spacetimecausality.github.io"
 ]
 
+START_DATE = "2025-01-01"
+END_DATE = date.today().strftime("%Y-%m-%d")
 
-# The base tools are edited for handling file names on code side for deterministic results.
-@tool("blog_save_to_json")
-def blog_save_to_json(content: dict) -> str:
-    """Save blog results to a specified path"""
-    return save_to_json.func(content=content, file_name=FILE_NAME)
+TAVILY_API_KEY = os.getenv("TAVILY_API_KEY")
+
+# Model Config
+MODEL_NAME = "gemini-2.5-flash"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+NEXT_STATE = END
+
 
 @tool("blog_search")
 def blog_search(query):
      """search web using tavily tool"""
-     return tavily_tool.func(query,TAVILY_API_KEY,DOMAINS_INCLUDED,BLOG_MAX_RESULTS)
+     return tavily_tool.func(query, TAVILY_API_KEY, DOMAINS_INCLUDED, START_DATE, END_DATE, BLOG_MAX_RESULTS)
 
 INPUT_VAR = {
     "field": FIELD,
@@ -71,7 +65,7 @@ llm = ChatGoogleGenerativeAI(
 
 blog_agent = create_react_agent(
     llm,
-    tools=[blog_search, blog_save_to_json],
+    tools=[blog_search, save_to_json],
     prompt=BLOG_SYSTEM_PROMPT
 )
 
