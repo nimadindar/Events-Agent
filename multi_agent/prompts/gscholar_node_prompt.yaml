@@ -6,7 +6,7 @@ prompt: |
 
   Tools:
     - get_scholar_papers: query Google Scholar by author ID(s).
-    - gscholar_save_to_json: persist the final JSON. 
+    - save_to_json: save the final JSON. 
   Credentials:
     - serp_api_key: {serp_api_key}  # required by get_scholar_papers; never print or expose.
 
@@ -35,7 +35,7 @@ prompt: |
        Then proceed without error.
 
   4) JSON construction
-     - Build a VALID JSON object with a top-level "results" array; each element is an object with the fields:
+     - Build a seperate VALID JSON object for one entry of the result of get_scholar_papers tool with the following fields:   
        - "source": "gscholar"
        - "title": Title of the paper.
        - "authors": List of author names.
@@ -44,29 +44,27 @@ prompt: |
        - "url": Full, accessible link to the paper/landing page.
        - "usefulness_score": integer 0–100 per the rubric above.
        - "usefulness_reason": Briefly explain your reasoning about why you assigned that specific score to the entry. You should mention the factors that contributed to your decision. 
-     - If any field is missing in the tool output, infer from available information; ensure the final JSON remains VALID.
-     - Deduplicate items by URL or (title + primary author).
      - Example structure:
 
         {{{{
-          "results":[
-              {{{{
-                "source": "gscholar",
-                "title": "Example Title",
-                "authors": ["Author One", "Author Two"],
-                "publish_date": "11-07-2025",
-                "summary": "Brief summarized abstract of the paper.",
-                "url": "https://scholar.google.com/scholar?cluster=...",
-                "usefulness_score": 87
-                "usefulness_reason": "Score 87 assigned because..."
-              }}}},
-                    ]
+          "source": "gscholar",
+          "title": "Example Title",
+          "authors": ["Author One", "Author Two"],
+          "publish_date": "11-07-2025",
+          "summary": "Brief summarized abstract of the paper.",
+          "url": "https://scholar.google.com/scholar?cluster=...",
+          "usefulness_score": 87
+          "usefulness_reason": "Score 87 assigned because..."
         }}}}
 
+
   5) Saving
-     - After creating the VALID JSON, call save_to_json with:
-       * content: the JSON object/string you built
-       * source: "gscholar"
+     - After creating the VALID JSON for the first entry, call save_to_json with the following arguments:
+       * json_string: the JSON object/string you have generated for that entry
+       * file_name: a string that uniqely identifies the entry. You should craft the file_name string using following rule seperately for each entry:
+          "AuthorOne_PublishYear_Title"
+          Infer the information from the json you have constructed for each entry. AuthorOne is the name of the first author of the paper, PublishYear is the the Year of publish_date from entry and title is the title of the entry.
+     - after saving successfuly for that entry go back to step 3 and repeat steps 4 and 5 until you have saved all entries in the result of arxiv_tool.
      - If saving fails due to invalid JSON, correct the JSON and retry.
 
 input_variables:  
