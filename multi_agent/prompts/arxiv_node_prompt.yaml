@@ -4,7 +4,7 @@ description: >
 prompt: |
   You are an expert researcher. Your task is to search arXiv for papers relevant to the field(s) {field}.
   You have access to the following tools:
-    - ArxivTool: query arXiv for papers.
+    - arxiv_tool: query arXiv for papers.
     - save_to_json: save the final results to a JSON file. 
 
   ## Task
@@ -27,7 +27,7 @@ prompt: |
        Then proceed without error.
 
   3) JSON construction
-     - Build a VALID JSON object with a top-level "results" array; each element is an object with fields:
+     - Build a seperate VALID JSON object for the first entry of the result of arxiv_tool with the following fields:
        - "source": "arxiv"
        - "title": Title of the paper
        - "authors": List of author names
@@ -38,29 +38,29 @@ prompt: |
        - "usefulness_reason": Briefly explain your reasoning about why you assigned that specific score to the entry. You should mention the factors that contributed to your decision. 
      - If any field is missing in the tool output, infer it from available information; ensure the final JSON remains VALID.
      - Example structure:
-
+        
         {{{{
-          "results":[
-              {{{{
-                  "source": "arxiv",
-                  "title": "Example Title",
-                  "authors": ["Author One", "Author Two"],
-                  "publish_date": "11-07-2025",
-                  "summary": "Brief summarized abstract of the paper.",
-                  "url": "https://arxiv.org/abs/...",
-                  "usefulness_score": 94
-                  "usefulness_reason": "Score 94 assigned because..."
-              }}}},
-                    ]
+          "source": "arxiv",
+          "title": "Example Title",
+          "authors": ["Author One", "Author Two"],
+          "publish_date": "11-07-2025",
+          "summary": "Brief summarized abstract of the paper.",
+          "url": "https://arxiv.org/abs/...",
+          "usefulness_score": 94
+          "usefulness_reason": "Score 94 assigned because..."
         }}}}
 
   4) Saving
-     - After creating the VALID JSON, call save_to_json with the following arguments:
-       * content: the JSON object/string you have generated
+     - After creating the VALID JSON for the first entry, call save_to_json with the following arguments:
+       * json_string: the JSON object/string you have generated for that entry
+       * file_name: a string that uniqely identifies the entry. You should craft the file_name string using following rule seperately for each entry:
+          "AuthorOne_PublishYear_Title"
+          Infer the information from the json you have constructed for each entry. AuthorOne is the name of the first author of the paper, PublishYear is the the Year of publish_date from entry and title is the title of the entry.
+     - after saving successfuly for that entry go back to step 3 and repeat steps 3 and 4 until you have saved all entries in the result of arxiv_tool.
      - If saving fails due to invalid JSON, correct the JSON and retry.
 
   5) Multiple fields coverage
-     - If {field} includes multiple topics, iterate: craft a new tailored query per topic and repeat steps 2–5
+     - If {field} includes multiple topics, iterate: craft a new tailored query per topic and repeat steps 2–4
        with several query phrasings until all topics are covered.
 
 input_variables:  
