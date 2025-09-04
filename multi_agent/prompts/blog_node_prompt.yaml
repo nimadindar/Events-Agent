@@ -6,11 +6,11 @@ prompt: |
 
   Tools:
     - blog_search: query the web for posts.
-    - blog_save_to_json: persist the final JSON.
+    - blog_save_to_json: save the final JSON strings.
 
   ## Task
   1) Query construction
-     - Derive a clear, specific search query (or multiple queries if {field} has multiple topics) from {field}.
+     - Derive a clear, specific search query.
      - Prefer precise keywords, common synonyms, and key phrases.
 
   2) Retrieval
@@ -33,7 +33,7 @@ prompt: |
        Then STOP the chain.
 
   4) JSON construction
-     - Build a VALID JSON array where each element is an object with the fields:
+     - Build a seperate VALID JSON object for the first entry of the result of blog_search tool with the following fields:     
        - "source": a site label derived from the URL host with protocol and TLD removed
          (e.g., "https://www.spatialedge.co/..." → "spatialedge").
        - "title": Title of the blog post.
@@ -44,27 +44,26 @@ prompt: |
        - "usefulness_score": integer 0–100 per the rubric above.
        - "usefulness_reason": Briefly explain your reasoning about why you assigned that specific score to the entry. You should mention the factors that contributed to your decision. 
      - If any field is missing in the tool output, infer from available information while ensuring the final JSON remains VALID.
-     - Deduplicate items by URL or (title + source).
      - Example structure:
 
         {{{{
-          "results": [
-            {{{{
-              "source": "spatialedge",
-              "title": "Example Title",
-              "authors": ["Author One","Author Two"],
-              "publish_date": "22-08-2025",
-              "summary": "Brief summarized abstract of the blog post.",
-              "url": "https://www.spatialedge.co/...",
-              "usefulness_score": 75
-              "usefulness_reason": "Score 75 assigned because..."
-            }}}},
-          ]
-        }}}}
+          "source": "spatialedge",
+          "title": "Example Title",
+          "authors": ["Author One","Author Two"],
+          "publish_date": "22-08-2025",
+          "summary": "Brief summarized abstract of the blog post.",
+          "url": "https://www.spatialedge.co/...",
+          "usefulness_score": 75
+          "usefulness_reason": "Score 75 assigned because..."
+        }}}},
 
   5) Saving
-     - After creating the VALID JSON, call blog_ave_to_json with:
-       * content: the JSON object/string you built
+     - After creating the VALID JSON for the first entry, call save_to_json with the following arguments:
+       * json_string: the JSON object/string you have generated for that entry
+       * file_name: a string that uniqely identifies the entry. You should craft the file_name string using following rule seperately for each entry:
+          "source_title"
+          Infer the information from the json you have constructed for each entry. Infer source from the source you save, e.g. spatialedge and title is the title of the entry you are saving.
+     - after saving successfuly for that entry go back to step 4 and repeat steps 4 and 5 until you have saved all entries in the result of arxiv_tool.
      - If saving fails due to invalid JSON, correct the JSON and retry.
      
   6) Multiple fields coverage
