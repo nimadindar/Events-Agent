@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "A Brenier Theorem on (P2 (P2(Rd )), W2 ) and Applications to Adapted Transport",
+  "authors": [
+    "Mathias Beiglböck",
+    "Gudmund Pammer",
+    "Stefan Schrott"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This paper aims to provide a version of Brenier's fundamental theorem for measures on the space of probability measures with finite second moments, with costs given by the squared Wasserstein distance. It characterizes optimal transport plans in terms of gradients of convex functions.",
+  "url": "http://arxiv.org/abs/2509.03506v1",
+  "usefulness_score": 35,
+  "usefulness_reason": "The paper discusses measures and optimal transport, which can be related to point processes in a highly abstract mathematical context. However, it does not directly address \"Point Process\" as a statistical model for events or its applications, making its relevance tangential."
+}

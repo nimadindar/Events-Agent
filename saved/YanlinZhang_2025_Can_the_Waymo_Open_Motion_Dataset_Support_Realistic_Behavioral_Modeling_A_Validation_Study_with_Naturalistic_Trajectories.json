@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Can the Waymo Open Motion Dataset Support Realistic Behavioral Modeling? A Validation Study with Naturalistic Trajectories",
+  "authors": [
+    "Yanlin Zhang",
+    "Sungyong Chung",
+    "Nachuan Li",
+    "Dana Monzer",
+    "Hani S. Mahmassani",
+    "Samer H. Hamdar",
+    "Alireza Talebpour"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "The Waymo Open Motion Dataset (WOMD) has become a popular resource for data-driven modeling of autonomous vehicles (AVs) behavior. However, its validity for behavioral analysis remains uncertain due to proprietary post-processing, the absence of error quantification, and the segmentation of trajectories into 20-second clips. This study examines whether WOMD accurately captures the dynamics and interactions observed in real-world AV operations. Leveraging an independently collected naturalistic d",
+  "url": "http://arxiv.org/abs/2509.03515v1",
+  "usefulness_score": 50,
+  "usefulness_reason": "The paper discusses a dataset for autonomous vehicle behavior and naturalistic trajectories, which involves spatio-temporal data. However, it does not explicitly mention 'point process', 'contextual dataset' in a general sense, or 'survey data'. The focus is on dataset validation rather than the theoretical or methodological aspects of spatio-temporal point processes."
+}

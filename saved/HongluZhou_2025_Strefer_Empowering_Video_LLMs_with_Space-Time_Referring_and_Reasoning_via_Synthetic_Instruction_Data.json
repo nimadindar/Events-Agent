@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Strefer: Empowering Video LLMs with Space-Time Referring and Reasoning via Synthetic Instruction Data",
+  "authors": [
+    "Honglu Zhou",
+    "Xiangyu Peng",
+    "Shrikant Kendre",
+    "Michael S. Ryoo",
+    "Silvio Savarese",
+    "Caiming Xiong",
+    "Juan Carlos Niebles"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This paper introduces Strefer, a method to empower Video Large Language Models (Video LLMs) with enhanced space-time referring and reasoning capabilities. It addresses the limitations of existing Video LLMs in fine-grained spatiotemporal reasoning, especially when dealing with time-based event references or gestural cues for spatial anchoring, by utilizing synthetic instruction data.",
+  "url": "http://arxiv.org/abs/2509.03501v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "The title and abstract explicitly mention and focus on 'Space-Time Referring and Reasoning' and 'fine-grained, spatiotemporal reasoning', directly addressing the 'Spatio Temporal' aspect of the query. While it doesn't cover 'point process', 'contextual dataset', or 'survey data', its strong relevance to spatio-temporal concepts warrants a high score."
+}

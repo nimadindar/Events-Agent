@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Bayesian Multivariate Sparse Functional PCA",
+  "authors": [
+    "Joseph Sartini",
+    "Scott Zeger",
+    "Ciprian Crainiceanu"
+  ],
+  "publish_date": "03-09-2025",
+  "summary": "This paper proposes a fully Bayesian inferential framework for multivariate, sparse functional data (MSFAST) to model principal components (PCs) and incorporate their uncertainty. It builds upon Functional Principal Components Analysis (FPCA) which provides a parsimonious, semi-parametric model for multivariate, sparsely-observed functional data.",
+  "url": "http://arxiv.org/abs/2509.03512v1",
+  "usefulness_score": 30,
+  "usefulness_reason": "The paper discusses \"functional data\" and \"sparse functional data,\" which could potentially be derived from survey data. However, it does not explicitly mention \"survey data\" or its methodologies. The focus is on a statistical modeling framework rather than the characteristics or analysis of survey data itself, making its relevance tangential."
+}
