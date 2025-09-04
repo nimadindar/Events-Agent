@@ -22,7 +22,7 @@ ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
 # Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
 ARXIV_MAX_RESULTS = 5
-ARXIV_MIN_USEFULNESS = 0
+ARXIV_MIN_USEFULNESS = 60
 
 # Time Frame used to get data
 START_DATE = "20250101000000"
@@ -34,7 +34,7 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 NEXT_STATE = END
 
 
-# @tool("arxiv_tool")
+@tool("arxiv_tool")
 def arxiv_tool(query:str) -> str:
     """arxiv results filtered based on year"""
     return ArxivTool.func(f"{query} AND submittedDate: [{START_DATE} TO {END_DATE}]", max_results= ARXIV_MAX_RESULTS)
