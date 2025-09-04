@@ -1,33 +1,112 @@
-import os
-import json
-import arxiv
+import os, re, json, arxiv
 from pathlib import Path
-from typing import Union, List, Dict
+from pydantic import BaseModel, Field
+from typing import Union, List, Dict, Optional
 
-from langchain.tools import tool
+# from langchain.tools import tool
+from langchain_core.tools import tool 
 from serpapi import GoogleSearch
 from langchain_tavily import TavilySearch
 
 from ..utils.utils import normalize_url
 
 
-@tool
-def save_to_json(content: Union[str, dict], file_name: str) -> str:
+
+SAVE_DIR = "saved"
+
+class SaveToJSONArgs(BaseModel):
+    """Arguments for the save_to_json tool."""
+    json_string: str = Field(..., description="A valid JSON string to write to disk.")
+    file_name: str = Field(
+        ...,
+        description=(
+            "Base file name (without path). Extension is optional; "
+            "the tool will enforce '.json'."
+        ),
+    )
+
+def _sanitize_filename(name: str) -> Optional[str]:
     """
-    Save new result entries into a single 'results' list inside a source-specific file:
-      - arxiv     -> ./saved/arxiv_results.json
-      - blog      -> ./saved/blog_results.json
-      - gscholar  -> ./saved/gscholar_results.json
+    Sanitize a file name to avoid path traversal and illegal characters.
+    Returns a cleaned base name without extension, or None if invalid.
+    """
+    if not isinstance(name, str):
+        return None
+    name = name.strip()
+    name = os.path.basename(name)
+
+    if "." in name:
+        name = name.rsplit(".", 1)[0]
+
+    name = re.sub(r"[^A-Za-z0-9._-]+", "_", name)
+
+    if not name or set(name) == {"."} or len(name) > 255:
+        return None
+
+    reserved = {
+        "CON", "PRN", "AUX", "NUL",
+        *(f"COM{i}" for i in range(1, 10)),
+        *(f"LPT{i}" for i in range(1, 10)),
+    }
+    if name.upper() in reserved:
+        return None
+
+    return name
+
+@tool("save_to_json", args_schema=SaveToJSONArgs)
+def save_to_json(json_string: str, file_name: str) -> str:
+    """
+    Save a JSON string inside 'save/<file_name>.json' if no duplicate exists.
+
+    Behavior:
+    - Validates that `json_string` is valid JSON (parses it first).
+    - Ensures the 'save' directory exists.
+    - Sanitizes `file_name` to avoid path traversal and illegal names.
+    - Enforces a '.json' extension.
+    - If a file with the same name already exists, returns an error and does NOT overwrite.
+
+    Returns:
+      A human-readable status message describing success or the specific error.
+    """
+    base = _sanitize_filename(file_name)
+    if not base:
+        return "ERROR: Invalid `file_name`. Provide a simple base name without paths or reserved characters."
+
+    try:
+        data = json.loads(json_string)
+    except json.JSONDecodeError as e:
+        return f"ERROR: `json_string` is not valid JSON: {e}"
+
+    try:
+        os.makedirs(SAVE_DIR, exist_ok=True)
+    except OSError as e:
+        return f"ERROR: Could not create directory '{SAVE_DIR}': {e}"
+
+    target_path = os.path.join(SAVE_DIR, f"{base}.json")
+
+    if os.path.exists(target_path):
+        return f"ERROR: File '{base}.json' already exists in '{SAVE_DIR}'. No file was written."
+
+    try:
+        with open(target_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+    except OSError as e:
+        return f"ERROR: Failed to write file '{target_path}': {e}"
+
+    return f"OK: Saved JSON to '{target_path}'."
+
+
+@tool
+def save_to_json_deprecated(content: Union[str, dict], file_name: str) -> str:
+    """
+    Save new result entries into a single json file:
 
     Args:
-        content: A JSON string or Python dict with a 'results' key pointing to a list.
-        source: One of {'arxiv', 'blog', 'gscholar'} determining the output file.
+        content: A JSON string or Python dict.
+        filename: name of the file to save.
 
     Returns:
         str: A message indicating success or failure.
-
-    Raises:
-        ValueError: If 'source' is not one of the allowed names.
     """
     # if source not in allowed:
     #     raise ValueError(f"Invalid source '{source}'. Must be one of {sorted(allowed.keys())}.")
@@ -87,7 +166,7 @@ def save_to_json(content: Union[str, dict], file_name: str) -> str:
     
 
 @tool
-def ArxivTool(query: str, max_results: int = 5, year: str = "2025") -> str:
+def ArxivTool(query: str, max_results: int = 5) -> str:
     """
     Search ArXiv for papers based on a provided query and return relevant results in JSON format.
 
@@ -134,9 +213,6 @@ def ArxivTool(query: str, max_results: int = 5, year: str = "2025") -> str:
             publish_date = result.published
             formatted_date = publish_date.strftime("%d-%m-%Y")
 
-            if not publish_date.strftime("%Y") == year:
-                continue
-
             authors = [author.name for author in result.authors]
             summary = result.summary[:500] 
 
@@ -153,7 +229,7 @@ def ArxivTool(query: str, max_results: int = 5, year: str = "2025") -> str:
         if not results:
             return json.dumps({
                 "results": [],
-                "error": f"No papers found for query '{query}' in {year}"
+                "error": f"No papers found for query '{query}'"
             })
 
         return json.dumps({"results": results}, ensure_ascii=False)
