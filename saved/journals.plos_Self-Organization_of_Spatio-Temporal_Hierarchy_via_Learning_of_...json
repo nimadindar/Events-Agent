@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Self-Organization of Spatio-Temporal Hierarchy via Learning of ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article explores the self-organization of spatio-temporal hierarchy through learning, combining spatial and temporal processing in a neural network model for contextual recognition of dynamic visual patterns.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131214",
+  "usefulness_score": 80,
+  "usefulness_reason": "The title and content directly address 'Spatio-Temporal Hierarchy' and 'Contextual recognition,' making it highly relevant to spatio-temporal data and contextual datasets. While not explicitly about point processes or survey data, the core concepts align well with the broader search."
+}

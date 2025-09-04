@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Early classification of spatio-temporal events using partial information",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article discusses the early classification of spatio-temporal events using partial information, mentioning a dataset and change points.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236331",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title mentions 'spatio-temporal events' and the content refers to a 'dataset' and 'change points', which aligns with spatio-temporal data and contextual datasets. The concept of 'events' and 'change points' has relevance to point processes, though not explicitly stated."
+}

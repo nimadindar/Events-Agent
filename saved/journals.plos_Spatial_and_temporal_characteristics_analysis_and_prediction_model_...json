@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Spatial and temporal characteristics analysis and prediction model ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article focuses on the spatial and temporal characteristics analysis and prediction model, describing data and its processing using the KNN algorithm.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287423",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title mentions 'Spatial and temporal characteristics analysis,' which is directly relevant to spatio-temporal data. However, the summary doesn't explicitly mention point processes, contextual datasets, or survey data, making its direct relevance to those specific aspects less clear."
+}
