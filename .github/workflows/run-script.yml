@@ -2,8 +2,11 @@ name: Agent Schedule
 
 on:
   schedule:
-    - cron: '0 0-23/12 * * *'  
+    - cron: '0 0-23/12 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   run-script:
@@ -14,48 +17,67 @@ jobs:
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-        
+
       - name: Create saved directory
-        run: |
-          mkdir -p saved
+        run: mkdir -p saved
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12 
+          python-version: '3.12'
 
       - name: Install dependencies
         run: |
+          python -V
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  
+          pip install -r requirements.txt
 
       - name: Create .env file from GitHub secrets
         run: |
-          echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}" >> .env
-          echo "X_API_KEY=${{ secrets.X_API_KEY }}" >> .env
-          echo "X_API_KEY_SECRET=${{ secrets.X_API_KEY_SECRET }}" >> .env
-          echo "X_ACCESS_TOKEN=${{ secrets.X_ACCESS_TOKEN }}" >> .env
-          echo "X_ACCESS_TOKEN_SECRET=${{ secrets.X_ACCESS_TOKEN_SECRET }}" >> .env
-          echo "TAVILY_API_KEY=${{ secrets.TAVILY_API_KEY }}" >> .env
-          echo "SERP_API_KEY=${{ secrets.SERP_API_KEY }}" >> .env
+          {
+            echo "GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }}"
+            echo "X_API_KEY=${{ secrets.X_API_KEY }}"
+            echo "X_API_KEY_SECRET=${{ secrets.X_API_KEY_SECRET }}"
+            echo "X_ACCESS_TOKEN=${{ secrets.X_ACCESS_TOKEN }}"
+            echo "X_ACCESS_TOKEN_SECRET=${{ secrets.X_ACCESS_TOKEN_SECRET }}"
+            echo "TAVILY_API_KEY=${{ secrets.TAVILY_API_KEY }}"
+            echo "SERP_API_KEY=${{ secrets.SERP_API_KEY }}"
+          } >> .env
 
       - name: Run Agent script
         run: |
-          python -B -m multi_agent.main  
+          # If your entry is a module:
+          python -B -m multi_agent.main
+          # If your entry is a root-level main.py, use instead:
+          # python -B main.py
 
-      - name: Commit updated JSON files
+      - name: Commit updated JSON files (exclude logs)
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add saved/arxiv_results.json saved/blog_results.json saved/gscholar_results.json saved/tweets.json
-          git commit -m "Update results from workflow" || echo "No changes to commit"
-          git push
+
+          # Stage all changes in saved/, but exclude any *.log files via pathspec magic
+          git add -A -- ':!saved/*.log' saved
+
+          # Create a commit if there are staged changes
+          if ! git diff --cached --quiet; then
+            git commit -m "Update results from workflow"
+          else
+            echo "No changes to commit."
+          fi
+
+          # Push only if HEAD is ahead of the remote
+          CURRENT_BRANCH="${GITHUB_REF_NAME:-main}"
+          git fetch origin "$CURRENT_BRANCH" --quiet
+          if ! git diff --quiet "origin/$CURRENT_BRANCH"..HEAD; then
+            git push
+          else
+            echo "No new commits to push."
+          fi
         continue-on-error: true
-      
+
       - name: Upload saved output files as artifact
         uses: actions/upload-artifact@v4
         with:
           name: saved
-          path: |
-            saved/*.json 
-            saved/*.log 
+          path: saved/**
