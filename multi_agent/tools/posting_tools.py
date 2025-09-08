@@ -5,17 +5,7 @@ import re
 from pathlib import Path
 from typing import Literal, Optional, List, Dict, Any, Tuple
 from datetime import datetime, date as dt_date
-from pydantic import BaseModel, Field, validator
-
-# try:
-#     from langchain_core.tools import tool
-# except Exception:
-#     try:
-#         from langchain.tools import tool  
-#     except Exception:
-#         def tool(*a, **k):
-#             def _wrap(fn): return fn
-#             return _wrap
+from pydantic import Field  # kept for compatibility with your existing schema stubs
 
 SAVE_DIR = Path("./saved")
 TWEETS_FILE = SAVE_DIR / "tweets.json"
@@ -25,9 +15,7 @@ SOURCES: Tuple[str, ...] = ("arxiv", "blog", "gscholar")
 def _parse_input_date(d: Optional[str]) -> Optional[dt_date]:
     if not d:
         return None
-
     return datetime.strptime(d.strip(), "%d-%m-%Y").date()
-
 
 def _parse_publish_date(d: Any) -> Optional[dt_date]:
     if not d or (isinstance(d, str) and d.strip().lower() == "unknown"):
@@ -71,10 +59,10 @@ def _normalize_url(url: str) -> str:
 
     m = _ARXIV_ABS_RE.match(u)
     if m:
-        tail = m.group(1) 
+        tail = m.group(1)
         m2 = _ARXIV_VERSION_RE.match(tail)
         if m2:
-            base_id = m2.group("id")  
+            base_id = m2.group("id")
             return f"arxiv:{base_id}"
         return f"arxiv:{tail}"
     return u
@@ -103,13 +91,16 @@ def _load_tweets() -> List[Dict[str, str]]:
     if isinstance(raw, dict) and isinstance(raw.get("tweets"), list):
         for u in raw["tweets"]:
             e = _as_entry(u)
-            if e: normalized.append(e)
+            if e:
+                normalized.append(e)
     elif isinstance(raw, list):
         for u in raw:
             e = _as_entry(u)
-            if e: normalized.append(e)
+            if e:
+                normalized.append(e)
 
     return normalized
+
 
 def _save_tweets(entries: List[Dict[str, str]]) -> None:
     _save_json(TWEETS_FILE, {"tweets": entries})
@@ -119,10 +110,38 @@ def _tweet_norm_set(entries: List[Dict[str, str]]) -> set[str]:
     return {_normalize_url(e.get("url", "")) for e in entries if isinstance(e, dict)}
 
 
-def _load_results_for_source(source: str) -> List[Dict[str, Any]]:
-    data = _load_json(SAVE_DIR / f"{source}_results.json")
-    results = data.get("results", []) if isinstance(data, dict) else []
-    return [r for r in results if isinstance(r, dict)]
+def _entry_origin(entry: Dict[str, Any]) -> Literal["arxiv", "gscholar", "blog"]:
+    """
+    Map the saved entry to one of our three high-level origins.
+    - arxiv entries have entry["source"] == "arxiv"
+    - gscholar entries have entry["source"] == "gscholar"
+    - blog entries store a site label in entry["source"] (e.g., 'spatialedge'), so treat any other value as 'blog'
+    """
+    src = str(entry.get("source", "")).strip().lower()
+    if src == "arxiv":
+        return "arxiv"
+    if src == "gscholar":
+        return "gscholar"
+    return "blog"
+
+
+def _iter_saved_entries() -> List[Dict[str, Any]]:
+    """
+    Load every JSON object in ./saved except tweets.json.
+    Each file is expected to contain a single JSON object with fields:
+    source, title, authors, publish_date, summary, url, usefulness_score, usefulness_reason
+    """
+    items: List[Dict[str, Any]] = []
+    if not SAVE_DIR.exists():
+        return items
+
+    for path in SAVE_DIR.glob("*.json"):
+        if path.name == "tweets.json":
+            continue
+        obj = _load_json(path)
+        if isinstance(obj, dict) and obj.get("url"):
+            items.append(obj)
+    return items
 
 
 def _safe_int(x, default: int = -1) -> int:
@@ -140,7 +159,6 @@ def _pick_best_by_date(items):
         return (pd is None, pd or dt_date.min, sc)
     return max(items, key=key, default=None)
 
-
 def _pick_best_by_score(items):
     """Highest usefulness_score (tie-break: newer publish_date)."""
     def key(it: Dict[str, Any]):
@@ -150,7 +168,6 @@ def _pick_best_by_score(items):
     return max(items, key=key, default=None)
 
 
-# class FetchFilteredItemsArgs(BaseModel):
 class FetchFilteredItemsArgs():
     source: Literal["arxiv", "blog", "gscholar", "all"] = Field(
         ..., description='Which source(s) to read: "arxiv", "blog", "gscholar", or "all".'
@@ -162,39 +179,33 @@ class FetchFilteredItemsArgs():
         None, description='Keep items with publish_date >= this date. Format: "dd-mm-yyyy".'
     )
 
-    @validator("date")
-    def _validate_date(cls, v):
-        if v:
-            _ = _parse_input_date(v)  
-        return v
 
-
-# @tool("fetch_filtered_items", args_schema=FetchFilteredItemsArgs)
 def fetch_filtered_items(
     source: Literal["arxiv", "blog", "gscholar", "all"],
     min_usefulness_score: Optional[int] = None,
     date: Optional[str] = None,
 ) -> Dict[str, Any]:
     """
-    Fetch items from ./saved/{source}_results.json (or all), filter by usefulness score and/or date,
-    and EXCLUDE items whose URLs already appear in ./saved/tweets.json (duplicate prevention).
+    NEW STRUCTURE:
+      - Read every JSON object in ./saved except tweets.json (one file per entry).
+      - Filter by requested origin (arxiv/blog/gscholar/all).
+      - Apply usefulness_score and date filters.
+      - Exclude URLs already present in tweets.json (normalized).
+      - Sort by usefulness_score desc, then by publish_date desc (unknown last).
     """
+    all_items = _iter_saved_entries()
 
-    srcs = SOURCES if source == "all" else (source,)
-    raw_items: List[Dict[str, Any]] = []
-    sources_used: List[str] = []
+    if source != "all":
+        wanted = source
+        all_items = [it for it in all_items if _entry_origin(it) == wanted]
 
-    for s in srcs:
-        items = _load_results_for_source(s)
-        if items:
-            raw_items.extend(items)
-            sources_used.append(s)
+    sources_used = sorted({ _entry_origin(it) for it in all_items })
 
-    if source != "all" and not sources_used:
+    if source != "all" and not all_items:
         return {
             "results": [],
             "meta": {
-                "error": f"No data found for source '{source}'. Expected './saved/{source}_results.json'.",
+                "error": f"No data found for source '{source}'. Expected individual JSON files in './saved/'.",
                 "sources_used": [],
                 "min_usefulness_score": min_usefulness_score,
                 "date_filter": date,
@@ -211,7 +222,8 @@ def fetch_filtered_items(
     filtered: List[Dict[str, Any]] = []
     excluded_already_tweeted = 0
 
-    for it in raw_items:
+    for it in all_items:
+        # usefulness filter
         if min_score is not None:
             try:
                 if int(it.get("usefulness_score", -1)) < min_score:
@@ -219,11 +231,13 @@ def fetch_filtered_items(
             except Exception:
                 continue
 
+        # date filter
         if cutoff:
             pub = _parse_publish_date(it.get("publish_date"))
             if not pub or pub < cutoff:
                 continue
 
+        # duplicate filter
         norm_url = _normalize_url(str(it.get("url", "")))
         if norm_url and norm_url in tweeted_norm:
             excluded_already_tweeted += 1
@@ -232,12 +246,9 @@ def fetch_filtered_items(
         filtered.append(it)
 
     def _sort_key(x: Dict[str, Any]):
-        try:
-            sc = int(x.get("usefulness_score", -1))
-        except Exception:
-            sc = -1
+        sc = _safe_int(x.get("usefulness_score"), -1)
         pd = _parse_publish_date(x.get("publish_date"))
-        return (-sc, pd is None, pd or date.min)
+        return (-sc, pd is None, pd or dt_date.min)
 
     filtered.sort(key=_sort_key)
 
@@ -253,7 +264,6 @@ def fetch_filtered_items(
     }
 
 
-# class SaveTweetArgs(BaseModel):
 class SaveTweetArgs():
     url: str = Field(..., description="The URL of the posted item.")
     posting_reason: str = Field(
@@ -261,14 +271,13 @@ class SaveTweetArgs():
     )
 
 
-# @tool("save_tweet", args_schema=SaveTweetArgs)
 def save_tweet(url: str, posting_reason: str) -> Dict[str, Any]:
     """
     Record a tweeted item in ./saved/tweets.json with fields:
       { "tweets": [ { "url": <url>, "posting_reason": <str> }, ... ] }
     Prevents duplicates using normalized URLs (handles arXiv URL variants).
     """
-    entries = _load_tweets() 
+    entries = _load_tweets()
     norm_existing = _tweet_norm_set(entries)
     norm_new = _normalize_url(url)
 
@@ -282,7 +291,6 @@ def save_tweet(url: str, posting_reason: str) -> Dict[str, Any]:
     return {"status": "saved", "entry": new_entry}
 
 
-# @tool
 def post_to_X(
     consumer_key: str,
     consumer_secret: str,
@@ -292,26 +300,6 @@ def post_to_X(
 ) -> str:
     """
     Posts a message to X using the Tweepy library.
-
-    This function authenticates with the X API using provided credentials and posts the given content
-    as a tweet. It ensures the content is within the 280-character limit, handles authentication errors,
-    network issues, and other potential failures, and returns a status message indicating success or failure.
-
-    Args:
-        consumer_key (str): The X API consumer key for authentication.
-        consumer_secret (str): The X API consumer secret for authentication.
-        access_token (str): The X API access token for the user.
-        access_token_secret (str): The X API access token secret for the user.
-        content (str): The content to post on X (must be 280 characters or fewer).
-
-    Returns:
-        str: A message indicating the result of the operation.
-             - On success: "Successfully posted to X"
-             - On failure: A descriptive error message, e.g., "Error posting to X: <error details>"
-
-    Raises:
-        ValueError: If any input parameter is invalid (e.g., empty or non-string).
-        tweepy.TweepyException: If there is an issue with the X API (e.g., authentication failure, rate limits).
     """
     if not all(isinstance(arg, str) for arg in [consumer_key, consumer_secret, access_token, access_token_secret, content]):
         return "Error posting to X: All arguments must be strings"
@@ -323,8 +311,7 @@ def post_to_X(
         return "Error posting to X: Content cannot be empty"
     
     if len(content) > 280:
-        # content = content[:277] + "..."
-        return "Error posting to X: Content cannot be more than 280 characters. Try with shorter Content." 
+        return "Error posting to X: Content cannot be more than 280 characters. Try with shorter Content."
     
     try:
         x_client = tweepy.Client(
