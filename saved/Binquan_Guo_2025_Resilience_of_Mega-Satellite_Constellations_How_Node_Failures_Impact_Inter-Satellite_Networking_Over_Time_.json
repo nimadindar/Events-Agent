@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Resilience of Mega-Satellite Constellations: How Node Failures Impact Inter-Satellite Networking Over Time?",
+  "authors": [
+    "Binquan Guo",
+    "Zehui Xiong",
+    "Zhou Zhang",
+    "Baosheng Li",
+    "Dusit Niyato",
+    "Chau Yuen",
+    "Zhu Han"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This study investigates the impact of satellite node failures on inter-satellite networking over time in mega-satellite constellations, which involves both spatial (constellations) and temporal (over time) aspects.",
+  "url": "http://arxiv.org/abs/2509.06766v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title explicitly mentions 'Over Time' and 'Mega-Satellite Constellations', indicating both temporal and spatial aspects of the research."
+}

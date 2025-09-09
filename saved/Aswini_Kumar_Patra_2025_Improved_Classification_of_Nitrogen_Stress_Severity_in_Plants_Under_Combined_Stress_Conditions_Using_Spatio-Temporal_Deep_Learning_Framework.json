@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Improved Classification of Nitrogen Stress Severity in Plants Under Combined Stress Conditions Using Spatio-Temporal Deep Learning Framework",
+  "authors": [
+    "Aswini Kumar Patra"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This study proposes a novel deep learning framework for improved classification of nitrogen stress severity in plants under combined stress conditions, leveraging spatio-temporal data to address the complexities of interacting stresses in natural habitats.",
+  "url": "http://arxiv.org/abs/2509.06625v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "The title explicitly mentions \"Spatio-Temporal Deep Learning Framework\" and the summary discusses analyzing \"plants in their natural habitats endure an array of interacting stresses,\" which clearly indicates a strong focus on spatio-temporal data analysis."
+}

@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Video-Based MPAA Rating Prediction: An Attention-Driven Hybrid Architecture Using Contrastive Learning",
+  "authors": [
+    "Dipta Neogi",
+    "Nourash Azmine Chowdhury",
+    "Muhammad Rafsan Kabir",
+    "Mohammad Ashrafuzzaman Khan"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This study employs contrastive learning for improved discrimination and adaptability in automated video classification for age-suitability standards like the MPAA rating system, exploring three frameworks: Instance Discrimination, Contextual Contrastive Learning.",
+  "url": "http://arxiv.org/abs/2509.06826v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title and summary mention 'video-based' and 'automated video classification', which inherently involve spatio-temporal data. The mention of 'Contextual Contrastive Learning' also relates to contextual datasets."
+}

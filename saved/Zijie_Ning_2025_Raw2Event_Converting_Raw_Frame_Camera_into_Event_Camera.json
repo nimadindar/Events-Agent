@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Raw2Event: Converting Raw Frame Camera into Event Camera",
+  "authors": [
+    "Zijie Ning",
+    "Enmin Lin",
+    "Sudarshan R. Iyengar",
+    "Patrick Vandewalle"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This work presents Raw2Event, a hardware-software system for real-time event generation from low-cost raw frame cameras, leveraging event cameras' advantages like high temporal resolution and dynamic range for vision tasks.",
+  "url": "http://arxiv.org/abs/2509.06767v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title and summary clearly indicate processing of temporal events from raw frames, which is a spatio-temporal process. The mention of 'high temporal resolution' further supports this."
+}

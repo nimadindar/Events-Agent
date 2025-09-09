@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "Pheno4D: A spatio-temporal dataset of maize and tomato plant point ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper introduces Pheno4D, a spatio-temporal dataset of maize and tomato plant point clouds. It discusses the challenges of processing high-density point clouds and the usage of larger spatial context.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256340",
+  "usefulness_score": 70,
+  "usefulness_reason": "This article is relevant because it presents a 'spatio-temporal dataset' and discusses 'point cloud processing', which relates to 'point process' and 'contextual dataset' in a broader sense. While not directly about spatio-temporal point processes, it covers related concepts."
+}

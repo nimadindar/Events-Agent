@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "H$_{2}$OT: Hierarchical Hourglass Tokenizer for Efficient Video Pose Transformers",
+  "authors": [
+    "Wenhao Li",
+    "Mengyuan Liu",
+    "Hong Liu",
+    "Pichao Wang",
+    "Shijian Lu",
+    "Nicu Sebe"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper presents a hierarchical plug-and-play pruning-and-recovering framework, called Hierarchical Hourglass Tokenizer (H$_{2}$OT), for efficient transformer-based 3D human pose estimation from videos, addressing the high computational costs of video pose transformers (VPTs).",
+  "url": "http://arxiv.org/abs/2509.06956v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title and summary mention 'video-based 3D human pose estimation' and 'video pose transformers', which implies spatio-temporal data processing. While not directly about point processes, it deals with spatio-temporal information."
+}

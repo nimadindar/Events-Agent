@@ -1,0 +1,12 @@
+{
+  "source": "ploscompbiol",
+  "title": "A mechanistic spatio-temporal framework for modelling individual-to ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper develops a framework for accommodating individual-level spatio-temporal data, rooted in spatio-temporal point processes. It views the transmission process as a marked spatio-temporal point process, addressing the challenges of integrating such processes with mechanistic compartmental disease models.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005798",
+  "usefulness_score": 95,
+  "usefulness_reason": "This article is highly relevant as it directly addresses spatio-temporal point processes and their application in modeling individual-level spatio-temporal data, which aligns well with the core concepts of the search query."
+}

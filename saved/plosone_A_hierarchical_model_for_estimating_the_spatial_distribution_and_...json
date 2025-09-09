@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "A hierarchical model for estimating the spatial distribution and ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper describes a hierarchical model that includes a spatial point process for individual activity centers and a temporal point process for detection times. It extends count-based SCR models and is illustrated by analyzing tiger detection times in a spatial array.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176966",
+  "usefulness_score": 90,
+  "usefulness_reason": "This article is highly relevant as it directly discusses 'spatial point process' and 'temporal point process', which are core to the query. The data collection method, involving detection times in a spatial array, is akin to survey data."
+}

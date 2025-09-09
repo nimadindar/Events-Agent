@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "NeedForHeat DataGear: An Open Monitoring System to Accelerate the Residential Heating Transition",
+  "authors": [
+    "Henri ter Hofte",
+    "Nick van Ravenzwaaij"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper introduces NeedForHeat DataGear, an open hardware and software system for collecting time series monitoring data in homes to assess thermal characteristics, heating system efficiency, and residents' comfort needs, thereby accelerating the residential heating transition.",
+  "url": "http://arxiv.org/abs/2509.06927v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper describes a \"data collection system\" that gathers \"time series monitoring data in homes\" to understand \"residents' comfort needs.\" This directly relates to the concept of collecting data from a population to understand specific aspects, which aligns with the definition of survey data, even if the collection method is automated monitoring rather than traditional questionnaires."
+}

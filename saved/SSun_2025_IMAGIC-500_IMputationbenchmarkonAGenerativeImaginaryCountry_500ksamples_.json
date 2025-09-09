@@ -1,0 +1,17 @@
+{
+  "source": "gscholar",
+  "title": "IMAGIC-500: IMputation benchmark on A Generative Imaginary Country (500k samples)",
+  "authors": [
+    "S Sun",
+    "DA Selby",
+    "Y Huang",
+    "S Vollmer",
+    "S Flaxman",
+    "A Calinescu"
+  ],
+  "publish_date": "10-06-2025",
+  "summary": "This study introduces IMAGIC-500, a synthetic dataset derived from a World Bank household survey, designed for benchmarking missing data imputation methods in socioeconomic research. It reflects the hierarchical structure of real-world household surveys and provides a comprehensive benchmark under various missing mechanisms and ratios.",
+  "url": "https://arxiv.org/abs/2506.08844",
+  "usefulness_score": 85,
+  "usefulness_reason": "Score 85 assigned because the paper directly focuses on 'missing data imputation in tabular datasets' within 'socioeconomic research' and utilizes a 'World Bank household survey' to create a benchmark dataset, making it highly relevant to 'Contextual dataset' and 'Survey data'."
+}
