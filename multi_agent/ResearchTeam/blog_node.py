@@ -21,7 +21,7 @@ from ..utils.utils import State, DebugHandler
 BLOG_PROMPT_DIR = "./multi_agent/prompts/blog_node_prompt.yaml"
 
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
-BLOG_MAX_RESULTS = 5
+BLOG_MAX_RESULTS = 10
 BLOG_MIN_USEFULNESS = 60
 
 DOMAINS_INCLUDED = [

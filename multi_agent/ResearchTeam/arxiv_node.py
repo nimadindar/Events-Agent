@@ -21,7 +21,7 @@ ARXIV_PROMPT_DIR = "./multi_agent/prompts/arxiv_node_prompt.yaml"
 
 # Prompt Config
 FIELD = "Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, Survey data"
-ARXIV_MAX_RESULTS = 5
+ARXIV_MAX_RESULTS = 10
 ARXIV_MIN_USEFULNESS = 60
 
 # Time Frame used to get data
