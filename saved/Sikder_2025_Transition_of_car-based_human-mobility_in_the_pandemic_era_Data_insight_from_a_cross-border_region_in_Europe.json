@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Transition of car-based human-mobility in the pandemic era: Data insight from a cross-border region in Europe",
+  "authors": [
+    "Sujit Kumar Sikder",
+    "Jyotirmaya Ijaradar",
+    "Hao Li",
+    "Hichem Omrani"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This study explores spatio-temporal transitions in cross-country road traffic volumes to model behavioral transitions in car-based human mobility. It reports on individual car-based daily travel behavior detected before and during the pandemic era, providing data insights from a cross-border region in Europe.",
+  "url": "http://arxiv.org/abs/2509.05166v2",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper explicitly mentions 'spatio-temporal transitions' and 'road traffic data' which aligns with spatio-temporal analysis. The 'data insight' and 'human-mobility' aspects suggest a connection to contextual or survey-like data, although 'point process' is not directly mentioned."
+}
