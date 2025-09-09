@@ -1,0 +1,15 @@
+{
+  "source": "gscholar",
+  "title": "Fast approximate Bayesian inference of HIV indicators using PCA adaptive Gauss-Hermite quadrature",
+  "authors": [
+    "A Howes",
+    "A Stringer",
+    "SR Flaxman",
+    "JW Imai-Eaton"
+  ],
+  "publish_date": "21-08-2025",
+  "summary": "This paper introduces a new inference method for the Naomi spatial evidence synthesis model, which produces district-level HIV epidemic indicators using household survey and health system data. The proposed method, based on an extension of adaptive Gauss-Hermite quadrature, improves the accuracy and speed of inference for model parameters compared to previous approaches.",
+  "url": "https://arxiv.org/abs/2508.15665",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper discusses a 'spatial evidence synthesis model' and utilizes 'household survey data', which are directly relevant to 'Spatio Temporal' and 'Survey data' topics. However, it does not explicitly focus on 'Point Process' or 'Contextual dataset'."
+}

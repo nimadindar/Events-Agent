@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Resolving Tangling in Multi-Conformer Refinement via Iterative Projections",
+  "authors": [
+    "Avinash Mandaiya",
+    "Veit Elser"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This paper addresses the challenge of extracting cooperative motions from temporally and spatially averaged electron density maps in structural biology. It proposes a method to resolve the tangling phenomenon in multi-conformer refinement, which is crucial for handling conformational heterogeneity.",
+  "url": "http://arxiv.org/abs/2509.05189v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly mentions 'temporally and spatially averaged electron density maps' and 'protein dynamics', which directly relates to spatio-temporal aspects. While it doesn't mention point processes or survey data, the focus on dynamic structural data makes it relevant to spatio-temporal analysis."
+}

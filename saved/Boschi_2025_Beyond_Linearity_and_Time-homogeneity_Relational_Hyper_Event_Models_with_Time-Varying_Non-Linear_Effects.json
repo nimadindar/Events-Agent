@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Beyond Linearity and Time-homogeneity: Relational Hyper Event Models with Time-Varying Non-Linear Effects",
+  "authors": [
+    "Martina Boschi",
+    "Jürgen Lerner",
+    "Ernst C. Wit"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This paper introduces Relational Hyper Event Models (RHEMs) to explain the dynamics of large and complex networks of time-stamped relational events. It aims to move beyond linearity and time-homogeneity assumptions by modeling event rates as a function of past history and external information.",
+  "url": "http://arxiv.org/abs/2509.05289v2",
+  "usefulness_score": 80,
+  "usefulness_reason": "The paper directly addresses 'time-stamped relational events' and 'event rate', which are core concepts in point processes and spatio-temporal analysis. The mention of 'external information' also aligns with contextual data."
+}

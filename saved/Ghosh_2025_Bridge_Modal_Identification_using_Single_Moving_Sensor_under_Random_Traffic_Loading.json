@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Bridge Modal Identification using Single Moving Sensor under Random Traffic Loading",
+  "authors": [
+    "Dhiraj Ghosh",
+    "Suparno Mukhopadhyay",
+    "Shaily Jain"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This paper investigates the use of a single moving sensor to identify modal parameters of a bridge system under various loading conditions, including random traffic-induced vibrations. It focuses on analyzing dynamic response data in the frequency domain to determine natural frequencies and damping ratios.",
+  "url": "http://arxiv.org/abs/2509.05277v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper deals with data collected from a 'single moving sensor' and 'random traffic-induced vibrations', which implies spatio-temporal data collection and analysis. The 'random traffic-induced vibrations' can be interpreted as a form of point process, and the data collection method is akin to a survey of the bridge's dynamic response."
+}

@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Generation of realistic cardiac ultrasound sequences with ground truth motion and speckle decorrelation",
+  "authors": [
+    "Thierry Judge",
+    "Nicolas Duchateau",
+    "Khuram Faraz",
+    "Pierre-Marc Jodoin",
+    "Olivier Bernard"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This paper proposes an improved simulation framework for generating realistic cardiac ultrasound image sequences with ground truth motion and speckle decorrelation. This is crucial for training and validating machine learning algorithms for left ventricular strain estimation.",
+  "url": "http://arxiv.org/abs/2509.05261v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper focuses on generating dynamic sequences with spatial and temporal components (ultrasound images with motion), making it relevant to spatio-temporal analysis. While not explicitly mentioning point processes or survey data, the nature of the data is spatio-temporal."
+}

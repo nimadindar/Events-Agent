@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "A functional tensor model for dynamic multilayer networks with common invariant subspaces and the RKHS estimation",
+  "authors": [
+    "Runshi Tang",
+    "Runbing Zheng",
+    "Anru R. Zhang",
+    "Carey E. Priebe"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This paper proposes a functional tensor-based model for dynamic multilayer networks, focusing on capturing shared structure and temporal evolution of relationships among entities. It aims to address the limited analytical methods for such complex data structures in fields like sociology, economics, and neuroscience.",
+  "url": "http://arxiv.org/abs/2509.05221v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper directly addresses 'dynamic multilayer networks' and 'temporal evolution', which are strong indicators of spatio-temporal analysis. While it doesn't explicitly mention point processes or survey data, the nature of the data structures could be relevant to contextual datasets."
+}

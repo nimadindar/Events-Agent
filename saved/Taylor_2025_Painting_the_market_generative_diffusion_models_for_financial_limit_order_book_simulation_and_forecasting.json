@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Painting the market: generative diffusion models for financial limit order book simulation and forecasting",
+  "authors": [
+    "James Taylor",
+    "Jiazhang Wang",
+    "Guanzhong Hu",
+    "Zihan Chen",
+    "Ping Guo",
+    "Florian Willomitzer"
+  ],
+  "publish_date": "05-09-2025",
+  "summary": "This paper introduces a novel approach for simulating and forecasting financial limit order books (LOBs) by converting LOB data into a structured image format and applying diffusion models with inpainting. This addresses the challenges of high noise and complexity in financial market data.",
+  "url": "http://arxiv.org/abs/2509.05107v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper focuses on simulating and forecasting financial limit order books, which are inherently spatio-temporal in nature (price levels over time). The use of \"generative diffusion models\" and \"structured image format\" for LOB data implies a spatio-temporal representation and analysis."
+}
