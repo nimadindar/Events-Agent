@@ -1,0 +1,21 @@
+{
+  "source": "arxiv",
+  "title": "F1: A Vision-Language-Action Model Bridging Understanding and Generation to Actions",
+  "authors": [
+    "Qi Lv",
+    "Weijie Kong",
+    "Hao Li",
+    "Jia Zeng",
+    "Zherui Qiu",
+    "Delin Qu",
+    "Haoming Song",
+    "Qizhi Chen",
+    "Xiang Deng",
+    "Jiangmiao Pang"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper introduces F1, a pretrained Vision-Language-Action (VLA) framework that integrates visual foresight generation into decision-making for language-conditioned tasks in dynamic visual environments.",
+  "url": "http://arxiv.org/abs/2509.06951v2",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the summary mentions \"dynamic visual environments\" and \"visual foresight generation into decision-making pipeline,\" which implies processing contextual information over time. This is relevant to \"Contextual dataset\" and potentially \"Spatio Temporal\"."
+}

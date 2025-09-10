@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "Enhancing Technical Documents Retrieval for RAG",
+  "authors": [
+    "Songjiang Lai",
+    "Tsun-Hin Cheung",
+    "Ka-Chun Fung",
+    "Kaiwen Xue",
+    "Kwan-Ho Lin",
+    "Yan-Ming Choi",
+    "Vincent Ng",
+    "Kin-Man Lam"
+  ],
+  "publish_date": "04-09-2025",
+  "summary": "This paper introduces Technical-Embeddings, a framework to optimize semantic retrieval in technical documentation by leveraging LLMs to generate expanded query representations that capture user intent and improve dataset diversity.",
+  "url": "http://arxiv.org/abs/2509.04139v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper focuses on \"optimizing semantic retrieval\" and \"capturing user intent\" by enhancing query representations, which is relevant to understanding and utilizing contextual information within a dataset."
+}

@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "SliceSemOcc: Vertical Slice Based Multimodal 3D Semantic Occupancy Representation",
+  "authors": [
+    "Han Huang",
+    "Han Sun",
+    "Ningzhong Liu",
+    "Huiyu Zhou",
+    "Jiaquan Shen"
+  ],
+  "publish_date": "04-09-2025",
+  "summary": "This paper introduces SliceSemOcc for 3D semantic occupancy prediction, leveraging a complete 3D voxel grid to model spatial structures and capture semantic variations along the vertical axis.",
+  "url": "http://arxiv.org/abs/2509.03999v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper explicitly mentions \"3D semantic occupancy prediction\" and \"model spatial structures in all dimensions,\" which is relevant to the \"Spatio Temporal\" aspect (spatial component). The \"semantic\" aspect also relates to contextual information."
+}

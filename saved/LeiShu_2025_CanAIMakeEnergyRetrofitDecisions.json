@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Can AI Make Energy Retrofit Decisions? An Evaluation of Large Language Models",
+  "authors": [
+    "Lei Shu",
+    "Dong Zhao"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper evaluates LLMs for residential energy retrofit decisions, processing contextual information and producing practitioner readable recommendations.",
+  "url": "http://arxiv.org/abs/2509.06307v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper explicitly mentions processing 'contextual information' for decision-making, which is directly relevant to 'Contextual dataset'. While 'Spatio Temporal Point Process' is not directly mentioned, the application of LLMs to complex decision-making based on contextual data could involve underlying spatio-temporal aspects."
+}

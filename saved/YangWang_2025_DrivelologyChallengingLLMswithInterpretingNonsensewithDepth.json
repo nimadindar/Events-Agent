@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Drivel-ology: Challenging LLMs with Interpreting Nonsense with Depth",
+  "authors": [
+    "Yang Wang",
+    "Chenghao Xiao",
+    "Chia-Yi Hsiao",
+    "Zi Yan Chang",
+    "Chi-Li Chen",
+    "Tyler Loakman",
+    "Chenghua Lin"
+  ],
+  "publish_date": "04-09-2025",
+  "summary": "This paper introduces Drivelology, a linguistic phenomenon of \"nonsense with depth\" that requires contextual inference, moral reasoning, or emotional interpretation, and challenges LLMs to interpret such expressions.",
+  "url": "http://arxiv.org/abs/2509.03867v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper explicitly mentions \"contextual inference\", which is relevant to the 'Contextual dataset' aspect of the query."
+}

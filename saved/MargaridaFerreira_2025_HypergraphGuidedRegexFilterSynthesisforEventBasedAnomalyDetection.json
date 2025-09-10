@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Hypergraph-Guided Regex Filter Synthesis for Event-Based Anomaly Detection",
+  "authors": [
+    "Margarida Ferreira",
+    "Victor Nicolet",
+    "Luan Pham",
+    "Joey Dodds",
+    "Daniel Kroening",
+    "Ines Lynce",
+    "Ruben Martins"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper proposes HyGLAD, an algorithm that automatically builds interpretable patterns to model event data for detecting event-based anomalies in stationary systems.",
+  "url": "http://arxiv.org/abs/2509.06911v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper explicitly mentions \"model event data\" and \"event-based anomalies\". 'Event data' can be considered a form of point process data, and the modeling of it for anomaly detection implies the use of contextual information."
+}

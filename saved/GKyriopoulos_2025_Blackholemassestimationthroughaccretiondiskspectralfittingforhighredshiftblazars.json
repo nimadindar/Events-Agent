@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Black-hole mass estimation through accretion disk spectral fitting for high-redshift blazars",
+  "authors": [
+    "G. Kyriopoulos",
+    "M. Petropoulou",
+    "G. Vasilopoulos",
+    "D. Hatzidimitriou"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper aims to determine black hole masses and mass accretion rates of high-redshift blazars using a Markov Chain Monte Carlo (MCMC) fitting method and the Shakura-Sunayev multi-temperature accretion disk model, compiling a sample for analysis.",
+  "url": "http://arxiv.org/abs/2509.06933v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the summary explicitly states \"We compiled a sample\", which is a direct indication of using survey data."
+}

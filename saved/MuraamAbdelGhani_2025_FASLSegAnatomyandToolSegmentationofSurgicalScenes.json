@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "FASL-Seg: Anatomy and Tool Segmentation of Surgical Scenes",
+  "authors": [
+    "Muraam Abdel-Ghani",
+    "Mahmoud Ali",
+    "Mohamed Ali",
+    "Fatmaelzahraa Ahmed",
+    "Mohamed Arsalan",
+    "Abdulaziz Al-Ali",
+    "Shidin Balakrishnan"
+  ],
+  "publish_date": "07-09-2025",
+  "summary": "This paper proposes FASL-Seg, a model for anatomy and tool segmentation in surgical scenes, addressing the challenge of balancing high-level contextual features and low-level edge features.",
+  "url": "http://arxiv.org/abs/2509.06159v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper explicitly mentions 'capturing high-level contextual features', which is relevant to the 'Contextual dataset' aspect of the query."
+}

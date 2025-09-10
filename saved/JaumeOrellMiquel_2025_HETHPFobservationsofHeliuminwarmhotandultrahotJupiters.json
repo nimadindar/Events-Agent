@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "HET/HPF observations of Helium in warm, hot, and ultra-hot Jupiters",
+  "authors": [
+    "Jaume Orell-Miquel",
+    "Kyra Sampson",
+    "Caroline V. Morley",
+    "William D. Cochran",
+    "Girish M. Duvvuri",
+    "Daniel M. Krolikowski",
+    "Suvrath Mahadevan",
+    "Quang H. Tran"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper presents high-resolution transmission spectroscopy results for the helium triplet line of sixteen gas giants, part of an extensive helium survey conducted to study atmospheric escape processes of close-in exoplanets.",
+  "url": "http://arxiv.org/abs/2509.06847v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the summary explicitly mentions \"extensive helium survey conducted\", which directly relates to \"Survey data\"."
+}

@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "QCSE: A Pretrained Quantum Context-Sensitive Word Embedding for Natural Language Processing",
+  "authors": [
+    "Charles M. Varmantchaonala",
+    "Niclas GÖtting",
+    "Nils-Erik SchÜtte",
+    "Jean Louis E. K. Fendji",
+    "Christopher Gies"
+  ],
+  "publish_date": "06-09-2025",
+  "summary": "This paper introduces QCSE, a pretrained quantum context-sensitive embedding model that leverages quantum computation to capture contextual relationships in natural languages.",
+  "url": "http://arxiv.org/abs/2509.05729v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper explicitly mentions 'context-sensitive word embeddings' and 'contextual relationships', directly addressing the 'Contextual dataset' aspect of the query. While 'Spatio Temporal Point Process' is not mentioned, the focus on context makes it relevant."
+}

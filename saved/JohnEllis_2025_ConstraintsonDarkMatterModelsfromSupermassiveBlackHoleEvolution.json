@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Constraints on Dark Matter Models from Supermassive Black Hole Evolution",
+  "authors": [
+    "John Ellis",
+    "Malcolm Fairbairn",
+    "Juan Urrutia",
+    "Ville Vaskonen"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper uses JWST and pre-JWST observations to constrain dark matter models based on stellar mass-BH mass relations, reproducing high-redshift SMBH data.",
+  "url": "http://arxiv.org/abs/2509.06955v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper explicitly refers to \"JWST and pre-JWST observations\" and \"high-redshift SMBH data\", which are types of survey data used for analysis."
+}

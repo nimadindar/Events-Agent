@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "ContextFusion and Bootstrap: An Effective Approach to Improve Slot Attention-Based Object-Centric Learning",
+  "authors": [
+    "Pinzhuo Tian",
+    "Shengjie Yang",
+    "Hang Yu",
+    "Alex C. Kot"
+  ],
+  "publish_date": "02-09-2025",
+  "summary": "This paper introduces ContextFusion and Bootstrap to improve slot attention-based object-centric learning by addressing the lack of high-level semantic information and leveraging relationships to understand the environment.",
+  "url": "http://arxiv.org/abs/2509.02032v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the title 'ContextFusion' and the summary's mention of 'relationships to understand the environment' and 'high-level semantic information' suggest a focus on contextual understanding, making it relevant to 'Contextual dataset'."
+}

@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Group Effect Enhanced Generative Adversarial Imitation Learning for Individual Travel Behavior Modeling under Incentives",
+  "authors": [
+    "Yuanyuan Wu",
+    "Zhenlin Qin",
+    "Leizhen Wang",
+    "Xiaolei Ma",
+    "Zhenliang Ma"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper proposes a group-effect-enhanced generative adversarial imitation learning approach for individual travel behavior modeling, addressing challenges of data quantity, spatial-temporal coverage, and situational diversity in solving Markov decision processes.",
+  "url": "http://arxiv.org/abs/2509.06656v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "Score 85 assigned because the paper explicitly mentions 'spatial-temporal coverage' in the context of modeling individual travel behavior, making it highly relevant to 'Spatio Temporal'. The modeling of individual travel behavior could also implicitly involve point processes for discrete events."
+}

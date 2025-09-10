@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "VariSAC: V2X Assured Connectivity in RIS-Aided ISAC via GNN-Augmented Reinforcement Learning",
+  "authors": [
+    "Huijun Tang",
+    "Wang Zeng",
+    "Ming Du",
+    "Pinlong Zhao",
+    "Pengfei Jiao",
+    "Huaming Wu",
+    "Hongjian Sun"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper explores dynamic spatial resource management and real-time adaptation in vehicular networks through the integration of Reconfigurable Intelligent Surfaces (RIS) and Integrated Sensing and Communication (ISAC), addressing challenges in unified reliability modeling and resource optimization.",
+  "url": "http://arxiv.org/abs/2509.06763v2",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper explicitly mentions \"dynamic spatial resource management\" and \"real-time adaptation to environmental changes\" and \"highly dynamic and heterogeneous network topologies\", which are all strong indicators of spatio-temporal aspects."
+}

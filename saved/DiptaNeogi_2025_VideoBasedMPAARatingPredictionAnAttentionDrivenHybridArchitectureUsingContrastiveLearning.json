@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Video-Based MPAA Rating Prediction: An Attention-Driven Hybrid Architecture Using Contrastive Learning",
+  "authors": [
+    "Dipta Neogi",
+    "Nourash Azmine Chowdhury",
+    "Muhammad Rafsan Kabir",
+    "Mohammad Ashrafuzzaman Khan"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper proposes an attention-driven hybrid architecture using contrastive learning for video-based MPAA rating prediction, addressing challenges in automated video classification and employing contextual contrastive learning.",
+  "url": "http://arxiv.org/abs/2509.06826v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the title 'Video-Based' implies spatio-temporal data, and the summary mentions 'Contextual Contrastive Learning', which is relevant to 'Contextual dataset'."
+}

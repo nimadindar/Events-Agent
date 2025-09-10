@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "floq: Training Critics via Flow-Matching for Scaling Compute in Value-Based RL",
+  "authors": [
+    "Bhavya Agrawalla",
+    "Michal Nauman",
+    "Khush Agarwal",
+    "Aviral Kumar"
+  ],
+  "publish_date": "08-09-2025",
+  "summary": "This paper investigates the benefits of iterative computation for temporal difference (TD) methods in reinforcement learning (RL) to enable models to learn complex functions in a generalizable manner.",
+  "url": "http://arxiv.org/abs/2509.06863v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the summary mentions \"temporal difference (TD) methods\" and \"iterative computation for temporal difference,\" which directly relates to the \"Temporal\" aspect of \"Spatio Temporal.\" While \"Spatio\" is not explicitly mentioned, the focus on temporal dynamics in RL is relevant."
+}
