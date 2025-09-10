@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Mini-o3: Scaling Up Reasoning Patterns and Interaction Turns for Visual Search",
+  "authors": [
+    "Xin Lai",
+    "Junyi Li",
+    "Wei Li",
+    "Tao Liu",
+    "Tianjian Li",
+    "Hengshuang Zhao"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This work addresses limitations in existing open-source large multimodal models by scaling up tool-based interactions and introducing Mini-o3, a system that executes deep, multi-turn reasoning for visual problems, particularly those requiring trial-and-error exploration.",
+  "url": "http://arxiv.org/abs/2509.07969v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"large multimodal models\" and \"tool-based interactions\" for \"visual problems,\" which implies the use of contextual information within visual datasets. While not explicitly using the term \"contextual dataset,\" the nature of the problem it addresses is highly related to understanding context in data."
+}

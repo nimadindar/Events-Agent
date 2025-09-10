@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Temporal Counterfactual Explanations of Behaviour Tree Decisions",
+  "authors": [
+    "Tamlin Love",
+    "Antonio Andriella",
+    "Guillem Alenyà"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper explores the explainability of robot decision-making controlled by behavior trees, specifically focusing on generating temporal counterfactual explanations to answer \"why\" questions about robot actions.",
+  "url": "http://arxiv.org/abs/2509.07674v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title explicitly mentions \"Temporal Counterfactual Explanations\" and the summary discusses \"temporal aspects of robot behavior\", directly relating to the 'Temporal' part of the query. While not directly about spatio-temporal point processes, the strong temporal focus makes it relevant."
+}

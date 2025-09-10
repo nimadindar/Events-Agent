@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "LHAASO Galactic Plane \\gamma-rays Strongly Constrain Heavy Dark Matter",
+  "authors": [
+    "Celine Boehm",
+    "Ranjan Laha",
+    "Tarak Nath Maity"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper analyzes high-energy diffuse \\gamma-rays from the Galactic plane observed by LHAASO to search for signatures of heavy decaying and annihilating dark matter, computing the expected photon flux from both Galactic and extragalactic dark matter.",
+  "url": "http://arxiv.org/abs/2509.07982v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper analyzes data from \"LHAASO, a ground-based observatory,\" which is a type of scientific survey. The data analyzed, \"high energy diffuse \\gamma-rays from the Galactic plane,\" can be considered a form of survey data, making it relevant to the 'Survey data' aspect of the query."
+}

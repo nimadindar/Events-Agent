@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Biased Tales: Cultural and Topic Bias in Generating Children's Stories",
+  "authors": [
+    "Donya Rooein",
+    "Vilém Zouhar",
+    "Debora Nozza",
+    "Dirk Hovy"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper introduces Biased Tales, a comprehensive dataset designed to analyze how cultural and gender stereotypes influence protagonists' attributes and story elements in LLM-generated children's stories, uncovering striking biases.",
+  "url": "http://arxiv.org/abs/2509.07908v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper introduces \"Biased Tales, a comprehensive dataset designed to analyze how biases influence protagonists' attributes and story elements in LLM-generated stories.\" This is a clear example of a 'Contextual dataset' used for analyzing specific attributes and biases within generated narratives."
+}

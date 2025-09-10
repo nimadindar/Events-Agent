@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "SimpleQA Verified: A Reliable Factuality Benchmark to Measure Parametric Knowledge",
+  "authors": [
+    "Lukas Haas",
+    "Gal Yona",
+    "Giovanni D'Antonio",
+    "Sasha Goldshtein",
+    "Dipanjan Das"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper introduces SimpleQA Verified, a 1,000-prompt benchmark for evaluating Large Language Model (LLM) short-form factuality, addressing limitations in OpenAI's SimpleQA through a rigorous multi-stage filtering process.",
+  "url": "http://arxiv.org/abs/2509.07968v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper introduces a \"1,000-prompt benchmark\" for evaluating LLMs, which can be considered a form of contextual dataset used for evaluation. The focus on factuality and addressing limitations in existing benchmarks implies a need for well-defined contextual information."
+}

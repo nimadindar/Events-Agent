@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Quantum Transport Reservoir Computing",
+  "authors": [
+    "Yecheng Jing",
+    "Pengfei Wang",
+    "Shuai Zhang",
+    "Zhoujie Zeng",
+    "Shi-Jun Liang",
+    "Wei Chen"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "Reservoir computing (RC), a neural network designed for temporal data, enables efficient computation with low-cost training and direct physical implementation. Recently, quantum RC has opened new possibilities for conventional RC and introduced novel ideas to tackle open problems in quantum physics and advance quantum technologies. Despite its promise, it faces challenges, including physical realization, output readout, and measurement-induced back-action. Here, we propose to implement quantum R",
+  "url": "http://arxiv.org/abs/2509.07778v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper explicitly mentions \"Reservoir computing (RC), a neural network designed for temporal data\", which directly relates to the temporal aspect of the search query. While it doesn't cover spatial or point processes, the strong emphasis on temporal data makes it relevant."
+}

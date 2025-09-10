@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "ImportSnare: Directed \"Code Manual\" Hijacking in Retrieval-Augmented Code Generation",
+  "authors": [
+    "Kai Ye",
+    "Liangcai Su",
+    "Chenxiong Qian"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper addresses the functional deficiencies and security vulnerabilities in LLM-generated code by proposing ImportSnare, a method that enhances correctness and security through directed \"code manual\" hijacking in Retrieval-Augmented Generation (RAG).",
+  "url": "http://arxiv.org/abs/2509.07941v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"Retrieval-Augmented Generation (RAG)\" and leveraging \"external code manuals\" to improve code generation. These \"code manuals\" can be considered a form of contextual dataset that provides relevant information for the task, making it tangentially relevant to 'Contextual dataset'."
+}

@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "CAViAR: Critic-Augmented Video Agentic Reasoning",
+  "authors": [
+    "Sachit Menon",
+    "Ahmet Iscen",
+    "Arsha Nagrani",
+    "Tobias Weyand",
+    "Carl Vondrick",
+    "Cordelia Schmid"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper explores leveraging existing perception capabilities for complex video reasoning, developing a Critic-Augmented Video Agentic Reasoning (CAViAR) framework to address performance limitations in tasks requiring complex reasoning on longer and more intricate videos.",
+  "url": "http://arxiv.org/abs/2509.07680v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"complex reasoning on videos\" and \"complex video reasoning,\" which implies the use of contextual information within video data. While not explicitly using the term \"contextual dataset,\" the nature of the problem it addresses is highly related to understanding context in data."
+}

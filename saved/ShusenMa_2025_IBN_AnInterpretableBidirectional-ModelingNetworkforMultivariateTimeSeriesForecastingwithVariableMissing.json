@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "IBN: An Interpretable Bidirectional-Modeling Network for Multivariate Time Series Forecasting with Variable Missing",
+  "authors": [
+    "Shusen Ma",
+    "Tianhao Zhang",
+    "Qijiu Xia",
+    "Yun-Bo Zhao"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "Multivariate time series forecasting (MTSF) often faces challenges from missing variables, which hinder conventional spatial-temporal graph neural networks in modeling inter-variable correlations. While GinAR addresses variable missing using attention-based imputation and adaptive graph learning for the first time, it lacks interpretability and fails to capture more latent temporal patterns due to its simple recursive units (RUs). To overcome these limitations, we propose the Interpretable Bidir",
+  "url": "http://arxiv.org/abs/2509.07725v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "The paper directly addresses \"Multivariate time series forecasting\" and explicitly mentions \"spatial-temporal graph neural networks\", which are highly relevant to the 'Spatio Temporal' aspect of the query. The focus on modeling inter-variable correlations in a spatio-temporal context makes it very useful."
+}

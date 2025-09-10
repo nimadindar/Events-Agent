@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Visual-TableQA: Open-Domain Benchmark for Reasoning over Table Images",
+  "authors": [
+    "Boammani Aser Lompo",
+    "Marc Haraoui"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper introduces Visual-TableQA, a large-scale, open-domain multimodal dataset designed to evaluate and enhance visual reasoning over complex tabular data, addressing limitations in current benchmarks for vision-language models.",
+  "url": "http://arxiv.org/abs/2509.07966v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "The paper introduces \"Visual-TableQA, a large-scale, open-domain multimodal dataset\" specifically for \"visual reasoning over complex tabular data.\" This directly aligns with the 'Contextual dataset' aspect of the query, as it provides a dataset with rich contextual information for reasoning."
+}

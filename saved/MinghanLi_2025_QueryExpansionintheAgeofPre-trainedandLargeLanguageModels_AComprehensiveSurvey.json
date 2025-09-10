@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "Query Expansion in the Age of Pre-trained and Large Language Models: A Comprehensive Survey",
+  "authors": [
+    "Minghan Li",
+    "Xinxuan Lv",
+    "Junjie Zou",
+    "Tongna Chen",
+    "Chao Zhang",
+    "Suchao An",
+    "Ercong Nie",
+    "Guodong Zhou"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "Modern information retrieval (IR) must bridge short, ambiguous queries and ever more diverse, rapidly evolving corpora. Query Expansion (QE) remains a key mechanism for mitigating vocabulary mismatch, but the design space has shifted markedly with pre-trained language models (PLMs) and large language models (LLMs). This survey synthesizes the field from three angles: (i) a four-dimensional framework of query expansion - from the point of injection (explicit vs. implicit QE), through grounding an",
+  "url": "http://arxiv.org/abs/2509.07794v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper is a survey on Query Expansion, which is a technique used in information retrieval. While it doesn't directly address spatio-temporal point processes or survey data, it discusses how queries evolve over time and how models handle diverse and evolving corpora, which has a tangential connection to temporal aspects and contextual datasets."
+}

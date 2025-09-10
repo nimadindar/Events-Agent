@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Dynamical Dark Energy or Modified Gravity? Signatures in Gravitational Wave Propagation",
+  "authors": [
+    "Purnendu Karmakar",
+    "Sandeep Haridasu"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This study discusses the implications of recent DESI Baryon Acoustic Oscillations (BAO) DR2 and DESyr5 supernovae datasets for modified gravity, employing a model-independent approach to reconstruct dark energy density and estimate perturbation-level quantities.",
+  "url": "http://arxiv.org/abs/2509.07976v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly mentions using \"DESI Baryon Acoustic Oscillations (BAO) DR2 and DESyr5 compilation of supernovae (SNe) datasets,\" which are large-scale astronomical survey datasets. This directly relates to the 'Survey data' aspect of the query."
+}

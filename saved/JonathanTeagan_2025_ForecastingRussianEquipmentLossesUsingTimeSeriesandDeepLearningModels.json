@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Forecasting Russian Equipment Losses Using Time Series and Deep Learning Models",
+  "authors": [
+    "Jonathan Teagan"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This study applies a range of forecasting techniques,including ARIMA, Prophet, Long Short Term Memory networks (LSTM), Temporal Convolutional Networks (TCN), and XGBoost, to model and predict Russian equipment losses during the ongoing war in Ukraine. Drawing on daily and monthly open-source intelligence (OSINT) data from WarSpotting, we aim to assess trends in attrition, evaluate model performance, and estimate future loss patterns through the end of 2025. Our findings show that deep learning m",
+  "url": "http://arxiv.org/abs/2509.07813v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper focuses on 'time series forecasting' and uses 'Temporal Convolutional Networks', which are clearly temporal aspects. While it doesn't explicitly mention 'spatial', the context of 'Russian equipment losses' and 'war in Ukraine' implies an underlying spatial component, even if not directly modeled as spatio-temporal."
+}

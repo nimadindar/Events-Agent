@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Deep Learning-Based Burned Area Mapping Using Bi-Temporal Siamese Networks and AlphaEarth Foundation Datasets",
+  "authors": [
+    "Seyd Teymoor Seydi"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This study presents a novel approach to automated burned area mapping using the AlphaEArth dataset combined with the Siamese U-Net deep learning architecture. The AlphaEArth Dataset, comprising high-resolution optical and thermal infrared imagery with comprehensive ground-truth annotations, provides an unprecedented resource for training robust burned area d",
+  "url": "http://arxiv.org/abs/2509.07852v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper explicitly mentions \"Bi-Temporal Siamese Networks\" and \"burned area mapping\", indicating a focus on analyzing data across time, which is a key aspect of spatio-temporal analysis."
+}
