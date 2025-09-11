@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Towards an application of fourth-order shear statistics II: Efficient estimation of fourth-order shear correlation functions and an application to the DES Y3 data",
+  "authors": [
+    "Lucas Porth",
+    "Elena Silvestre-Rosello",
+    "Peter Schneider",
+    "Martina Larma"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper focuses on the efficient estimation of fourth-order shear correlation functions and applies this method to data from Stage-III lensing surveys, specifically the DES Y3 data, to extract cosmological information.",
+  "url": "http://arxiv.org/abs/2509.07974v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "This paper explicitly mentions 'Stage-III lensing surveys' and 'application to the DES Y3 data', directly indicating the use and analysis of survey data in a cosmological context. While the focus is on lensing statistics, the direct reference to 'surveys' and 'data' makes it relevant to 'Survey data'."
+}
