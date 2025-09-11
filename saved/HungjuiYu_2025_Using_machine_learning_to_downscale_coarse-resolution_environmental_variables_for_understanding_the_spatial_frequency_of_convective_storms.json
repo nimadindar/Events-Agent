@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Using machine learning to downscale coarse-resolution environmental variables for understanding the spatial frequency of convective storms",
+  "authors": [
+    "Hungjui Yu",
+    "Lander Ver Hoef",
+    "Kristen L. Rasmussen",
+    "Imme Ebert-Uphoff"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "Global climate models (GCMs), typically run at ~100-km resolution, capture large-scale environmental conditions but cannot resolve convection and cloud processes at kilometer scales. Convection-permitting models offer higher-resolution simulations that explicitly simulate convection but are computationally expensive and impractical for large ensemble runs. This study explores machine learning (ML) as a bridge between these approaches. We train simple, pixel-based neural networks to predict conve",
+  "url": "http://arxiv.org/abs/2509.08802v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title mentions \"spatial frequency\" and the summary discusses \"coarse-resolution environmental variables\" and \"convection and cloud processes at kilometer scales\", which implies spatio-temporal data. While it doesn't explicitly mention \"point process\" or \"survey data\", the focus on spatial and temporal aspects of environmental data makes it relevant to \"Spatio Temporal\"."
+}

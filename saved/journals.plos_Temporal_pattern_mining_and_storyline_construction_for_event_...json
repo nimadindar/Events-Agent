@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Temporal pattern mining and storyline construction for event ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper proposes a framework to systematically model event evolution by analyzing temporal patterns and semantic correlations of hashtags.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0327596",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the title mentions 'Temporal pattern mining' and the summary discusses 'temporal patterns', which is relevant to the 'Spatio Temporal' aspect of the query. However, it lacks explicit mention of spatial, point process, or contextual elements, leading to a moderate score."
+}

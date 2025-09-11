@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "PianoVAM: A Multimodal Piano Performance Dataset",
+  "authors": [
+    "Yonghyun Kim",
+    "Junhyung Park",
+    "Joonhyung Bae",
+    "Kirak Kim",
+    "Taegyun Kwon",
+    "Alexander Lerch",
+    "Juhan Nam"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "The multimodal nature of music performance has driven increasing interest in data beyond the audio domain within the music information retrieval (MIR) community. This paper introduces PianoVAM, a comprehensive piano performance dataset that includes videos, audio, MIDI, hand landmarks, fingering labels, and rich metadata. The dataset was recorded using a Disklavier piano, capturing audio and MIDI from amateur pianists during their daily practice sessions, alongside synchronized top-view videos i",
+  "url": "http://arxiv.org/abs/2509.08800v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title explicitly mentions \"Dataset\" and the summary describes a \"multimodal piano performance dataset\" with \"synchronized top-view videos\". This is relevant to \"Contextual dataset\" and potentially \"Spatio Temporal\" due to the video aspect, even though it doesn't mention point processes or survey data."
+}

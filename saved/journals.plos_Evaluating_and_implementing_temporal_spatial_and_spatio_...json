@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Evaluating and implementing temporal, spatial, and spatio ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper evaluates various temporal, spatial, and spatio-temporal detection methods using syndromic surveillance data, comparing their performance in detecting simulated injections.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184419",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the title and summary directly address 'temporal, spatial, and spatio-temporal detection methods' and 'syndromic surveillance data', which aligns with the broader themes of spatio-temporal analysis and survey data."
+}

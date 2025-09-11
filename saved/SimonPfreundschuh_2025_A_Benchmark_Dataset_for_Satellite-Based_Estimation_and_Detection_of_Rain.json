@@ -1,0 +1,31 @@
+{
+  "source": "arxiv",
+  "title": "A Benchmark Dataset for Satellite-Based Estimation and Detection of Rain",
+  "authors": [
+    "Simon Pfreundschuh",
+    "Malarvizhi Arulraj",
+    "Ali Behrangi",
+    "Linda Bogerd",
+    "Alan James Peixoto Calheiros",
+    "Daniele Casella",
+    "Neda Dolatabadi",
+    "Clement Guilloteau",
+    "Jie Gong",
+    "Christian D. Kummerow",
+    "Pierre Kirstetter",
+    "Gyuwon Lee",
+    "Maximilian Maahn",
+    "Lisa Milani",
+    "Giulia Panegrossi",
+    "Rayana Palharini",
+    "Veljko Petković",
+    "Soorok Ryu",
+    "Paolo Sanò",
+    "Jackson Tan"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper introduces a standardized benchmark dataset for satellite-based precipitation retrieval, addressing the need for fair comparisons and algorithm development in tracking the global distribution and evolution of precipitation.",
+  "url": "http://arxiv.org/abs/2509.08816v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title mentions \"Benchmark Dataset\" and the summary discusses \"global distribution and evolution of precipitation\" and \"satellite observations\", which implies spatio-temporal data. This is relevant to \"Spatio Temporal\" and \"Contextual dataset\"."
+}

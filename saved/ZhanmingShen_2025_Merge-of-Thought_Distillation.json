@@ -1,0 +1,20 @@
+{
+  "source": "arxiv",
+  "title": "Merge-of-Thought Distillation",
+  "authors": [
+    "Zhanming Shen",
+    "Zeyu Qin",
+    "Zenan Huang",
+    "Hao Chen",
+    "Jiaqi Hu",
+    "Yihong Zhuang",
+    "Guoshan Lu",
+    "Gang Chen",
+    "Junbo Zhao"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper addresses efficient reasoning distillation for long chain-of-thought models, considering the availability of multiple candidate teachers and growing CoT corpora. It highlights that optimal teacher selection varies across students and datasets, aiming to unify multiple teachers' reasoning abilities.",
+  "url": "http://arxiv.org/abs/2509.08814v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary mentions \"growing CoT corpora\" and \"across datasets\", which directly relates to the \"Contextual dataset\" aspect of the query. While it doesn't mention spatio-temporal or point processes, the focus on dataset utilization makes it relevant."
+}

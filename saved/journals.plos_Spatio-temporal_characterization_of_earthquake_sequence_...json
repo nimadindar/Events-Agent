@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Spatio-temporal characterization of earthquake sequence ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This study uses point process modeling to understand interactions between earthquakes and spatial, temporal, and covariate effects, viewing each earthquake as a point related to space, time, and magnitude.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301975",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the article explicitly mentions 'Point process modeling', 'spatio-temporal characterization', and treats each earthquake event as a 'point related to space (latitude and longitude coordinates), time of occurrence, and magnitude', directly aligning with the core concepts of spatio-temporal point processes."
+}

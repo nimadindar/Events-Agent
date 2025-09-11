@@ -1,0 +1,20 @@
+{
+  "source": "arxiv",
+  "title": "SocialNav-SUB: Benchmarking VLMs for Scene Understanding in Social Robot Navigation",
+  "authors": [
+    "Michael J. Munje",
+    "Chen Tang",
+    "Shuijing Liu",
+    "Zichao Hu",
+    "Yifeng Zhu",
+    "Jiaxun Cui",
+    "Garrett Warnell",
+    "Joydeep Biswas",
+    "Peter Stone"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper focuses on benchmarking Vision-Language Models (VLMs) for scene understanding in social robot navigation, specifically inferring spatial-temporal aspects of complex social navigation scenes. It highlights the need for robust scene understanding in dynamic, human-centered environments.",
+  "url": "http://arxiv.org/abs/2509.08757v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The summary explicitly mentions \"inferring the spatial-temporal\" aspects of scenes and \"benchmarking\" which implies the use of a dataset, making it relevant to \"Spatio Temporal\" and \"Contextual dataset\"."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Unidimensional semi-discrete partial optimal transport",
+  "authors": [
+    "Adrien Cances",
+    "Hugo Leclerc"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper studies the semi-discrete formulation of one-dimensional partial optimal transport, where a probability density is partially transported to a finite sum of Dirac masses. It finds applications in risk management, crowd motion modeling, and sliced partial transport algorithms for point cloud registration.",
+  "url": "http://arxiv.org/abs/2509.08799v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary mentions \"finite sum of Dirac masses\" and \"point cloud registration\", which are related to \"Point Process\" and \"Spatio Temporal\" (implicitly through point clouds). The \"optimal transport\" can be seen as a process, making it relevant to the query."
+}

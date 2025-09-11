@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Comprehensive framework for visualizing and analyzing ...",
+  "authors": [
+    "A Dmowska"
+  ],
+  "publish_date": "2017",
+  "summary": "This paper presents a comprehensive framework for visualizing and analyzing diversity data, fulfilling specific requirements for such analysis.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174993",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because while the title and summary are general, the concept of 'analyzing diversity data' could potentially involve spatio-temporal or contextual aspects, making it tangentially relevant. However, without more specific keywords, a higher score is not justified."
+}

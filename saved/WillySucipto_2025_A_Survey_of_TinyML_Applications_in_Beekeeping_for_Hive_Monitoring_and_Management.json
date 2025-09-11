@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "A Survey of TinyML Applications in Beekeeping for Hive Monitoring and Management",
+  "authors": [
+    "Willy Sucipto",
+    "Jianlong Zhou",
+    "Ray Seung Min Kwon",
+    "Fang Chen"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper surveys TinyML applications for hive monitoring and management in beekeeping, addressing challenges of traditional inspections and remote apiaries. It highlights the use of IoT and TinyML for low-power, real-time monitoring on edge devices.",
+  "url": "http://arxiv.org/abs/2509.08822v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "The title explicitly states \"A Survey\", which directly matches the \"Survey data\" keyword in the prompt. The abstract confirms it is a survey of applications in a specific domain."
+}

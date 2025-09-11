@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Calib3R: A 3D Foundation Model for Multi-Camera to Robot Calibration and 3D Metric-Scaled Scene Reconstruction",
+  "authors": [
+    "Davide Allegro",
+    "Matteo Terreran",
+    "Stefano Ghidoni"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper introduces Calib3R, a 3D Foundation Model for multi-camera to robot calibration and 3D metric-scaled scene reconstruction. It addresses the need for accurate 3D scene representation from RGB images for robot interaction tasks.",
+  "url": "http://arxiv.org/abs/2509.08813v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary mentions \"3D scene representation\" and \"RGB images\" which implies a contextual dataset with spatial information. While not explicitly spatio-temporal point process or survey data, the focus on 3D scene data makes it relevant to \"Contextual dataset\"."
+}

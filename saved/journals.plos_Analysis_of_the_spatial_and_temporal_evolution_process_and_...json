@@ -1,0 +1,14 @@
+{
+  "source": "journals.plos",
+  "title": "Analysis of the spatial and temporal evolution process and ...",
+  "authors": [
+    "Chen J",
+    "Cai C",
+    "Zhang T"
+  ],
+  "publish_date": "2023",
+  "summary": "This paper analyzes the spatial and temporal evolution process and development trend of innovation capacity in China's sports industry using spatial panel data and exploratory spatial data analysis (ESDA) and Spatial-temporal correlation analysis.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0289977",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the title and summary clearly focus on 'spatial and temporal evolution process' and use 'Spatial-temporal correlation analysis', which is highly relevant to spatio-temporal analysis. While not directly mentioning point processes or contextual datasets, the core spatio-temporal aspect is strong."
+}

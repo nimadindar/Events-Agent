@@ -1,0 +1,14 @@
+{
+  "source": "journals.plos",
+  "title": "Spatial and temporal distribution characteristics and ...",
+  "authors": [
+    "Ding Q",
+    "Yang Z",
+    "Huang Z"
+  ],
+  "publish_date": "2024",
+  "summary": "This study explores the spatial and temporal distribution characteristics and geographic context factors of civilized villages in China using methods like nearest neighbor index, kernel density, and spatiotemporal rearrangement scanning statistical analysis.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0305591",
+  "usefulness_score": 75,
+  "usefulness_reason": "Score 75 assigned because the title and summary explicitly mention 'spatial and temporal distribution characteristics' and 'geographic contexts', which are highly relevant to spatio-temporal and contextual datasets. The use of statistical analysis methods also aligns with the broader topic."
+}

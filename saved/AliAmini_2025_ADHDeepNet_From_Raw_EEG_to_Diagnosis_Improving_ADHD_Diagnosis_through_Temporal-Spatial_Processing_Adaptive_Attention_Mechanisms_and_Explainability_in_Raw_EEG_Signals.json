@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "ADHDeepNet From Raw EEG to Diagnosis: Improving ADHD Diagnosis through Temporal-Spatial Processing, Adaptive Attention Mechanisms, and Explainability in Raw EEG Signals",
+  "authors": [
+    "Ali Amini",
+    "Mohammad Alijanpour",
+    "Behnam Latifi",
+    "Ali Motie Nasrabadi"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper presents a novel method to improve ADHD diagnosis precision and timeliness by leveraging Deep Learning (DL) approaches and electroencephalogram (EEG) signals. We introduce ADHDeepNet, which focuses on Temporal-Spatial Processing, Adaptive Attention Mechanisms, and Explainability in Raw EEG Signals for ADHD diagnosis.",
+  "url": "http://arxiv.org/abs/2509.08779v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title and abstract explicitly mention \"Temporal-Spatial Processing\" of EEG signals, which directly relates to the \"Spatio Temporal\" aspect of the query. While it doesn't mention point processes, contextual datasets, or survey data, the strong emphasis on spatio-temporal analysis makes it highly relevant."
+}

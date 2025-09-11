@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Spatio-Temporal Gap Analysis of OBIS-SEAMAP Project Data",
+  "authors": [
+    "CY Kot"
+  ],
+  "publish_date": "2010",
+  "summary": "This paper summarizes all datasets published on OBIS-SEAMAP up to February 2009, focusing on their spatial and temporal aspects, with seabirds comprising the majority of records.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012990",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the title explicitly mentions 'Spatio-Temporal' and 'Data', and the content refers to 'datasets' being summarized spatially and temporally, which is relevant to spatio-temporal analysis and contextual/survey data."
+}

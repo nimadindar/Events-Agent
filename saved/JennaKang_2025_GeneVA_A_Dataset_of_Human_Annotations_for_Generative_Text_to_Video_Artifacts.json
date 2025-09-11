@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "GeneVA: A Dataset of Human Annotations for Generative Text to Video Artifacts",
+  "authors": [
+    "Jenna Kang",
+    "Maria Silva",
+    "Patsorn Sangkloy",
+    "Kenneth Chen",
+    "Niall Williams",
+    "Qi Sun"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "Recent advances in probabilistic generative models have extended capabilities from static image synthesis to text-driven video generation. However, the inherent randomness of their generation process can lead to unpredictable artifacts, such as impossible physics and temporal inconsistency. Progress in addressing these challenges requires systematic benchmarks, yet existing datasets primarily focus on generative images due to the unique spatio-temporal complexities of videos. To bridge this gap,",
+  "url": "http://arxiv.org/abs/2509.08818v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title mentions \"Dataset\" and the summary mentions \"spatio-temporal complexities of videos\" and \"existing datasets\". While it doesn't explicitly mention \"point process\" or \"survey data\", the focus on spatio-temporal aspects and dataset creation makes it somewhat relevant to \"Spatio Temporal\" and \"Contextual dataset\"."
+}

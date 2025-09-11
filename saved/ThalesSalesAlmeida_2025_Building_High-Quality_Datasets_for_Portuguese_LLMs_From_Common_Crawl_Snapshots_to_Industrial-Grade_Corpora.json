@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Building High-Quality Datasets for Portuguese LLMs: From Common Crawl Snapshots to Industrial-Grade Corpora",
+  "authors": [
+    "Thales Sales Almeida",
+    "Rodrigo Nogueira",
+    "Helio Pedrini"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper explores scalable methods for building web-based corpora for Large Language Models (LLMs) in Portuguese, aiming to construct high-quality training datasets. It discusses the importance of data quality and composition for LLM performance.",
+  "url": "http://arxiv.org/abs/2509.08824v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title and abstract explicitly mention \"Building High-Quality Datasets\" and \"training data\", which is directly relevant to the \"Contextual dataset\" aspect of the query. While it doesn't mention spatio-temporal or point processes, the strong focus on dataset creation makes it useful."
+}

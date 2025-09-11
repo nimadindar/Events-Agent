@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "SWE-Mirror: Scaling Issue-Resolving Datasets by Mirroring Issues Across Repositories",
+  "authors": [
+    "Junhao Wang",
+    "Daoguang Zan",
+    "Shulin Xin",
+    "Siyao Liu",
+    "Yurong Wu",
+    "Kai Shen"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper addresses the challenge of creating large-scale verifiable training datasets for issue-resolving tasks. It proposes SWE-Mirror, a method to scale issue-resolving datasets by mirroring issues across repositories, maximizing the utilization of existing Gym environments and rich data from human-reported problems.",
+  "url": "http://arxiv.org/abs/2509.08724v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title and summary explicitly mention \"datasets\" and \"scaling issue-resolving datasets\", which directly relates to the \"Contextual dataset\" aspect of the query. While it doesn't mention spatio-temporal or point processes, the focus on dataset creation and utilization makes it relevant."
+}
