@@ -1,0 +1,22 @@
+{
+  "source": "arxiv",
+  "title": "FinZero: Launching Multi-modal Financial Time Series Forecast with Large Reasoning Model",
+  "authors": [
+    "Yanlong Wang",
+    "Jian Xu",
+    "Fei Ma",
+    "Hongkang Zhang",
+    "Hang Yu",
+    "Tiantian Gao",
+    "Yu Wang",
+    "Haochen You",
+    "Shao-Lun Huang",
+    "Danny Dongning Sun",
+    "Xiao-Ping Zhang"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper introduces FinZero, a framework for multi-modal financial time series forecasting using a large reasoning model. It addresses the challenges of information loss from data standardization and limitations of fixed variable numbers or lookback window lengths in traditional time series models.",
+  "url": "http://arxiv.org/abs/2509.08742v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper focuses on \"Financial Time Series Forecast\" and \"Multi-modal\" data, which aligns with the \"Spatio Temporal\" (primarily temporal) and \"Contextual dataset\" aspects of the query. While not explicitly a point process, the temporal nature is relevant."
+}

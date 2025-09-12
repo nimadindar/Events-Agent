@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Quantifying Accuracy of an Event-Based Star Tracker via Earth's Rotation",
+  "authors": [
+    "Dennis Melamed",
+    "Connor Hashemi",
+    "Scott McCloskey"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper analyzes the accuracy of an event-based camera (EBC) star tracking system by utilizing Earth's motion as ground truth. It focuses on detecting and tracking events (stars) in space and time, which is relevant to spatio-temporal analysis and potentially point processes.",
+  "url": "http://arxiv.org/abs/2509.08794v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper discusses \"Event-based cameras\" and \"star tracking\", which involves detecting events in space and time, making it relevant to \"Spatio Temporal\". The \"event-based\" nature also suggests a connection to \"Point Process\" concepts."
+}
