@@ -1,0 +1,26 @@
+{
+  "source": "arxiv",
+  "title": "SpatialVID: A Large-Scale Video Dataset with Spatial Annotations",
+  "authors": [
+    "Jiahao Wang",
+    "Yufeng Yuan",
+    "Rujie Zheng",
+    "Youtian Lin",
+    "Jian Gao",
+    "Lin-Zhuo Chen",
+    "Yajie Bao",
+    "Yi Zhang",
+    "Chang Zeng",
+    "Yanxi Zhou",
+    "Xiaoxiao Long",
+    "Hao Zhu",
+    "Zhaoxiang Zhang",
+    "Xun Cao",
+    "Yao Yao"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper introduces SpatialVID, a large-scale video dataset with spatial annotations, addressing the scarcity of high-quality training data for spatial intelligence, spatial reconstruction, and world exploration in real-world dynamic scenes.",
+  "url": "http://arxiv.org/abs/2509.09676v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper directly relates to \"Spatio Temporal\" through \"Spatial Annotations\" and \"real-world dynamic scenes\". The introduction of a \"Large-Scale Video Dataset\" is highly relevant to \"Contextual dataset\". While \"Point Process\" and \"Survey data\" are not explicitly mentioned, the core themes align well with the broader search criteria."
+}

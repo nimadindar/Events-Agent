@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "Environmental vs. intrinsic quenching at cosmic noon: Predictions from cosmological hydrodynamical simulations for VLT-MOONRISE",
+  "authors": [
+    "Paul H. Goubert",
+    "Asa F. L. Bluck",
+    "Joanna M. Piotrowska",
+    "Paul Torrey",
+    "Roberto Maiolino",
+    "Thomas Pinto Franco",
+    "Camilo Casimiro",
+    "Nicolas Cea"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper investigates the quenching of simulated galaxies across cosmic time, focusing on intrinsic and environmental mechanisms. It provides predictions for the VLT-MOONRISE wide-field spectroscopic galaxy survey, examining the quenching of centrals, high-mass satellites, and low-mass satellites from cosmological hydrodynamical simulations.",
+  "url": "http://arxiv.org/abs/2509.09626v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "Score 75 assigned because the paper directly addresses 'Spatio Temporal' aspects through 'galaxies across cosmic time' and 'Environmental vs. intrinsic quenching'. It also explicitly mentions 'galaxy survey', which aligns with 'Survey data'. While 'Point Process' is not explicitly stated, the study of individual galaxies can be considered as points in space-time, making it relevant to the broader theme."
+}
