@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Explaining Concept Drift through the Evolution of Group Counterfactuals",
+  "authors": [
+    "Ignacy Stępka",
+    "Jerzy Stefanowski"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper introduces a novel methodology to explain concept drift by analyzing the temporal evolution of group-based counterfactual explanations (GCEs). The approach tracks shifts in GCEs' clusters to understand how and why a model's decision-making logic changes in dynamic environments.",
+  "url": "http://arxiv.org/abs/2509.09616v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary explicitly mentions 'temporal evolution' and 'dynamic environments' which directly relates to the temporal aspect of spatio-temporal. While not explicitly spatial, the temporal focus is strong enough to be relevant to the broader 'Spatio Temporal' topic."
+}

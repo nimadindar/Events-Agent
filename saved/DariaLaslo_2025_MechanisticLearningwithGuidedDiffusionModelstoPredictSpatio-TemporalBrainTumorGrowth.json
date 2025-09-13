@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Mechanistic Learning with Guided Diffusion Models to Predict Spatio-Temporal Brain Tumor Growth",
+  "authors": [
+    "Daria Laslo",
+    "Efthymios Georgiou",
+    "Marius George Linguraru",
+    "Andreas Rauschecker",
+    "Sabine Muller",
+    "Catherine R. Jutzeler",
+    "Sarah Bruningk"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper proposes a hybrid mechanistic learning framework to predict the spatio-temporal progression of brain tumors. It combines a mathematical tumor growth model with a guided denoising diffusion implicit model to synthesize future MRIs, capturing temporal tumor dynamics.",
+  "url": "http://arxiv.org/abs/2509.09610v1",
+  "usefulness_score": 95,
+  "usefulness_reason": "The title and summary explicitly mention and focus on \"spatio-temporal progression\" in the context of brain tumors, directly aligning with the 'Spatio Temporal' topic."
+}

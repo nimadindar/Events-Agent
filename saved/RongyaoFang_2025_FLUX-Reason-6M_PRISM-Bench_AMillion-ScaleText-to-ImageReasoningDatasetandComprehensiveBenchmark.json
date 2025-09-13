@@ -1,0 +1,21 @@
+{
+  "source": "arxiv",
+  "title": "FLUX-Reason-6M & PRISM-Bench: A Million-Scale Text-to-Image Reasoning Dataset and Comprehensive Benchmark",
+  "authors": [
+    "Rongyao Fang",
+    "Aldrich Yu",
+    "Chengqi Duan",
+    "Linjiang Huang",
+    "Shuai Bai",
+    "Yuxuan Cai",
+    "Kun Wang",
+    "Si Liu",
+    "Xihui Liu",
+    "Hongsheng Li"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper introduces FLUX-Reason-6M and PRISM-Bench, a massive, large-scale, reasoning-focused dataset and comprehensive evaluation benchmark for text-to-image models. It addresses the lack of such resources in open-source systems.",
+  "url": "http://arxiv.org/abs/2509.09680v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper introduces a \"large-scale, reasoning-focused dataset\" and \"massive dataset\", which directly relates to \"Contextual dataset\"."
+}

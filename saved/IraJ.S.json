@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Conditioning on PDE Parameters to Generalise Deep Learning Emulation of Stochastic and Chaotic Dynamics",
+  "authors": [
+    "Ira J. S. Shokar",
+    "Rich R. Kerswell",
+    "Peter H. Haynes"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper presents a deep learning emulator for stochastic and chaotic spatio-temporal systems, explicitly conditioned on the parameter values of the underlying partial differential equations (PDEs). The approach involves pre-training and fine-tuning to generalize across a broad range of parameter values.",
+  "url": "http://arxiv.org/abs/2509.09599v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "The title and summary directly address \"stochastic and chaotic spatio-temporal systems\", which is a core aspect of the 'Spatio Temporal' topic."
+}
