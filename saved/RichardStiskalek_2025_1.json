@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "1.8 per cent measurement of $H_0$ from Cepheids alone",
+  "authors": [
+    "Richard Stiskalek",
+    "Harry Desmond",
+    "Eleni Tsaprazi",
+    "Alan Heavens",
+    "Guilhem Lavaux",
+    "Stuart McAlpine",
+    "Jens Jasche"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper presents a 1.8% measurement of $H_0$ using Cepheid periods and magnitudes, anchor distances, and host galaxy redshifts from SH0ES data. It introduces improvements in selection modeling and error propagation.",
+  "url": "http://arxiv.org/abs/2509.09665v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly uses \"SH0ES data\" and discusses \"Cepheid periods and magnitudes\" and \"host galaxy redshifts,\" which are forms of survey data. While not directly about spatio-temporal *point processes*, it deals with spatio-temporal *measurements* from a survey."
+}

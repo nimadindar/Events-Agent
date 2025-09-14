@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "RSMA-Enhanced Data Collection in RIS-Assisted Intelligent Consumer Transportation Systems",
+  "authors": [
+    "Chunjie Wang",
+    "Xuhui Zhang",
+    "Wenchao Liu",
+    "Jinke Ren",
+    "Shuqiang Wang",
+    "Yanyan Shen",
+    "Kejiang Ye",
+    "Kim Fung Tsang"
+  ],
+  "publish_date": "11-09-2025",
+  "summary": "This paper investigates data collection enhancement in a reconfigurable intelligent surface (RIS)-empowered intelligent consumer transportation system (ICTS). It proposes a framework where a data center provides energy to roadside unit pairs during downlink, and these pairs use a hybrid RSMA and TDMA protocol for uplink data transmission.",
+  "url": "http://arxiv.org/abs/2509.09644v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper discusses data collection in intelligent transportation systems, which inherently involves spatio-temporal data. While it doesn't explicitly mention 'point process', the context of data collection in a dynamic spatial system makes it relevant to 'Spatio Temporal' and 'Contextual dataset'."
+}
