@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "The influence of contextual priming on discrete choice ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article investigates the influence of contextual priming on discrete choice, detailing survey design, administration, and the impact of survey context.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0312256",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title mentions \"contextual priming\" and the content extensively discusses \"Survey design and administration\" and \"context in which a survey takes place\", directly addressing \"Contextual dataset\" and \"Survey data\". While it doesn't explicitly mention spatio-temporal point processes, the contextual nature of survey data can be relevant."
+}

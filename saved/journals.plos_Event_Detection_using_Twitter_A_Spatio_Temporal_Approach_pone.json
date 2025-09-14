@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Event Detection using Twitter: A Spatio-Temporal Approach",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article discusses event detection using a spatio-temporal approach, viewing data points as incidences within a space-time cube and detailing data collection.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0097807",
+  "usefulness_score": 85,
+  "usefulness_reason": "The title explicitly mentions \"Spatio-Temporal Approach\" and \"Event Detection\", which can be related to \"Spatio Temporal Point Process\" (events occurring in space and time). The content also mentions \"data points, known as incidences, within a space-time cube\" and \"Data Collection\", which aligns with \"Contextual dataset\"."
+}

@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Evaluating and implementing temporal, spatial, and spatio ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article evaluates and implements temporal, spatial, and spatio-temporal methods using a training dataset of real NYC syndromic data for surveillance.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0184419",
+  "usefulness_score": 75,
+  "usefulness_reason": "The title mentions \"temporal, spatial, and spatio-temporal methods\" and the content discusses fitting these methods to a \"training dataset\" and \"syndromic data\", which aligns with \"Spatio Temporal\" and \"Contextual dataset\"."
+}

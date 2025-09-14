@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Early classification of spatio-temporal events using partial ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article focuses on the early classification of spatio-temporal events using partial data, discussing the nature of the dataset and its applications.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236331",
+  "usefulness_score": 85,
+  "usefulness_reason": "The title explicitly mentions \"spatio-temporal events\" and \"classification\", which is highly relevant to \"Spatio Temporal Point Process\". The content also mentions \"dataset\" and \"applications and datasets used\", aligning with \"Contextual dataset\"."
+}

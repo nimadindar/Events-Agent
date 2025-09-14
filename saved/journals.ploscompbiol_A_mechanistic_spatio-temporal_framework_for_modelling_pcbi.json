@@ -1,0 +1,12 @@
+{
+  "source": "journals.ploscompbiol",
+  "title": "A mechanistic spatio-temporal framework for modelling ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article proposes a mechanistic spatio-temporal framework for modeling, discussing nonhomogeneous Poisson processes, stationary point processes, and population density data.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005798",
+  "usefulness_score": 90,
+  "usefulness_reason": "The title explicitly mentions \"spatio-temporal framework for modelling\" and the content directly discusses \"nonhomogeneous Poisson processes\" and \"stationary point processes\", which are core to \"Spatio Temporal Point Process\". It also mentions \"data generated from a null model\" and \"Population Density Data\", which can be considered a \"Contextual dataset\"."
+}

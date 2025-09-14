@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "A machine learning analysis on survey data from 16 countries",
+  "authors": [
+    "Hajdu et al."
+  ],
+  "publish_date": "unknown",
+  "summary": "This article presents a machine learning analysis on survey data collected from 16 countries, detailing data availability and ethical approvals.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0276970",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title directly mentions \"survey data\", which is one of the key search terms. While it doesn't explicitly mention spatio-temporal point processes, the use of machine learning on survey data could involve contextual datasets and potentially spatio-temporal aspects, making it relevant but not directly focused."
+}

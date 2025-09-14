@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Analysis of the spatial and temporal evolution process and ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article analyzes the spatial and temporal evolution process, discussing relevant spatial data analysis and data sources.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0289977",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title mentions \"spatial and temporal evolution process\" and the content mentions \"spatial data analysis\" and \"data sources\", which is relevant to \"Spatio Temporal\" and \"Contextual dataset\". However, it doesn't explicitly mention \"point process\" or \"survey data\"."
+}
