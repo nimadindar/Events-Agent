@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Using social media to quantify spatial and temporal dynamics ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This study compares spatial and temporal patterns from Flickr photographs with traditional survey data to quantify nature recreation dynamics. It highlights the statistical relationship between social media data and survey data on a national scale.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200565",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the article directly addresses \"spatial and temporal patterns\" and \"survey data\", which are key aspects of \"Spatio Temporal\" and \"Survey data\". It also implicitly deals with a \"Contextual dataset\" (social media data)."
+}

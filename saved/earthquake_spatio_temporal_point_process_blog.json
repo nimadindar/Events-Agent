@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Spatio-temporal characterization of earthquake sequence ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article uses point process modeling, specifically the Hawkes process (a self-excited point process model), to understand earthquake sequences in space-time. It considers spatial, temporal, and covariate effects, which are relevant to contextual data.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301975",
+  "usefulness_score": 95,
+  "usefulness_reason": "Score 95 assigned because the article directly discusses \"Point process modeling\" and \"self-excited point process model\" (Hawkes process) in the context of \"space-time\" for earthquake sequences, which is highly relevant to \"Spatio Temporal Point Process\". It also mentions \"covariate effects\" which can be related to contextual data."
+}
