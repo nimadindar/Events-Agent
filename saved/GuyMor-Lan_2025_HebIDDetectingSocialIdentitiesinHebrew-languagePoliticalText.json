@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "HebID: Detecting Social Identities in Hebrew-language Political Text",
+  "authors": [
+    "Guy Mor-Lan",
+    "Naama Rivlin-Angert",
+    "Yael R. Kaplan",
+    "Tamir Sheafer",
+    "Shaul R. Shenhav"
+  ],
+  "publish_date": "21-08-2025",
+  "summary": "This paper introduces HebID, the first multilabel Hebrew corpus for social identity detection, comprising 5,536 sentences from Israeli politicians' Facebook posts. It addresses the challenge of political language intertwined with social identities in specific cultural contexts.",
+  "url": "http://arxiv.org/abs/2508.15483v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper introduces a corpus for social identity detection from political text, which can be considered a \"Contextual dataset\". However, it does not explicitly mention \"Spatio Temporal\" or \"Survey data\"."
+}

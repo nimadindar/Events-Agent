@@ -1,0 +1,28 @@
+{
+  "source": "arxiv",
+  "title": "Real-time small area estimation of food security in Zimbabwe: integrating mobile-phone and face-to-face surveys using joint multilevel regression and poststratification",
+  "authors": [
+    "Sahoko Ishida",
+    "Adam Howes",
+    "Valerie Bradley",
+    "Elizaveta Semenova",
+    "Theo Rashid",
+    "Silinganisiwe Dzumbunu",
+    "Sumali Bajaj",
+    "Gaurav Singhal",
+    "Dino Sejdinovic",
+    "Herbert Zvirere",
+    "Duccio Piovani",
+    "Silvia Passeri",
+    "Kusum Hachhethu",
+    "Arif Husain",
+    "George D. Kembo",
+    "Terrence Kairiza",
+    "Seth Flaxman"
+  ],
+  "publish_date": "06-05-2025",
+  "summary": "This paper focuses on real-time small area estimation of food security by integrating mobile-phone and face-to-face survey data in Zimbabwe. It highlights the use of scalable and temporally rich data sources for monitoring food security.",
+  "url": "http://arxiv.org/abs/2505.03517v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "The paper directly addresses \"real-time small area estimation\" and integrates \"mobile-phone and face-to-face surveys\", making it highly relevant to \"Spatio Temporal\" (real-time and small area) and \"Survey data\". The context of food security also implies a \"Contextual dataset\"."
+}

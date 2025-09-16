@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Forecasting Labor Demand: Predicting JOLT Job Openings using Deep Learning Model",
+  "authors": [
+    "Kyungsu Kim"
+  ],
+  "publish_date": "24-03-2025",
+  "summary": "This thesis investigates the effectiveness of Long Short Term Memory models in forecasting Job Openings and Labor Turnover Survey data in the United States. It uses multiple economic indicators to predict JOLT job openings and compares its performance with conventional autoregressive approaches.",
+  "url": "http://arxiv.org/abs/2503.19048v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper directly uses \"Job Openings and Labor Turnover Survey data\" for forecasting, which is highly relevant to \"Survey data\". The forecasting aspect implies a \"Spatio Temporal\" component (temporal forecasting). The economic indicators can be seen as a \"Contextual dataset\"."
+}

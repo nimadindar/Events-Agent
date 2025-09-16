@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Reprocessing of the Parkes 70-cm Survey and Discovery of a New Radio Pulsar in the Large Magellanic Cloud",
+  "authors": [
+    "Wenke Xia",
+    "Fronefield Crawford",
+    "Shinnosuke Hisano",
+    "Tai Jespersen",
+    "Melanie Ficarra",
+    "Mckenzie Golden",
+    "Mia Gironda"
+  ],
+  "publish_date": "29-07-2025",
+  "summary": "This paper describes the reprocessing of data from the Parkes 70-cm pulsar survey to detect previously missed pulsars. It details the processing of archived data and the detection of known pulsars, including a new radio pulsar.",
+  "url": "http://arxiv.org/abs/2507.21920v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly mentions a \"pulsar survey\" and the detection of pulsars, which can be considered a form of \"Point Process\" in an astronomical context (events occurring at specific points). It also uses \"survey data\". However, it does not explicitly use the term \"Point Process\" in a statistical modeling sense, nor \"Contextual dataset\"."
+}

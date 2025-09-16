@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "A mathematical model of vaccine hesitancy: Analysing the impact of political trends and the interaction across age and education groups in the USA",
+  "authors": [
+    "Wajid Ali",
+    "Javad Mohamadichamgavi",
+    "Juan Ramirez",
+    "Jose Aguilar",
+    "Antonio Fernández Anta",
+    "Kieran J. Sharkey"
+  ],
+  "publish_date": "09-09-2025",
+  "summary": "This paper presents a mathematical model to investigate the impact of social interaction on vaccine hesitancy, focusing on temporal transitions between vaccination classes across age and education groups in the USA.",
+  "url": "http://arxiv.org/abs/2509.07712v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"temporal transitions\" and social interaction across population groups, which relates to \"Spatio Temporal\" and \"Contextual dataset\". However, it does not explicitly mention \"Point Process\" or \"Survey data\"."
+}

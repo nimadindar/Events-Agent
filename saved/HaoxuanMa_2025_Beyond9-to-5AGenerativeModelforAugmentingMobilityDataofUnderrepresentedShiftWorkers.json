@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Beyond 9-to-5: A Generative Model for Augmenting Mobility Data of Underrepresented Shift Workers",
+  "authors": [
+    "Haoxuan Ma",
+    "Xishun Liao",
+    "Yifan Liu",
+    "Chris Stanford",
+    "Jiaqi Ma"
+  ],
+  "publish_date": "17-07-2025",
+  "summary": "This paper addresses the underrepresentation of shift workers in urban mobility modeling by proposing a generative model to augment their mobility data. It highlights differences between GPS and survey data for shift workers, focusing on temporal patterns.",
+  "url": "http://arxiv.org/abs/2507.19510v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The paper directly addresses \"urban mobility modeling\" and \"temporal patterns\", indicating a \"Spatio Temporal\" aspect. It also explicitly uses and compares \"GPS and survey data\", making it highly relevant to \"Survey data\". The focus on underrepresented shift workers also implies a \"Contextual dataset\"."
+}

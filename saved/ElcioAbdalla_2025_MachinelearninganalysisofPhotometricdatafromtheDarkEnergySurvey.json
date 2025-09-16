@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Machine learning analysis of Photometric data from the Dark Energy Survey",
+  "authors": [
+    "Elcio Abdalla",
+    "Filipe B. Abdalla",
+    "Alessandro Marins",
+    "Amilcar Queiroz",
+    "Rafael M. Ribeiro",
+    "Alex S. C. Souza"
+  ],
+  "publish_date": "13-08-2025",
+  "summary": "This paper applies machine learning methods (ANNz2, GPz, Keras) to publicly available Dark Energy Survey data release 2 (DR2) to estimate the distribution of photometric redshift. The goal is to retrieve cosmological parameters from photometric surveys.",
+  "url": "http://arxiv.org/abs/2508.10191v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper uses \"Dark Energy Survey data\", which is relevant to \"Survey data\". However, it does not explicitly mention \"Point Process\" or \"Contextual dataset\"."
+}

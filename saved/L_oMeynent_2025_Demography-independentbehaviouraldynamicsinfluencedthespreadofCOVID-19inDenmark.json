@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Demography-independent behavioural dynamics influenced the spread of COVID-19 in Denmark",
+  "authors": [
+    "Léo Meynent",
+    "Michael Bang Petersen",
+    "Sune Lehmann",
+    "Benjamin F. Maier"
+  ],
+  "publish_date": "14-03-2025",
+  "summary": "This paper investigates the influence of demography-independent behavioral dynamics on COVID-19 spread in Denmark, utilizing high-frequency survey data on social contact behavior to improve predictions of epidemiological observables.",
+  "url": "http://arxiv.org/abs/2503.11455v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper explicitly mentions \"high-frequency survey data on social contact behaviour\" and its use in improving predictions of \"epidemiological observables during\" an outbreak, which strongly suggests both \"Survey data\" and \"Spatio Temporal\" aspects. The behavioral dynamics can also be considered a \"Contextual dataset\"."
+}

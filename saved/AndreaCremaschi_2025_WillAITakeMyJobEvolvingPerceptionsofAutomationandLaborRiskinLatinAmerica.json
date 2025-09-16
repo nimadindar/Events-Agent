@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Will AI Take My Job? Evolving Perceptions of Automation and Labor Risk in Latin America",
+  "authors": [
+    "Andrea Cremaschi",
+    "Dae-Jin Lee",
+    "Manuele Leonelli"
+  ],
+  "publish_date": "13-05-2025",
+  "summary": "This study examines the evolution of public perceptions of AI and robotics in Latin America using survey data from multiple waves of the Latinobarómetro. It analyzes fear of job loss due to automation across 16 countries, employing statistical modeling.",
+  "url": "http://arxiv.org/abs/2505.08841v2",
+  "usefulness_score": 75,
+  "usefulness_reason": "The paper uses \"survey data\" from multiple waves and across 16 countries, which directly relates to \"Survey data\" and implies a \"Spatio Temporal\" aspect due to the evolution of perceptions over time and across different countries. The focus on public perceptions also suggests a \"Contextual dataset\"."
+}

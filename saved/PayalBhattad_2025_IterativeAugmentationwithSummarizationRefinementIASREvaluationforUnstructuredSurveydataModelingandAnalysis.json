@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Iterative Augmentation with Summarization Refinement (IASR) Evaluation for Unstructured Survey data Modeling and Analysis",
+  "authors": [
+    "Payal Bhattad",
+    "Sai Manoj Pudukotai Dinakarrao",
+    "Anju Gupta"
+  ],
+  "publish_date": "16-07-2025",
+  "summary": "This work introduces a principled evaluation framework for iterative text data augmentation with summarization refinement, specifically for unstructured survey data modeling and analysis in natural language processing.",
+  "url": "http://arxiv.org/abs/2507.12126v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper directly addresses \"Unstructured Survey data Modeling and Analysis\" and discusses text data augmentation in NLP, which implies working with a \"Contextual dataset\". It is highly relevant to \"Survey data\". However, it does not mention \"Point Process\" or \"Spatio Temporal\"."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Measure Selection for Functional Linear Model",
+  "authors": [
+    "Su I Iao",
+    "Hans-Georg Müller"
+  ],
+  "publish_date": "30-08-2025",
+  "summary": "This paper proposes a flexible framework for functional data analysis where the measure can be arbitrary, extending core methods like functional principal component analysis. It addresses the increasing prevalence of functional data in modern science.",
+  "url": "http://arxiv.org/abs/2509.00583v1",
+  "usefulness_score": 30,
+  "usefulness_reason": "The paper discusses functional data, which can sometimes be related to spatio-temporal data, but it does not explicitly mention \"Spatio Temporal Point Process\", \"Spatio Temporal\", \"Point Process\", \"Contextual dataset\", or \"Survey data\". The connection is too tangential for a higher score."
+}
