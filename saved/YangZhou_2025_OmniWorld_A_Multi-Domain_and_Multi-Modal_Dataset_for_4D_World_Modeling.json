@@ -1,0 +1,30 @@
+{
+  "source": "arxiv",
+  "title": "OmniWorld: A Multi-Domain and Multi-Modal Dataset for 4D World Modeling",
+  "authors": [
+    "Yang Zhou",
+    "Yifan Wang",
+    "Jianjun Zhou",
+    "Wenzheng Chang",
+    "Haoyu Guo",
+    "Zizun Li",
+    "Kaijing Ma",
+    "Xinyue Li",
+    "Yating Wang",
+    "Haoyi Zhu",
+    "Mingyu Liu",
+    "Dingning Liu",
+    "Jiange Yang",
+    "Zhoujie Fu",
+    "Junyi Chen",
+    "Chunhua Shen",
+    "Jiangmiao Pang",
+    "Kaipeng Zhang",
+    "Tong He"
+  ],
+  "publish_date": "15-09-2025",
+  "summary": "This paper introduces OmniWorld, a multi-domain and multi-modal dataset designed for 4D world modeling. It aims to capture spatial geometry and temporal dynamics, addressing the limitations of existing datasets in dynamic complexity, multi-domain diversity, and spatial-temporal annotations.",
+  "url": "http://arxiv.org/abs/2509.12201v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper directly addresses 'Spatio Temporal' through its focus on 'spatial geometry and temporal dynamics' and '4D world modeling'. The mention of 'Multi-Domain and Multi-Modal Dataset' also aligns with 'Contextual dataset'. While 'Point Process' is not explicitly mentioned, the nature of 4D world modeling and spatio-temporal data often involves point-based representations or events."
+}
