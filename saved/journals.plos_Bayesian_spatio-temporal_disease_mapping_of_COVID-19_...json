@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Bayesian spatio-temporal disease mapping of COVID-19 ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post introduces the Spatio-temporal Poisson ANOVA model (SPAM) for disease mapping, focusing on spatio-temporal analysis to understand disease patterns across spatial units and over time using relevant datasets.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0316621",
+  "usefulness_score": 80,
+  "usefulness_reason": "Score 80 assigned because the post directly discusses 'Spatio-temporal Poisson ANOVA model' and 'Spatio-temporal analysis' in the context of disease mapping, explicitly mentioning spatial and temporal domains and datasets."
+}
