@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Managing spatio-temporal heterogeneity of susceptibles by ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article discusses managing spatio-temporal heterogeneity of susceptibles, using survey data to derive reference values for attack rates of different COVID-19 variants and analyzing epidemiological survey data.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the article explicitly discusses \"spatio-temporal heterogeneity\" and uses \"survey data\", making it relevant to \"Spatio Temporal\" and \"Survey data\"."
+}

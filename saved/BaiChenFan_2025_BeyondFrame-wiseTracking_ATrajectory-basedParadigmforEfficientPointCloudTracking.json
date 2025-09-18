@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Beyond Frame-wise Tracking: A Trajectory-based Paradigm for Efficient Point Cloud Tracking",
+  "authors": [
+    "BaiChen Fan",
+    "Sifan Zhou",
+    "Jian Li",
+    "Shibo Zhao",
+    "Muqing Cao",
+    "Qin Wang"
+  ],
+  "publish_date": "14-09-2025",
+  "summary": "This paper proposes a novel trajectory-based paradigm for efficient LiDAR-based 3D single object tracking (3D SOT). It addresses the limitations of existing frame-wise and sequence-based methods by incorporating long-term temporal context for robustness in sparse or occluded scenes, while aiming for computational efficiency. The method processes multiple point clouds to gain robustness.",
+  "url": "http://arxiv.org/abs/2509.11453v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the title and summary directly mention 'Point Cloud Tracking' and 'long-term temporal context', which are highly relevant to 'Spatio Temporal' and 'Point Process'. The paper focuses on tracking objects represented by point clouds over time, directly aligning with the core concepts."
+}

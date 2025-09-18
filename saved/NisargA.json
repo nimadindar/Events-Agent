@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Cinéaste: A Fine-grained Contextual Movie Question Answering Benchmark",
+  "authors": [
+    "Nisarg A. Shah",
+    "Amir Ziai",
+    "Chaitanya Ekanadham",
+    "Vishal M. Patel"
+  ],
+  "publish_date": "17-09-2025",
+  "summary": "This paper introduces Cinéaste, a comprehensive benchmark for long-form movie understanding. It addresses the challenge of diagnosing the capacity of vision-language models for deep, narrative comprehension by evaluating fine-grained reasoning over long-form narrative content, filling a gap in existing benchmarks.",
+  "url": "http://arxiv.org/abs/2509.14227v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "Score 80 assigned because the title explicitly mentions \"Contextual Movie Question Answering Benchmark\" and the summary describes a \"comprehensive benchmark for long-form movie understanding\" which is a \"dataset\". This directly aligns with the 'Contextual dataset' aspect of the search query."
+}

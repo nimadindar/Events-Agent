@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Quickest Change Detection with Cost-Constrained Experiment Design",
+  "authors": [
+    "Patrick Vincent N. Lubenia",
+    "Taposh Banerjee"
+  ],
+  "publish_date": "17-09-2025",
+  "summary": "This paper addresses the quickest change detection problem where an observer monitors a stochastic process and, at each observation time, chooses between multiple experiments with different information qualities and costs. The goal is to minimize the worst-case average detection delay subject to false alarm and cost constraints. An algorithm called the 2E-CUSUM Algorithm is developed for this purpose.",
+  "url": "http://arxiv.org/abs/2509.14186v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper focuses on 'quickest change detection' in a 'stochastic process', which is directly relevant to the concept of 'Point Process'. While it doesn't explicitly mention 'spatio-temporal' aspects, the core methodology of monitoring a stochastic process over time aligns with the broader theme of point processes."
+}

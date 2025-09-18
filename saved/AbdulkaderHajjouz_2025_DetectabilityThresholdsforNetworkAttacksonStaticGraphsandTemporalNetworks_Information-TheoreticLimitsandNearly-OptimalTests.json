@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Detectability Thresholds for Network Attacks on Static Graphs and Temporal Networks: Information-Theoretic Limits and Nearly-Optimal Tests",
+  "authors": [
+    "Abdulkader Hajjouz",
+    "Elena Avksentieva"
+  ],
+  "publish_date": "13-09-2025",
+  "summary": "This paper develops a consolidated theory for the detectability of network-borne attacks under two observation models: static graphs and temporal interaction networks modeled by multivariate point processes (Poisson or Hawkes). The main contribution is to match information-theoretic lower and upper bounds that govern when reliable testing is possible.",
+  "url": "http://arxiv.org/abs/2509.10925v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "Score 80 assigned because the title and summary explicitly mention 'Temporal Networks' and 'multivariate point processes (Poisson or Hawkes)', which are directly relevant to 'Spatio Temporal Point Process'. The paper focuses on modeling and detecting events in networks over time, aligning well with the core concepts."
+}

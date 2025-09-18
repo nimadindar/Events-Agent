@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "CETUS: Causal Event-Driven Temporal Modeling With Unified Variable-Rate Scheduling",
+  "authors": [
+    "Hanfang Liang",
+    "Bing Wang",
+    "Shizhen Zhang",
+    "Wen Jiang",
+    "Yizhuo Yang",
+    "Weixiang Guo",
+    "Shenghai Yuan"
+  ],
+  "publish_date": "17-09-2025",
+  "summary": "This paper introduces CETUS, a method for causal event-driven temporal modeling with unified variable-rate scheduling. It focuses on event cameras that capture asynchronous pixel-level brightness changes with microsecond temporal resolution. The work addresses challenges in processing event streams, particularly in real-time efficiency for pointwise detection methods.",
+  "url": "http://arxiv.org/abs/2509.13784v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the title and summary directly mention 'Event-Driven Temporal Modeling' and 'point clouds', which are highly relevant to 'Spatio Temporal Point Process'. The paper deals with asynchronous events and their temporal resolution, aligning perfectly with the concept of point processes in a spatio-temporal context."
+}

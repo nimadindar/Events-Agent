@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "An Attention-Based Stochastic Simulator for Multisite Extremes to Evaluate Nonstationary, Cascading Flood Risk",
+  "authors": [
+    "Adam Nayak",
+    "Pierre Gentine",
+    "Upmanu Lall"
+  ],
+  "publish_date": "17-09-2025",
+  "summary": "This paper introduces an attention-based stochastic simulator for multisite extremes to evaluate nonstationary, cascading flood risk. It addresses compound flood risks from spatially and temporally clustered extremes, which challenge traditional risk models. The simulator aims to unify spatial and temporal extremes under low-frequency hydroclimatic variability and large-scale moisture transport.",
+  "url": "http://arxiv.org/abs/2509.14162v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "Score 85 assigned because the title and summary directly mention 'Spatiotemporally clustered floods' and 'stochastic simulator', which are highly relevant to 'Spatio Temporal' and 'Point Process' concepts. The paper focuses on modeling extreme events with spatial and temporal dependencies, aligning well with the core search topics."
+}
