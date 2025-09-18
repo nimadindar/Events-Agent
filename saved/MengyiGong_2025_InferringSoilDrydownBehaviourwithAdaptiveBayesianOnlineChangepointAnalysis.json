@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Inferring Soil Drydown Behaviour with Adaptive Bayesian Online Changepoint Analysis",
+  "authors": [
+    "Mengyi Gong",
+    "Christopher Nemeth",
+    "Rebecca Killick",
+    "Peter Strauss",
+    "John Quinton"
+  ],
+  "publish_date": "16-09-2025",
+  "summary": "This paper introduces extensions to Bayesian Online Changepoint Detection (BOCPD) to infer soil drydown behavior from continuous soil-moisture measurements. The model captures piecewise dynamics and accommodates unknown parameters, using a particle-filter approach for realistic inference of segment-specific behaviors over time.",
+  "url": "http://arxiv.org/abs/2509.13293v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper deals with continuous soil-moisture measurements, which can be considered spatio-temporal data. The 'piecewise dynamics' and 'changepoint detection' relate to modeling events over time and space, showing some overlap with point processes, although it's not explicitly a point process paper."
+}
