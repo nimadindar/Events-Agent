@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Calibration-Aware Prompt Learning for Medical Vision-Language Models",
+  "authors": [
+    "Abhishek Basu",
+    "Fahad Shamshad",
+    "Ashshak Sharifdeen",
+    "Karthik Nandakumar",
+    "Muhammad Haris Khan"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper introduces CalibPrompt, the first framework to calibrate Medical Vision-Language Models (Med-VLMs) during prompt tuning. It addresses the challenge of miscalibrated predictions in Med-VLMs, which can lead to overconfident errors and undermine clinical trust.",
+  "url": "http://arxiv.org/abs/2509.15226v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"confidence calibration\" and \"prompt learning\" for medical vision-language models. While not explicitly \"contextual dataset\", prompt learning often involves providing contextual information to guide the model. This makes it tangentially relevant to \"Contextual dataset\"."
+}

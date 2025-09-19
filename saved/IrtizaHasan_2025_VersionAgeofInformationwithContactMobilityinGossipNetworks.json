@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Version Age of Information with Contact Mobility in Gossip Networks",
+  "authors": [
+    "Irtiza Hasan",
+    "Ahmed Arafa"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "A gossip network is considered in which a source node updates its status while other nodes in the network aim at keeping track of it as it varies over time. Information gets disseminated by the source sending status updates to the nodes, and the nodes gossiping with each other. In addition, the nodes in the network are mobile, and can move to other nodes to get information, which we term contact mobility. The goal for the nodes is to remain as fresh as possible, i.e., to have the same informatio",
+  "url": "http://arxiv.org/abs/2509.15184v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary mentions \"status updates... as it varies over time\" and \"nodes in the network are mobile, and can move to other nodes to get information, which we term contact mobility.\" This suggests a spatio-temporal aspect of events (status updates, contact mobility) occurring at points (nodes) in a network, which aligns with the concept of a spatio-temporal point process. While not explicitly using the term \"point process,\" the description of events in space and time is relevant."
+}

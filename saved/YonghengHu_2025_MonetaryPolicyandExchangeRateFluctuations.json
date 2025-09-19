@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Monetary Policy and Exchange Rate Fluctuations",
+  "authors": [
+    "Yongheng Hu"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper models USD-CNY bilateral exchange rate fluctuations as a general stochastic process and examines how monetary policy shock affects the Revealed Comparative Advantage (RCA) index. Numerical simulations indicate that currency devaluation increases the RCA index, and smaller bilateral exchange rate fluctuations after policy shock gradually cause the RCA index to rise.",
+  "url": "http://arxiv.org/abs/2509.15169v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary mentions \"model USD-CNY bilateral exchange rate fluctuations as a general stochastic process\". While not explicitly a \"point process\" or \"spatio-temporal\", a stochastic process can be a foundational concept for point processes, and exchange rate fluctuations have a temporal aspect. This makes it tangentially relevant to \"Point Process\" and \"Spatio Temporal\"."
+}

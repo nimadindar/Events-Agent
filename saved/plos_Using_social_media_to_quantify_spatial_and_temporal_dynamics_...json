@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Using social media to quantify spatial and temporal dynamics ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This blog post explores the use of social media data (Flickr photographs) to quantify spatial and temporal patterns in nature recreation, comparing these findings with traditional survey data. It discusses the limitations of survey data and the potential of geotagged photographs to reflect activity patterns.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0200565",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the post directly addresses \"spatial and temporal dynamics\" and explicitly compares social media data with \"survey data,\" which are key components of the query. While not focused on point processes, it covers relevant data types and spatio-temporal analysis."
+}

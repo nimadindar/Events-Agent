@@ -1,0 +1,19 @@
+{
+  "source": "gscholar",
+  "title": "Scalable Spatiotemporal Inference with Biased Scan Attention Transformer Neural Processes",
+  "authors": [
+    "D Jenson",
+    "J Navott",
+    "P Grynfelder",
+    "M Zhang",
+    "M Sharma",
+    "E Semenova",
+    "S Flaxman",
+    "S Vollmer"
+  ],
+  "publish_date": "10-06-2025",
+  "summary": "This paper introduces BSA-TNP, a new Neural Process architecture for scalable spatiotemporal inference. It models stochastic processes that evolve in both space and time, offering improved accuracy and training speed for applications in various fields.",
+  "url": "https://arxiv.org/abs/2506.09163",
+  "usefulness_score": 95,
+  "usefulness_reason": "Score 95 assigned because the title explicitly mentions \"Spatiotemporal Inference\" and the abstract discusses \"stochastic processes\" and modeling processes that \"evolve in both space and time\". This directly aligns with the keywords \"Spatio Temporal\" and \"Point Process\"."
+}

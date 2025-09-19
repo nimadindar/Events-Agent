@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Unleashing the Potential of Multimodal LLMs for Zero-Shot Spatio-Temporal Video Grounding",
+  "authors": [
+    "Zaiquan Yang",
+    "Yuhao Liu",
+    "Gerhard Hancke",
+    "Rynson W. H. Lau"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "Spatio-temporal video grounding (STVG) aims at localizing the spatio-temporal tube of a video, as specified by the input text query. This paper explores a zero-shot solution in STVG using multimodal large language models (MLLMs), revealing insights into MLLMs' dynamic assignment of grounding tokens and their challenges in fully integrating temporal information.",
+  "url": "http://arxiv.org/abs/2509.15178v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "The title explicitly mentions \"Spatio-Temporal Video Grounding\" and the summary reinforces this by stating its aim to \"localizing the spatio-temporal tube of a video\". This directly aligns with the \"Spatio Temporal\" aspect of the query."
+}

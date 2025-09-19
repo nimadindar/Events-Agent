@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "To CLEAN or not to CLEAN: Data Processing in the ngVLA era",
+  "authors": [
+    "Hendrik Müller"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "Radio interferometric imaging has long relied on the CLEAN algorithm, valued for its speed, robustness, and integration with calibration pipelines. CLEAN remains dominant due to its simplicity and accumulated expertise, yet its assumption of modeling the sky as point sources limits its ability to recover complex structures.",
+  "url": "http://arxiv.org/abs/2509.15176v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The summary mentions \"modeling the sky as point sources\", which is directly relevant to the \"Point Process\" aspect of the query. The context of radio interferometric imaging implies spatial data."
+}

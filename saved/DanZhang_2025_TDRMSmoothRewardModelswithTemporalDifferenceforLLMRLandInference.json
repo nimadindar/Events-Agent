@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "TDRM: Smooth Reward Models with Temporal Difference for LLM RL and Inference",
+  "authors": [
+    "Dan Zhang",
+    "Min Cai",
+    "Jonathan Li",
+    "Ziniu Hu",
+    "Yisong Yue",
+    "Yuxiao Dong",
+    "Jie Tang"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "Reward models are central to both reinforcement learning (RL) with language models and inference-time verification. However, existing reward models often lack temporal consistency, leading to ineffective policy updates and unstable RL training. We introduce TDRM, a method for learning smoother and more reliable reward models by minimizing temporal differences during training. This temporal-difference (TD) regularization produces smooth rewards and improves alignment with long-term objectives.",
+  "url": "http://arxiv.org/abs/2509.15110v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper focuses on 'temporal consistency' and 'temporal differences' in reward models, which is relevant to the 'Spatio Temporal' aspect, specifically the 'temporal' part. It doesn't explicitly mention spatial aspects, but temporal dynamics are a key component."
+}

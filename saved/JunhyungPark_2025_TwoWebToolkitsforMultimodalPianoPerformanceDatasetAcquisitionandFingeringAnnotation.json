@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Two Web Toolkits for Multimodal Piano Performance Dataset Acquisition and Fingering Annotation",
+  "authors": [
+    "Junhyung Park",
+    "Yonghyun Kim",
+    "Joonhyung Bae",
+    "Kirak Kim",
+    "Taegyun Kwon",
+    "Alexander Lerch",
+    "Juhan Nam"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper presents an integrated web toolkit for acquiring large-scale multimodal piano performance data, addressing the bottleneck in research. The toolkit includes two graphical user interfaces: PiaRec for synchronized data acquisition and another for fingering annotation.",
+  "url": "http://arxiv.org/abs/2509.15222v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper focuses on \"Dataset Acquisition\" for \"multimodal data\". While not explicitly \"contextual dataset\" or \"survey data\" in the traditional sense, multimodal data often contains contextual information. The emphasis on data acquisition makes it relevant to the \"dataset\" aspect of the query."
+}

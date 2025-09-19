@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Managing spatio-temporal heterogeneity of susceptibles by ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This blog post investigates managing spatio-temporal heterogeneity of susceptibles in epidemic modeling. It references survey data for Omicron variant attack rates and epidemiological survey data for confirmed cases, focusing on the time-interval from infection to contact.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the post directly addresses \"spatio-temporal heterogeneity\" and explicitly uses \"survey data\" in the context of epidemiological modeling. This aligns with the 'Spatio Temporal' and 'Survey data' aspects of the query."
+}

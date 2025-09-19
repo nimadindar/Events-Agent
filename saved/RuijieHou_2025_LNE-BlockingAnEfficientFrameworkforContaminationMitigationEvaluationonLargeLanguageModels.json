@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "LNE-Blocking: An Efficient Framework for Contamination Mitigation Evaluation on Large Language Models",
+  "authors": [
+    "Ruijie Hou",
+    "Yueyang Jiao",
+    "Hanxu Hu",
+    "Yingming Li",
+    "Wai Lam",
+    "Huajian Zhang",
+    "Hongyuan Lu"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper proposes LNE-Blocking, a novel framework to restore model performance prior to contamination on potentially leaked datasets, addressing the problem of data contamination in large language models (LLMs). It aims to fairly benchmark LLMs despite the common integration of evaluation benchmarks into training data.",
+  "url": "http://arxiv.org/abs/2509.15218v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"data contamination\" and \"contamination-free datasets\" in the context of LLMs, which is relevant to the challenges and considerations of creating and using \"Contextual dataset\" for training and evaluation."
+}

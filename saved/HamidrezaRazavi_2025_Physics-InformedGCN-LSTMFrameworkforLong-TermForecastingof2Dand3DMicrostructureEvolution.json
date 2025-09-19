@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Physics-Informed GCN-LSTM Framework for Long-Term Forecasting of 2D and 3D Microstructure Evolution",
+  "authors": [
+    "Hamidreza Razavi",
+    "Nele Moelans"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper presents a physics-informed framework integrating graph convolutional networks (GCN) with long short-term memory (LSTM) to forecast microstructure evolution over long time horizons in both 2D and 3D. The framework is composition-aware, trained jointly on datasets with different compositions, and operates in latent graph space, capturing compositions and morphological dynamics.",
+  "url": "http://arxiv.org/abs/2509.15029v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The summary mentions \"microstructure evolution over long time horizons in both 2D and 3D\", which directly implies a spatio-temporal aspect. The use of GCN and LSTM for forecasting further supports the relevance to spatio-temporal data analysis."
+}

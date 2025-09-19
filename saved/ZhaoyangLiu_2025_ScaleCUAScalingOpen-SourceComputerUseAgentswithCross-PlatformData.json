@@ -1,0 +1,32 @@
+{
+  "source": "arxiv",
+  "title": "ScaleCUA: Scaling Open-Source Computer Use Agents with Cross-Platform Data",
+  "authors": [
+    "Zhaoyang Liu",
+    "JingJing Xie",
+    "Zichen Ding",
+    "Zehao Li",
+    "Bowen Yang",
+    "Zhenyu Wu",
+    "Xuehui Wang",
+    "Qiushi Sun",
+    "Shi Liu",
+    "Weiyun Wang",
+    "Shenglong Ye",
+    "Qingyun Li",
+    "Zeyue Tian",
+    "Gen Luo",
+    "Xiangyu Yue",
+    "Biqing Qi",
+    "Kai Chen",
+    "Bowen Zhou",
+    "Yu Qiao",
+    "Qifeng Chen",
+    "Wenhai Wang"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This work introduces ScaleCUA, a step toward scaling open-source computer use agents (CUAs) by offering a large-scale dataset spanning 6 operating systems and 3 task domains. The dataset is built via a closed-loop pipeline uniting automated agents with human experts, addressing the limitation of lacking large-scale, open-source computer use data and foundation models.",
+  "url": "http://arxiv.org/abs/2509.15221v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "This paper introduces a \"large-scale dataset\" for computer use agents, built with \"human experts\". This is highly relevant to \"Contextual dataset\" and could be considered a form of \"Survey data\" if the human expert input is gathered through a survey-like process."
+}

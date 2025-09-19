@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "Generalizable Geometric Image Caption Synthesis",
+  "authors": [
+    "Yue Xin",
+    "Wenyuan Wang",
+    "Rui Pan",
+    "Ruida Wang",
+    "Howard Meng",
+    "Renjie Pi",
+    "Shizhe Diao",
+    "Tong Zhang"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "Multimodal large language models struggle with complex geometric problems due to a lack of high-quality image-text pair datasets for understanding geometric images. This paper introduces a method to bridge this gap, as most template-based data synthesis pipelines fail to generalize beyond predefined templates.",
+  "url": "http://arxiv.org/abs/2509.15217v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper addresses the \"lack of high-quality image-text pair datasets\" for geometric problems, which is relevant to the \"Contextual dataset\" aspect of the query. While not directly about spatio-temporal point processes or survey data, it deals with the creation and challenges of a specific type of dataset."
+}

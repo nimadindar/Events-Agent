@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "From Patterns to Predictions: A Shapelet-Based Framework for Directional Forecasting in Noisy Financial Markets",
+  "authors": [
+    "Juwon Kim",
+    "Hyunwook Lee",
+    "Hyotaek Jeon",
+    "Seungmin Jin",
+    "Sungahn Ko"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper proposes a two-stage framework that integrates unsupervised pattern extraction with interpretable deep learning for directional forecasting in financial markets. It aims to bridge the gap between interpretable approaches based on human-defined patterns and deep learning models that effectively capture complex dynamics but offer limited transparency.",
+  "url": "http://arxiv.org/abs/2509.15040v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper focuses on \"directional forecasting\" and \"time series\" in financial markets, which is relevant to the \"Spatio Temporal\" aspect, specifically the temporal component. While it doesn't explicitly mention spatial aspects, the analysis of patterns over time is a key element of spatio-temporal analysis."
+}

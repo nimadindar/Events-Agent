@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Maize Seedling Detection Dataset (MSDD): A Curated High-Resolution RGB Dataset for Seedling Maize Detection and Benchmarking with YOLOv9, YOLO11, YOLOv12 and Faster-RCNN",
+  "authors": [
+    "Dewi Endah Kharismawati",
+    "Toni Kazic"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper introduces MSDD, a high-quality aerial image dataset for maize seedling stand counting, crucial for precision agriculture. It addresses the scarcity of curated datasets for accurate maize seedling detection, with applications in early-season crop monitoring, yield prediction, and in-field management.",
+  "url": "http://arxiv.org/abs/2509.15181v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper introduces a \"curated high-resolution RGB dataset\" for \"maize seedling detection\" and \"stand counting\". This directly relates to \"Contextual dataset\" and potentially \"Survey data\" in the context of agricultural monitoring. While not a spatio-temporal point process, it's a relevant dataset."
+}

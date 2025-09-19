@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "CausalPre: Scalable and Effective Data Pre-processing for Causal Fairness",
+  "authors": [
+    "Ying Zheng",
+    "Yangfan Jiang",
+    "Kian-Lee Tan"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper proposes CausalPre, a scalable and effective data pre-processing solution for causal fairness in databases. It addresses limitations of prior work by capturing broader attribute relationships critical to maintaining utility, without relying on a known causal model.",
+  "url": "http://arxiv.org/abs/2509.15199v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper focuses on \"data pre-processing\" for \"causal fairness\" in \"databases\". While not explicitly \"contextual dataset\" or \"survey data\", the concept of \"causal fairness\" and \"attribute relationships\" implies dealing with contextual information within a dataset. This makes it tangentially relevant to \"Contextual dataset\"."
+}

@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Out-of-Sight Trajectories: Tracking, Fusion, and Prediction",
+  "authors": [
+    "Haichao Zhang",
+    "Yi Xu",
+    "Yun Fu"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper addresses challenges in trajectory prediction due to incomplete and noisy observational data from out-of-sight objects and sensor limitations. It focuses on tracking, fusion, and prediction, highlighting the need for robust methods to handle inherent noise and limited ground truth.",
+  "url": "http://arxiv.org/abs/2509.15219v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"observational data\" and \"sensor data\" in the context of trajectory prediction, which can be considered a form of \"Contextual dataset\". It also highlights challenges with data quality and completeness, which are relevant to dataset considerations."
+}

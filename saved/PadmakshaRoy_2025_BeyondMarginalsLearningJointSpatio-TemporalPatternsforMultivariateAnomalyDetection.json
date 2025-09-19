@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Beyond Marginals: Learning Joint Spatio-Temporal Patterns for Multivariate Anomaly Detection",
+  "authors": [
+    "Padmaksha Roy",
+    "Almuatazbellah Boker",
+    "Lamine Mili"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper aims to improve multivariate anomaly detection by modeling time-varying non-linear spatio-temporal correlations in multivariate time series data, where anomalies may be indicated by the simultaneous deviation of interrelated time series from their expected collective behavior.",
+  "url": "http://arxiv.org/abs/2509.15033v1",
+  "usefulness_score": 95,
+  "usefulness_reason": "The title explicitly mentions \"Spatio-Temporal Patterns\" and the abstract further elaborates on \"time-varying non-linear spatio-temporal correlations\" in multivariate time series data. This is a direct and substantial match for the \"Spatio Temporal\" aspect of the query."
+}

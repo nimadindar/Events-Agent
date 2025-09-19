@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Spatio-Temporal Gap Analysis of OBIS-SEAMAP Project Data",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This blog post discusses a spatio-temporal gap analysis of OBIS-SEAMAP project data, focusing on marine mammal, seabird, and sea turtle observations. It highlights the importance of identifying gaps in data holdings to prioritize future surveys and research.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0012990",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the post directly mentions \"Spatio-Temporal Gap Analysis\" and deals with \"survey data\" in the context of ecological observations. While not explicitly about point processes, the spatio-temporal aspect and survey data relevance are strong."
+}

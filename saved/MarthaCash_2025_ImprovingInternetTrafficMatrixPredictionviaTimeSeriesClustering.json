@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Improving Internet Traffic Matrix Prediction via Time Series Clustering",
+  "authors": [
+    "Martha Cash",
+    "Alexander Wyglinski"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper presents a novel framework that leverages time series clustering to improve internet traffic matrix (TM) prediction using deep learning (DL) models. It proposes two clustering strategies, source clustering and histogram clustering, that group flows with similar temporal patterns prior to model training, creating more homogeneous clusters.",
+  "url": "http://arxiv.org/abs/2509.15072v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper focuses on \"time series clustering\" and \"temporal behaviors\" of traffic flows, which is relevant to the \"Spatio Temporal\" aspect, specifically the temporal component. While it doesn't explicitly mention spatial aspects, the concept of traffic matrices often implies a spatial network, making it tangentially relevant to spatio-temporal data."
+}

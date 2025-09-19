@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Data mining and spatio-temporal characteristics of urban road ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This blog post focuses on data mining and the spatio-temporal characteristics of urban road emissions. It mentions using Didi data and survey data to calculate and understand the distribution of NOx and CO2 emissions over space and time.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295664",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the post explicitly discusses \"spatio-temporal characteristics\" and mentions the use of \"survey data\" in the context of urban road emissions. While not directly about point processes, the spatio-temporal and survey data aspects are relevant."
+}

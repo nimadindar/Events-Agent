@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Conditional Prior-based Non-stationary Channel Estimation Using Accelerated Diffusion Models",
+  "authors": [
+    "Muhammad Ahmed Mohsin",
+    "Ahsan Bilal",
+    "Muhammad Umer",
+    "Asad Aali",
+    "Muhammad Ali Jamshed",
+    "Dean F. Hougen",
+    "John M. Cioffi"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This work proposes conditional prior diffusion for channel estimation in motion-rich urban microcell (UMi) settings, where wireless channels are non-stationary and mobility and scatterer dynamics shift the distribution over time. A temporal encoder with cross-time attention compresses a short observation window into a context vector, capturing the channel's instantaneous coherence.",
+  "url": "http://arxiv.org/abs/2509.15182v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The abstract mentions \"Wireless channels in motion-rich urban microcell (UMi) settings are non-stationary; mobility and scatterer dynamics shift the distribution over time\". This clearly indicates a spatio-temporal aspect. While it doesn't explicitly mention \"point process\" or \"contextual dataset\" or \"survey data\", the focus on spatio-temporal dynamics makes it relevant to \"Spatio Temporal\"."
+}

@@ -1,0 +1,20 @@
+{
+  "source": "arxiv",
+  "title": "Assessing Historical Structural Oppression Worldwide via Rule-Guided Prompting of Large Language Models",
+  "authors": [
+    "Sreejato Chatterjee",
+    "Linh Tran",
+    "Quoc Duy Nguyen",
+    "Roni Kirson",
+    "Drue Hamlin",
+    "Harvest Aquino",
+    "Hanjia Lyu",
+    "Jiebo Luo",
+    "Timothy Dye"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper introduces a novel framework for oppression measurement that leverages Large Language Models (LLMs) to generate context-sensitive scores of lived historical oppression. It addresses the challenges of cross-national validity in measuring historical structural oppression, which traditionally relied on structured indices.",
+  "url": "http://arxiv.org/abs/2509.15216v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "The paper focuses on generating \"context-sensitive scores\" using LLMs to measure historical structural oppression. This directly relates to the concept of a \"Contextual dataset\" as it involves extracting and utilizing contextual information from text to create meaningful data points."
+}

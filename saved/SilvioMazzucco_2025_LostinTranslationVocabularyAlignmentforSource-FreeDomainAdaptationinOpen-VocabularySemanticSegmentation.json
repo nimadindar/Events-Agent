@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Lost in Translation? Vocabulary Alignment for Source-Free Domain Adaptation in Open-Vocabulary Semantic Segmentation",
+  "authors": [
+    "Silvio Mazzucco",
+    "Carl Persson",
+    "Mattia Segu",
+    "Pier Luigi Dovesi",
+    "Federico Tombari",
+    "Luc Van Gool",
+    "Matteo Poggi"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper introduces VocAlign, a novel source-free domain adaptation framework for VLMs in open-vocabulary semantic segmentation. It uses a student-teacher paradigm with vocabulary alignment to improve pseudo-label generation by incorporating additional class concepts, and employs Low-Rank Adaptation (LoRA) for efficient fine-tuning.",
+  "url": "http://arxiv.org/abs/2509.15225v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper discusses \"vocabulary alignment\" and \"class concepts\" in the context of semantic segmentation, which implies using contextual information for better understanding and processing of data. This aligns with the idea of a \"Contextual dataset\"."
+}

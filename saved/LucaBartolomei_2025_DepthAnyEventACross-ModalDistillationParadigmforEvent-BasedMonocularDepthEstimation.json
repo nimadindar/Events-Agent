@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Depth AnyEvent: A Cross-Modal Distillation Paradigm for Event-Based Monocular Depth Estimation",
+  "authors": [
+    "Luca Bartolomei",
+    "Enrico Mannocci",
+    "Fabio Tosi",
+    "Matteo Poggi",
+    "Stefano Mattoccia"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "Event cameras capture sparse, high-temporal-resolution visual information, making them particularly suitable for challenging environments with high-speed motion and strongly varying lighting conditions. To address the limitation of lacking large datasets with dense ground-truth depth annotations, we propose a cross-modal distillation paradigm to generate dense proxy labels leveraging a Vision Foundation Model.",
+  "url": "http://arxiv.org/abs/2509.15224v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The title and summary explicitly mention 'high-temporal-resolution visual information' and 'event-based monocular depth estimation,' which implies spatio-temporal data. While not a point process, it's clearly relevant to spatio-temporal data."
+}

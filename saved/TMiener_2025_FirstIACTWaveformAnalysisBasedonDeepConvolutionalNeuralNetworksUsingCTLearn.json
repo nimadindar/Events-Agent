@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "First IACT Waveform Analysis Based on Deep Convolutional Neural Networks Using CTLearn",
+  "authors": [
+    "T. Miener",
+    "L. Burmistrov",
+    "B. Lacave",
+    "A. Cerviño"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "Imaging atmospheric Cherenkov telescopes (IACTs) detect extended air showers (EASs) generated when very-high-energy (VHE) gamma rays or cosmic rays interact with the Earth's atmosphere. Cherenkov photons produced during an EAS are captured by fast-imaging cameras, which record both the spatial and temporal development of the shower, along with calorimetric data.",
+  "url": "http://arxiv.org/abs/2509.15010v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The summary explicitly states that the cameras record \"both the spatial and temporal development of the shower\", which directly aligns with the \"Spatio Temporal\" aspect of the query."
+}

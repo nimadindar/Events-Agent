@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Bayesian inference for spatio-temporal hidden Markov models using the exchange algorithm",
+  "authors": [
+    "Daniele Tancini",
+    "Riccardo Rastelli",
+    "Francesco Bartolucci"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This work proposes a spatio-temporal hidden Markov model where the latent process is an extension of the autologistic model, addressing the difficulty of estimating spatio-temporal hidden Markov models due to their latent joint distributions being available only in trivial cases.",
+  "url": "http://arxiv.org/abs/2509.15164v1",
+  "usefulness_score": 95,
+  "usefulness_reason": "The title explicitly mentions \"spatio-temporal hidden Markov models\" and the summary further elaborates on the challenges and proposed solutions for these models. This is a direct and substantial match for the \"Spatio Temporal\" aspect of the query."
+}

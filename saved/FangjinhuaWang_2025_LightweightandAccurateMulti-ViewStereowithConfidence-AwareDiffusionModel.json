@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Lightweight and Accurate Multi-View Stereo with Confidence-Aware Diffusion Model",
+  "authors": [
+    "Fangjinhua Wang",
+    "Qingshan Xu",
+    "Yew-Soon Ong",
+    "Marc Pollefeys"
+  ],
+  "publish_date": "18-09-2025",
+  "summary": "This paper proposes a lightweight and accurate multi-view stereo method using a confidence-aware diffusion model to reconstruct 3D geometry from calibrated images. It focuses on improving computational efficiency by initializing a coarse depth map and refining it iteratively.",
+  "url": "http://arxiv.org/abs/2509.15220v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The abstract mentions \"fuse depth maps into a mesh or point cloud\". While \"point cloud\" is mentioned, it's in the context of 3D geometry reconstruction, not a statistical \"point process\". However, the term \"point\" is present, making it tangentially relevant to \"Point Process\"."
+}
