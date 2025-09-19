@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Generative AI as a Safety Net for Survey Question Refinement",
+  "authors": [
+    "Erica Ann Metheney",
+    "Lauren Yehle"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This paper explores the use of generative AI to assist in the demanding task of writing and refining survey questions. It highlights the challenges in creating clear and accurate survey questions and proposes AI as a tool to identify and resolve potential errors, thereby improving the quality of collected data.",
+  "url": "http://arxiv.org/abs/2509.08702v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper directly addresses 'Survey data' and its refinement. While it doesn't explicitly mention 'Spatio Temporal' or 'Point Process', the core focus on improving survey data quality makes it clearly relevant to the 'Survey data' aspect of the query."
+}

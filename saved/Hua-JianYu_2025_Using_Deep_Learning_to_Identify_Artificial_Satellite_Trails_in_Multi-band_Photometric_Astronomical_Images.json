@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Using Deep Learning to Identify Artificial Satellite Trails in Multi-band Photometric Astronomical Images",
+  "authors": [
+    "Hua-Jian Yu",
+    "Jia-Lei Zheng",
+    "Yuan Fang"
+  ],
+  "publish_date": "04-09-2025",
+  "summary": "This research develops a deep learning method to identify artificial satellite trail interference in ground-based astronomical observations. It utilizes multi-band photometric survey observational data to accurately detect satellite trails, which is crucial for maintaining astronomical data quality amidst the increasing number of satellite constellations.",
+  "url": "http://arxiv.org/abs/2509.04081v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper uses \"photometric survey observational data\" which directly relates to \"Survey data\". While it doesn't explicitly mention \"Spatio Temporal Point Process\" or \"Contextual dataset\", the identification of satellite trails in images implies a spatial and potentially temporal aspect of data analysis, making it tangentially relevant to \"Spatio Temporal\"."
+}

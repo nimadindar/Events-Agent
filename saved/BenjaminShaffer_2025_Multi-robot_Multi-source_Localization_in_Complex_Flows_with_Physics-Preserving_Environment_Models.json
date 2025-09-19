@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Multi-robot Multi-source Localization in Complex Flows with Physics-Preserving Environment Models",
+  "authors": [
+    "Benjamin Shaffer",
+    "Victoria Edwards",
+    "Brooks Kinch",
+    "Nathaniel Trask",
+    "M. Ani Hsieh"
+  ],
+  "publish_date": "17-09-2025",
+  "summary": "This paper addresses multi-robot multi-source localization in complex, time-varying flows, where sensor readings are sporadic and intermittent. It focuses on accurately accounting for physical processes driving dispersion dynamics using physics-preserving environment models.",
+  "url": "http://arxiv.org/abs/2509.14228v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "Score 85 assigned because the paper deals with \"multi-source localization in complex flows\" with \"time-varying and chaotic\" dynamics and \"sporadic and intermittent sensor readings\". This strongly aligns with \"Spatio Temporal\" and the nature of the sensor readings suggests a \"Point Process\" interpretation of events in space and time."
+}

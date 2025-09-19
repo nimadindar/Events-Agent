@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Machine learning analysis of Photometric data from the Dark Energy Survey",
+  "authors": [
+    "Elcio Abdalla",
+    "Filipe B. Abdalla",
+    "Alessandro Marins",
+    "Amilcar Queiroz",
+    "Rafael M. Ribeiro",
+    "Alex S. C. Souza"
+  ],
+  "publish_date": "13-08-2025",
+  "summary": "This paper applies machine learning methods to photometric data from the Dark Energy Survey to estimate the distribution of photometric redshift in the sky, aiming to retrieve cosmological parameters from these surveys.",
+  "url": "http://arxiv.org/abs/2508.10191v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper directly uses \"photometric surveys\" and \"Dark Energy Survey data\", making it highly relevant to \"Survey data\". The estimation of \"distribution of the photometric redshift in the sky\" implies a spatial component, linking it to \"Spatio Temporal\"."
+}

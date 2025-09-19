@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Quickest Change Detection with Cost-Constrained Experiment Design",
+  "authors": [
+    "Patrick Vincent N. Lubenia",
+    "Taposh Banerjee"
+  ],
+  "publish_date": "17-09-2025",
+  "summary": "This paper addresses the quickest change detection problem where an observer monitors a stochastic process and, at each observation time, chooses between multiple experiments with varying information qualities and costs. The objective is to minimize the worst-case average detection delay under false alarm and cost constraints.",
+  "url": "http://arxiv.org/abs/2509.14186v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper discusses monitoring a \"stochastic process\" and \"at each observation time, the decision-maker needs to choose between multiple experiments\". This aligns with the concept of a \"Point Process\" where events occur at specific times. While not explicitly spatio-temporal, the temporal aspect of a point process is present."
+}
