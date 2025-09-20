@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "Bayesian spatio-temporal disease mapping of COVID-19 ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post discusses spatio-temporal analysis and modeling, specifically mentioning a \"Spatio-temporal Poisson ANOVA model\" for understanding disease patterns. It focuses on how spatial and temporal interactions reveal disease routes and patterns over time and across spatial units.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0316621",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because it directly mentions \"Spatio-temporal Poisson ANOVA model\", which is highly relevant to \"Spatio Temporal\" and \"Point Process\" (Poisson processes are a type of point process)."
+}

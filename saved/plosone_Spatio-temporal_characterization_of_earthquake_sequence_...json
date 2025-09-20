@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "Spatio-temporal characterization of earthquake sequence ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This blog post discusses the use of point process modeling, specifically the ETAS (Hawkes) model, for spatio-temporal characterization of earthquake sequences. It highlights how earthquake events can be viewed as points in space and time, and how these models help understand interactions and triggering functions in spatio-temporal contexts.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301975",
+  "usefulness_score": 95,
+  "usefulness_reason": "Score 95 assigned because the post directly discusses 'Point process modeling' and 'self-excited point process model' in a 'spatio-temporal' context, which are core to the query."
+}
