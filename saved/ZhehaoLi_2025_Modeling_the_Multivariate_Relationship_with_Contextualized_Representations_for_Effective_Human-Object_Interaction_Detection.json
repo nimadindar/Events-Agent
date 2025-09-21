@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Modeling the Multivariate Relationship with Contextualized Representations for Effective Human-Object Interaction Detection",
+  "authors": [
+    "Zhehao Li",
+    "Yucheng Qian",
+    "Chong Wang",
+    "Yinghao Lu",
+    "Zhihao Yang",
+    "Jiafei Wu"
+  ],
+  "publish_date": "16-09-2025",
+  "summary": "This paper introduces a Contextualized Representation Learning Network to enhance Human-Object Interaction (HOI) detection. It integrates affordance-guided reasoning and contextual prompts with visual cues to better capture complex interactions, addressing challenges from incomplete context modeling in existing two-stage approaches.",
+  "url": "http://arxiv.org/abs/2509.12784v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly mentions \"Contextualized Representations\" and \"incomplete context modeling\", directly aligning with the \"Contextual dataset\" aspect of the query. While it doesn't directly address spatio-temporal point processes or survey data, its focus on contextual information is relevant."
+}

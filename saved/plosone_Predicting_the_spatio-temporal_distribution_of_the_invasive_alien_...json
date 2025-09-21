@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "Predicting the spatio-temporal distribution of the invasive alien ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article focuses on predicting the spatio-temporal distribution of an invasive species by comparing modeling results with field survey data. It highlights the use of survey data as a contextual dataset for understanding spatio-temporal patterns.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0291365",
+  "usefulness_score": 75,
+  "usefulness_reason": "Score 75 assigned because the article directly discusses \"spatio-temporal distribution\" and compares modeling results with \"field survey data\", which aligns with the query's focus on Spatio Temporal and Survey data."
+}

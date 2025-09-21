@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Skellam Processes via Multiparameter Poisson Process",
+  "authors": [
+    "Pradeep Vishwakarma"
+  ],
+  "publish_date": "16-09-2025",
+  "summary": "This paper introduces a multiparameter version of the Skellam point process through multiparameter Poisson processes. It details its distributional properties, derives its compound representation for a specific case, and obtains a closed expression for the characteristic function of its Riemann integral over a rectangle. A different version of the multiparameter Skellam process is also introduced, with a weak convergence result derived.",
+  "url": "http://arxiv.org/abs/2509.12729v1",
+  "usefulness_score": 95,
+  "usefulness_reason": "The title explicitly mentions \"Skellam point process\" and \"multiparameter Poisson processes\", which are direct forms of \"Point Process\". The \"multiparameter\" aspect implies spatio-temporal or multi-dimensional characteristics, making it highly relevant to \"Spatio Temporal Point Process\"."
+}

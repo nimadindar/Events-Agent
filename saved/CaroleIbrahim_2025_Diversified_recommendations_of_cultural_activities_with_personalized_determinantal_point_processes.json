@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Diversified recommendations of cultural activities with personalized determinantal point processes",
+  "authors": [
+    "Carole Ibrahim",
+    "Hiba Bederina",
+    "Daniel Cuesta",
+    "Laurent Montier",
+    "Cyrille Delabre",
+    "Jill-Jênn Vie"
+  ],
+  "publish_date": "12-09-2025",
+  "summary": "This study investigates the use of personalized Determinantal Point Processes (DPPs) to sample diverse and relevant recommendations for cultural activities. It aims to diversify recommendations without negatively impacting core business metrics, aligning with an initiative to broaden the audience's cultural practices.",
+  "url": "http://arxiv.org/abs/2509.10392v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper explicitly uses \"personalized Determinantal Point Processes\", which is a direct application of \"Point Process\". While not explicitly spatio-temporal, the context of recommendations can involve implicit spatio-temporal aspects of user behavior."
+}

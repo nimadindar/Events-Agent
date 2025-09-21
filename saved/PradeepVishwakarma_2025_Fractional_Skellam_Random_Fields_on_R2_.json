@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Fractional Skellam Random Fields on $\\mathbb{R}^2_+",
+  "authors": [
+    "Pradeep Vishwakarma"
+  ],
+  "publish_date": "13-09-2025",
+  "summary": "This paper studies a Skellam point process on $\\mathbb{R}^M_+$, focusing on the $M=2$ case as a Skellam random field on a plane. It derives a weak convergent result and investigates three fractional variants of the Skellam random field on the positive quadrant of a plane, detailing their point probabilities, governing equations, and other distributional properties.",
+  "url": "http://arxiv.org/abs/2509.10870v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "The paper explicitly mentions \"Skellam point process\" and \"Skellam random field on plane,\" which are direct forms of \"Point Process\" and have clear \"Spatio Temporal\" implications due to the \"random field on plane\" and \"two parameter\" nature."
+}

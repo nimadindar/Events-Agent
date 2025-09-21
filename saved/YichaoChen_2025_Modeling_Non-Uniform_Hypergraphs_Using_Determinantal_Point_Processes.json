@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Modeling Non-Uniform Hypergraphs Using Determinantal Point Processes",
+  "authors": [
+    "Yichao Chen",
+    "Jingfei Zhang",
+    "Ji Zhu"
+  ],
+  "publish_date": "15-09-2025",
+  "summary": "This paper proposes a new hypergraph model using Determinantal Point Processes (DPPs) to address the limitations of existing models that assume uniform hyperedges or rely on node diversity. It focuses on modeling higher-order interactions among multiple nodes in real-world networks.",
+  "url": "http://arxiv.org/abs/2509.12028v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "The title explicitly mentions \"Determinantal Point Processes\", which is a direct and strong match for \"Point Process\". The modeling of \"higher-order interactions\" in networks can have spatio-temporal implications, although not explicitly stated."
+}

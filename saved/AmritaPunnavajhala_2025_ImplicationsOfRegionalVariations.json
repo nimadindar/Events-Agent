@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Implications of regional variations in climate change vulnerability and mitigation behaviour for social-climate dynamics",
+  "authors": [
+    "Amrita Punnavajhala",
+    "Timothy M. Lenton",
+    "Chris T. Bauch",
+    "Madhur Anand"
+  ],
+  "publish_date": "14-09-2025",
+  "summary": "This paper presents a coupled social-climate model stratified across five world regions, parameterized with geophysical, economic, and social survey data. It investigates how regional heterogeneity in social and cultural processes drive and respond to climate dynamics, finding that support for mitigation evolves variably across regions based on socio-economics, climate vulnerability, and temperature feedback.",
+  "url": "http://arxiv.org/abs/2509.11343v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "The paper discusses regional variations and evolving social-climate dynamics, indicating spatio-temporal aspects. It also explicitly uses \"social survey data\" for parameterization, which directly aligns with the \"Survey data\" part of the query."
+}

@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Gap metrics for stationary point processes and quantitative convexity of the free energy",
+  "authors": [
+    "Martin Huesmann",
+    "Bastian Müller"
+  ],
+  "publish_date": "10-09-2025",
+  "summary": "This article investigates convexity properties of the free energy for stationary point processes on $\\mathbb R$ using a new geometry inspired by optimal transport. It demonstrates quantified strict convexity of the free energy, implying uniqueness of minimizers, and the existence of a gradient flow curve that converges exponentially fast to the unique minimizer for a rich class of pairwise interaction energies.",
+  "url": "http://arxiv.org/abs/2509.08659v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The paper is directly focused on \"stationary point processes\", which is a core concept within \"Point Process\". While it doesn't explicitly mention spatio-temporal aspects or contextual/survey data, its fundamental contribution to point process theory makes it highly relevant to the overall query."
+}
