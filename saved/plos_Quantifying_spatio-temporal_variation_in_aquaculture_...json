@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Quantifying spatio-temporal variation in aquaculture ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post describes a methodology to quantify spatio-temporal variation in aquaculture areas using satellite imagery, secondary data, and a questionnaire survey conducted during a field visit.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278042",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because it explicitly mentions \"spatio-temporal variation\" and utilizes \"secondary data\" and a \"questionnaire survey,\" which falls under \"survey data,\" making it relevant."
+}
