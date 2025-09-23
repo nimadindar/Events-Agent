@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "PLOS Improving big citizen science data: Moving beyond haphazard sampling | PLOS Biology",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "27-06-2019",
+  "summary": "This post discusses how citizen scientists collect data with spatial and temporal biases, leading to gaps and redundancies. It argues for a tractable framework to improve big citizen science data.",
+  "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000357",
+  "usefulness_score": 75,
+  "usefulness_reason": "The post mentions 'spatial and temporal biases' in data collection, which is relevant to 'Spatio Temporal'. 'Citizen science data' can be considered a contextual dataset. The discussion of sampling and data collection methods is broadly related to survey data, even if not explicitly called 'survey data'. However, 'Point Process' is not mentioned."
+}

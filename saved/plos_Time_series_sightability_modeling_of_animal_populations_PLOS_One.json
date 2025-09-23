@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "PLOS Time series sightability modeling of animal populations | PLOS One",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "12-01-2018",
+  "summary": "This post discusses using logistic regression models and detection/non-detection data from marked individuals to adjust for visibility bias in detection-only surveys, estimating population abundance.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0190706",
+  "usefulness_score": 65,
+  "usefulness_reason": "The post mentions \"time series\" which has a temporal aspect, and \"surveys\" which directly relates to \"Survey data\". It also deals with \"detection/non-detection data\" which can be considered a contextual dataset. However, it doesn't explicitly mention \"Spatio Temporal\" or \"Point Process\". The focus is more on modeling animal populations using survey data."
+}

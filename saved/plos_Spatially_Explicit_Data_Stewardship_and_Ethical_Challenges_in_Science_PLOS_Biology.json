@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "PLOS Spatially Explicit Data: Stewardship and Ethical Challenges in Science | PLOS Biology",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "03-09-2013",
+  "summary": "This post discusses the technical and ethical challenges of sharing spatially specific data, which includes characteristics and behaviors of individuals, households, or communities in geographical space.",
+  "url": "https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001634",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title explicitly mentions 'Spatially Explicit Data', which is highly relevant to 'Spatio Temporal'. The content discusses sharing data with 'characteristics and behaviors of individuals, households, or communities in geographical space', which can be considered a contextual dataset. However, it doesn't explicitly mention 'Point Process' or 'Survey data', and the temporal aspect is less emphasized than the spatial."
+}

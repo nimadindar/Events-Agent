@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "A hierarchical model for estimating the spatial distribution and ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article describes a hierarchical model that includes a spatial point process for individual activity centers and a temporal point process for detection times. It extends count-based SCR models to account for temporal heterogeneity in detection rates.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0176966",
+  "usefulness_score": 95,
+  "usefulness_reason": "This article is highly relevant as it explicitly discusses a 'spatial point process' and a 'temporal point process', which directly addresses 'Spatio Temporal Point Process'. It also mentions 'detection times' and 'detection rates', which can be considered contextual data related to observations."
+}

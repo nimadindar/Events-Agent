@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "A mechanistic spatio-temporal framework for modelling ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article develops a mechanistic spatio-temporal framework for modeling individual-level spatio-temporal data, rooted in spatio-temporal point processes. It views transmission processes as marked spatio-temporal point processes.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005798",
+  "usefulness_score": 95,
+  "usefulness_reason": "This article is highly relevant as it explicitly discusses a 'mechanistic spatio-temporal framework' and states that the approach is 'rooted in spatio-temporal point processes'. It directly addresses 'Spatio Temporal Point Process' and mentions 'individual-level spatio-temporal data', which is a type of contextual dataset."
+}

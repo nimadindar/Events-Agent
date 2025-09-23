@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "PLOS Discovering Health Topics in Social Media Using Topic Models | PLOS One",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "01-08-2014",
+  "summary": "This post describes a topic modeling framework for discovering health topics in Twitter by aggregating self-reported health statuses across millions of users. It's an exploratory approach using social media data.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0103408",
+  "usefulness_score": 60,
+  "usefulness_reason": "The post discusses 'social media' as a source of data, which can be considered a contextual dataset. It also mentions 'self-reported health statuses', which is akin to survey data. While it doesn't explicitly mention 'Spatio Temporal' or 'Point Process', the aggregation of data across millions of users implies some form of spatial and temporal distribution, even if not the primary focus."
+}

@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Recurrent spatio-temporal modeling of check-ins in location ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This article discusses recurrent spatio-temporal modeling of check-ins in location-based social networks, using point processes to model the time of occurrences of phenomena (events). It defines a point process and its different descriptions.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0197683",
+  "usefulness_score": 90,
+  "usefulness_reason": "This article is highly relevant as it explicitly discusses 'Spatio-temporal modeling' and defines 'Point Process'. It uses 'check-ins in location-based social networks' as a contextual dataset, where each check-in can be considered a point event. It covers multiple keywords very well."
+}
