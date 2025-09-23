@@ -1,0 +1,25 @@
+{
+  "source": "arxiv",
+  "title": "RPG: A Repository Planning Graph for Unified and Scalable Codebase Generation",
+  "authors": [
+    "Jane Luo",
+    "Xin Zhang",
+    "Steven Liu",
+    "Jie Wu",
+    "Yiming Huang",
+    "Yangyu Huang",
+    "Chengyu Yin",
+    "Ying Xin",
+    "Jianfeng Liu",
+    "Yuefeng Zhan",
+    "Hao Sun",
+    "Qi Chen",
+    "Scarlett Li",
+    "Mao Yang"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper introduces the Repository Planning Graph (RPG), a persistent representation for unifying proposal- and implementation-level planning in codebase generation. It aims to address the challenge of generating complete repositories from scratch with coherent and reliable planning.",
+  "url": "http://arxiv.org/abs/2509.16198v1",
+  "usefulness_score": 30,
+  "usefulness_reason": "The paper discusses 'codebase generation' and 'software structures', which are not directly related to 'Spatio Temporal Point Process', 'Spatio Temporal', 'Point Process', 'Contextual dataset', or 'Survey data'. While it deals with 'data' in a broad sense, it's not the specific type of contextual or survey data relevant to the query."
+}

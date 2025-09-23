@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Effects of time dependence in the second order coherence of pulsed light",
+  "authors": [
+    "Joscelyn van der Veen",
+    "Daniel James"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper investigates the effects of time dependence on the second-order coherence of pulsed light. It calculates the distribution of photon arrival time differences, showing strong bunching, and explains how to account for pulse shape.",
+  "url": "http://arxiv.org/abs/2509.16090v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Clearly relevant to \"Temporal\" aspect due to \"time dependence\" and \"temporal distribution of photons\". While not explicitly \"spatio\", the concept of photon arrival times can be considered a point process in time. The \"distribution of photon arrival time differences\" is a key indicator."
+}

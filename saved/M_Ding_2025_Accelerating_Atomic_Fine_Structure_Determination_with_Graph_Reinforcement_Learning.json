@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Accelerating Atomic Fine Structure Determination with Graph Reinforcement Learning",
+  "authors": [
+    "M. Ding",
+    "V. -A. Darvariu",
+    "A. N. Ryabtsev",
+    "N. Hawes",
+    "J. C. Pickering"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper proposes automating atomic data analysis by casting it as a Markov decision process and solving it with graph reinforcement learning. Reward functions are learned from historical human decisions to accelerate fine structure determination.",
+  "url": "http://arxiv.org/abs/2509.16184v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly mentions 'Markov decision process', which is a type of stochastic process and can be related to point processes. The use of 'graph reinforcement learning' could imply some spatial or relational aspect, making it tangentially relevant to spatio-temporal concepts. Additionally, the 'atomic data' can be considered a contextual dataset."
+}

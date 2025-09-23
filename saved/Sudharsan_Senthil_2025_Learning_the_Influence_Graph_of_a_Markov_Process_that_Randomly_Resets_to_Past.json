@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Learning the Influence Graph of a Markov Process that Randomly Resets to Past",
+  "authors": [
+    "Sudharsan Senthil",
+    "Avhishek Chatterjee"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper addresses the challenge of learning the influence graph of a high-dimensional Markov process, particularly when the system probabilistically 'jumps back in time'. It explores a more general regime of Markov processes with memory.",
+  "url": "http://arxiv.org/abs/2509.16129v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly discusses 'Markov process', which is a fundamental concept in 'Point Process'. The notion of 'jumps back in time' introduces a temporal aspect, and 'influence graph' can imply a spatial or relational structure, making it relevant to 'Spatio Temporal' concepts."
+}

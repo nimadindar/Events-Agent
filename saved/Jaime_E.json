@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Near-Field Gain and Far-Field Control via a Plasmonic Time Crystal Slab",
+  "authors": [
+    "Jaime E. Sustaeta-Osuna",
+    "Thomas F. Allard",
+    "Francisco J. García-Vidal",
+    "Paloma A. Huidobro"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper studies light-matter interactions in time-varying media, specifically a plasmonic time crystal slab. It explores near-field gain and far-field control through temporal modulation of the plasma frequency, leading to suppressed nonradiative losses and strong radiation at parametric resonance.",
+  "url": "http://arxiv.org/abs/2509.16153v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The abstract explicitly mentions \"time varying media\" and \"temporal modulation,\" which directly relates to the \"Spatio Temporal\" aspect of the query. While not a point process, the focus on temporal changes in a spatial medium makes it relevant."
+}

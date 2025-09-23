@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Early classification of spatio-temporal events using partial ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper discusses early classification of spatio-temporal events using partial data streams, transforming two or three-dimensional data to suit univariate change point detection methods.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0236331",
+  "usefulness_score": 60,
+  "usefulness_reason": "The post mentions \"spatio-temporal events\" and \"two or three-dimensional data streams\" which can be considered a type of contextual dataset. This is relevant to \"Spatio Temporal\" and \"Contextual dataset\"."
+}

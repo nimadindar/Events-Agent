@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Sound-Horizon-Agnostic Inference of the Hubble Constant and Neutrino Mass from BAO, CMB Lensing, and Galaxy Weak Lensing and Clustering",
+  "authors": [
+    "Helena García Escudero",
+    "Seyed Hamidreza Mirpoorian",
+    "Levon Pogosian"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper presents a sound-horizon-agnostic determination of the Hubble constant by combining DESI DR2 baryon acoustic oscillation (BAO) data with CMB lensing measurements, galaxy weak lensing and clustering correlations, and the Pantheon+ supernova sample. The analysis treats the sound horizon at the drag epoch as a free parameter.",
+  "url": "http://arxiv.org/abs/2509.16202v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The abstract mentions combining \"BAO data with the latest cosmic microwave background (CMB) lensing measurements from Planck, ACT, and SPT-3G, the angular size of the CMB acoustic scale, Dark Energy Survey Year-3 (3x2-pt) galaxy weak lensing and clustering correlations, and the Pantheon+ supernova sample.\" This clearly indicates the use of \"Survey data\" and a \"Contextual dataset\" (multiple datasets combined for a specific context)."
+}

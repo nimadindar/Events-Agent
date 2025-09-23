@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "MTS-DMAE: Dual-Masked Autoencoder for Unsupervised Multivariate Time Series Representation Learning",
+  "authors": [
+    "Yi Xu",
+    "Yitian Zhang",
+    "Yun Fu"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper proposes Dual-Masked Autoencoder (DMAE), a novel framework for unsupervised multivariate time series (MTS) representation learning. DMAE uses two pretext tasks: reconstructing masked values and estimating masked attributes, to extract compact and informative representations from raw sequences.",
+  "url": "http://arxiv.org/abs/2509.16078v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title explicitly mentions \"Multivariate Time Series\" and the summary discusses \"time series representation learning,\" which is highly relevant to the \"Spatio Temporal\" aspect of the query (specifically temporal). Multivariate data can often have spatial components, making it broadly relevant."
+}

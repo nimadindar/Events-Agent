@@ -1,0 +1,12 @@
+{
+  "source": "journals.ploscompbiol",
+  "title": "A mechanistic spatio-temporal framework for modelling ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper proposes a mechanistic spatio-temporal framework for modeling, comparing estimated L(r) values to those from a Poisson point process, and discussing statistical inference for spatial processes.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005798",
+  "usefulness_score": 90,
+  "usefulness_reason": "This article explicitly mentions \"spatio-temporal framework\" and \"Poisson point process\" and \"stationary point processes\". This is directly and substantially about \"Spatio Temporal Point Process\" and \"Point Process\". It's an academic paper, not a blog post, but the content is highly relevant."
+}

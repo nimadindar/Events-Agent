@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Kingman's coalescent on a random graph",
+  "authors": [
+    "Louigi Addario-Berry",
+    "Caelan Atamanchuk",
+    "Maxwell Kaye"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper introduces a generalization of Kingman's coalescent on a graph, building on a forest-valued representation. It describes how trees merge based on connections in the graph, extending the standard Kingman coalescent.",
+  "url": "http://arxiv.org/abs/2509.16181v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper explicitly discusses 'Kingman's coalescent' and 'process', which are directly related to 'Point Process'. While not explicitly 'spatio-temporal', coalescent processes inherently involve a temporal dimension, and the 'on a random graph' aspect introduces a structural or potentially spatial context, making it relevant to the broader topic of point processes."
+}

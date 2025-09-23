@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Real-Time Thermal State Estimation and Forecasting in Laser Powder Bed Fusion",
+  "authors": [
+    "Yukta Pareek",
+    "Abdul Malik Al Mardhouf Al Saadi",
+    "Amrita Basak",
+    "Satadru Dey"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper focuses on real-time thermal state estimation and forecasting in Laser Powder Bed Fusion (L-PBF) to ensure part quality. It addresses the challenge of predicting future temperature distributions, which is crucial for proactive process control.",
+  "url": "http://arxiv.org/abs/2509.16114v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "The abstract mentions \"thermal gradients\" and \"temperature distributions in real time,\" which clearly indicates a spatio-temporal aspect. The forecasting of these distributions further strengthens the relevance to \"Spatio Temporal\"."
+}

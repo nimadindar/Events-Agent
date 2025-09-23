@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "A novel agile THz Pulsed Spectropolarimeter measuring 2D distributions of the magnetic field, density and ion temperature of fusion reactor equilibria",
+  "authors": [
+    "Roger J Smith"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper introduces a THz Pulsed Spectropolarimeter for non-perturbative measurements of internal local magnetic fields in fusion devices. It resolves 2D distributions of magnetic field and density, analogous to RADAR measurements of precipitation, to determine FRC midplane profiles.",
+  "url": "http://arxiv.org/abs/2509.16159v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The abstract mentions \"2D distributions\" and \"spatial distribution,\" which directly relates to \"Spatio Temporal.\" While \"temporal\" isn't explicitly stated, measurements of dynamic phenomena often imply a temporal aspect."
+}

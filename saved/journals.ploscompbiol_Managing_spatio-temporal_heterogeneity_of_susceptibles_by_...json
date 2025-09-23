@@ -1,0 +1,12 @@
+{
+  "source": "journals.ploscompbiol",
+  "title": "Managing spatio-temporal heterogeneity of susceptibles by ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper discusses managing spatio-temporal heterogeneity and uses epidemiological survey data to analyze epidemic rates and reported cases.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
+  "usefulness_score": 70,
+  "usefulness_reason": "The title mentions \"spatio-temporal heterogeneity\" and the content explicitly refers to \"epidemiological survey data\". This is relevant to \"Spatio Temporal\" and \"Survey data\"."
+}

@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "See&Trek: Training-Free Spatial Prompting for Multimodal Large Language Model",
+  "authors": [
+    "Pengteng Li",
+    "Pinhao Song",
+    "Wuyang Li",
+    "Weiyu Guo",
+    "Huizai Yao",
+    "Yijie Xu",
+    "Dugang Liu",
+    "Hui Xiong"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper introduces SEE&TREK, a training-free prompting framework to enhance the spatial understanding of Multimodal Large Language Models (MLLMs) under vision-only constraints. It focuses on increasing visual diversity and motion reconstruction to improve purely visual-spatial reasoning.",
+  "url": "http://arxiv.org/abs/2509.16087v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The title and abstract explicitly mention \"spatial understanding\" and \"spatial reasoning,\" which directly relates to \"Spatio Temporal.\" The mention of \"point clouds\" also hints at point data, making it relevant to \"Point Process\" in a spatial context."
+}

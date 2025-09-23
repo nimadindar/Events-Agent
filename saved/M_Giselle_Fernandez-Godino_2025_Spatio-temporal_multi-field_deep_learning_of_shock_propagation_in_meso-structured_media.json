@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "Spatio-temporal, multi-field deep learning of shock propagation in meso-structured media",
+  "authors": [
+    "M. Giselle Fernández-Godino",
+    "Meir H. Shachar",
+    "Kevin Korner",
+    "Jonathan L. Belof",
+    "Mukul Kumar",
+    "Jonathan Lind",
+    "William J. Schill"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper introduces a multi-field spatio-temporal deep learning approach to predict shock wave propagation in porous and architected materials. It aims to capture complex phenomena like pore collapse and localized heating, crucial for applications in planetary defense and inertial fusion energy.",
+  "url": "http://arxiv.org/abs/2509.16139v1",
+  "usefulness_score": 95,
+  "usefulness_reason": "The title explicitly mentions 'Spatio-temporal' and the abstract discusses predicting phenomena over space and time, directly addressing the 'Spatio Temporal' aspect of the query. The use of 'multi-field deep learning' also suggests handling complex datasets, which aligns with 'Contextual dataset'."
+}

@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Expected Constraints on the Intergalactic Magnetic Field using Gamma-Ray Bursts with the Cherenkov Telescope Array Observatory",
+  "authors": [
+    "Ténéman Keita",
+    "Renaud Belmont",
+    "Thierry Stolarczyk"
+  ],
+  "publish_date": "19-09-2025",
+  "summary": "This paper investigates constraints on the InterGalactic Magnetic Field (IGMF) using time-delayed very-high-energy photons from Gamma-Ray Bursts (GRBs). It simulates data from the Cherenkov Telescope Array Observatory to derive these constraints.",
+  "url": "http://arxiv.org/abs/2509.16092v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The abstract mentions \"time-delayed\" and \"along their path to the Earth\" which implies spatio-temporal aspects. The simulation of data can be considered a form of contextual dataset, and the use of an \"Observatory\" suggests a survey-like data collection."
+}
