@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Spatio-temporal transformer traffic prediction network based ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "02-09-2025",
+  "summary": "This paper proposes a spatiotemporal Transformer network based on multi-level causal attention (MLCAFormer) for traffic prediction. It addresses the complex characteristics of traffic flow data across both temporal and spatial dimensions.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0331139",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the title and summary directly discuss 'spatio-temporal' data and prediction, which is a core concept of the search query."
+}
