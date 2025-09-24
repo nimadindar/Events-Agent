@@ -1,0 +1,27 @@
+{
+  "source": "arxiv",
+  "title": "WenetSpeech-Chuan: A Large-Scale Sichuanese Corpus with Rich Annotation for Dialectal Speech Processing",
+  "authors": [
+    "Yuhang Dai",
+    "Ziyu Zhang",
+    "Shuai Wang",
+    "Longhao Li",
+    "Zhao Guo",
+    "Tianlun Zuo",
+    "Shuiyuan Wang",
+    "Hongfei Xue",
+    "Chengyou Wang",
+    "Qing Wang",
+    "Xin Xu",
+    "Hui Bu",
+    "Jie Li",
+    "Jian Kang",
+    "Binbin Zhang",
+    "Lei Xie"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper introduces WenetSpeech-Chuan, a 10,000-hour, richly annotated corpus for Sichuanese dialects, addressing the scarcity of large-scale, open-source data for dialectal speech processing. It also presents the Chuan-Pipeline, a data processing framework, and high-quality evaluation sets.",
+  "url": "http://arxiv.org/abs/2509.18004v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper focuses on creating a 'large-scale corpus' which is a type of 'contextual dataset'. While not directly about spatio-temporal point processes or survey data, the creation and annotation of a specialized dataset aligns with the broader theme of contextual data."
+}

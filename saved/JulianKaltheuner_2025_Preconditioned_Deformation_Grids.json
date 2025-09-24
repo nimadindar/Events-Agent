@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "Preconditioned Deformation Grids",
+  "authors": [
+    "Julian Kaltheuner",
+    "Alexander Oebel",
+    "Hannah Droege",
+    "Patrick Stotko",
+    "Reinhard Klein"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper introduces Preconditioned Deformation Grids, a novel technique for estimating coherent deformation fields directly from point cloud sequences, addressing limitations in dynamic surface reconstruction. It aims to improve reconstruction accuracy and generalization to unseen objects and motions.",
+  "url": "http://arxiv.org/abs/2509.18097v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper focuses on 'dynamic surface reconstruction of objects from point cloud sequences', which directly involves both spatial (point cloud) and temporal (sequences, dynamic) aspects, making it highly relevant to 'Spatio Temporal'."
+}

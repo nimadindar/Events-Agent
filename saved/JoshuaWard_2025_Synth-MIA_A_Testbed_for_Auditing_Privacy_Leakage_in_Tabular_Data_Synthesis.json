@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Synth-MIA: A Testbed for Auditing Privacy Leakage in Tabular Data Synthesis",
+  "authors": [
+    "Joshua Ward",
+    "Xiaofeng Lin",
+    "Chi-Hua Wang",
+    "Guang Cheng"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper introduces Synth-MIA, a testbed for auditing privacy leakage in tabular data synthesis, addressing challenges in evaluating empirical privacy of tabular generative models and the limitations of existing Membership Inference Attacks.",
+  "url": "http://arxiv.org/abs/2509.18014v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper deals with \"synthetic datasets\" and \"tabular data synthesis\", which are forms of \"contextual datasets\". It's not directly about spatio-temporal point processes or survey data, but the creation and analysis of contextual data is relevant."
+}

@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "NeuS-QA: Grounding Long-Form Video Understanding in Temporal Logic and Neuro-Symbolic Reasoning",
+  "authors": [
+    "Sahil Shah",
+    "S P Sharan",
+    "Harsh Goel",
+    "Minkyu Choi",
+    "Mustafa Munir",
+    "Manvik Pasula",
+    "Radu Marculescu",
+    "Sandeep Chinchali"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper addresses challenges in Long-Form Video Question Answering (LVQA) by proposing NeuS-QA, a framework that grounds long-form video understanding in temporal logic and neuro-symbolic reasoning. It aims to overcome limitations of current vision-language models in handling complex queries and multi-step temporal reasoning over long videos.",
+  "url": "http://arxiv.org/abs/2509.18041v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the paper explicitly deals with \"Long-Form Video Question Answering\" and \"multi-step temporal reasoning\" over \"long videos\", which are strong indicators of both spatial (video content) and temporal aspects, making it highly relevant to \"Spatio Temporal\"."
+}

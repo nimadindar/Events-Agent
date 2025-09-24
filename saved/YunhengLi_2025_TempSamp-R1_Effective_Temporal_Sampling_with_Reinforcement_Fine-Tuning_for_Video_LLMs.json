@@ -1,0 +1,18 @@
+{
+  "source": "arxiv",
+  "title": "TempSamp-R1: Effective Temporal Sampling with Reinforcement Fine-Tuning for Video LLMs",
+  "authors": [
+    "Yunheng Li",
+    "Jing Cheng",
+    "Shaoyong Jia",
+    "Hangyi Kuang",
+    "Shaohui Jiao",
+    "Qibin Hou",
+    "Ming-Ming Cheng"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper introduces TempSamp-R1, a reinforcement fine-tuning framework designed to improve the effectiveness of adapting multimodal large language models (MLLMs) to video temporal grounding tasks, addressing inefficiencies of on-policy sampling in large temporal search spaces.",
+  "url": "http://arxiv.org/abs/2509.18056v1",
+  "usefulness_score": 75,
+  "usefulness_reason": "Score 75 assigned because the paper explicitly focuses on \"Temporal Sampling\" and \"video temporal grounding tasks\", which are directly related to the temporal aspect of \"Spatio Temporal\". The context of video data also inherently includes spatial information."
+}

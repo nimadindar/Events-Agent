@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "A spatio-temporal dataset of maize and tomato plant point ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post presents a multi-temporal dataset of high-resolution registered point clouds of maize and tomato plants, manually labeled for computer vision tasks. It provides approximately 260 million labeled 3D points to advance research in plant phenotyping, 3D reconstruction, and deep learning on raw point clouds.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256340",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the post directly discusses a 'spatio-temporal dataset' and 'point clouds' with 'labeled 3D points', which are highly relevant to 'Spatio Temporal', 'Point Process', and 'Contextual dataset'."
+}

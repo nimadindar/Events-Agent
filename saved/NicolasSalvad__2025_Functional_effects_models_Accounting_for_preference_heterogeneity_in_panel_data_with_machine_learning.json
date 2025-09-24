@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Functional effects models: Accounting for preference heterogeneity in panel data with machine learning",
+  "authors": [
+    "Nicolas Salvadé",
+    "Tim Hillel"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper introduces Functional Effects Models, which use Machine Learning to learn individual-specific preference parameters from socio-demographic characteristics, addressing inter-individual heterogeneity in panel choice data. The model offers advantages over traditional fixed and random/mixed effects models by mapping individual-specific effects as a function of socio-demographic factors.",
+  "url": "http://arxiv.org/abs/2509.18047v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the paper discusses 'panel choice data' and 'socio-demographic characteristics', which can be considered types of 'survey data' or 'contextual datasets'. The focus on individual-specific preference parameters and heterogeneity also aligns with analyzing contextual information in data."
+}

@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "RnGCam: High-speed video from rolling & global shutter measurements",
+  "authors": [
+    "Kevin Tandi",
+    "Xiang Dai",
+    "Chinmay Talegaonkar",
+    "Gal Mishne",
+    "Nick Antipa"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper proposes RnGCam, a system that fuses measurements from low-speed consumer-grade rolling-shutter and global-shutter sensors into video at kHz frame rates, enabling high-speed video reconstruction from compressive video capture.",
+  "url": "http://arxiv.org/abs/2509.18087v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper focuses on \"high-speed video\" and \"fuses measurements... into video at kHz frame rates\", which inherently involves both spatial and temporal dimensions, making it relevant to \"Spatio Temporal\"."
+}

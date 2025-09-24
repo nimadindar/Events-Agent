@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "Equilibrium flow: From Snapshots to Dynamics",
+  "authors": [
+    "Yanbo Zhang",
+    "Michael Levin"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This work introduces the Equilibrium flow method, a framework that learns continuous dynamics preserving a given pattern distribution. It investigates how static patterns from underlying dynamical systems, such as cellular snapshots or celestial distributions, constrain and allow for the recovery of their underlying dynamics.",
+  "url": "http://arxiv.org/abs/2509.17990v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the paper discusses recovering underlying dynamics from static patterns, which can be interpreted as spatio-temporal analysis of point-like data (e.g., celestial distributions), even if it doesn't explicitly use 'point process' terminology. The focus on dynamics and patterns implies spatio-temporal considerations."
+}

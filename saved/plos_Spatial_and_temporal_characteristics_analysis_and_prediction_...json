@@ -1,0 +1,18 @@
+{
+  "source": "plos",
+  "title": "Spatial and temporal characteristics analysis and prediction ...",
+  "authors": [
+    "Ma Z",
+    "Luo W",
+    "Jiang J",
+    "Wang B",
+    "Ma Z",
+    "Lin J",
+    "et al."
+  ],
+  "publish_date": "unknown",
+  "summary": "This post proposes a novel PM2.5 concentration prediction model based on the SpatioTemporal-Informer model, combining spatial location, temporal variation, and contextual information for spatiotemporal data prediction.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0287423",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the post explicitly discusses 'SpatioTemporal-Informer model', 'spatiotemporal data prediction task', and 'contextual information', directly addressing 'Spatio Temporal' and 'Contextual dataset' from the query."
+}

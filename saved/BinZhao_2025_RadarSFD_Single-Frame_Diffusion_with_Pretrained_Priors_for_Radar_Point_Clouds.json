@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "RadarSFD: Single-Frame Diffusion with Pretrained Priors for Radar Point Clouds",
+  "authors": [
+    "Bin Zhao",
+    "Nakul Garg"
+  ],
+  "publish_date": "22-09-2025",
+  "summary": "This paper introduces RadarSFD, a conditional latent diffusion framework that reconstructs dense LiDAR-like point clouds from a single radar frame. It aims to improve radar imaging resolution without relying on synthetic aperture or multi-frame aggregation, making it practical for small robotic platforms.",
+  "url": "http://arxiv.org/abs/2509.18068v1",
+  "usefulness_score": 85,
+  "usefulness_reason": "Score 85 assigned because the title explicitly mentions 'Radar Point Clouds', which directly relates to 'Point Process' and inherently involves spatial data. The context of radar and single-frame processing also implies a spatio-temporal aspect, as radar data is often collected sequentially over time."
+}
