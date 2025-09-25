@@ -1,0 +1,23 @@
+{
+  "source": "arxiv",
+  "title": "xGFabric: Coupling Sensor Networks and HPC Facilities with Private 5G Wireless Networks for Real-Time Digital Agriculture",
+  "authors": [
+    "Liubov Kurafeeva",
+    "Alan Subedi",
+    "Ryan Hartung",
+    "Michael Fay",
+    "Avhishek Biswas",
+    "Shantenu Jha",
+    "Ozgur O. Kilic",
+    "Chandra Krintz",
+    "Andre Merzky",
+    "Douglas Thain",
+    "Mehmet C. Vuran",
+    "Rich Wolski"
+  ],
+  "publish_date": "24-09-2025",
+  "summary": "This paper presents xGFabric, a system for coupling distributed sensor networks with high-performance computing facilities using private 5G wireless networks for real-time digital agriculture. It addresses the need for monitoring environmental conditions and detecting damage in citrus research facilities.",
+  "url": "http://arxiv.org/abs/2509.20340v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper discusses \"distributed sensor networks\" and \"real-time\" monitoring of \"environmental conditions\", which implies spatio-temporal data and a contextual dataset. While it doesn't explicitly use \"point process\", the nature of sensor events over space and time is relevant to the broader theme."
+}

@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Adaptive Event-Triggered Policy Gradient for Multi-Agent Reinforcement Learning",
+  "authors": [
+    "Umer Siddique",
+    "Abhinav Sinha",
+    "Yongcan Cao"
+  ],
+  "publish_date": "24-09-2025",
+  "summary": "This paper proposes ET-MAPG, an event-triggered multi-agent policy gradient reinforcement learning framework. It jointly learns an agent's control policy and its event-triggering policy to address the computational and communication intensity of conventional time-triggered MARL methods.",
+  "url": "http://arxiv.org/abs/2509.20338v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper focuses on \"event-triggered\" execution, which is a strong indicator of a point process. While not explicitly spatio-temporal, the multi-agent context often implies spatial distribution, and the events occur over time. This aligns well with the 'Point Process' aspect of the query."
+}
