@@ -1,0 +1,13 @@
+{
+  "source": "arxiv",
+  "title": "STFT-AECNN: An Attention-Enhanced CNN for Efficient Φ-OTDR Event Recognition in IoT-Enabled Distributed Acoustic Sensing",
+  "authors": [
+    "Xiyang Lan",
+    "Xin Li"
+  ],
+  "publish_date": "23-09-2025",
+  "summary": "This paper proposes STFT-AECNN, an attention-enhanced CNN for efficient event recognition from Φ-OTDR data streams in IoT infrastructures. It addresses the challenge of accurately recognizing events from massive Φ-OTDR data while preserving their inherent spatiotemporal structure, enabling large-scale distributed acoustic sensing for various applications.",
+  "url": "http://arxiv.org/abs/2509.19281v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper focuses on \"event recognition\" from \"Φ-OTDR data streams\" and emphasizes preserving \"inherent spatiotemporal structure\". This directly relates to \"Spatio Temporal\" and \"Point Process\" (events). While not explicitly a \"Spatio Temporal Point Process\" model, the core problem involves spatio-temporal event detection."
+}

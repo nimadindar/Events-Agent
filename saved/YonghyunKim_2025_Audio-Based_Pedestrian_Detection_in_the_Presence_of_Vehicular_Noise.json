@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Audio-Based Pedestrian Detection in the Presence of Vehicular Noise",
+  "authors": [
+    "Yonghyun Kim",
+    "Chaeyeon Han",
+    "Akash Sarode",
+    "Noah Posner",
+    "Subhrajit Guhathakurta",
+    "Alexander Lerch"
+  ],
+  "publish_date": "23-09-2025",
+  "summary": "This paper presents a new dataset and analysis for audio-based pedestrian detection in the presence of vehicular noise. It explores cross-dataset evaluation and the impact of noisy data on model performance, highlighting the influence of acoustic context.",
+  "url": "http://arxiv.org/abs/2509.19295v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper explicitly mentions a \"new dataset\" and discusses the \"presence of vehicular noise\" and \"acoustic context\", which aligns with the concept of a \"Contextual dataset\". While not directly about spatio-temporal point processes, the focus on a specific type of contextual data makes it relevant."
+}

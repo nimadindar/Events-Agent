@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "MsFIN: Multi-scale Feature Interaction Network for Traffic Accident Anticipation",
+  "authors": [
+    "Tongshuai Wu",
+    "Chao Lu",
+    "Ze Song",
+    "Yunlong Lin",
+    "Sizhe Fan",
+    "Xuemei Chen"
+  ],
+  "publish_date": "23-09-2025",
+  "summary": "This paper proposes a Multi-scale Feature Interaction Network (MsFIN) for traffic accident anticipation from dashcam perspectives. It addresses challenges in modeling feature-level interactions among traffic participants and capturing complex, asynchronous multi-temporal behavioral cues preceding accidents, which are crucial for proactive safety interventions.",
+  "url": "http://arxiv.org/abs/2509.19227v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The paper focuses on \"traffic accident anticipation\" and \"multi-temporal behavioral cues preceding accidents\", which strongly implies spatio-temporal events (point processes in time and space). The use of dashcam data can be considered a contextual dataset. While it doesn't explicitly use the term \"Spatio Temporal Point Process\", the problem domain is highly relevant."
+}

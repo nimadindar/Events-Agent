@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "On Kemeny's Constant for Markov Processes",
+  "authors": [
+    "P. J. Fitzsimmons"
+  ],
+  "publish_date": "23-09-2025",
+  "summary": "This paper presents a new approach to Kemeny's constant for irreducible Markov chains on a finite state space, based on time reversal and a mean occupation time formula. It extends the result to continuous-time Markov processes, showing that the constancy holds almost surely with respect to the stationary distribution.",
+  "url": "http://arxiv.org/abs/2509.19273v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper directly discusses \"continuous-time Markov processes\", which are a fundamental type of point process. This aligns with the \"Point Process\" aspect of the query. While it doesn't explicitly mention spatio-temporal aspects or specific datasets, its core topic is highly relevant to the underlying mathematical framework of point processes."
+}

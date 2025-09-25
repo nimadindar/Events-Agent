@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Systematic Comparative Analysis of Large Pretrained Language Models on Contextualized Medication Event Extraction",
+  "authors": [
+    "Tariq Abdul-Quddoos",
+    "Xishuang Dong",
+    "Lijun Qian"
+  ],
+  "publish_date": "23-09-2025",
+  "summary": "This research conducts a comparative analysis of pre-trained attention-based models for contextualized medication event extraction from Electronic Health Record (EHR) clinical notes. It highlights the effectiveness of these models in capturing contextual representations of language for NLP tasks in medical language.",
+  "url": "http://arxiv.org/abs/2509.19224v1",
+  "usefulness_score": 60,
+  "usefulness_reason": "The paper focuses on \"Contextualized Medication Event Extraction\" from clinical notes, which aligns with \"Contextual dataset\" and \"Point Process\" (events). While not explicitly spatio-temporal, the extraction of events from a contextual dataset makes it relevant."
+}

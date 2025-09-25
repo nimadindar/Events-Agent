@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Adversarially-Refined VQ-GAN with Dense Motion Tokenization for Spatio-Temporal Heatmaps",
+  "authors": [
+    "Gabriel Maldonado",
+    "Narges Rashvand",
+    "Armin Danesh Pazho",
+    "Ghazal Alinezhad Noghre",
+    "Vinit Katariya",
+    "Hamed Tabkhi"
+  ],
+  "publish_date": "23-09-2025",
+  "summary": "This paper introduces an adversarially-refined VQ-GAN framework with dense motion tokenization for compressing spatio-temporal heatmaps while preserving fine-grained human motion traces. It addresses the challenge of continuous human motion understanding due to high dimensionality and inherent redundancy, crucial for analyzing complex motion dynamics.",
+  "url": "http://arxiv.org/abs/2509.19252v1",
+  "usefulness_score": 70,
+  "usefulness_reason": "The paper directly addresses \"Spatio-Temporal Heatmaps\" and \"dense motion tokenization\" for understanding human motion, which is highly relevant to \"Spatio Temporal\". While it doesn't explicitly use \"Point Process\" or \"Contextual dataset\", the concept of motion traces and their spatio-temporal representation aligns with the broader scope of the query."
+}
