@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "spmodel: Spatial statistical modeling and prediction in R",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "09-03-2023",
+  "summary": "This post introduces 'spmodel', an R package for fitting, summarizing, and predicting various spatial statistical models for point-referenced or areal data, including features like anisotropy, non-spatial random effects, and big data.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0282524",
+  "usefulness_score": 80,
+  "usefulness_reason": "Score 80 assigned because the title mentions \"Spatial statistical modeling\" and \"point-referenced...data\", which is directly relevant to \"Point Process\" and \"Spatio Temporal\" concepts. The content also discusses modeling and prediction, which aligns with analyzing contextual datasets."
+}

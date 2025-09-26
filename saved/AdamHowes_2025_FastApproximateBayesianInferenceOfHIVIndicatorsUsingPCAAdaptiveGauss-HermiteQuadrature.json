@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Fast approximate Bayesian inference of HIV indicators using PCA adaptive Gauss-Hermite quadrature",
+  "authors": [
+    "Adam Howes",
+    "Alex Stringer",
+    "Seth R. Flaxman",
+    "Jeffrey W. Imai-Eaton"
+  ],
+  "publish_date": "21-08-2025",
+  "summary": "This paper introduces Naomi, a spatial evidence synthesis model for producing district-level HIV epidemic indicators in sub-Saharan Africa. It jointly models HIV prevalence, incidence, and antiretroviral therapy coverage using household survey data and routinely reported health system data, providing a tool for countries to generate estimates annually.",
+  "url": "http://arxiv.org/abs/2508.15665v1",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the paper explicitly describes a \"spatial evidence synthesis model\" for \"district-level HIV epidemic indicators\" and uses both \"household survey data\" and \"routinely reported health system data\". This directly addresses Spatio Temporal, Survey data, and Contextual dataset aspects of the query. While \"point process\" is not explicitly mentioned, the nature of epidemic events and their modeling often aligns with spatio-temporal point process methodologies."
+}

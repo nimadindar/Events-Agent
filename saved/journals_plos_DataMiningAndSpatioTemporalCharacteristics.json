@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Data mining and spatio-temporal characteristics of urban road ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "13-12-2023",
+  "summary": "This post discusses the accurate estimation of traffic emissions and analysis of spatio-temporal distribution on urban roads, often using GPS-based spatio-temporal data.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0295664",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the title and content directly mention 'spatio-temporal distribution' and 'spatio-temporal data', which are key aspects of the search query. It also implies contextual datasets in the form of urban road traffic and emissions."
+}

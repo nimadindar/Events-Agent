@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Spatio-temporal transformer traffic prediction network based ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "02-09-2025",
+  "summary": "This post proposes a spatio-temporal Transformer network (MLCAFormer) for traffic prediction, addressing the complex spatial and temporal characteristics of traffic flow data in intelligent transportation systems.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0331139",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the title and content directly focus on 'spatio-temporal' analysis in the context of traffic prediction, which involves contextual datasets."
+}

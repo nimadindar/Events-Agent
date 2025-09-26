@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "Managing spatio-temporal heterogeneity of susceptibles by ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post discusses a model for managing spatio-temporal heterogeneity of susceptible populations, focusing on estimating parameters for mechanistic and neural network models in the context of epidemic waves.",
+  "url": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1012497",
+  "usefulness_score": 85,
+  "usefulness_reason": "Score 85 assigned because the title directly mentions 'spatio-temporal' and the content discusses modeling and population dynamics, which are relevant to spatio-temporal analysis and potentially point processes or contextual datasets in an epidemiological context."
+}
