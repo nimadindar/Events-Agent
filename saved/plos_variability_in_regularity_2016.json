@@ -1,0 +1,12 @@
+{
+  "source": "journals.plos",
+  "title": "PLOS Variability in Regularity: Mining Temporal Mobility Patterns in London, Singapore and Beijing Using Smart-Card Data | PLOS One",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "12-02-2016",
+  "summary": "This post discusses discovering regularities in human mobility at aggregated spatio-temporal scales using smart-card data.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0149222",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because it directly addresses 'spatio-temporal scales' and uses 'data', which is relevant to the search query. While it doesn't explicitly mention point processes or survey data, the spatio-temporal aspect is present."
+}
