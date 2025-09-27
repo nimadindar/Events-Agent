@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Pheno4D: A spatio-temporal dataset of maize and tomato ... - PLOS",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This paper presents a multi-temporal dataset with high-resolution registered point clouds of maize and tomato plants, manually labeled for computer vision tasks, providing approximately 260 million labeled 3D points.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256340",
+  "usefulness_score": 80,
+  "usefulness_reason": "Score 80 assigned because the title and summary explicitly mention \"spatio-temporal dataset\" and \"point clouds,\" which are highly relevant to the query. While not a \"point process\" in the statistical sense, \"point clouds\" are a type of point data."
+}

@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Registration of spatio-temporal point clouds of plants for ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "25-02-2021",
+  "summary": "This paper discusses the registration of spatio-temporal point clouds of plants for phenotyping, utilizing 3D sensor data to measure plant traits.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247243",
+  "usefulness_score": 80,
+  "usefulness_reason": "Score 80 assigned because the title and summary explicitly mention 'spatio-temporal point clouds' and '3D sensor data,' which are highly relevant to the query, particularly 'Spatio Temporal' and 'Point Process' (as point clouds are a form of point data)."
+}

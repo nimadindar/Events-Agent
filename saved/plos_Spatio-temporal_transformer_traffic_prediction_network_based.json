@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Spatio-temporal transformer traffic prediction network based ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "02-09-2025",
+  "summary": "This paper proposes a spatio-temporal Transformer network for traffic prediction, addressing the complex spatial and temporal characteristics of traffic flow data.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0331139",
+  "usefulness_score": 70,
+  "usefulness_reason": "Score 70 assigned because the title and summary clearly address \"spatio-temporal\" aspects and data prediction, which is relevant to the query. However, it does not explicitly mention \"point process,\" \"contextual dataset,\" or \"survey data.\""
+}

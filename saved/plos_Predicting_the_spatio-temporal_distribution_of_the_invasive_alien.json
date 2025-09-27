@@ -1,0 +1,12 @@
+{
+  "source": "plos",
+  "title": "Predicting the spatio-temporal distribution of the invasive alien ...",
+  "authors": [
+    "JS Park"
+  ],
+  "publish_date": "2023",
+  "summary": "This paper focuses on predicting the spatio-temporal distribution of an invasive alien species using survey data points.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0291365",
+  "usefulness_score": 90,
+  "usefulness_reason": "Score 90 assigned because the title and summary directly mention \"spatio-temporal distribution\" and \"survey data points,\" which are highly relevant to the query."
+}
