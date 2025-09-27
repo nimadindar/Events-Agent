@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "Registration of spatio-temporal point clouds of plants for ...",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post describes an approach for registering time-series 3D point cloud data of plants, focusing on spatio-temporal point clouds and datasets for analyzing plant growth.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0247243",
+  "usefulness_score": 65,
+  "usefulness_reason": "Score 65 assigned because the post discusses \"spatio-temporal point clouds\" and \"datasets\", which are relevant to \"Spatio Temporal\" and \"Contextual dataset\". While not a statistical point process, \"point clouds\" are a form of spatial point data."
+}

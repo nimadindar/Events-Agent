@@ -1,0 +1,12 @@
+{
+  "source": "plosone",
+  "title": "PLOS Variability in Regularity: Mining Temporal Mobility Patterns in London, Singapore and Beijing Using Smart-Card Data | PLOS One",
+  "authors": [
+    "unknown"
+  ],
+  "publish_date": "unknown",
+  "summary": "This post explores spatiotemporal regularity in human trajectories by mining temporal mobility patterns from smart-card data, mobile phone data, and trip survey data in various cities.",
+  "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0149222",
+  "usefulness_score": 60,
+  "usefulness_reason": "Score 60 assigned because the post discusses \"spatiotemporal regularity\" and explicitly mentions \"trip survey data\" and other forms of \"data\" (smart-card, mobile phone), making it relevant to \"Spatio Temporal\", \"Contextual dataset\", and \"Survey data\"."
+}
