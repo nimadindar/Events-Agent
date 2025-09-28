@@ -1,0 +1,14 @@
+{
+  "source": "arxiv",
+  "title": "Measurement of circumgalactic extinction in the Kilo-Degree Survey's Data Release 4",
+  "authors": [
+    "Eray Genc",
+    "Angus H. Wright",
+    "Hendrik Hildebrandt"
+  ],
+  "publish_date": "21-08-2025",
+  "summary": "This study investigates the amount and distribution of dust in galactic halos by measuring shifts in the observed magnitudes of background galaxies using multi-band magnitude shifts in the Kilo-Degree Survey (KiDS) Data Release 4.",
+  "url": "http://arxiv.org/abs/2508.15490v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper uses data from the \"Kilo-Degree Survey\" which is directly relevant to \"Survey data\". It also deals with spatial distribution of dust in galactic halos. While it doesn't explicitly mention \"Spatio Temporal Point Process\" or \"Contextual dataset\", the use of survey data for spatial analysis gives it some relevance."
+}

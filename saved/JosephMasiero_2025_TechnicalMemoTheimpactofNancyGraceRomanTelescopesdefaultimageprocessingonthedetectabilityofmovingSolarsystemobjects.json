@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Technical Memo: The impact of Nancy Grace Roman Telescope's default image processing on the detectability of moving Solar system objects",
+  "authors": [
+    "Joseph Masiero"
+  ],
+  "publish_date": "24-09-2025",
+  "summary": "The Nancy Grace Roman Telescope is scheduled to launch in 2026 to conduct a wide-field survey of the sky at near-infrared wavelengths. There is recent interest in the potential capability of the telescope to support planetary defense by tracking and characterizing asteroids and comets. However, the standard pipeline image processing scheme that the mission is planning to implement for t",
+  "url": "http://arxiv.org/abs/2509.20469v1",
+  "usefulness_score": 65,
+  "usefulness_reason": "The paper discusses a \"wide-field survey\" which aligns with \"Survey data\". However, it does not mention \"Spatio Temporal Point Process\" or \"Contextual dataset\"."
+}

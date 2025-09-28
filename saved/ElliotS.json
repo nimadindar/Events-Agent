@@ -1,0 +1,19 @@
+{
+  "source": "arxiv",
+  "title": "Leveraging national forest inventory data to estimate forest carbon density status and trends for small areas",
+  "authors": [
+    "Elliot S. Shannon",
+    "Andrew O. Finley",
+    "Paul B. May",
+    "Grant M. Domke",
+    "Hans-Erik Andersen",
+    "George C. Gaines III",
+    "Arne Nothdurft",
+    "Sudipto Banerjee"
+  ],
+  "publish_date": "11-03-2025",
+  "summary": "This paper focuses on leveraging national forest inventory (NFI) data to estimate forest carbon density status and trends for small spatial and temporal domains, addressing challenges with sparse data in traditional design-based estimators.",
+  "url": "http://arxiv.org/abs/2503.08653v1",
+  "usefulness_score": 80,
+  "usefulness_reason": "The paper directly discusses \"national forest inventory data\" and \"survey data\", which is highly relevant to \"Survey data\". It also mentions \"small spatial, temporal, or biophysical domains\" and \"status and trends\", indicating a spatio-temporal analysis. This aligns well with the \"Spatio Temporal\" aspect of the query."
+}

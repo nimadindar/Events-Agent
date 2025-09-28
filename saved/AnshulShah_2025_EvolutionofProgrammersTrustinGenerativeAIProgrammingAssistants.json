@@ -1,0 +1,17 @@
+{
+  "source": "arxiv",
+  "title": "Evolution of Programmers' Trust in Generative AI Programming Assistants",
+  "authors": [
+    "Anshul Shah",
+    "Thomas Rexin",
+    "Elena Tomson",
+    "Leo Porter",
+    "William G. Griswold",
+    "Adalbert Gerald Soosai Raj"
+  ],
+  "publish_date": "16-09-2025",
+  "summary": "This study aims to understand programmers' evolution of trust in generative AI programming assistants, as trust is a dynamic attitude that may change over time and impacts how programmers use these tools.",
+  "url": "http://arxiv.org/abs/2509.13253v1",
+  "usefulness_score": 20,
+  "usefulness_reason": "The paper focuses on programmers' trust in AI assistants and does not directly address Spatio Temporal Point Process, Spatio Temporal, Point Process, Contextual dataset, or Survey data in a substantial way. While it might involve data collection, it's not the primary focus of the search query."
+}

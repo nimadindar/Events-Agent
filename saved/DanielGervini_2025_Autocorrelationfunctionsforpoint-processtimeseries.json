@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Autocorrelation functions for point-process time series",
+  "authors": [
+    "Daniel Gervini"
+  ],
+  "publish_date": "10-04-2025",
+  "summary": "This article introduces autocorrelograms for time series of point processes, which often arise from slicing longer temporal or spatio-temporal point processes into smaller time units, assuming a doubly-stochastic Poisson model with log-Gaussian intensity functions.",
+  "url": "http://arxiv.org/abs/2504.08070v2",
+  "usefulness_score": 100,
+  "usefulness_reason": "The abstract explicitly mentions \"spatio-temporal point process\" and the paper focuses on autocorrelation functions for point-process time series, directly addressing the core of the search query."
+}

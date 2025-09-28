@@ -1,0 +1,15 @@
+{
+  "source": "arxiv",
+  "title": "Sharp Convergence Rates of Empirical Unbalanced Optimal Transport for Spatio-Temporal Point Processes",
+  "authors": [
+    "Marina Struleva",
+    "Shayan Hundrieser",
+    "Dominic Schuhmacher",
+    "Axel Munk"
+  ],
+  "publish_date": "04-09-2025",
+  "summary": "This paper statistically analyzes empirical plug-in estimators for unbalanced optimal transport formalisms between general intensity measures based on observations from spatio-temporal point processes, establishing sharp convergence rates.",
+  "url": "http://arxiv.org/abs/2509.04225v1",
+  "usefulness_score": 100,
+  "usefulness_reason": "The title and abstract directly and explicitly mention \"Spatio-Temporal Point Processes\" multiple times, which is the core of the search query. This paper is directly and substantially about the topic."
+}

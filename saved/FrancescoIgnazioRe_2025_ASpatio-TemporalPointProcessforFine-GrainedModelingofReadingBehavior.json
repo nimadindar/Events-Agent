@@ -1,0 +1,16 @@
+{
+  "source": "arxiv",
+  "title": "A Spatio-Temporal Point Process for Fine-Grained Modeling of Reading Behavior",
+  "authors": [
+    "Francesco Ignazio Re",
+    "Andreas Opedal",
+    "Glib Manaiev",
+    "Mario Giulianelli",
+    "Ryan Cotterell"
+  ],
+  "publish_date": "24-06-2025",
+  "summary": "This article introduces a spatio-temporal point process model to analyze reading behavior, specifically fixations and saccades, to gain insight into online sentence processing, moving beyond aggregated eye-tracking measurements.",
+  "url": "http://arxiv.org/abs/2506.19999v1",
+  "usefulness_score": 100,
+  "usefulness_reason": "The title explicitly states \"A Spatio-Temporal Point Process\" and the abstract details its application to modeling reading behavior, which involves events unfolding across space and time. This is directly and substantially relevant to the core query."
+}

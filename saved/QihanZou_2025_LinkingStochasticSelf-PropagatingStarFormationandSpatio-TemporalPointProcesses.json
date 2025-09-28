@@ -1,0 +1,12 @@
+{
+  "source": "arxiv",
+  "title": "Linking Stochastic Self-Propagating Star Formation and Spatio-Temporal Point Processes",
+  "authors": [
+    "Qihan Zou"
+  ],
+  "publish_date": "17-08-2025",
+  "summary": "This work establishes a connection between the stochastic self-propagating star-formation (SSPSF) model and spatio-temporal point processes (STPP), providing a formal statistical foundation for the SSPSF model.",
+  "url": "http://arxiv.org/abs/2508.12372v1",
+  "usefulness_score": 100,
+  "usefulness_reason": "The title and abstract directly and explicitly mention \"Spatio-Temporal Point Processes\" multiple times, which is the core of the search query. This paper is directly and substantially about the topic."
+}
